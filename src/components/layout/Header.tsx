@@ -14,10 +14,7 @@ export function Header() {
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
         </button>
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-md flex items-center justify-center font-bold text-black text-xs"
-            style={{ background: 'linear-gradient(135deg, #D4AF37, #F4D03F)' }}>
-            A
-          </div>
+          <img src="/icons/icon-192.png" alt="APEX Ortho" className="w-8 h-8 rounded-md" />
           <span className="text-sm font-bold tracking-wider">
             <span className="text-white">APEX</span>
             <span className="text-[#D4AF37] ml-1">Ortho</span>
