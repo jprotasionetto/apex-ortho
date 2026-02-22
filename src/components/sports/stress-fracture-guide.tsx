@@ -5,6 +5,27 @@ export default function StressFractureGuideTool() {
   const colorMap: Record<string, string> = { safe: 'border-green-500/30 bg-green-500/5', caution: 'border-yellow-500/30 bg-yellow-500/5', danger: 'border-red-500/30 bg-red-500/5', info: 'border-blue-500/30 bg-blue-500/5' };
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Guia de Fraturas por Estresse</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Fraturas causadas por carga cíclica repetitiva que supera a capacidade de remodelação óssea. Divididas em alto risco (navicular, colo femoral, metáfise tibial medial, Jones) e baixo risco (diáfise tibial, fíbula).</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Atleta com dor insidiosa no exercício sem trauma específico. Diagnóstico: RX (tardio), Cintilografia ou RM (precoce, padrão-ouro). Identificar fator de risco: tríade da atleta, treinamento excessivo, osteopenia.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Baixo risco: redução de carga 4-8 semanas, progressão gradual. Alto risco (navicular, colo femoral zona de tensão, Jones): fixação cirúrgica imediata para evitar fratura completa. Navicular: gesso 6 semanas sem carga antes de considerar cirurgia.</p>
+          </div>
+        </div>
+      </div>
+
       {stressFractureGuide.sections.map((section) => (
         <section key={section.id}>
           <h2 className="text-lg font-semibold text-slate-100 mb-3">{section.title}</h2>
