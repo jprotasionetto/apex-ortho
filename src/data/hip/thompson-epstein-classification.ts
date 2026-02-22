@@ -1,0 +1,93 @@
+import type { ClassificationData } from '@/types/classification.ts';
+
+export const thompsonEpsteinClassificationData: ClassificationData = {
+  id: 'thompson-epstein',
+  name: 'Classificação de Thompson-Epstein – Luxação do Quadril',
+  author: 'Thompson/Epstein',
+  year: 1951,
+  grades: [
+    {
+      id: 'type-i',
+      label: 'Tipo I – Posterior Simples',
+      description: 'Luxação posterior simples sem fratura ou com fragmento mínimo da parede posterior.',
+      criteria: [
+        'Luxação posterior do quadril',
+        'Sem fratura ou fragmento mínimo da parede posterior',
+        'Quadril estável após redução',
+        'Superfície articular congruente',
+      ],
+      treatment: 'Redução fechada urgente (<6h). Sedação profunda ou anestesia geral. Manobra de Allis ou Stimson. Tração cutânea 2-3 dias seguida de carga progressiva.',
+      prognosis: 'Bom se reduzido <6h. Taxa de NAV 10% se redução precoce, >40% se tardia.',
+      colorCode: 'caution',
+    },
+    {
+      id: 'type-ii',
+      label: 'Tipo II – Posterior com Fragmento Grande',
+      description: 'Luxação posterior com fragmento grande da parede posterior.',
+      criteria: [
+        'Luxação posterior do quadril',
+        'Fragmento grande da parede posterior',
+        'Possível instabilidade após redução',
+        'TC para avaliar tamanho do fragmento e congruência',
+      ],
+      treatment: 'Redução fechada urgente. Se instável após redução ou incongruência articular: RAFI da parede posterior (via Kocher-Langenbeck). Fragmento >40% da parede = fixação.',
+      prognosis: 'Moderado. Depende do tamanho do fragmento e estabilidade pós-redução.',
+      colorCode: 'caution',
+    },
+    {
+      id: 'type-iii',
+      label: 'Tipo III – Posterior com Cominução do Rebordo',
+      description: 'Luxação posterior com cominução do rebordo acetabular posterior.',
+      criteria: [
+        'Luxação posterior do quadril',
+        'Cominução do rebordo acetabular posterior',
+        'Múltiplos fragmentos',
+        'Instabilidade após redução muito provável',
+        'TC essencial para planejamento',
+      ],
+      treatment: 'Redução fechada urgente. RAFI obrigatória: reconstrução da parede posterior com placa + parafusos. Enxerto ósseo se perda óssea significativa.',
+      prognosis: 'Reservado. Maior risco de artrose pós-traumática e instabilidade residual.',
+      colorCode: 'danger',
+    },
+    {
+      id: 'type-iv',
+      label: 'Tipo IV – Posterior com Fratura do Assoalho',
+      description: 'Luxação posterior com fratura do assoalho acetabular.',
+      criteria: [
+        'Luxação posterior do quadril',
+        'Fratura do assoalho (fundo) do acetábulo',
+        'Envolvimento da parede e/ou coluna posterior',
+        'Lesão de alta energia',
+        'Reconstrução complexa',
+      ],
+      treatment: 'Redução fechada urgente. RAFI do assoalho acetabular. Abordagem posterior (Kocher-Langenbeck) ou combinada. Pode necessitar placa de reconstrução pélvica.',
+      prognosis: 'Reservado. Reconstrução complexa com resultados menos previsíveis.',
+      colorCode: 'danger',
+    },
+    {
+      id: 'type-v',
+      label: 'Tipo V – Posterior com Fratura da Cabeça Femoral',
+      description: 'Luxação posterior com fratura da cabeça femoral associada.',
+      criteria: [
+        'Luxação posterior do quadril',
+        'Fratura da cabeça femoral associada (Pipkin)',
+        'Lesão de alta energia',
+        'Vascularização da cabeça comprometida',
+        'Avaliação com TC + RM',
+      ],
+      treatment: 'Redução urgente da luxação. Tratamento da fratura da cabeça conforme classificação de Pipkin. Artroscopia pode auxiliar em fragmentos intra-articulares. Artroplastia se NAV ou destruição articular.',
+      prognosis: 'Reservado. Risco elevado de NAV e artrose pós-traumática.',
+      colorCode: 'danger',
+    },
+  ],
+  clinicalPearl: 'Reducao em <6h reduz significativamente o risco de necrose avascular da cabeca femoral.',
+  pitfall: 'TC pos-reducao e obrigatoria para avaliar congruencia, fragmentos intra-articulares e fraturas associadas.',
+  references: [
+    {
+      authors: 'Thompson VP, Epstein HC',
+      title: 'Traumatic dislocation of the hip',
+      journal: 'J Bone Joint Surg Am',
+      year: 1951,
+    },
+  ],
+};

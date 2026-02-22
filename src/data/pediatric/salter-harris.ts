@@ -1,0 +1,90 @@
+import type { ClassificationData } from '@/types/classification.ts';
+
+export const salterHarrisClassificationData: ClassificationData = {
+  id: 'salter-harris',
+  name: 'Classificação de Salter-Harris (Fraturas Fisárias)',
+  author: 'Salter/Harris',
+  year: 1963,
+  grades: [
+    {
+      id: 'type-i',
+      label: 'Tipo I – Através da Fise',
+      description: 'Separação através da placa fisária sem envolvimento ósseo.',
+      criteria: [
+        'Fratura através da fise apenas (zona hipertrófica)',
+        'Radiografia pode ser normal (suspeitar clinicamente)',
+        'Dor e edema sobre a fise',
+        'Sem fragmento metafisário ou epifisário',
+      ],
+      treatment: 'Imobilização gessada por 3-4 semanas. Sem redução necessária se não desviada.',
+      prognosis: 'Excelente. Risco mínimo de barra fisária.',
+      colorCode: 'safe',
+    },
+    {
+      id: 'type-ii',
+      label: 'Tipo II – Fise + Metáfise (Mais Comum)',
+      description: 'Fratura através da fise com fragmento metafisário (sinal de Thurston-Holland).',
+      criteria: [
+        'Fratura através da fise com extensão para a metáfise',
+        'Fragmento metafisário triangular (Thurston-Holland)',
+        'Tipo mais comum (75% das fraturas fisárias)',
+        'Periósteo intacto no lado do fragmento metafisário',
+      ],
+      treatment: 'Redução fechada se desviada. Imobilização gessada 3-6 semanas.',
+      prognosis: 'Excelente. Barra fisária rara (<2%).',
+      colorCode: 'safe',
+    },
+    {
+      id: 'type-iii',
+      label: 'Tipo III – Fise + Epífise (Intra-articular)',
+      description: 'Fratura através da fise com extensão para a epífise e superfície articular.',
+      criteria: [
+        'Fratura intra-articular através da epífise',
+        'Extensão para a fise',
+        'Superfície articular envolvida',
+        'Comum no tornozelo distal (fratura de Tillaux)',
+      ],
+      treatment: 'Redução anatômica necessária (articular). RAFI se desvio >2mm.',
+      prognosis: 'Reservado. Risco de barra fisária e incongruência articular.',
+      colorCode: 'caution',
+    },
+    {
+      id: 'type-iv',
+      label: 'Tipo IV – Metáfise através Fise até Epífise',
+      description: 'Fratura que cruza metáfise, fise e epífise.',
+      criteria: [
+        'Fratura cruza os três componentes: metáfise, fise e epífise',
+        'Intra-articular',
+        'Exemplo clássico: fratura do côndilo lateral do úmero em crianças',
+        'Risco de barra fisária se não reduzida anatomicamente',
+      ],
+      treatment: 'Redução aberta e fixação interna (RAFI) obrigatória. Restaurar congruência articular e alinhamento fisário.',
+      prognosis: 'Reservado. Risco significativo de barra fisária se redução inadequada.',
+      colorCode: 'danger',
+    },
+    {
+      id: 'type-v',
+      label: 'Tipo V – Esmagamento da Fise',
+      description: 'Lesão por compressão/esmagamento da placa fisária.',
+      criteria: [
+        'Lesão por compressão axial da fise',
+        'Radiografia frequentemente normal inicialmente',
+        'Diagnóstico geralmente retrospectivo',
+        'Detecção pela formação de barra fisária tardia',
+      ],
+      treatment: 'Imobilização e acompanhamento rigoroso. Monitorizar crescimento por 1-2 anos.',
+      prognosis: 'Mau. Alta taxa de barra fisária e deformidade angular progressiva.',
+      colorCode: 'danger',
+    },
+  ],
+  clinicalPearl: 'Mnemónico SALTR: Straight (I), Above (II), Lower (III), Through (IV), Rammed (V). Tipos I e II: bom prognóstico. Tipos III e IV: redução anatómica obrigatória.',
+  pitfall: 'Tipo V é frequentemente um diagnóstico retrospectivo — a radiografia inicial pode ser completamente normal. Suspeitar quando há dor fisária após carga axial sem fratura visível.',
+  references: [
+    {
+      authors: 'Salter RB, Harris WR',
+      title: 'Injuries involving the epiphyseal plate',
+      journal: 'Journal of Bone and Joint Surgery (Am)',
+      year: 1963,
+    },
+  ],
+};

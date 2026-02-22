@@ -1,0 +1,80 @@
+import type { ClassificationData } from '@/types/classification.ts';
+
+export const tonnisClassificationData: ClassificationData = {
+  id: 'tonnis-classification',
+  name: 'Classificação de Tönnis – Artrose do Quadril',
+  author: 'Tönnis',
+  year: 1976,
+  grades: [
+    {
+      id: 'grade-0',
+      label: 'Grau 0 – Sem Artrose',
+      description: 'Sem sinais radiográficos de artrose.',
+      criteria: [
+        'Espaço articular normal',
+        'Sem esclerose subcondral',
+        'Sem osteófitos',
+        'Sem cistos subcondrais',
+        'Esfericidade da cabeça femoral preservada',
+      ],
+      treatment: 'Sem tratamento específico. Monitorização se sintomático. Investigar outras causas de dor (labrum, FAI, sinovite).',
+      prognosis: 'Excelente. Sem doença articular degenerativa.',
+      colorCode: 'safe',
+    },
+    {
+      id: 'grade-1',
+      label: 'Grau 1 – Esclerose Aumentada',
+      description: 'Esclerose aumentada, leve estreitamento articular e osteófitos pequenos.',
+      criteria: [
+        'Esclerose subcondral aumentada da cabeça e/ou acetábulo',
+        'Leve estreitamento do espaço articular',
+        'Osteófitos pequenos',
+        'Sem cistos significativos',
+        'Esfericidade da cabeça preservada',
+      ],
+      treatment: 'Conservador: modificação de atividades, fisioterapia, AINE, perda de peso. Considerar preservação articular (osteotomia periacetabular, artroscopia) se FAI ou displasia associada.',
+      prognosis: 'Bom a médio prazo. Progressão variável. Candidato a cirurgia preservadora se jovem e sintomático.',
+      colorCode: 'caution',
+    },
+    {
+      id: 'grade-2',
+      label: 'Grau 2 – Cistos Pequenos e Estreitamento Moderado',
+      description: 'Cistos pequenos, estreitamento moderado e osteófitos moderados.',
+      criteria: [
+        'Cistos subcondrais pequenos',
+        'Estreitamento moderado do espaço articular',
+        'Osteófitos moderados',
+        'Esclerose subcondral moderada',
+        'Início de deformidade da cabeça femoral',
+      ],
+      treatment: 'Conservador otimizado. Cirurgia preservadora controversa (pior resultado neste grau). Considerar artroplastia total se sintomático e refratário ao conservador.',
+      prognosis: 'Moderado. Progressão mais provável. Preservação articular com resultados menos previsíveis.',
+      colorCode: 'danger',
+    },
+    {
+      id: 'grade-3',
+      label: 'Grau 3 – Cistos Grandes e Estreitamento Severo',
+      description: 'Cistos grandes, estreitamento severo ou obliteração, deformidade da cabeça femoral.',
+      criteria: [
+        'Cistos subcondrais grandes',
+        'Estreitamento severo ou obliteração do espaço articular',
+        'Osteófitos grandes',
+        'Deformidade da cabeça femoral (perda da esfericidade)',
+        'Necrose avascular possível',
+      ],
+      treatment: 'Artroplastia total do quadril (ATQ). Tratamento conservador como ponte até cirurgia. Não há papel para cirurgia preservadora neste estágio.',
+      prognosis: 'Reservado sem cirurgia. Bom a excelente com ATQ em termos de alívio de dor e função.',
+      colorCode: 'danger',
+    },
+  ],
+  clinicalPearl: 'Tonnis 0-1 em paciente jovem com dor: investigar FAI e lesao labral - candidato a preservacao articular.',
+  pitfall: 'Radiografias devem ser AP de pelve centrada com rotacao interna de 15-20 graus dos membros inferiores para avaliacao adequada.',
+  references: [
+    {
+      authors: 'Tönnis D',
+      title: 'Normal values of the hip joint for the evaluation of X-rays in children and adults',
+      journal: 'Clin Orthop Relat Res',
+      year: 1976,
+    },
+  ],
+};

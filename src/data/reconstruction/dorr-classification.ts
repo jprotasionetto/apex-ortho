@@ -1,0 +1,68 @@
+import type { ClassificationData } from '@/types/classification.ts';
+
+export const dorrClassificationData: ClassificationData = {
+  id: 'dorr-classification',
+  name: 'Classificação de Dorr (Morfologia do Canal Femoral)',
+  author: 'Dorr',
+  year: 1993,
+  grades: [
+    {
+      id: 'type-a',
+      label: 'Tipo A – Champagne Flute (Taça de Champanhe)',
+      description: 'Canal estreito com córtex espesso. Forma de taça de champanhe.',
+      criteria: [
+        'Canal femoral estreito (funnel-shaped)',
+        'Córtex espesso e denso',
+        'Forma de taça de champanhe (champagne flute)',
+        'Índice cortical elevado (CFI >4.7 ou canal flare index >4.7)',
+        'Típico de pacientes jovens, ativos, com boa qualidade óssea',
+        'Istmo estreito com metáfise bem diferenciada',
+      ],
+      treatment: 'Ideal para haste não-cimentada press-fit (encaixe mecânico excelente). Hastes cuneiformes (taper-wedge) ou cilíndricas.',
+      prognosis: 'Excelente. Fixação primária robusta e osteointegração previsível.',
+      colorCode: 'safe',
+    },
+    {
+      id: 'type-b',
+      label: 'Tipo B – Forma Intermédia',
+      description: 'Canal moderadamente alargado com córtex de espessura intermédia.',
+      criteria: [
+        'Canal femoral moderadamente alargado',
+        'Córtex de espessura intermédia',
+        'Forma intermédia entre champagne flute e stovepipe',
+        'Índice cortical intermédio (CFI 3.0-4.7)',
+        'Mais comum na população de artroplastia',
+        'Qualidade óssea moderada',
+      ],
+      treatment: 'Haste não-cimentada na maioria dos casos. Haste com revestimento poroso metafisário ou totalmente poroso. Considerar cimentação em osso osteoporótico.',
+      prognosis: 'Bom. A maioria dos designs de haste funciona bem.',
+      colorCode: 'caution',
+    },
+    {
+      id: 'type-c',
+      label: 'Tipo C – Stovepipe (Tubo de Fogão)',
+      description: 'Canal amplo com córtex fino. Forma tubular sem diferenciação metáfise-diáfise.',
+      criteria: [
+        'Canal femoral amplo e tubular (stovepipe)',
+        'Córtex fino e osteoporótico',
+        'Sem diferenciação entre metáfise e diáfise',
+        'Índice cortical baixo (CFI <3.0)',
+        'Típico de idosos com osteoporose significativa',
+        'Risco de fratura periprotésica intraoperatória',
+      ],
+      treatment: 'Considerar haste cimentada (melhor fixação imediata em osso osteoporótico). Se não-cimentada: haste modular ou extensamente porosa. Cuidado com fraturas intraoperatórias.',
+      prognosis: 'Reservado. Risco aumentado de subsidence, fratura periprotésica e afrouxamento.',
+      colorCode: 'danger',
+    },
+  ],
+  clinicalPearl: 'Tipo A: ideal para hastes press-fit não-cimentadas. Tipo C: pode necessitar haste cimentada ou modular para garantir fixação adequada. O cortical index ratio ajuda na quantificação objetiva.',
+  pitfall: 'O índice cortical (canal flare index) medido numa radiografia AP da bacia ajuda na quantificação objetiva, mas a qualidade da radiografia afeta a medição. A TC pode fornecer informação adicional sobre a qualidade óssea.',
+  references: [
+    {
+      authors: 'Dorr LD, Faugere MC, Mackel AM, Gruen TA, Bognar B, Malluche HH',
+      title: 'Structural and cellular assessment of bone quality of proximal femur',
+      journal: 'Bone',
+      year: 1993,
+    },
+  ],
+};

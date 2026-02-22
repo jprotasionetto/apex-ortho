@@ -1,0 +1,87 @@
+import type { ClassificationData } from '@/types/classification.ts';
+
+export const ficatArletClassificationData: ClassificationData = {
+  id: 'ficat-arlet',
+  name: 'Classificação de Ficat-Arlet – Necrose Avascular da Cabeça Femoral',
+  author: 'Ficat/Arlet',
+  year: 1980,
+  grades: [
+    {
+      id: 'stage-i',
+      label: 'Estádio I – RX Normal, RM Positiva',
+      description: 'Radiografia normal com alterações na ressonância magnética.',
+      criteria: [
+        'Radiografia normal',
+        'RM positiva: edema medular, sinal de dupla linha (T2)',
+        'Cintilografia pode ser positiva (captação aumentada)',
+        'Sintomas: dor inguinal intermitente',
+        'Fase pré-radiográfica',
+      ],
+      treatment: 'Medidas de proteção da carga (carga parcial com canadianas). Descompressão core (core decompression) se sintomático: perfuração simples ou com enxerto. Bisfosfonatos (evidência limitada). Campos eletromagnéticos pulsados (experimental).',
+      prognosis: 'Melhor prognóstico de todos os estádios. Core decompression: sucesso 80-90%. Sem tratamento: 85% progridem.',
+      colorCode: 'safe',
+    },
+    {
+      id: 'stage-ii',
+      label: 'Estádio II – Esclerose/Cistos, Sem Colapso',
+      description: 'Alterações radiográficas sem colapso da cabeça femoral.',
+      criteria: [
+        'Esclerose subcondral focal ou difusa',
+        'Cistos subcondrais',
+        'Sem fratura subcondral',
+        'Sem colapso da cabeça femoral',
+        'Esfericidade da cabeça preservada',
+        'Espaço articular normal',
+      ],
+      treatment: 'Core decompression + enxerto ósseo (autólogo ou substituto). Osteotomia rotacional (Sugioka) em casos selecionados. Enxerto vascularizado de fíbula em pacientes jovens.',
+      prognosis: 'Moderado. Core decompression: sucesso 60-70%. Sem tratamento: maioria progride para colapso.',
+      colorCode: 'caution',
+    },
+    {
+      id: 'stage-iii',
+      label: 'Estádio III – Fratura Subcondral / Sinal do Crescente',
+      description: 'Fratura subcondral com sinal do crescente (crescent sign) e início de colapso.',
+      criteria: [
+        'Sinal do crescente (crescent sign): linha radiolucente subcondral',
+        'Fratura subcondral na incidência lateral (frog-leg)',
+        'Início do colapso (flattening) da cabeça femoral',
+        'Espaço articular ainda preservado',
+        'Perda de esfericidade da cabeça',
+      ],
+      treatment: 'Enxerto vascularizado de fíbula (pacientes jovens, colapso <2mm). Osteotomia rotacional (Sugioka) em casos muito selecionados. ATQ se colapso significativo ou paciente >50 anos.',
+      prognosis: 'Reservado para preservação. Sucesso de cirurgia preservadora diminui significativamente. ATQ pode ser inevitável.',
+      colorCode: 'danger',
+    },
+    {
+      id: 'stage-iv',
+      label: 'Estádio IV – Colapso e Artrose',
+      description: 'Colapso da cabeça femoral com alterações degenerativas secundárias.',
+      criteria: [
+        'Colapso da cabeça femoral estabelecido',
+        'Estreitamento do espaço articular',
+        'Alterações degenerativas acetabulares secundárias',
+        'Osteófitos',
+        'Deformidade da cabeça femoral',
+      ],
+      treatment: 'Artroplastia total do quadril (ATQ). Resurfacing (hip resurfacing) em homens jovens com boa qualidade óssea e lesão limitada. Artrodese em casos muito selecionados (jovem, unilateral).',
+      prognosis: 'Reservado sem cirurgia. Bom a excelente com ATQ. Resurfacing com resultados variáveis.',
+      colorCode: 'danger',
+    },
+  ],
+  clinicalPearl: 'RM e o padrao-ouro para diagnostico precoce (estagio I)',
+  pitfall: 'Bilateral em 40-80% dos casos - sempre avaliar ambos quadris',
+  references: [
+    {
+      authors: 'Ficat RP',
+      title: 'Idiopathic bone necrosis of the femoral head: early diagnosis and treatment',
+      journal: 'J Bone Joint Surg Br',
+      year: 1985,
+    },
+    {
+      authors: 'Arlet J, Ficat P',
+      title: 'Forage-biopsie de la tête fémorale dans l\'ostéonécrose primitive',
+      journal: 'Rev Rhum Mal Osteoartic',
+      year: 1968,
+    },
+  ],
+};

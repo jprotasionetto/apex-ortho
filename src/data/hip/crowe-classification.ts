@@ -1,0 +1,80 @@
+import type { ClassificationData } from '@/types/classification.ts';
+
+export const croweClassificationData: ClassificationData = {
+  id: 'crowe-classification',
+  name: 'Classificação de Crowe – Displasia do Quadril (Adulto)',
+  author: 'Crowe',
+  year: 1979,
+  grades: [
+    {
+      id: 'type-i',
+      label: 'Tipo I – Subluxação <50%',
+      description: 'Subluxação da cabeça femoral de menos de 50% em relação ao acetábulo.',
+      criteria: [
+        'Subluxação proximal <50% (ou <10% da altura da pelve)',
+        'Junção cabeça-colo proximal à linha interteardrop',
+        'Acetábulo displásico mas com alguma cobertura',
+        'Anatomia menos distorcida',
+      ],
+      treatment: 'ATQ com componentes padrão na maioria. Pode necessitar de acetábulo com alto offset ou medialização. Enxerto ósseo acetabular se necessário para cobertura.',
+      prognosis: 'Bom. ATQ com resultado previsível, semelhante a coxartrose primária.',
+      colorCode: 'safe',
+    },
+    {
+      id: 'type-ii',
+      label: 'Tipo II – Subluxação 50-75%',
+      description: 'Subluxação da cabeça femoral de 50-75%.',
+      criteria: [
+        'Subluxação proximal 50-75% (ou 10-15% da altura da pelve)',
+        'Migração proximal moderada',
+        'Acetábulo hipoplásico',
+        'Canal femoral pode ser estreito',
+      ],
+      treatment: 'ATQ com possível necessidade de enxerto ósseo acetabular estrutural. Haste femoral pode necessitar de tamanho menor. Atenção ao offset e comprimento do membro.',
+      prognosis: 'Bom a moderado. ATQ mais complexa que Tipo I. Atenção à discrepância de comprimento.',
+      colorCode: 'caution',
+    },
+    {
+      id: 'type-iii',
+      label: 'Tipo III – Subluxação 75-100%',
+      description: 'Subluxação da cabeça femoral de 75-100%.',
+      criteria: [
+        'Subluxação proximal 75-100% (ou 15-20% da altura da pelve)',
+        'Migração proximal significativa',
+        'Neoarticulação com falso acetábulo possível',
+        'Acetábulo verdadeiro severamente hipoplásico',
+        'Canal femoral estreito',
+      ],
+      treatment: 'ATQ complexa. Cotilo no acetábulo verdadeiro (centro de rotação anatômico). Enxerto acetabular estrutural frequente. Possível osteotomia subtrocantérica de encurtamento para redução.',
+      prognosis: 'Moderado. Cirurgia tecnicamente exigente. Risco de paralisia do ciático se alongamento >4cm sem encurtamento.',
+      colorCode: 'danger',
+    },
+    {
+      id: 'type-iv',
+      label: 'Tipo IV – Luxação Alta (>100%)',
+      description: 'Luxação completa com migração proximal >100% (quadril alto).',
+      criteria: [
+        'Luxação completa (migração >100% ou >20% da altura da pelve)',
+        'Cabeça femoral articulada com a asa ilíaca',
+        'Falso acetábulo cranial',
+        'Acetábulo verdadeiro severamente hipoplásico e raso',
+        'Encurtamento do membro significativo',
+        'Musculatura abdutora encurtada',
+        'Canal femoral muito estreito',
+      ],
+      treatment: 'ATQ complexa com osteotomia subtrocantérica de encurtamento femoral (obrigatório). Cotilo no acetábulo verdadeiro. Enxerto acetabular + possível anel de reforço. Considerar haste modular ou cônica.',
+      prognosis: 'Reservado. Cirurgia de alta complexidade. Risco de lesão do nervo ciático se não encurtar. Resultados funcionais inferiores aos outros tipos.',
+      colorCode: 'danger',
+    },
+  ],
+  clinicalPearl: 'Tipo IV: quadril alto, pode necessitar encurtamento femoral',
+  pitfall: 'Anatomia distorcida torna artroplastia complexa',
+  references: [
+    {
+      authors: 'Crowe JF, Mani VJ, Ranawat CS',
+      title: 'Total hip replacement in congenital dislocation and dysplasia of the hip',
+      journal: 'J Bone Joint Surg Am',
+      year: 1979,
+    },
+  ],
+};

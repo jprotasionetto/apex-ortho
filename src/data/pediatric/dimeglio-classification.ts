@@ -1,0 +1,81 @@
+import type { ClassificationData } from '@/types/classification.ts';
+
+export const dimeglioClassificationData: ClassificationData = {
+  id: 'dimeglio-classification',
+  name: 'Classificação de Dimeglio (Pé Torto Congénito)',
+  author: 'Dimeglio',
+  year: 1995,
+  grades: [
+    {
+      id: 'grade-i',
+      label: 'Grau I – Benigno/Postural',
+      description: 'Pé torto postural, redutível e maleável.',
+      criteria: [
+        'Score >20 pontos (escala de 0-20)',
+        'Todos os componentes são redutíveis além da posição neutra',
+        'Pé maleável',
+        'Deformidade postural sem rigidez',
+        'Responde bem à manipulação',
+      ],
+      treatment: 'Manipulação e gessos seriados (Ponseti). Excelente resposta. Pode necessitar apenas 2-3 gessos.',
+      prognosis: 'Excelente. Correção completa esperada com tratamento conservador.',
+      colorCode: 'safe',
+    },
+    {
+      id: 'grade-ii',
+      label: 'Grau II – Moderado/Redutível',
+      description: 'Deformidade moderada, parcialmente redutível.',
+      criteria: [
+        'Score 15-20 pontos',
+        'Redutível parcialmente (até posição neutra)',
+        'Alguma resistência à correção',
+        'Componentes parcialmente maleáveis',
+        'Vincos cutâneos moderados',
+      ],
+      treatment: 'Método de Ponseti: gessos seriados (5-6 gessos) + tenotomia de Aquiles provável + ortótese.',
+      prognosis: 'Bom com tratamento adequado. Maioria corrige com Ponseti.',
+      colorCode: 'caution',
+    },
+    {
+      id: 'grade-iii',
+      label: 'Grau III – Severo/Resistente',
+      description: 'Deformidade severa com resistência significativa.',
+      criteria: [
+        'Score 5-14 pontos',
+        'Redutibilidade parcial (não atinge posição neutra)',
+        'Rigidez significativa',
+        'Vincos cutâneos profundos (posterior e medial)',
+        'Resistente à manipulação passiva',
+      ],
+      treatment: 'Método de Ponseti: mais gessos necessários (6-8) + tenotomia de Aquiles + ortótese rigorosa. Taxa de recidiva mais alta.',
+      prognosis: 'Reservado. Pode necessitar procedimentos adicionais (transferência do tibial anterior).',
+      colorCode: 'danger',
+    },
+    {
+      id: 'grade-iv',
+      label: 'Grau IV – Muito Severo/Teratológico',
+      description: 'Pé torto teratológico, rígido, associado a síndromes.',
+      criteria: [
+        'Score 0-4 pontos',
+        'Deformidade rígida, irredutível',
+        'Associação com artrogripose, mielomeningocele ou síndromes',
+        'Vincos profundos e pele atrófica',
+        'Musculatura atrófica',
+        'Sem redutibilidade passiva',
+      ],
+      treatment: 'Ponseti modificado (mais gessos, maior taxa de recidiva). Pode necessitar liberação cirúrgica extensa. Astragalectomia em casos extremos.',
+      prognosis: 'Mau. Alta taxa de recidiva. Pode necessitar múltiplas cirurgias.',
+      colorCode: 'danger',
+    },
+  ],
+  clinicalPearl: 'Avalia 4 parâmetros principais: equino sagital, varo do retropé, desrotação do bloco calcâneo-pedioso e adução do antepé. Cada parâmetro é pontuado de 0-4 (4=irredutível). Pontos adicionais para vincos, cavus, condição muscular e rigidez.',
+  pitfall: 'Não confundir pé torto congénito com metatarso aduto. O metatarso aduto tem retropé neutro e corrige espontaneamente na maioria dos casos.',
+  references: [
+    {
+      authors: 'Dimeglio A, Bensahel H, Souchet P, Mazeau P, Bonnet F',
+      title: 'Classification of clubfoot',
+      journal: 'Journal of Pediatric Orthopaedics Part B',
+      year: 1995,
+    },
+  ],
+};

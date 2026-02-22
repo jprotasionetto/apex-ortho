@@ -1,0 +1,155 @@
+import type { ScoreDefinition } from '@/types/score.ts';
+
+export const harrisHipScoreData: ScoreDefinition = {
+  id: 'harris-hip-score',
+  name: 'Harris Hip Score',
+  items: [
+    {
+      id: 'pain',
+      label: 'Dor',
+      description: 'Nível de dor no quadril',
+      type: 'radio',
+      section: 'Dor',
+      options: [
+        { value: 44, label: 'Nenhuma ou ignora' },
+        { value: 40, label: 'Leve, ocasional, sem comprometimento de atividades' },
+        { value: 30, label: 'Leve, sem efeito nas atividades normais, dor após atividade incomum' },
+        { value: 20, label: 'Moderada, tolerável, com concessões; uso ocasional de AINE' },
+        { value: 10, label: 'Acentuada, limitação severa das atividades' },
+        { value: 0, label: 'Totalmente incapacitado, dor em repouso, acamado' },
+      ],
+    },
+    {
+      id: 'limp',
+      label: 'Claudicação',
+      description: 'Presença e grau de claudicação',
+      type: 'radio',
+      section: 'Função',
+      options: [
+        { value: 11, label: 'Nenhuma' },
+        { value: 8, label: 'Leve' },
+        { value: 5, label: 'Moderada' },
+        { value: 0, label: 'Severa' },
+      ],
+    },
+    {
+      id: 'support',
+      label: 'Suporte / Apoio',
+      description: 'Necessidade de auxiliar de marcha',
+      type: 'radio',
+      section: 'Função',
+      options: [
+        { value: 11, label: 'Nenhum' },
+        { value: 7, label: 'Bengala para caminhadas longas' },
+        { value: 5, label: 'Bengala a maior parte do tempo' },
+        { value: 2, label: 'Uma canadiana' },
+        { value: 0, label: 'Duas canadianas ou incapaz de andar' },
+      ],
+    },
+    {
+      id: 'distance',
+      label: 'Distância Caminhada',
+      description: 'Distância máxima de caminhada',
+      type: 'radio',
+      section: 'Função',
+      options: [
+        { value: 11, label: 'Ilimitada' },
+        { value: 8, label: '6 quarteirões (aproximadamente 600m)' },
+        { value: 5, label: '2-3 quarteirões (200-300m)' },
+        { value: 2, label: 'Apenas em ambiente interno' },
+        { value: 0, label: 'Acamado ou cadeira' },
+      ],
+    },
+    {
+      id: 'stairs',
+      label: 'Escadas',
+      description: 'Capacidade de subir escadas',
+      type: 'radio',
+      section: 'Função',
+      options: [
+        { value: 4, label: 'Normal sem corrimão' },
+        { value: 2, label: 'Normal com corrimão' },
+        { value: 1, label: 'De qualquer maneira' },
+        { value: 0, label: 'Incapaz de subir escadas' },
+      ],
+    },
+    {
+      id: 'shoes_socks',
+      label: 'Calçar Sapatos e Meias',
+      description: 'Capacidade de calçar sapatos e meias',
+      type: 'radio',
+      section: 'Atividade',
+      options: [
+        { value: 4, label: 'Com facilidade' },
+        { value: 2, label: 'Com dificuldade' },
+        { value: 0, label: 'Incapaz' },
+      ],
+    },
+    {
+      id: 'sitting',
+      label: 'Sentar',
+      description: 'Capacidade de sentar',
+      type: 'radio',
+      section: 'Atividade',
+      options: [
+        { value: 5, label: 'Confortavelmente em qualquer cadeira por 1 hora' },
+        { value: 3, label: 'Em cadeira alta por 30 minutos' },
+        { value: 0, label: 'Incapaz de sentar confortavelmente' },
+      ],
+    },
+    {
+      id: 'public_transport',
+      label: 'Transporte Público',
+      description: 'Capacidade de utilizar transporte público',
+      type: 'radio',
+      section: 'Atividade',
+      options: [
+        { value: 1, label: 'Capaz de utilizar transporte público' },
+        { value: 0, label: 'Incapaz de utilizar transporte público' },
+      ],
+    },
+  ],
+  maxScore: 100,
+  minScore: 0,
+  interpretations: [
+    {
+      range: [90, 100],
+      label: 'Excelente',
+      description: 'Função excelente do quadril. Sem limitações significativas nas atividades diárias.',
+      color: 'safe',
+      recommendation: 'Manutenção da atividade física e acompanhamento de rotina.',
+    },
+    {
+      range: [80, 89],
+      label: 'Bom',
+      description: 'Boa função do quadril com limitações mínimas.',
+      color: 'safe',
+      recommendation: 'Manutenção do tratamento atual. Fisioterapia se necessário.',
+    },
+    {
+      range: [70, 79],
+      label: 'Razoável',
+      description: 'Função razoável com limitações moderadas nas atividades.',
+      color: 'caution',
+      recommendation: 'Otimizar tratamento conservador. Considerar opções cirúrgicas se refratário.',
+    },
+    {
+      range: [0, 69],
+      label: 'Mau',
+      description: 'Função pobre com limitações significativas. Impacto severo na qualidade de vida.',
+      color: 'danger',
+      recommendation: 'Considerar fortemente intervenção cirúrgica (artroplastia) se candidato.',
+    },
+  ],
+  calculate: (values: Record<string, number>) => {
+    return Object.values(values).reduce((sum, val) => sum + (val || 0), 0);
+  },
+  references: [
+    {
+      authors: 'Harris WH',
+      title: 'Traumatic arthritis of the hip after dislocation and acetabular fractures: treatment by mold arthroplasty',
+      journal: 'J Bone Joint Surg Am',
+      year: 1969,
+    },
+  ],
+};

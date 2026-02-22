@@ -1,0 +1,82 @@
+import type { ClassificationData } from '@/types/classification.ts';
+
+export const perthersCatterallClassificationData: ClassificationData = {
+  id: 'perthes-catterall',
+  name: 'Classificação de Catterall (Perthes)',
+  author: 'Catterall',
+  year: 1971,
+  grades: [
+    {
+      id: 'group-i',
+      label: 'Grupo I – <25% Envolvimento',
+      description: 'Envolvimento anterior apenas, sem colapso ou sequestro.',
+      criteria: [
+        'Menos de 25% da cabeça femoral envolvida',
+        'Envolvimento anterior apenas',
+        'Sem colapso da cabeça',
+        'Sem sequestro',
+        'Metáfise normal',
+      ],
+      treatment: 'Observação. Tratamento sintomático. Atividade conforme tolerada.',
+      prognosis: 'Excelente. Sem deformidade residual na maioria dos casos.',
+      colorCode: 'safe',
+    },
+    {
+      id: 'group-ii',
+      label: 'Grupo II – 50% Envolvimento Anterior',
+      description: 'Envolvimento de até 50% da cabeça, com sequestro anterior.',
+      criteria: [
+        'Até 50% da cabeça femoral envolvida (porção anterior)',
+        'Sequestro anterior bem definido',
+        'Fragmento viável na porção posterior e lateral',
+        'Possível reação metafisária anterolateral',
+        'Altura da cabeça pode estar preservada',
+      ],
+      treatment: 'Contenção se sinais de head-at-risk presentes. Ortótese de abdução ou cirurgia em crianças maiores.',
+      prognosis: 'Bom. Remodelação favorável se não houver sinais de risco.',
+      colorCode: 'caution',
+    },
+    {
+      id: 'group-iii',
+      label: 'Grupo III – 75% Envolvimento com Sequestro',
+      description: 'Grande sequestro com apenas pequeno fragmento posterior viável.',
+      criteria: [
+        'Aproximadamente 75% da cabeça femoral envolvida',
+        'Grande sequestro central',
+        'Apenas fragmento posterior viável',
+        'Colapso da cabeça frequente',
+        'Alterações metafisárias difusas',
+        'Presença de sinais de head-at-risk frequente',
+      ],
+      treatment: 'Contenção cirúrgica recomendada: osteotomia femoral varizante ou osteotomia pélvica (Salter, triple).',
+      prognosis: 'Reservado. Risco elevado de deformidade residual.',
+      colorCode: 'danger',
+    },
+    {
+      id: 'group-iv',
+      label: 'Grupo IV – 100% Envolvimento',
+      description: 'Toda a epífise envolvida, colapso difuso.',
+      criteria: [
+        '100% da cabeça femoral envolvida',
+        'Colapso difuso da epífise',
+        'Sem fragmento viável',
+        'Calcificação lateral à epífise',
+        'Alterações metafisárias extensas',
+        'Reação fisária frequente',
+      ],
+      treatment: 'Contenção cirúrgica. Resultados limitados independentemente do tratamento. Considerar distração articular em casos selecionados.',
+      prognosis: 'Mau. Alta taxa de deformidade residual, coxa magna e artrose precoce.',
+      colorCode: 'danger',
+    },
+  ],
+  clinicalPearl: 'Sinais de head-at-risk de Catterall: subluxação lateral, sinal de Gage (radiolucência em V na epífise lateral), calcificação lateral à epífise, fise horizontal, reação metafisária difusa.',
+  pitfall: 'A reprodutibilidade interobservador da classificação de Catterall é baixa. A classificação de Herring (pilar lateral) tem melhor concordância e é preferida atualmente.',
+  references: [
+    {
+      authors: 'Catterall A',
+      title: 'The natural history of Perthes disease',
+      journal: 'Journal of Bone and Joint Surgery (Br)',
+      year: 1971,
+    },
+  ],
+};

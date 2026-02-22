@@ -1,0 +1,93 @@
+import type { ClassificationData } from '@/types/classification.ts';
+
+export const paproskyfemurClassificationData: ClassificationData = {
+  id: 'paprosky-femur',
+  name: 'Classificação de Paprosky – Defeitos Femorais (Revisão ATQ)',
+  author: 'Paprosky',
+  year: 2000,
+  grades: [
+    {
+      id: 'type-i',
+      label: 'Tipo I – Perda Metafisária Mínima',
+      description: 'Perda óssea metafisária mínima com diáfise intacta.',
+      criteria: [
+        'Perda óssea metafisária mínima',
+        'Diáfise intacta com bom suporte cortical',
+        'Canal femoral com geometria preservada',
+        'Sem osteólise diafisária significativa',
+      ],
+      treatment: 'Haste de revisão não-cimentada extensamente porosa (standard). Haste cimentada em pacientes idosos com boa reserva óssea.',
+      prognosis: 'Excelente. Resultados semelhantes a artroplastia primária.',
+      colorCode: 'safe',
+    },
+    {
+      id: 'type-ii',
+      label: 'Tipo II – Perda Metafisária Extensa',
+      description: 'Perda óssea metafisária extensa mas diáfise preservada.',
+      criteria: [
+        'Perda óssea metafisária extensa (ausência de suporte calcar)',
+        'Diáfise intacta com fixação distal possível',
+        'Cortical diafisária preservada',
+        'Pode ter alargamento proximal sem comprometimento distal',
+      ],
+      treatment: 'Haste não-cimentada de fixação distal (tapered fluted ou extensamente porosa). Bypass da metáfise com fixação diafisária.',
+      prognosis: 'Bom. Fixação distal confiável na maioria dos casos.',
+      colorCode: 'caution',
+    },
+    {
+      id: 'type-iiia',
+      label: 'Tipo IIIA – Dano Metafisário + Diafisário (>4cm scratch-fit)',
+      description: 'Dano metafisário e diafisário com possibilidade de fixação distal (>4cm de scratch-fit no istmo).',
+      criteria: [
+        'Perda óssea metafisária extensa',
+        'Dano diafisário com alargamento do canal',
+        'Ainda possível obter >4cm de scratch-fit no istmo femoral',
+        'Cortical diafisária danificada mas presente',
+        'Istmo alargado mas funcional',
+      ],
+      treatment: 'Haste não-cimentada longa de fixação distal (tapered fluted titanium ou extensamente porosa). Enxerto ósseo impactado pode complementar.',
+      prognosis: 'Reservado. Resultados dependem da qualidade da fixação distal obtida.',
+      colorCode: 'danger',
+    },
+    {
+      id: 'type-iiib',
+      label: 'Tipo IIIB – Dano Metafisário + Diafisário (<4cm scratch-fit)',
+      description: 'Dano extenso com menos de 4cm de scratch-fit possível.',
+      criteria: [
+        'Perda óssea metafisária e diafisária extensa',
+        'Menos de 4cm de scratch-fit disponível no istmo',
+        'Istmo severamente comprometido',
+        'Cortical diafisária fina ou ausente em segmentos',
+        'Fixação biológica distal comprometida',
+      ],
+      treatment: 'Haste modular longa ou prótese compósita de aloenxerto (APC). Enxerto cortical estrutural. Considerar megaprótese femoral proximal em casos extremos.',
+      prognosis: 'Mau. Alta taxa de complicações. Pode necessitar reconstrução complexa.',
+      colorCode: 'danger',
+    },
+    {
+      id: 'type-iv',
+      label: 'Tipo IV – Perda Extensa com Istmo Destruído',
+      description: 'Perda óssea extensa com destruição completa do istmo femoral.',
+      criteria: [
+        'Perda óssea metafisária e diafisária extensa',
+        'Istmo femoral completamente destruído',
+        'Canal femoral tipo stovepipe alargado',
+        'Sem possibilidade de scratch-fit em qualquer nível',
+        'Pode ter descontinuidade femoral',
+      ],
+      treatment: 'Reconstrução com APC (allograft prosthetic composite), megaprótese femoral, ou impaction bone grafting com haste cimentada longa.',
+      prognosis: 'Mau. Procedimento de salvamento. Alto risco de complicações e reoperação.',
+      colorCode: 'danger',
+    },
+  ],
+  clinicalPearl: 'Tipo IIIA: haste tapered fluted (ex: Wagner SL) com fixação distal confiável. Tipo IIIB: pode necessitar prótese compósita de aloenxerto (APC) ou haste modular.',
+  pitfall: 'A TC pré-operatória ajuda a avaliar o stock ósseo remanescente e o diâmetro do canal, especialmente para diferenciar IIIA de IIIB. A avaliação intra-operatória é definitiva.',
+  references: [
+    {
+      authors: 'Paprosky WG, Burnett RS',
+      title: 'Assessment and classification of bone stock deficiency in revision total hip arthroplasty',
+      journal: 'American Journal of Orthopedics',
+      year: 2000,
+    },
+  ],
+};

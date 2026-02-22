@@ -1,0 +1,162 @@
+import type { ScoreDefinition } from '@/types/score.ts';
+
+export const constantScoreData: ScoreDefinition = {
+  id: 'constant-score',
+  name: 'Constant-Murley Score',
+  items: [
+    {
+      id: 'pain',
+      label: 'Dor',
+      type: 'radio',
+      section: 'Dor',
+      options: [
+        { value: 0, label: 'Dor severa (0)' },
+        { value: 5, label: 'Dor moderada (5)' },
+        { value: 10, label: 'Dor ligeira (10)' },
+        { value: 15, label: 'Sem dor (15)' },
+      ],
+    },
+    {
+      id: 'adl_work',
+      label: 'Nível de atividade laboral',
+      type: 'radio',
+      section: 'Atividades da Vida Diária',
+      options: [
+        { value: 0, label: 'Impossível (0)' },
+        { value: 1, label: 'Muito limitado (1)' },
+        { value: 2, label: 'Limitado (2)' },
+        { value: 3, label: 'Ligeira limitação (3)' },
+        { value: 4, label: 'Sem limitação (4)' },
+      ],
+    },
+    {
+      id: 'adl_sport',
+      label: 'Nível de atividade desportiva/recreativa',
+      type: 'radio',
+      section: 'Atividades da Vida Diária',
+      options: [
+        { value: 0, label: 'Impossível (0)' },
+        { value: 1, label: 'Muito limitado (1)' },
+        { value: 2, label: 'Limitado (2)' },
+        { value: 3, label: 'Ligeira limitação (3)' },
+        { value: 4, label: 'Sem limitação (4)' },
+      ],
+    },
+    {
+      id: 'adl_sleep',
+      label: 'Afetação do sono',
+      type: 'radio',
+      section: 'Atividades da Vida Diária',
+      options: [
+        { value: 0, label: 'Insónia severa (0)' },
+        { value: 1, label: 'Sono muito perturbado (1)' },
+        { value: 2, label: 'Sono perturbado (2)' },
+        { value: 3, label: 'Ligeira perturbação (3)' },
+        { value: 4, label: 'Sem perturbação (4)' },
+      ],
+    },
+    {
+      id: 'adl_hand_height',
+      label: 'Nível de trabalho confortável com a mão',
+      type: 'radio',
+      section: 'Atividades da Vida Diária',
+      options: [
+        { value: 0, label: 'Cintura (0)' },
+        { value: 2, label: 'Xifóide/esterno (2)' },
+        { value: 4, label: 'Pescoço (4)' },
+        { value: 6, label: 'Cabeça (6)' },
+        { value: 8, label: 'Acima da cabeça (8)' },
+      ],
+    },
+    {
+      id: 'rom_forward_flex',
+      label: 'Flexão anterior',
+      type: 'radio',
+      section: 'Amplitude de Movimento',
+      options: [
+        { value: 0, label: '0-30° (0)' },
+        { value: 2, label: '31-60° (2)' },
+        { value: 4, label: '61-90° (4)' },
+        { value: 6, label: '91-120° (6)' },
+        { value: 8, label: '121-150° (8)' },
+        { value: 10, label: '151-180° (10)' },
+      ],
+    },
+    {
+      id: 'rom_abduction',
+      label: 'Abdução',
+      type: 'radio',
+      section: 'Amplitude de Movimento',
+      options: [
+        { value: 0, label: '0-30° (0)' },
+        { value: 2, label: '31-60° (2)' },
+        { value: 4, label: '61-90° (4)' },
+        { value: 6, label: '91-120° (6)' },
+        { value: 8, label: '121-150° (8)' },
+        { value: 10, label: '151-180° (10)' },
+      ],
+    },
+    {
+      id: 'rom_external_rotation',
+      label: 'Rotação externa',
+      type: 'radio',
+      section: 'Amplitude de Movimento',
+      options: [
+        { value: 0, label: 'Sem rotação externa (0)' },
+        { value: 2, label: 'Mão atrás da cabeça, cotovelo anterior (2)' },
+        { value: 4, label: 'Mão atrás da cabeça, cotovelo posterior (4)' },
+        { value: 6, label: 'Mão no topo da cabeça, cotovelo anterior (6)' },
+        { value: 8, label: 'Mão no topo da cabeça, cotovelo posterior (8)' },
+        { value: 10, label: 'Elevação completa (10)' },
+      ],
+    },
+    {
+      id: 'rom_internal_rotation',
+      label: 'Rotação interna',
+      type: 'radio',
+      section: 'Amplitude de Movimento',
+      options: [
+        { value: 0, label: 'Face lateral da coxa (0)' },
+        { value: 2, label: 'Nádega (2)' },
+        { value: 4, label: 'Articulação sacroilíaca (4)' },
+        { value: 6, label: 'Cintura (L3) (6)' },
+        { value: 8, label: 'T12 (8)' },
+        { value: 10, label: 'Interescapular (T7) (10)' },
+      ],
+    },
+    {
+      id: 'strength',
+      label: 'Força (abdução a 90°, dinamómetro)',
+      type: 'radio',
+      section: 'Força',
+      options: [
+        { value: 0, label: '0 libras (0)' },
+        { value: 5, label: '~5 libras (5)' },
+        { value: 10, label: '~10 libras (10)' },
+        { value: 15, label: '~15 libras (15)' },
+        { value: 20, label: '~20 libras (20)' },
+        { value: 25, label: '≥25 libras (25)' },
+      ],
+    },
+  ],
+  maxScore: 100,
+  minScore: 0,
+  interpretations: [
+    { range: [86, 100], label: 'Excelente', description: 'Função do ombro excelente', color: 'safe' },
+    { range: [71, 85], label: 'Bom', description: 'Boa função do ombro', color: 'safe' },
+    { range: [56, 70], label: 'Razoável', description: 'Função razoável com limitações', color: 'caution' },
+    { range: [0, 55], label: 'Mau', description: 'Função do ombro significativamente comprometida', color: 'danger' },
+  ],
+  calculate: (values: Record<string, number>) => {
+    const ids = ['pain', 'adl_work', 'adl_sport', 'adl_sleep', 'adl_hand_height', 'rom_forward_flex', 'rom_abduction', 'rom_external_rotation', 'rom_internal_rotation', 'strength'];
+    return ids.reduce((sum, id) => sum + (values[id] ?? 0), 0);
+  },
+  references: [
+    {
+      authors: 'Constant CR, Murley AH',
+      title: 'A clinical method of functional assessment of the shoulder',
+      journal: 'Clinical Orthopaedics and Related Research',
+      year: 1987,
+    },
+  ],
+};

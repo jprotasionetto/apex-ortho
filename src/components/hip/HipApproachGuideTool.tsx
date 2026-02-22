@@ -1,0 +1,95 @@
+import { useState } from 'react';
+import { Alert } from '@/components/ui/Alert.tsx';
+
+const sections = [
+  {
+    id: 'posterior',
+    title: 'Via Posterior (Kocher-Langenbeck)',
+    content: [
+      'Via mais utilizada para artroplastia total do quadril',
+      'Intervalo: entre glúteo médio (nervo glúteo superior) e rotadores externos curtos',
+      'Posição: decúbito lateral',
+      'Incisão: centrada no grande trocânter, curvilínea posterior',
+      'Estruturas seccionadas: piriforme, obturadores, gêmeos (rotadores externos curtos)',
+      'Nervo em risco: CIÁTICO (nervo isquiático) - proteger com rotação externa + flexão do joelho',
+      'Risco de luxação posterior: 2-5% (maior que via anterior)',
+      'Reparação capsular + rotadores externos: reduz risco de luxação para <1%',
+      'Vantagens: excelente exposição, familiar para maioria dos cirurgiões',
+      'Indicações: ATQ primária e revisão, fraturas acetabulares posteriores',
+    ],
+  },
+  {
+    id: 'lateral',
+    title: 'Via Lateral (Hardinge)',
+    content: [
+      'Via lateral direta com split do glúteo médio',
+      'Intervalo: split do terço anterior do glúteo médio (sem intervalo internervoso)',
+      'Posição: decúbito lateral ou supino',
+      'Estruturas divididas: glúteo médio (terço anterior) e vasto lateral',
+      'Nervo em risco: GLÚTEO SUPERIOR - não estender a incisão >5cm proximal ao trocânter',
+      'Risco de Trendelenburg: possível se lesão do nervo glúteo superior ou desinserção excessiva',
+      'Menor risco de luxação que via posterior',
+      'Vantagens: baixo risco de luxação, boa exposição acetabular',
+      'Desvantagens: risco de claudicação (abdutor), ossificação heterotópica',
+      'Variante: abordagem lateral modificada (Hardinge split limitado)',
+    ],
+  },
+  {
+    id: 'anterior',
+    title: 'Via Anterior (Smith-Petersen / DAA)',
+    content: [
+      'Via anterior direta (Direct Anterior Approach - DAA)',
+      'Intervalo INTERNERVOSO: entre sartório/reto femoral (n. femoral) e tensor da fáscia lata (n. glúteo superior)',
+      'Posição: supino em mesa de tração ou mesa convencional',
+      'Estruturas em risco: nervo cutâneo femoral lateral (meralgia parestésica 1-10%)',
+      'Preservação muscular: não secciona musculatura (muscle-sparing)',
+      'Menor risco de luxação: 0.5-1% (preservação da cápsula posterior)',
+      'Vantagens: recuperação mais rápida, menor dor pós-op, menor risco luxação',
+      'Desvantagens: curva de aprendizagem, risco de fratura femoral, exposição femoral limitada',
+      'Fluoroscopia intra-operatória frequentemente utilizada',
+      'Indicações crescentes: ATQ primária, especialmente em pacientes com risco de luxação',
+    ],
+  },
+  {
+    id: 'anterolateral',
+    title: 'Via Anterolateral (Watson-Jones)',
+    content: [
+      'Intervalo: entre tensor da fáscia lata (n. glúteo superior) e glúteo médio (n. glúteo superior)',
+      'Nota: NÃO é verdadeiramente internervosa (ambos inervados pelo n. glúteo superior)',
+      'Posição: decúbito lateral ou supino',
+      'Capsulotomia anterior entre glúteo mínimo e cápsula',
+      'Nervo em risco: glúteo superior (evitar retração excessiva proximal)',
+      'Risco de luxação: intermediário entre posterior e anterior',
+      'Vantagens: boa exposição, preservação dos rotadores externos',
+      'Desvantagens: exposição femoral moderada, risco de lesão abdutora',
+      'Variação: via anterolateral minimamente invasiva (mini Watson-Jones)',
+      'Utilizada para: ATQ primária, fixação de fraturas do colo femoral',
+    ],
+  },
+];
+
+export default function HipApproachGuideTool() {
+  const [activeSection, setActiveSection] = useState<string>('posterior');
+
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-wrap gap-2">
+        {sections.map((s) => (
+          <button key={s.id} onClick={() => setActiveSection(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeSection === s.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:text-slate-200'}`}>{s.title}</button>
+        ))}
+      </div>
+      {sections.filter((s) => s.id === activeSection).map((s) => (
+        <div key={s.id} className="bg-slate-800 border border-slate-700 rounded-xl p-6 animate-fade-in">
+          <h3 className="text-lg font-semibold text-slate-100 mb-4">{s.title}</h3>
+          <ul className="space-y-2">
+            {s.content.map((item, i) => (
+              <li key={i} className="flex gap-3 text-sm text-slate-300"><span className="text-primary-400 mt-0.5">•</span><span>{item}</span></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      <Alert type="info">Via anterior (DAA): unica via verdadeiramente internervosa e muscle-sparing para ATQ.</Alert>
+      <Alert type="caution">Via posterior: SEMPRE reparar a capsula e rotadores externos para reduzir risco de luxacao.</Alert>
+    </div>
+  );
+}

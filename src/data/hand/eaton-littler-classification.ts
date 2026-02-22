@@ -1,0 +1,81 @@
+import type { ClassificationData } from '@/types/classification.ts';
+
+export const eatonLittlerClassificationData: ClassificationData = {
+  id: 'eaton-littler',
+  name: 'Classificação de Eaton-Littler – Artrose CMC do Polegar',
+  author: 'Eaton/Littler',
+  year: 1973,
+  grades: [
+    {
+      id: 'stage-i',
+      label: 'Estádio I – Articulação Normal / Alargada',
+      description: 'Contornos articulares normais com possível alargamento do espaço articular (sinovite/efusão).',
+      criteria: [
+        'Contornos articulares normais',
+        'Espaço articular pode estar alargado (efusão)',
+        'Sem osteófitos',
+        'Sem esclerose subcondral',
+        'Cartilagem articular preservada',
+      ],
+      treatment: 'Tratamento conservador: imobilização com ortótese (splint), AINE, modificação de atividades. Infiltração com corticoide se sintomático.',
+      prognosis: 'Excelente com tratamento conservador. Maioria dos pacientes responde bem a medidas não cirúrgicas.',
+      colorCode: 'safe',
+    },
+    {
+      id: 'stage-ii',
+      label: 'Estádio II – Estreitamento Discreto com Osteófitos',
+      description: 'Discreto estreitamento articular com osteófitos <2mm e possíveis corpos livres.',
+      criteria: [
+        'Leve estreitamento do espaço articular',
+        'Osteófitos pequenos (<2mm)',
+        'Possíveis corpos livres ou fragmentos osteocondrais',
+        'Articulação escafo-trapézio-trapezóide (STT) preservada',
+        'Subluxação mínima (<1/3 da superfície articular)',
+      ],
+      treatment: 'Tratamento conservador como estádio I. Se refratário: artroscopia CMC, osteotomia metacarpal de extensão ou ligamentoplastia.',
+      prognosis: 'Bom com tratamento conservador. Progressão pode ser lenta ao longo de anos.',
+      colorCode: 'caution',
+    },
+    {
+      id: 'stage-iii',
+      label: 'Estádio III – Estreitamento Significativo',
+      description: 'Estreitamento articular significativo com osteófitos grandes e esclerose.',
+      criteria: [
+        'Estreitamento significativo do espaço articular',
+        'Osteófitos grandes (>2mm)',
+        'Esclerose subcondral',
+        'Possíveis cistos subcondrais',
+        'Subluxação >1/3 da superfície articular',
+        'Articulação STT preservada',
+      ],
+      treatment: 'Cirúrgico na maioria: trapeziectomia com ou sem interposição tendinosa (LRTI), suspensoplastia, artroplastia com implante. Artrodese CMC em pacientes jovens com alta demanda.',
+      prognosis: 'Moderado. Resultados cirúrgicos geralmente bons para alívio da dor com perda parcial de força de pinça.',
+      colorCode: 'danger',
+    },
+    {
+      id: 'stage-iv',
+      label: 'Estádio IV – Artrose Pantrapezial',
+      description: 'Artrose pantrapezial com envolvimento da articulação escafo-trapézio-trapezóide (STT).',
+      criteria: [
+        'Alterações degenerativas avançadas na CMC',
+        'Envolvimento da articulação STT',
+        'Estreitamento articular severo CMC e STT',
+        'Osteófitos grandes em ambas articulações',
+        'Esclerose e cistos em ambas articulações',
+      ],
+      treatment: 'Cirúrgico: trapeziectomia total com suspensoplastia/interposição tendinosa. Evitar artrodese CMC isolada (sobrecarrega STT). Considerar artroplastia total de trapézio.',
+      prognosis: 'Reservado sem tratamento. Bons resultados com trapeziectomia total, embora com perda de força de pinça.',
+      colorCode: 'danger',
+    },
+  ],
+  clinicalPearl: 'Estadio I-II: tratamento conservador. Estadio III-IV: considerar trapeziectomia',
+  pitfall: 'Dor na CMC pode mimetizar sindrome de De Quervain',
+  references: [
+    {
+      authors: 'Eaton RG, Littler JW',
+      title: 'Ligament reconstruction for the painful thumb carpometacarpal joint',
+      journal: 'J Bone Joint Surg Am',
+      year: 1973,
+    },
+  ],
+};

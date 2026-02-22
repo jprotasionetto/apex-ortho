@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #FEFCE8;
+  --color-primary-100: #FEF9C3;
+  --color-primary-200: #FEF08A;
+  --color-primary-300: #FDE047;
+  --color-primary-400: #F4D03F;
+  --color-primary-500: #D4AF37;
+  --color-primary-600: #B8941F;
+  --color-primary-700: #926F15;
+  --color-primary-800: #78580D;
+  --color-primary-900: #5C4309;
+  --color-accent-400: #F4D03F;
+  --color-accent-500: #D4AF37;
+  --color-accent-600: #B8941F;
+  --color-clinical-safe: #22C55E;
+  --color-clinical-caution: #F59E0B;
+  --color-clinical-danger: #EF4444;
+  --color-clinical-info: #3B82F6;
+}
+
+@layer base {
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #475569; }
+}
+
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slide-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.animate-fade-in { animation: fade-in 0.3s ease-out; }
+.animate-slide-up { animation: slide-up 0.3s ease-out; }
