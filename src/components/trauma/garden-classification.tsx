@@ -8,6 +8,26 @@ export default function GardenClassificationTool() {
   const active = selected ? gardenClassificationData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Images from MANUAL DE TRAUMA ORTOPÉDICO — Garden/Colo Femoral chapter (pp. 155-159) */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">
+          Colo Femoral — Manual SBOT (pp. 155–159)
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {[
+            { src: '/images/manual-trauma/page156_img1.png', caption: 'Fratura do colo femoral — tipos Garden I e II' },
+            { src: '/images/manual-trauma/page156_img2.png', caption: 'Garden III e IV — com desvio' },
+            { src: '/images/manual-trauma/page157_img1.png', caption: 'Classificação de Pauwels — ângulo de inclinação' },
+            { src: '/images/manual-trauma/page158_img1.png', caption: 'Fixação com parafusos canulados — Garden I/II' },
+            { src: '/images/manual-trauma/page158_img2.png', caption: 'Artroplastia — Garden III/IV em idosos' },
+          ].map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
       {/* Interactive SVG Diagram */}
       <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
         <GardenSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
