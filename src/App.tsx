@@ -27,13 +27,15 @@ export default function App() {
 
   return (
     <Routes>
-      <Route path="/landing" element={<Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}><LandingPage /></Suspense>} />
-      <Route element={<AppShell />}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/module/:moduleId" element={<ModulePage />} />
-        <Route path="/module/:moduleId/:toolId" element={<ToolPage />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="/recent" element={<RecentPage />} />
+      {/* Landing page is the default route */}
+      <Route path="/" element={<Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}><LandingPage /></Suspense>} />
+      {/* App routes under /app */}
+      <Route path="/app" element={<AppShell />}>
+        <Route index element={<HomePage />} />
+        <Route path="module/:moduleId" element={<ModulePage />} />
+        <Route path="module/:moduleId/:toolId" element={<ToolPage />} />
+        <Route path="favorites" element={<FavoritesPage />} />
+        <Route path="recent" element={<RecentPage />} />
       </Route>
     </Routes>
   );
