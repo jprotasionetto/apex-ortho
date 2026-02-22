@@ -55,7 +55,7 @@ export function AppShell() {
   const isDark = theme === 'dark';
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'bg-slate-900 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
+    <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'bg-[#0A0A0A] text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
       <Header />
       <Sidebar />
       <SearchModal />
