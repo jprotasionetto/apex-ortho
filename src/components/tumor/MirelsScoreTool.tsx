@@ -12,6 +12,26 @@ export default function MirelsScoreTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Score de Mirels — Risco de Fratura Patológica</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Escala preditiva de 12 pontos para risco de fratura patológica em metástases ósseas. Avalia 4 variáveis: sítio anatômico, dor, natureza da lesão (blástica/lítica) e tamanho cortical.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda metástase óssea de osso longo para determinar necessidade de fixação profilática versus radioterapia. Evita fratura patológica com alto impacto funcional e mortalidade.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Score ≤7: risco baixo de fratura (&lt;4%) — radioterapia. Score 8: risco intermediário (~15%) — individualizar. Score ≥9: risco alto (&gt;33%) — fixação profilática cirúrgica antes da radioterapia. Fêmur proximal: fixar profilaticamente se &gt;50% do córtex comprometido.</p>
+          </div>
+        </div>
+      </div>
       {sections.map((section) => (
         <div key={section} className="bg-slate-800 border border-slate-700 rounded-xl p-6 space-y-4">
           <h3 className="text-lg font-semibold text-slate-100">{section}</h3>
