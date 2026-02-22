@@ -14,6 +14,26 @@ export default function PatelaAOTool() {
   const active = selected ? data.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação AO/OTA — Fraturas da Patela</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Classifica fraturas da patela pelo sistema AO (34) em: Tipo A (avulsão/periférica), Tipo B (parcial, incompleta) e Tipo C (completa/cominutiva). Orienta cirurgia versus conservador.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda fratura de patela identificada em RX. Avaliação clínica: extensão ativa do joelho determina integridade do aparelho extensor — se mantida, conservador pode ser considerado.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Não deslocada + extensão ativa preservada: imobilização com joelho em extensão 4-6 semanas. Deslocada ou extensão perdida: cirurgia — fio em tensão (banda de tensão/TBW) para simples, excisão de pólo + reinserção ou patelectomia parcial para cominutiva.</p>
+          </div>
+        </div>
+      </div>
       <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
         <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Patela — Manual SBOT (p. 184)</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
