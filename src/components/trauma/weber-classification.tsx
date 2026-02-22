@@ -8,6 +8,27 @@ export default function WeberClassificationTool() {
   const active = selected ? weberClassificationData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Images from MANUAL DE TRAUMA ORTOPÉDICO — Weber/Lauge-Hansen chapter (pp. 198-205) */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">
+          Fraturas do Tornozelo — Manual SBOT (pp. 198–205)
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {[
+            { src: '/images/manual-trauma/page198_img1.png', caption: 'Anatomia ligamentar do tornozelo' },
+            { src: '/images/manual-trauma/page198_img2.png', caption: 'Complexo sindesmótico' },
+            { src: '/images/manual-trauma/page199_img1.png', caption: 'Incidência mortise — espaços normais' },
+            { src: '/images/manual-trauma/page200_img1.png', caption: 'Weber A – abaixo da sindesmose' },
+            { src: '/images/manual-trauma/page201_img1.png', caption: 'Weber B – ao nível da sindesmose' },
+            { src: '/images/manual-trauma/page202_img1.png', caption: 'Weber C – acima da sindesmose' },
+          ].map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
       {/* Interactive SVG Diagram */}
       <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
         <WeberSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
