@@ -902,7 +902,7 @@ export function FinalCTASection() {
 
 const ECOSYSTEM_LINKS = [
   { name: 'APEX Finance', href: '#' },
-  { name: 'APEX Dor', href: '#' },
+  { name: 'APEX Pain', href: '#' },
   { name: 'APEX Ortho', href: '#' },
   { name: 'APEX Academy', href: '#' },
 ];
