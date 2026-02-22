@@ -34,7 +34,7 @@ export function SearchModal() {
         <div className="overflow-y-auto max-h-[60vh] p-2">
           {results.length === 0 && query.length > 0 && <p className="text-sm text-slate-500 p-4 text-center">Nenhuma ferramenta encontrada</p>}
           {results.slice(0, 20).map((tool) => (
-            <button key={tool.id} onClick={() => { navigate(`/module/${tool.module}/${tool.id}`); setSearchOpen(false); }}
+            <button key={tool.id} onClick={() => { navigate(`/app/module/${tool.module}/${tool.id}`); setSearchOpen(false); }}
               className="w-full text-left p-3 rounded-lg hover:bg-slate-700/50 transition-colors flex items-center gap-3">
               <Badge color={MODULE_COLORS[tool.module]}>{tool.module}</Badge>
               <div><p className="text-sm font-medium text-slate-100">{tool.name}</p>
