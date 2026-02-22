@@ -77,6 +77,26 @@ export default function PonsetiMethodGuideTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Método de Ponseti — Tratamento do Pé Torto Congênito</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Protocolo de tratamento não-cirúrgico do pé torto equinovaro congênito baseado em gessos seriados manipulados segundo sequência CAVE (Cavo, Aduto, Varo, Equino), tenotomia e órtese de abduções.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Padrão-ouro para tratamento do pé torto congênito idiopático desde o nascimento. Idealmente iniciado nas primeiras semanas de vida. Eficaz mesmo em casos moderados a graves (Pirani >3).</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Fase de gessagem: 5-7 gessos semanais. Tenotomia percutânea do Aquiles: ~90% dos casos. Fase de órtese (botinha-barra): essencial — uso 23h/dia por 3 meses, depois noturno por 4-5 anos. Recidiva (20-30%): nova gessagem. Taxa de sucesso >90% se adesão à órtese.</p>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-wrap gap-2">
         {sections.map((s) => (
           <button key={s.id} onClick={() => setActiveSection(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeSection === s.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:text-slate-200'}`}>{s.title}</button>
