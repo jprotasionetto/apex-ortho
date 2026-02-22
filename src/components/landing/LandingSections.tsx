@@ -5,8 +5,6 @@ import {
   X,
   Star,
   Shield,
-  ExternalLink,
-  Instagram,
   ArrowRight,
   Zap,
   Crown,
@@ -488,107 +486,6 @@ export function ComparisonSection() {
 }
 
 /* ============================================================
-   SECTION 8 — CreatorSection
-   ============================================================ */
-
-const CREDENTIALS = [
-  'Ortopedista e Traumatologista — CRM-TO 4132 · RQE 2378',
-  'TEOT 17729 — Membro Titular da SBOT',
-  'Presidente da SBOT-TO',
-  'Supervisor do Programa de Residência em Ortopedia da UFT',
-  'Pós-graduação em Medicina da Dor e Medicina Regenerativa',
-  'Perito médico judicial',
-  'Fundador do ecossistema APEX Health IA',
-];
-
-export function CreatorSection() {
-  return (
-    <SectionWrapper id="criador">
-      <div className="max-w-5xl mx-auto">
-        <SectionBadge>Quem Criou</SectionBadge>
-        <div className="mb-12" />
-
-        <motion.div
-          variants={stagger}
-          className="flex flex-col lg:flex-row items-center lg:items-start gap-12"
-        >
-          {/* photo placeholder */}
-          <motion.div variants={scaleIn} className="shrink-0">
-            <div className="relative w-56 h-56 lg:w-64 lg:h-64 rounded-2xl bg-[#111111] border-2 border-[#D4AF37] flex items-center justify-center overflow-hidden">
-              {/* gold gradient behind initials */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[rgba(212,175,55,0.15)] to-transparent" />
-              <span className="relative text-5xl lg:text-6xl font-bold text-[#D4AF37]/80 tracking-wider select-none">
-                JP
-              </span>
-              {/* subtle corner decoration */}
-              <div className="absolute top-0 right-0 w-16 h-16">
-                <div className="absolute top-2 right-2 w-2 h-8 bg-[#D4AF37]/30 rounded-full" />
-                <div className="absolute top-2 right-2 w-8 h-2 bg-[#D4AF37]/30 rounded-full" />
-              </div>
-            </div>
-          </motion.div>
-
-          {/* text */}
-          <div className="flex-1 text-center lg:text-left">
-            <motion.span
-              variants={fadeInUp}
-              className="inline-block text-xs font-semibold tracking-wider uppercase text-[#D4AF37] mb-2"
-            >
-              Criador do APEX Ortho
-            </motion.span>
-
-            <motion.h3
-              variants={fadeInUp}
-              className="text-2xl sm:text-3xl font-bold text-white mb-6"
-            >
-              Dr. João Protásio Netto
-            </motion.h3>
-
-            <motion.ul variants={stagger} className="space-y-2.5 mb-8">
-              {CREDENTIALS.map((c) => (
-                <motion.li
-                  key={c}
-                  variants={fadeInUp}
-                  className="flex items-start gap-2.5 text-sm text-[#9CA3AF]"
-                >
-                  <Check className="w-4 h-4 text-[#D4AF37] mt-0.5 shrink-0" />
-                  <span>{c}</span>
-                </motion.li>
-              ))}
-            </motion.ul>
-
-            {/* quote */}
-            <motion.blockquote
-              variants={fadeInUp}
-              className="relative pl-6 border-l-2 border-[#D4AF37]/40 mb-8"
-            >
-              <Quote className="absolute -left-3 -top-1 w-5 h-5 text-[#D4AF37]/30" />
-              <p className="text-white/90 italic text-base leading-relaxed">
-                &ldquo;Criei o APEX Ortho porque durante minha residência eu precisava de
-                um app assim e ele simplesmente não existia.&rdquo;
-              </p>
-            </motion.blockquote>
-
-            {/* instagram */}
-            <motion.a
-              variants={fadeInUp}
-              href="https://instagram.com/drjoaoprotasio"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-[#D4AF37] hover:text-[#F4D03F] transition-colors"
-            >
-              <Instagram className="w-4 h-4" />
-              @drjoaoprotasio
-              <ExternalLink className="w-3 h-3 opacity-50" />
-            </motion.a>
-          </div>
-        </motion.div>
-      </div>
-    </SectionWrapper>
-  );
-}
-
-/* ============================================================
    SECTION 9 — TestimonialsSection
    ============================================================ */
 
@@ -1005,7 +902,7 @@ export function FinalCTASection() {
 
 const ECOSYSTEM_LINKS = [
   { name: 'APEX Finance', href: '#' },
-  { name: 'APEX Pain', href: '#' },
+  { name: 'APEX Dor', href: '#' },
   { name: 'APEX Ortho', href: '#' },
   { name: 'APEX Academy', href: '#' },
 ];
