@@ -8,6 +8,26 @@ export default function SamilsonPrietoTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação de Samilson-Prieto — Artropatia por Instabilidade</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Classifica as alterações degenerativas glenoumerais em pacientes com instabilidade crônica do ombro. Quatro graus com base em alterações radiológicas do espaço articular e osteófitos.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Avaliação radiológica de artropatia em ombros com instabilidade recorrente ou história de múltiplas cirurgias. Orienta decisão entre nova estabilização versus artroplastia glenoumeral.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Grau 0: sem alterações. Grau I: osteófito <3mm. Grau II: osteófito 3-7mm. Grau III: osteófito >7mm com remodelação articular. Graus III-IV = artropatia avançada: indicar artroplastia total glenoumeral ou RTSA. Grau II com instabilidade ativa: ainda pode tentar estabilização.</p>
+          </div>
+        </div>
+      </div>
       <div className="grid gap-2">
         {samilsonPrietoData.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-primary-500 bg-primary-500/10' : 'border-slate-700 hover:border-slate-600'}`}>
