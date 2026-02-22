@@ -921,9 +921,7 @@ export function Footer() {
           {/* col 1 — brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#D4AF37] to-[#F4D03F] flex items-center justify-center">
-                <Zap className="w-4 h-4 text-[#0A0A0A]" />
-              </div>
+              <img src="/icons/icon-192.png" alt="APEX Health IA" className="w-8 h-8 rounded-lg" />
               <span className="text-lg font-bold text-white">
                 APEX <span className="text-[#D4AF37]">Health IA</span>
               </span>
