@@ -80,6 +80,30 @@ export default function FlexorTendonZonesGuideTool() {
       ))}
       <Alert type="info">Polias A2 e A4 sao criticas para a funcao do dedo - preservar sempre que possivel durante reparacao.</Alert>
       <Alert type="caution">Zona II ("terra de ninguem") tem os piores resultados historicos - tecnica meticulosa e reabilitacao precoce sao essenciais.</Alert>
+      {/* Manual Images */}
+      <div className="mt-6 pt-6 border-t border-[rgba(212,175,55,0.15)]">
+        <p className="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-3">Manual SBOT — Imagens de Referência</p>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { src: '/images/manual-trauma/page133_img1.png', alt: 'Divisão da mão em zonas flexoras' },
+            { src: '/images/manual-trauma/page133_img2.png', alt: 'Divisão da mão em zonas flexoras (2)' },
+            { src: '/images/manual-trauma/page134_img1.png', alt: 'Técnicas de sutura flexora' },
+            { src: '/images/manual-trauma/page134_img2.png', alt: 'Técnicas de sutura (2)' },
+            { src: '/images/manual-trauma/page135_img1.png', alt: 'Exemplos de suturas' },
+            { src: '/images/manual-trauma/page135_img2.png', alt: 'Exemplos de suturas (2)' },
+          ].map((img, idx) => (
+            <div key={idx} className="rounded-lg overflow-hidden bg-[#0A0A0A] border border-[rgba(212,175,55,0.1)]">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-auto object-contain"
+                onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display='none'; }}
+              />
+              <p className="text-[10px] text-[#6B7280] p-1.5 leading-tight">{img.alt}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
