@@ -56,6 +56,26 @@ export default function BoutonniereGuideTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Deformidade em Boutonnière — Lesão da Banda Central do Extensor</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Deformidade do dedo caracterizada por flexão da IFP e hiperextensão da IFD causada por ruptura da banda central do tendão extensor. Pode ser aguda (trauma) ou crônica (AR).</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Lesão do extensor na região da IFP (zona III). O diagnóstico precoce é essencial — boutonnière aguda tratada tardiamente evolui para deformidade fixa e rigidez articular.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Aguda/parcial: tala extensão IFP 6-8 semanas (IFD livre). Crônica flexível: tala + reabilitação. Crônica rígida: cirurgia reconstrutiva. Nunca imobilizar a IFD em extensão.</p>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-wrap gap-2">
         {sections.map((s) => (
           <button key={s.id} onClick={() => setActiveSection(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeSection === s.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:text-slate-200'}`}>{s.title}</button>
