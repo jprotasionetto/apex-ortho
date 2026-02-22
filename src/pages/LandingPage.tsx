@@ -25,7 +25,6 @@ import {
 import {
   ModulesSection,
   ComparisonSection,
-  CreatorSection,
   TestimonialsSection,
   PricingSection,
   FAQSection,
@@ -686,7 +685,7 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
-              <Link to="/landing" className="flex items-center gap-2.5">
+              <Link to="/" className="flex items-center gap-2.5">
                 <div
                   className="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-black text-sm"
                   style={{
@@ -726,7 +725,7 @@ export default function LandingPage() {
               {/* CTA */}
               <div className="hidden md:flex items-center gap-4">
                 <Link
-                  to="/"
+                  to="/app"
                   className="px-5 py-2 rounded-lg text-sm font-semibold text-black tracking-wider transition-all hover:scale-[1.02]"
                   style={{
                     background: 'linear-gradient(135deg, #D4AF37, #F4D03F)',
@@ -783,7 +782,7 @@ export default function LandingPage() {
                 ))}
                 <div className="pt-3 px-4">
                   <Link
-                    to="/"
+                    to="/app"
                     className="block w-full text-center px-5 py-3 rounded-lg text-sm font-semibold text-black tracking-wider"
                     style={{
                       background: 'linear-gradient(135deg, #D4AF37, #F4D03F)',
@@ -860,7 +859,7 @@ export default function LandingPage() {
             {/* CTA Buttons */}
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 mb-6">
               <Link
-                to="/"
+                to="/app"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-sm tracking-wider text-black transition-all hover:scale-[1.02] active:scale-[0.98]"
                 style={{
                   background: 'linear-gradient(135deg, #D4AF37, #F4D03F)',
@@ -875,7 +874,7 @@ export default function LandingPage() {
             <motion.p variants={fadeInUp} className="text-sm mb-8">
               <span className="text-gray-500">ou </span>
               <Link
-                to="/"
+                to="/app"
                 className="text-[#D4AF37] hover:text-[#F4D03F] underline underline-offset-4 decoration-[#D4AF37]/30 transition-colors"
               >
                 R$ 599,90 acesso vitalicio (economize 15 meses)
@@ -1231,7 +1230,6 @@ export default function LandingPage() {
       {/* Sections 6-12 */}
       <ModulesSection />
       <ComparisonSection />
-      <CreatorSection />
       <TestimonialsSection />
       <PricingSection />
       <FAQSection />
