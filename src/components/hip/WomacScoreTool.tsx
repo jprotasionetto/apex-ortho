@@ -33,6 +33,26 @@ export default function WomacScoreTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">WOMAC — Western Ontario and McMaster Universities Osteoarthritis Index</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Questionário de 24 perguntas auto-aplicável para osteoartrite de quadril e joelho, avaliando dor (5 itens), rigidez (2 itens) e função física (17 itens). Responde à tratamento conservador e cirúrgico.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">OA de quadril ou joelho — avaliação pré e pós-operatória de artroplastia, fisioterapia, infiltrações e medicamentos. Diferencia-se do HHS por ser completamente auto-reportado pelo paciente (PROM).</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Pontuação 0-96 (maior = pior). Redução de ≥10% é clinicamente relevante. Usado em estudos comparativos de ATQ e ATJ. Correlaciona bem com qualidade de vida geral. Alternativa: KOOS-Hip (versão extendida).</p>
+          </div>
+        </div>
+      </div>
       <Alert type="info">WOMAC: pontuacao mais alta = pior funcao. Escala de 0 (sem sintomas) a 96 (sintomas extremos).</Alert>
       {sections.map(([sectionName, items]) => (
         <div key={sectionName}>
