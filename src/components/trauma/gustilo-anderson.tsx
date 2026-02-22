@@ -8,6 +8,23 @@ export default function GustiloAndersonTool() {
   const active = selected ? gustiloAndersonData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Images from MANUAL DE TRAUMA ORTOPÉDICO — Fraturas Expostas chapter (pp. 31-40) */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">
+          Fraturas Expostas — Manual SBOT (pp. 31–40)
+        </p>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { src: '/images/manual-trauma/page30_img1.png', caption: 'Algoritmo de conduta — lesão arterial e estado hemodinâmico' },
+            { src: '/images/manual-trauma/page50_img1.png', caption: 'Classificação de Gustilo-Anderson — Tipos I, II, III' },
+          ].map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-32 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
       {/* Interactive SVG Diagram */}
       <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
         <GustiloAndersonSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
