@@ -14,6 +14,26 @@ export default function UmeroDistalAOTool() {
   const active = selected ? data.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação AO/OTA — Fraturas do Úmero Distal</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Classifica fraturas do úmero distal em Tipo A (extraarticular), Tipo B (parcialmente articular — côndilo, capítulo, tróclea) e Tipo C (completamente articular — dicondilares e cominutivas).</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda fratura do úmero distal em adulto — TC obrigatória para planejamento cirúrgico. A maioria requer ORIF — úmero distal raramente tolerado sem cirurgia exceto em idosos com baixa demanda.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Tipos B e C: ORIF com dupla placa perpendicular (90-90) ou paralela — padrão-ouro. Tipo C3 em idoso &gt;75 anos: artroplastia total do cotovelo (TEA) — melhor outcome funcional que ORIF em osso de má qualidade. Abordagem: tricipital ou olecranização.</p>
+          </div>
+        </div>
+      </div>
       <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
         <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Úmero Distal — Manual SBOT (p. 83)</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
