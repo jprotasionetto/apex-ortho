@@ -19,6 +19,26 @@ export default function ColtonOlecranonTool() {
   const active = selected ? data.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação de Colton — Fraturas do Olécrano</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Classifica as fraturas do olécrano em não-deslocadas (Tipo I) e deslocadas (Tipos II-IV). As deslocadas subdividem-se em avulsões, oblíquas/transversas, cominutivas e fratura-luxação.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda fratura do olécrano. A classificação guia diretamente a indicação cirúrgica e a escolha do implante.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Tipo I (não deslocada, extensão ativa mantida): tratamento conservador com tala. Tipos II-IV: cirurgia — fio em tensão (banda de tensão/TBW) para simples, placa para cominutivas e fratura-luxação.</p>
+          </div>
+        </div>
+      </div>
       <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
         <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Olécrano — Manual SBOT (pp. 88–91)</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
