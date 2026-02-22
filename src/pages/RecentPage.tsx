@@ -15,7 +15,7 @@ export default function RecentPage() {
       ) : (
         <div className="grid gap-3">
           {recTools.map((tool) => tool && (
-            <Link key={tool.id} to={`/module/${tool.module}/${tool.id}`} className="bg-slate-800 border border-slate-700 rounded-xl p-4 hover:border-slate-600 transition-colors">
+            <Link key={tool.id} to={`/app/module/${tool.module}/${tool.id}`} className="bg-slate-800 border border-slate-700 rounded-xl p-4 hover:border-slate-600 transition-colors">
               <h3 className="text-sm font-medium text-slate-100">{tool.name}</h3>
               <p className="text-xs text-slate-500 mt-1">{tool.description}</p>
               <Badge color={MODULE_COLORS[tool.module]}>{tool.module}</Badge>
