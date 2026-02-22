@@ -29,6 +29,30 @@ export default function WeberClassificationTool() {
           ))}
         </div>
       </div>
+
+      {/* Técnica Cirúrgica e Resultados — Manual SBOT */}
+      <div className="mt-4 pt-4 border-t border-[rgba(212,175,55,0.1)]">
+        <p className="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-3">Técnica e Resultados</p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          {[
+            { src: '/images/manual-trauma/page199_img2.png', alt: 'Estabilização articular — técnica' },
+            { src: '/images/manual-trauma/page201_img2.png', alt: 'Fixação Weber B/C — placa e parafusos (2)' },
+            { src: '/images/manual-trauma/page201_img3.png', alt: 'Fixação Weber B/C — placa e parafusos (3)' },
+            { src: '/images/manual-trauma/page203_img1.png', alt: 'Fraturas por cisalhamento — tratamento' },
+            { src: '/images/manual-trauma/page203_img2.png', alt: 'Fraturas por cisalhamento (2)' },
+            { src: '/images/manual-trauma/page204_img1.png', alt: 'Retirada de fragmentos' },
+            { src: '/images/manual-trauma/page204_img2.png', alt: 'Retirada de fragmentos (2)' },
+            { src: '/images/manual-trauma/page205_img1.png', alt: 'Consolidação viciosa — encurtamento' },
+          ].map((img, idx) => (
+            <div key={idx} className="rounded-lg overflow-hidden bg-[#0A0A0A] border border-[rgba(212,175,55,0.1)]">
+              <img src={img.src} alt={img.alt} className="w-full h-auto object-contain"
+                onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display='none'; }} />
+              <p className="text-[10px] text-[#6B7280] p-1.5 leading-tight">{img.alt}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Interactive SVG Diagram */}
       <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
         <WeberSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
