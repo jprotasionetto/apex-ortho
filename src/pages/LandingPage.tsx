@@ -654,7 +654,7 @@ export default function LandingPage() {
   ];
 
   // Credibility bar stat hooks
-  const stat1 = useCountUp(167);
+  const stat1 = useCountUp(200);
   const stat2 = useCountUp(13);
   const stat3 = useCountUp(112);
   const stat4 = useCountUp(25);
@@ -841,7 +841,7 @@ export default function LandingPage() {
               variants={fadeInUp}
               className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8 max-w-xl"
             >
-              167 ferramentas clinicas em 13 subespecialidades. Diagramas
+              200+ ferramentas clinicas em 13 subespecialidades. Diagramas
               interativos de fraturas. Calculadoras com interpretacao
               automatica. Funciona offline. Feito por ortopedista, para
               ortopedistas.
@@ -923,7 +923,7 @@ export default function LandingPage() {
             viewport={{ once: true, amount: 0.3 }}
           >
             {[
-              { num: stat1, suffix: '', label: 'Ferramentas', icon: Layers },
+              { num: stat1, suffix: '+', label: 'Ferramentas', icon: Layers },
               { num: stat2, suffix: '', label: 'Subespecialidades', icon: Activity },
               { num: stat3, suffix: '', label: 'Classificacoes', icon: Image },
               { num: stat4, suffix: '+', label: 'SVGs Interativos', icon: Star },
@@ -1070,7 +1070,7 @@ export default function LandingPage() {
               A Solucao
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif text-white tracking-wide mb-4">
-              APEX Ortho: 167 ferramentas.
+              APEX Ortho: 200+ ferramentas.
               <br className="hidden sm:block" /> 13 subespecialidades.{' '}
               <span
                 className="bg-clip-text text-transparent"
