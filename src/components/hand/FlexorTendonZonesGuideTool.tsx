@@ -63,6 +63,26 @@ export default function FlexorTendonZonesGuideTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Zonas de Verdan — Lesões do Tendão Flexor</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Divide as lesões dos tendões flexores em 5 zonas anatômicas (I-V) da ponta do dedo até o antebraço proximal. Cada zona tem particularidades cirúrgicas e prognóstico distinto.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda laceração com suspeita de lesão de tendão flexor. A zona determina a abordagem cirúrgica, tipo de reparo e protocolo de reabilitação pós-operatório.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Zona II ('Terra de Ninguém'): pior prognóstico — bainha sinovial estreita, ambos FDS e FDP juntos. Reparo primário em 72h, protocolo Kleinert ou Duran. Zonas I, III, IV, V: melhor prognóstico. Cirurgia sempre por mão especializada.</p>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-wrap gap-2">
         {sections.map((s) => (
           <button key={s.id} onClick={() => setActiveSection(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeSection === s.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:text-slate-200'}`}>{s.title}</button>
