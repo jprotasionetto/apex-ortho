@@ -27,7 +27,7 @@ export default function ModulePage() {
   return (
     <div className="space-y-6 animate-fade-in">
       <div>
-        <Link to="/" className="text-sm text-slate-500 hover:text-slate-300 mb-2 inline-block">{'<'} Voltar</Link>
+        <Link to="/app" className="text-sm text-slate-500 hover:text-slate-300 mb-2 inline-block">{'<'} Voltar</Link>
         <h1 className="text-2xl font-bold text-slate-50">{mod.name}</h1>
         <p className="text-slate-400 mt-1">{mod.description}</p>
       </div>
@@ -40,7 +40,7 @@ export default function ModulePage() {
       </div>
       <div className="grid gap-3">
         {filtered.map((tool) => (
-          <Link key={tool.id} to={`/module/${moduleId}/${tool.id}`}
+          <Link key={tool.id} to={`/app/module/${moduleId}/${tool.id}`}
             className="bg-slate-800 border border-slate-700 rounded-xl p-4 hover:border-slate-600 transition-colors flex items-start gap-4">
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
