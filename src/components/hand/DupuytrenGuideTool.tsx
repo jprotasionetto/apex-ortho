@@ -62,6 +62,26 @@ export default function DupuytrenGuideTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Contratura de Dupuytren — Fibromatose da Fáscia Palmar</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Fibroproliferação progressiva da fáscia palmar formando cordões que causam contratura em flexão dos dedos. Afeta principalmente 4º e 5º dedos, mais comum em homens &gt;50 anos.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Quando a contratura da MCF ≥30° ou IFP ≥15°, interfere com função. Teste da mesa (não consegue apoiar palma plana) indica cirurgia. Tabletop test positivo = indicação cirúrgica.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Tratamento: fasciectomia parcial (padrão-ouro), fasciotomia por agulha percutânea (menos invasivo) ou colagenase Clostridium histolyticum (injeção, disponível em alguns países). Alta recidiva (30-70%).</p>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-wrap gap-2">
         {sections.map((s) => (
           <button key={s.id} onClick={() => setActiveSection(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeSection === s.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:text-slate-200'}`}>{s.title}</button>
