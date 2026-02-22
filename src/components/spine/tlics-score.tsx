@@ -30,6 +30,19 @@ export default function TlicsScoreTool() {
           </div>
         </div>
       </div>
+      {/* Imagem do Manual */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">
+          Fratura Toracolombar — Manual SBOT (p. 188)
+        </p>
+        <img
+          src="/images/manual-trauma/page188_img1.png"
+          alt="Fratura toracolombar — classificação e morfologia"
+          className="w-full rounded-lg bg-[#0A0A0A] object-contain max-h-72"
+          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+        />
+        <p className="text-xs text-gray-400 mt-2 text-center">Morfologia das fraturas toracolombares — Manual SBOT de Trauma Ortopédico</p>
+      </div>
 
       {tlicsScore.items.map((item) => (
         <RadioGroup key={item.id} name={item.id} label={item.label} options={item.options || []} value={values[item.id]} onChange={(v) => setValues((prev) => ({ ...prev, [item.id]: v }))} />
