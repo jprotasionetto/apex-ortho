@@ -8,6 +8,27 @@ export default function SpondylolisthesisMeyerdingTool() {
   const active = selected ? spondylolisthesisMeyerding.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação de Meyerding — Espondilolistese</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Classifica o grau de deslizamento vertebral anterior (espondilolistese) em 4 graus mais espondiloptose, baseado na porcentagem de translação da vértebra superior sobre a inferior.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Espondilolistese em qualquer nível (mais comum L4-L5 e L5-S1) identificada em RX. Orienta intensidade do tratamento: conservador para graus baixos, cirúrgico para graus altos ou sintomáticos.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Grau I (<25%): geralmente conservador. Grau II (25-50%): conservador ou cirurgia se sintomático. Grau III-IV (>50%): cirurgia (redução + fusão instrumentada). Espondiloptose (>100%): caso complexo — redução parcial + fusão longa.</p>
+          </div>
+        </div>
+      </div>
+
       <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
         <MeyerdingSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
       </div>
