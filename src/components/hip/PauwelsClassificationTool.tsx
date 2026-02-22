@@ -9,6 +9,26 @@ export default function PauwelsClassificationTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação de Pauwels — Ângulo da Fratura do Colo Femoral</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Classifica as fraturas do colo femoral pelo ângulo da linha de fratura em relação à horizontal. Determina as forças de cisalhamento e o risco de pseudartrose.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Fraturas do colo femoral em pacientes com osso de qualidade adequada para fixação interna (geralmente &lt; 65 anos ou &gt; 65 anos biologicamente jovens).</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Pauwels III (&gt;70°) tem alto cisalhamento e maior risco de pseudartrose e necrose avascular. Frequentemente indica fixação com parafusos canulados + enxerto ou artroplastia.</p>
+          </div>
+        </div>
+      </div>
       <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
         <PauwelsSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
       </div>
