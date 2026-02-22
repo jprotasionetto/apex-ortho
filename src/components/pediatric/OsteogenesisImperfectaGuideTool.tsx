@@ -81,6 +81,26 @@ export default function OsteogenesisImperfectaGuideTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Osteogênese Imperfeita — Classificação de Sillence</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Doença genética do colágeno tipo I que causa fragilidade óssea. Classificação de Sillence divide em 4 tipos principais pela gravidade (I: leve a IV: moderada-grave). Mutações em COL1A1/COL1A2.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Criança com fraturas repetidas, escleróticas azuis, perda auditiva, dentinogênese imperfeita ou hiperlassidão ligamentar. Suspeita de maus-tratos deve ser diferenciada. Diagnóstico clínico + genético.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Tipo I: mais comum, leve, poucas fraturas. Tipo II: letal perinatal. Tipo III: grave, deformidade progressiva. Tipo IV: moderada. Tratamento: bisfosfonatos (pamidronato), hastes telescópicas intramedular (Fassier-Duval) para fêmur e tíbia com deformidades. Sem cura.</p>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-wrap gap-2">
         {sections.map((s) => (
           <button key={s.id} onClick={() => setActiveSection(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeSection === s.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:text-slate-200'}`}>{s.title}</button>
