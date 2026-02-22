@@ -20,6 +20,26 @@ export default function SchatzkerClassificationTool() {
         />
         <p className="text-xs text-gray-400 mt-2 text-center">Tipos I–VI de Schatzker — do livro SBOT Manual de Trauma Ortopédico</p>
       </div>
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação de Schatzker — Fraturas do Planalto Tibial</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Seis tipos de fratura do planalto tibial (I-VI) em ordem crescente de gravidade energética e dificuldade de tratamento. Correlaciona com mecanismo e prognóstico articular.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda fratura do planalto tibial. Orienta a abordagem cirúrgica, tipo de implante e prognóstico funcional do joelho.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Tipos I-III: unicondilares laterais — fixação com parafusos ± enxerto. Tipos IV-VI: alta energia, bicondilar ou com dissociação metadiafisária — dupla placa, fixação externa temporária.</p>
+          </div>
+        </div>
+      </div>
       <div className="grid gap-2">
         {schatzkerClassificationData.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-primary-500 bg-primary-500/10' : 'border-slate-700 hover:border-slate-600'}`}>
