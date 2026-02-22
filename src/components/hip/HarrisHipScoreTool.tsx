@@ -33,6 +33,26 @@ export default function HarrisHipScoreTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Harris Hip Score (HHS) — Escore Funcional do Quadril</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Escala de 100 pontos para avaliação funcional do quadril: dor (44 pts), função (47 pts), ausência de deformidade (4 pts) e amplitude de movimento (5 pts). Padrão para artroplastia.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Avaliação pré e pós-operatória de artroplastia total ou parcial do quadril, fraturas do colo femoral, osteoartrite e impacto femoroacetabular. Principal outcome em cirurgia do quadril.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Excelente: ≥90 | Bom: 80-89 | Regular: 70-79 | Ruim: <70. Um aumento de ≥10 pontos é clinicamente significativo. A subescala de dor (44 pts) é o domínio mais ponderado do escore.</p>
+          </div>
+        </div>
+      </div>
       {sections.map(([sectionName, items]) => (
         <div key={sectionName}>
           <h3 className="text-md font-semibold text-slate-200 mb-3 pb-2 border-b border-slate-700">{sectionName}</h3>
