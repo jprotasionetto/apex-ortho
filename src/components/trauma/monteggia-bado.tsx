@@ -7,6 +7,26 @@ export default function MonteggiaBadoTool() {
   const active = selected ? monteggiaBadoData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação de Bado — Lesão de Monteggia</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Lesão de Monteggia é fratura da diáfise ulnar + luxação da cabeça do rádio. Bado classifica em 4 tipos pelo sentido da luxação radial: anterior (I, 70%), posterior (II), lateral (III) e variante (IV).</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda fratura de ulna deve ter radiografia do cotovelo para excluir luxação da cabeça do rádio — erro de diagnóstico leva a tratamento inadequado e perda de redução. RX deve incluir cotovelo SEMPRE.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Adulto: cirurgia — fixação de ulna com placa + redução fechada da cabeça do rádio (cirúrgica se irredutível). Criança: redução fechada geralmente suficiente. Tipo II posterior: pior prognóstico, frequentemente requer fixação de cabeça do rádio também.</p>
+          </div>
+        </div>
+      </div>
       <div className="grid gap-2">
         {monteggiaBadoData.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-primary-500 bg-primary-500/10' : 'border-slate-700 hover:border-slate-600'}`}>
