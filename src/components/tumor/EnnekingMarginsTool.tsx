@@ -8,6 +8,26 @@ export default function EnnekingMarginsTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Margens Cirúrgicas de Enneking — Ressecção de Tumores Ósseos</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Define os tipos de margens cirúrgicas em ressecção de tumores musculoesqueléticos: intralesional (dentro), marginal (pseudocápsula), ampla (fora da pseudocápsula, tecido normal) e radical (compartimento inteiro).</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Planejamento cirúrgico de ressecção de qualquer tumor ósseo ou de partes moles. A margem adequada depende do estadiamento (Enneking) e do tipo histológico do tumor.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Intralesional: apenas para tumores benignos (curetagem). Marginal: tumores benignos agressivos (curetagem + adjuvante). Ampla: padrão para tumores malignos de baixo e alto grau. Radical: raramente viável, reservada para tumores em compartimento fechado. Margem inadequada = alto risco de recidiva local.</p>
+          </div>
+        </div>
+      </div>
       <div className="grid gap-2">
         {ennekingMarginsData.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-primary-500 bg-primary-500/10' : 'border-slate-700 hover:border-slate-600'}`}>
