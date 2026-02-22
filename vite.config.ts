@@ -12,13 +12,13 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icons/*.png'],
       manifest: {
-        name: 'APEX Ortho',
+        name: 'APEX Ortho — Clinical Decision Support',
         short_name: 'APEX Ortho',
         description: 'Ferramentas clinicas interativas para ortopedia e traumatologia',
-        theme_color: '#0F172A',
-        background_color: '#0F172A',
+        theme_color: '#0A0A0A',
+        background_color: '#0A0A0A',
         display: 'standalone',
-        start_url: '/',
+        start_url: '/app',
         icons: [
           { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
