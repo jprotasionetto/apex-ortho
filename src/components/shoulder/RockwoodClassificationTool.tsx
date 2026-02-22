@@ -3,12 +3,36 @@ import { rockwoodClassificationData } from '@/data/shoulder/rockwood-classificat
 import { Alert } from '@/components/ui/Alert.tsx';
 import RockwoodSVG from '@/components/svg/shoulder/RockwoodSVG.tsx';
 
+const manualImages = [
+  { src: '/images/manual-trauma/page61_img1.png', caption: 'Classificação de Rockwood — Articulação Acromioclavicular (1)' },
+  { src: '/images/manual-trauma/page61_img2.png', caption: 'Classificação de Rockwood — AC joint, complicações e graus (2)' },
+  { src: '/images/manual-trauma/page62_img1.png', caption: 'Figura 2 — Rockwood AC joint, graus de separação' },
+];
+
 export default function RockwoodClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
   const active = selected ? rockwoodClassificationData.grades.find((g) => g.id === selected) : null;
 
   return (
     <div className="space-y-6">
+      {/* Manual SBOT — Imagens de Referência */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">
+          Articulação Acromioclavicular — Manual SBOT (pp. 61–62)
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {manualImages.map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]">
+                <p className="text-xs text-gray-400 leading-tight">{img.caption}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Interactive SVG Diagram */}
       <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
         <RockwoodSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
