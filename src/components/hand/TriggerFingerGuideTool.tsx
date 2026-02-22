@@ -59,6 +59,26 @@ export default function TriggerFingerGuideTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Dedo em Gatilho (Tenossinovite Estenosante) — Classificação de Quinnell</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Tenossinovite estenosante do tendão flexor que causa travamento do dedo na flexão. Inflamação e espessamento do tendão flexor na polia A1 causa disparo ou bloqueio ao deslizamento.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Dedo que trava, estalido doloroso na flexão/extensão ou bloqueio fixo em flexão. Classificação de Quinnell (0-4) guia o tratamento conservador versus cirúrgico.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Grau 0-1: AINE + órtese. Grau 2: infiltração de corticoide A1 (75-90% resolução em 1-2 infiltrações). Grau 3-4 ou falha conservador: liberação percutânea ou cirúrgica da polia A1. Excluir AR e diabetes.</p>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-wrap gap-2">
         {sections.map((s) => (
           <button key={s.id} onClick={() => setActiveSection(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeSection === s.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:text-slate-200'}`}>{s.title}</button>
