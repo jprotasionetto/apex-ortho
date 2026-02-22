@@ -8,6 +8,26 @@ export default function AoClassificationTool() {
   const active = selected ? aoClassificationData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação AO/OTA — Fraturas Diafisárias</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Sistema universal da AO Foundation para classificar fraturas de ossos longos. Divide em tipos A (simples), B (cunha) e C (complexo/cominutiva), com subgrupos crescentes de gravidade.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Qualquer fratura diafisária (úmero 12, rádio-ulna 22, fêmur 32, tíbia 42 etc.). Usada mundialmente para comunicação, pesquisa e planejamento cirúrgico.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Tipo A: fixação interna direta (placa/haste). Tipo B: haste + parafuso de tração. Tipo C (cominutiva): haste bloqueada, sem compressão — não reparável por redução direta.</p>
+          </div>
+        </div>
+      </div>
       {/* Interactive SVG Diagram */}
       <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
         <AOClassificationSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
