@@ -129,9 +129,7 @@ function PhoneMockup() {
           {/* App header */}
           <div className="px-4 pt-2 pb-3">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-6 h-6 rounded-md bg-gradient-to-br from-[#D4AF37] to-[#F4D03F] flex items-center justify-center">
-                <span className="text-[8px] font-bold text-black">A</span>
-              </div>
+              <img src="/icons/icon-192.png" alt="APEX Ortho" className="w-6 h-6 rounded-md" />
               <span className="text-[11px] font-semibold tracking-wider text-white">
                 APEX Ortho
               </span>
@@ -686,14 +684,7 @@ export default function LandingPage() {
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
               <Link to="/" className="flex items-center gap-2.5">
-                <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-black text-sm"
-                  style={{
-                    background: 'linear-gradient(135deg, #D4AF37, #F4D03F)',
-                  }}
-                >
-                  A
-                </div>
+                <img src="/icons/icon-192.png" alt="APEX Ortho" className="w-8 h-8 rounded-lg" />
                 <span
                   className="font-bold tracking-[0.15em] text-sm bg-clip-text text-transparent"
                   style={{
