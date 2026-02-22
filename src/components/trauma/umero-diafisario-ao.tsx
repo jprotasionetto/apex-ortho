@@ -14,6 +14,26 @@ export default function UmeroDiafisarioAOTool() {
   const active = selected ? data.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação AO/OTA — Fraturas Diafisárias do Úmero</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Classifica fraturas da diáfise umeral (código 12) em 3 tipos AO: Tipo A (simples), Tipo B (cunha/asa de borboleta) e Tipo C (complexa/cominutiva). Guia fixação e abordagem.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda fratura diafisária umeral. Avaliar nervo radial (lesão em 18% das fraturas de 1/3 distal — "Holstein-Lewis"). A maioria pode ser tratada conservadoramente com órtese funcional de Sarmiento.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Conservador (órtese funcional): 90% de consolidação. Indicação cirúrgica: lesão de nervo radial progressiva pós-redução, fratura patológica, polifocalidade, politraumatizado, falha conservadora. Fixação: placa (padrão) ou haste intramedular anterógrada. Cuidado com nervo radial na abordagem posterior.</p>
+          </div>
+        </div>
+      </div>
       <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
         <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Úmero Diafisário — Manual SBOT (p. 79)</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
