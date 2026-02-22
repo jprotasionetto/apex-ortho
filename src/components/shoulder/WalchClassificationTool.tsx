@@ -9,6 +9,26 @@ export default function WalchClassificationTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação de Walch — Morfologia da Glenoide</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Classifica a morfologia da glenoide em artroplastias e osteoartrose do ombro. Determina o desgaste posterior e a retroversão acetabular glenoidal.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Planejamento de artroplastia total do ombro (TSA/RTSA). Avalia o risco de afrouxamento do componente glenoidal.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Tipos B2/B3 e C têm maior risco de falha do implante; influenciam a decisão entre implante anatômico vs reverso.</p>
+          </div>
+        </div>
+      </div>
       {/* Interactive SVG Diagram */}
       <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
         <WalchSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
