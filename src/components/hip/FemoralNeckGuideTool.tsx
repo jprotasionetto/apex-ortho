@@ -62,6 +62,26 @@ export default function FemoralNeckGuideTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Guia de Fraturas do Colo Femoral</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Consolidação das classificações para fraturas do colo do fêmur (Pauwels, Garden e AO/OTA) em um guia clínico integrado. Auxilia na escolha entre fixação interna e artroplastia.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda fratura do colo femoral em adulto. A decisão terapêutica baseia-se na: idade, nível de atividade, grau de deslocamento (Garden) e ângulo de fratura (Pauwels).</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Garden I-II em jovem: fixação (parafusos canulados). Garden III-IV em idoso: artroplastia parcial (hemiartroplastia) ou total (ATQ) dependendo da demanda funcional. Em jovens: sempre tentar fixação para preservar cabeça femoral.</p>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-wrap gap-2">
         {sections.map((s) => (
           <button key={s.id} onClick={() => setActiveSection(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeSection === s.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:text-slate-200'}`}>{s.title}</button>
