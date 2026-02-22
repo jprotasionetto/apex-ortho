@@ -20,6 +20,26 @@ export default function LetournelJudetTool() {
   const active = selected ? data.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação de Letournel-Judet — Fraturas do Acetábulo</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Sistema de 10 tipos de fraturas acetabulares divididos em 5 elementares (envolvem uma coluna ou parede) e 5 associadas (combinações). Base para planejamento cirúrgico de fraturas acetabulares.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda fratura do acetábulo identificada em TC com reconstrução 3D. TC é mandatória — RX insuficiente. Classifica para determinar abordagem cirúrgica: Kocher-Langenbeck, ilioinguinal, combinado, abordagem de Stoppa.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Transversal + parede posterior: mais comum. Ambas as colunas: pode consolidar sem cirurgia se "teto acetabular intacto" (congruência secundária). Fratura de parede posterior: cirurgia se &gt;40% da parede ou instabilidade. Objetivo: reconstrução anatômica para prevenir artrose precoce.</p>
+          </div>
+        </div>
+      </div>
       <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
         <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Acetábulo — Manual SBOT (pp. 143–149)</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
