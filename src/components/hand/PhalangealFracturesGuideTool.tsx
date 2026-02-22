@@ -65,6 +65,26 @@ export default function PhalangealFracturesGuideTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Fraturas das Falanges — Trauma da Mão</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Fraturas das falanges proximal, média e distal são as fraturas mais comuns da mão. A maioria pode ser tratada conservadoramente com buddy tape ou tala, mas instabilidade e articular requerem fixação.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda fratura de falange com desvio rotacional, angulação &gt;10-15°, intra-articular com &gt;20% da superfície ou instabilidade. Avaliação clínica de rotação é essencial — observar alinhamento dos dedos em flexão.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Estável não deslocada: buddy tape / tala 3-4 semanas. Deslocada redutível: tala após redução. Instável / intra-articular significativa: fixação (K-wire, parafuso, placa). Rigidez pós-fratura de falange é a complicação mais comum.</p>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-wrap gap-2">
         {sections.map((s) => (
           <button key={s.id} onClick={() => setActiveSection(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeSection === s.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:text-slate-200'}`}>{s.title}</button>
