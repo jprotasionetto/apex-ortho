@@ -8,6 +8,27 @@ export default function TileClassificationTool() {
   const active = selected ? tileClassificationData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Images from MANUAL DE TRAUMA ORTOPÉDICO — Pelvis/Acetabulo chapter (pp. 140-149) */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">
+          Anel Pélvico — Manual SBOT (pp. 140–149)
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {[
+            { src: '/images/manual-trauma/page143_img1.png', caption: 'Epidemiologia e mecanismo das fraturas pélvicas' },
+            { src: '/images/manual-trauma/page144_img1.png', caption: 'Corona Mortis — anastomose presente em 84% da população' },
+            { src: '/images/manual-trauma/page146_img1.png', caption: 'Incidências de Judet (alar e obturatriz) — acetábulo' },
+            { src: '/images/manual-trauma/page146_img2.png', caption: 'Classificação de Letournel — tipos elementares' },
+            { src: '/images/manual-trauma/page147_img1.png', caption: 'Vias de acesso para o anel pélvico' },
+            { src: '/images/manual-trauma/page148_img1.png', caption: 'Fixação definitiva — parafusos iliosacros' },
+          ].map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
       {/* Interactive SVG Diagram */}
       <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
         <TilePelvicSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
