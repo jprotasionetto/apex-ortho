@@ -62,6 +62,26 @@ export default function JerseyFingerGuideTool() {
 
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Jersey Finger — Avulsão do Tendão Flexor Profundo</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Avulsão do tendão FDP (flexor digitorum profundus) na inserção na falange distal. Geralmente ocorre ao tentar segurar jersey de adversário no esporte. Principalmente 4º dedo.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda perda de flexão ativa da IFD após trauma em hiperextensão forçada do dedo. Diagnóstico clínico (posição de repouso em extensão, sem flexão ativa IFD) confirmado por US ou RM.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Tipo I (retração palmar): reparo em até 10 dias. Tipo II (nível IFP): até 3 meses. Tipo III (fragmento ósseo): fixação com parafuso. Sem reparo → perda permanente flexão IFD. É urgência relativa cirúrgica.</p>
+          </div>
+        </div>
+      </div>
       <div className="flex flex-wrap gap-2">
         {sections.map((s) => (
           <button key={s.id} onClick={() => setActiveSection(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeSection === s.id ? 'bg-primary-500 text-white' : 'bg-slate-800 text-slate-400 hover:text-slate-200'}`}>{s.title}</button>
