@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import {
   Check,
@@ -280,7 +281,7 @@ export function ModulesSection() {
           className="mt-14 text-center"
         >
           <p className="font-mono text-lg sm:text-xl tracking-wide">
-            <span className="text-[#D4AF37] font-semibold">167</span>
+            <span className="text-[#D4AF37] font-semibold">200+</span>
             <span className="text-[#6B7280]"> ferramentas &middot; </span>
             <span className="text-[#D4AF37] font-semibold">0</span>
             <span className="text-[#6B7280]"> dependência de internet &middot; </span>
@@ -571,7 +572,7 @@ export function TestimonialsSection() {
 
 const FEATURES_MONTHLY = [
   'Acesso aos 13 módulos completos',
-  '167 ferramentas clínicas',
+  '200+ ferramentas clínicas',
   'Diagramas interativos',
   'Funciona 100% offline',
   'Conteúdo em português',
@@ -587,6 +588,7 @@ const FEATURES_LIFETIME = [
 ];
 
 export function PricingSection() {
+  const navigate = useNavigate();
   return (
     <SectionWrapper id="precos">
       <div className="max-w-5xl mx-auto">
@@ -629,7 +631,7 @@ export function PricingSection() {
               ))}
             </ul>
 
-            <button className="w-full py-3.5 rounded-xl text-sm font-bold uppercase tracking-wider border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[rgba(212,175,55,0.1)] transition-colors">
+            <button onClick={() => navigate('/app')} className="w-full py-3.5 rounded-xl text-sm font-bold uppercase tracking-wider border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[rgba(212,175,55,0.1)] transition-colors">
               Assinar Mensal
             </button>
           </motion.div>
@@ -679,7 +681,7 @@ export function PricingSection() {
               ))}
             </ul>
 
-            <button className="relative w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-gradient-to-r from-[#D4AF37] to-[#F4D03F] text-[#0A0A0A] hover:brightness-110 transition-all shadow-[0_0_30px_rgba(212,175,55,0.25)]">
+            <button onClick={() => navigate('/app')} className="relative w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-gradient-to-r from-[#D4AF37] to-[#F4D03F] text-[#0A0A0A] hover:brightness-110 transition-all shadow-[0_0_30px_rgba(212,175,55,0.25)]">
               Garantir Acesso Vitalício
             </button>
           </motion.div>
@@ -827,6 +829,7 @@ export function FAQSection() {
    ============================================================ */
 
 export function FinalCTASection() {
+  const navigate = useNavigate();
   return (
     <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* background mesh / gradient */}
@@ -867,11 +870,11 @@ export function FinalCTASection() {
           variants={fadeInUp}
           className="text-[#9CA3AF] text-lg mb-10 max-w-xl mx-auto"
         >
-          167 ferramentas. Diagramas interativos. Offline. Em português.
+          200+ ferramentas. Diagramas interativos. Offline. Em português.
         </motion.p>
 
         <motion.div variants={fadeInUp} className="flex flex-col items-center gap-4">
-          <button className="group relative px-10 py-4 rounded-xl text-base font-bold uppercase tracking-wider bg-gradient-to-r from-[#D4AF37] to-[#F4D03F] text-[#0A0A0A] hover:brightness-110 transition-all shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+          <button onClick={() => navigate('/app')} className="group relative px-10 py-4 rounded-xl text-base font-bold uppercase tracking-wider bg-gradient-to-r from-[#D4AF37] to-[#F4D03F] text-[#0A0A0A] hover:brightness-110 transition-all shadow-[0_0_40px_rgba(212,175,55,0.3)]">
             <span className="flex items-center gap-2">
               Começar Agora — R$ 599,90 Vitalício
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -903,7 +906,7 @@ export function FinalCTASection() {
 const ECOSYSTEM_LINKS = [
   { name: 'APEX Finance', href: '#' },
   { name: 'APEX Pain', href: '#' },
-  { name: 'APEX Ortho', href: '#' },
+  { name: 'APEX Ortho', href: '/app' },
   { name: 'APEX Academy', href: '#' },
 ];
 
