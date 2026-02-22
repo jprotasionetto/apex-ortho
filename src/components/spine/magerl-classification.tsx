@@ -7,6 +7,19 @@ export default function MagerlClassificationTool() {
   const active = selected ? magerlClassification.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Imagem do Manual */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">
+          Fratura Toracolombar — Manual SBOT (p. 190)
+        </p>
+        <img
+          src="/images/manual-trauma/page190_img3.png"
+          alt="Redução e estabilização de fratura toracolombar — técnica cirúrgica"
+          className="w-full rounded-lg bg-[#0A0A0A] object-contain max-h-72"
+          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+        />
+        <p className="text-xs text-gray-400 mt-2 text-center">Redução e estabilização toracolombar — Manual SBOT de Trauma Ortopédico</p>
+      </div>
       <div className="grid gap-2">
         {magerlClassification.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-primary-500 bg-primary-500/10' : 'border-slate-700 hover:border-slate-600'}`}>
