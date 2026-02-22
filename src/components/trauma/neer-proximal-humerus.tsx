@@ -18,6 +18,26 @@ export default function NeerProximalHumerusTool() {
   const active = selected ? neerProximalHumerusData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação de Neer — Fraturas do Úmero Proximal</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Classifica fraturas do úmero proximal pelos 4 segmentos anatômicos (cabeça, troquíter, troquim, diáfise) e pelo deslocamento (&gt;1cm ou &gt;45°). Orienta tratamento conservador vs cirúrgico.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda fratura do úmero proximal em adulto. TC com 3D para casos complexos. Avalia: número de partes deslocadas, envolvimento articular e risco de necrose avascular da cabeça (NAV).</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">1-2 partes: conservador frequente (tipoia, fisioterapia precoce). 3-4 partes em jovem: ORIF (placa angular bloqueada). 3-4 partes em idoso (&gt;65 anos): hemiartroplastia ou RTSA. NAV: fratura-luxação cabeça ou 4 partes = alto risco (&gt;75%). RTSA supera hemiartroplastia em resultados funcionais em idosos.</p>
+          </div>
+        </div>
+      </div>
       <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4 overflow-hidden">
         <NeerSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
       </div>
