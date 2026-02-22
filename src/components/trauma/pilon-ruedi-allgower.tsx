@@ -7,6 +7,27 @@ export default function PilonRuediAllgowerTool() {
   const active = selected ? pilonRuediAllgowerData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Images from MANUAL DE TRAUMA ORTOPÉDICO — Pilon chapter (pp. 187-192) */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">
+          Pilão Tibial — Manual SBOT (pp. 187–192)
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {[
+            { src: '/images/manual-trauma/page187_img1.png', caption: 'Classificação de Ruedi-Allgower (tabela)' },
+            { src: '/images/manual-trauma/page189_img1.png', caption: 'Classificação AO para pilão tibial' },
+            { src: '/images/manual-trauma/page190_img1.png', caption: 'Protocolo staged — fixador externo (fase 1)' },
+            { src: '/images/manual-trauma/page190_img2.png', caption: 'Fixador externo spanning para controle de danos' },
+            { src: '/images/manual-trauma/page191_img1.png', caption: 'RAFI definitiva (fase 2) — placa anteromedial' },
+            { src: '/images/manual-trauma/page190_img4.png', caption: 'Wrinkle test — critério para RAFI definitiva' },
+          ].map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="grid gap-2">
         {pilonRuediAllgowerData.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-primary-500 bg-primary-500/10' : 'border-slate-700 hover:border-slate-600'}`}>
