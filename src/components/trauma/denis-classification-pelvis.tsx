@@ -7,6 +7,26 @@ export default function DenisClassificationPelvisTool() {
   const active = selected ? denisClassificationPelvisData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
+      {/* Contexto Clínico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-xl p-4 space-y-2">
+        <div className="flex items-start gap-3">
+          <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-white">Classificação de Denis — Fraturas do Sacro</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Divide as fraturas do sacro em três zonas anatômicas de medial para lateral: Zona I (asa), Zona II (forames), Zona III (canal central). A localização determina o risco neurológico.</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2 mt-2">
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Toda fratura do sacro identificada em TC ou RX. Avalia o risco de lesão das raízes nervosas sacrais e cauda equina.</p>
+          </div>
+          <div className="bg-[#0A0A0A] rounded-lg p-2">
+            <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Zona I: raramente causa déficit neurológico. Zona II: lesão de raízes L5/S1 em 28%. Zona III: lesão de cauda equina em 57% — déficit de bexiga/reto, indica descompressão cirúrgica urgente.</p>
+          </div>
+        </div>
+      </div>
       <div className="grid gap-2">
         {denisClassificationPelvisData.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-primary-500 bg-primary-500/10' : 'border-slate-700 hover:border-slate-600'}`}>
