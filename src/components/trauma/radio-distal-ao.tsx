@@ -66,6 +66,33 @@ export default function RadioDistalAOTool() {
         </div>
       </div>
 
+      {/* Imagens Complementares — Manual SBOT */}
+      <div className="mt-4 pt-4 border-t border-[rgba(212,175,55,0.1)]">
+        <p className="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-3">Referências Radiográficas e Anatômicas</p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          {[
+            { src: '/images/manual-trauma/page102_img1.png', alt: 'Fratura do terço distal — anatomia' },
+            { src: '/images/manual-trauma/page103_img1.png', alt: 'Comunicação entre profissionais — classificação' },
+            { src: '/images/manual-trauma/page103_img2.png', alt: 'Comunicação (2)' },
+            { src: '/images/manual-trauma/page105_img1.png', alt: 'Três colunas — perfil' },
+            { src: '/images/manual-trauma/page105_img2.png', alt: 'Três colunas — perfil (2)' },
+            { src: '/images/manual-trauma/page105_img3.png', alt: 'Três colunas — perfil (3)' },
+            { src: '/images/manual-trauma/page107_img1.png', alt: 'Exemplo de fratura articular' },
+            { src: '/images/manual-trauma/page108_img1.png', alt: 'Desvio radial — medição' },
+            { src: '/images/manual-trauma/page110_img1.png', alt: 'Rádio e ulna distal — relação articular' },
+            { src: '/images/manual-trauma/page110_img2.png', alt: 'Rádio e ulna distal (2)' },
+            { src: '/images/manual-trauma/page111_img1.png', alt: 'Radiografia perfil — inclinação palmar' },
+            { src: '/images/manual-trauma/page111_img2.png', alt: 'Radiografia perfil (2)' },
+          ].map((img, idx) => (
+            <div key={idx} className="rounded-lg overflow-hidden bg-[#0A0A0A] border border-[rgba(212,175,55,0.1)]">
+              <img src={img.src} alt={img.alt} className="w-full h-auto object-contain"
+                onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display='none'; }} />
+              <p className="text-[10px] text-[#6B7280] p-1.5 leading-tight">{img.alt}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Classification tabs */}
       <div className="flex gap-2">
         {TABS.map((tab) => (
