@@ -73,7 +73,7 @@ CREATE TRIGGER subscriptions_updated_at
   FOR EACH ROW EXECUTE FUNCTION public.update_updated_at();
 
 -- 6. Scheduled job: expire overdue monthly subscriptions (run daily)
--- After 5 days past period_end, set status = 'cancelled' and role = 'free'
+-- After 3 days past period_end, set status = 'cancelled' and role = 'free'
 CREATE OR REPLACE FUNCTION public.expire_overdue_subscriptions()
 RETURNS void AS $$
 DECLARE
@@ -84,7 +84,7 @@ BEGIN
     WHERE status = 'active'
       AND plan = 'monthly'
       AND current_period_end IS NOT NULL
-      AND current_period_end < now() - INTERVAL '5 days'
+      AND current_period_end < now() - INTERVAL '3 days'
   LOOP
     UPDATE public.subscriptions
     SET status = 'cancelled', updated_at = now()
