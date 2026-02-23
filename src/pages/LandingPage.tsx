@@ -24,7 +24,7 @@ import {
 } from 'lucide-react';
 import {
   ModulesSection,
-  ComparisonSection,
+  SocialProofSection,
   TestimonialsSection,
   PricingSection,
   FAQSection,
@@ -1220,7 +1220,7 @@ export default function LandingPage() {
 
       {/* Sections 6-12 */}
       <ModulesSection />
-      <ComparisonSection />
+      <SocialProofSection />
       <TestimonialsSection />
       <PricingSection />
       <FAQSection />
