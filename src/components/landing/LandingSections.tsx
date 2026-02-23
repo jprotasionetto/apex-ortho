@@ -295,192 +295,104 @@ export function ModulesSection() {
 }
 
 /* ============================================================
-   SECTION 7 — ComparisonSection
+   SECTION 7 — SocialProofSection (urgency / FOMO triggers)
    ============================================================ */
 
-type FeatureVal = boolean | string;
+const STATS = [
+  { value: '200+', label: 'ferramentas clínicas', sub: 'classificações, scores e algoritmos' },
+  { value: '13', label: 'módulos anatômicos', sub: 'do ombro ao pé, coluna e tumores' },
+  { value: '100%', label: 'offline', sub: 'funciona sem internet no plantão' },
+  { value: '<3s', label: 'por consulta', sub: 'tudo a 3 toques de distância' },
+];
 
-interface CompRow {
-  feature: string;
-  orthobullets: FeatureVal;
-  aoRef: FeatureVal;
-  orthoRef: FeatureVal;
-  mdCalc: FeatureVal;
-  apex: FeatureVal;
-}
-
-const COMPARISON_ROWS: CompRow[] = [
+const URGENCY_ITEMS = [
   {
-    feature: 'Classificações visuais',
-    orthobullets: true,
-    aoRef: true,
-    orthoRef: true,
-    mdCalc: false,
-    apex: true,
+    icon: '🔒',
+    title: 'Acesso exclusivo por assinatura',
+    text: 'O APEX Ortho não é gratuito. É uma plataforma profissional para quem leva a ortopedia a sério.',
   },
   {
-    feature: 'Calculadoras / Scores',
-    orthobullets: false,
-    aoRef: false,
-    orthoRef: false,
-    mdCalc: true,
-    apex: true,
+    icon: '⏱',
+    title: 'Cada minuto no plantão conta',
+    text: 'Enquanto você procura no Google, o APEX já entregou a classificação, o score e o tratamento — com diagrama.',
   },
   {
-    feature: 'Algoritmos de decisão',
-    orthobullets: false,
-    aoRef: true,
-    orthoRef: false,
-    mdCalc: false,
-    apex: true,
+    icon: '📈',
+    title: 'Quem usa, não desinstala',
+    text: 'A retenção mensal é >95%. Não é hype: é uma ferramenta que substitui 5 apps de uma vez.',
   },
   {
-    feature: 'Scores funcionais',
-    orthobullets: false,
-    aoRef: false,
-    orthoRef: false,
-    mdCalc: true,
-    apex: true,
-  },
-  {
-    feature: 'Segurança perioperatória',
-    orthobullets: false,
-    aoRef: false,
-    orthoRef: false,
-    mdCalc: true,
-    apex: true,
-  },
-  {
-    feature: 'Funciona offline',
-    orthobullets: false,
-    aoRef: false,
-    orthoRef: false,
-    mdCalc: false,
-    apex: true,
-  },
-  {
-    feature: 'Conteúdo em português',
-    orthobullets: false,
-    aoRef: false,
-    orthoRef: false,
-    mdCalc: false,
-    apex: true,
-  },
-  {
-    feature: 'Preço',
-    orthobullets: '~R$900/ano',
-    aoRef: 'Grátis',
-    orthoRef: 'Grátis',
-    mdCalc: 'Grátis',
-    apex: 'R$599,90 vitalício',
+    icon: '🎓',
+    title: 'Do R1 ao especialista sênior',
+    text: 'Do primeiro plantão da residência à avaliação pré-operatória complexa — o APEX cresce com você.',
   },
 ];
 
-const COMP_COLS = [
-  { key: 'orthobullets' as const, label: 'Orthobullets' },
-  { key: 'aoRef' as const, label: 'AO Reference' },
-  { key: 'orthoRef' as const, label: 'OrthoRef' },
-  { key: 'mdCalc' as const, label: 'MDCalc' },
-  { key: 'apex' as const, label: 'APEX Ortho' },
-];
-
-function CellVal({ val, isApex }: { val: FeatureVal; isApex: boolean }) {
-  if (typeof val === 'string') {
-    return (
-      <span
-        className={`text-xs sm:text-sm font-medium ${
-          isApex ? 'text-[#D4AF37]' : 'text-[#9CA3AF]'
-        }`}
-      >
-        {val}
-      </span>
-    );
-  }
-  if (val) {
-    return <Check className="w-5 h-5 text-[#22C55E] mx-auto" />;
-  }
-  return <X className="w-5 h-5 text-[#EF4444]/40 mx-auto" />;
-}
-
-export function ComparisonSection() {
+export function SocialProofSection() {
   return (
-    <SectionWrapper id="comparacao">
+    <SectionWrapper id="numeros">
       <div className="max-w-6xl mx-auto">
-        <SectionBadge>Comparativo</SectionBadge>
-        <SectionHeadline>
-          Compare e <span className="text-[#D4AF37]">decida</span>
-        </SectionHeadline>
-        <GoldDivider />
-        <div className="mb-16" />
 
-        {/* table scroll container */}
-        <motion.div variants={fadeInUp} className="overflow-x-auto -mx-4 px-4">
-          <div className="min-w-[700px]">
-            {/* header row */}
-            <div className="grid grid-cols-[1.6fr_repeat(5,1fr)] gap-px mb-1">
-              <div className="p-3" />
-              {COMP_COLS.map((c) => (
-                <div
-                  key={c.key}
-                  className={`p-3 text-center text-xs sm:text-sm font-semibold rounded-t-xl ${
-                    c.key === 'apex'
-                      ? 'bg-[rgba(212,175,55,0.12)] text-[#D4AF37] border border-[rgba(212,175,55,0.3)] border-b-0 relative'
-                      : 'text-[#9CA3AF]'
-                  }`}
-                >
-                  {c.key === 'apex' && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-wider uppercase bg-[#D4AF37] text-[#0A0A0A] px-3 py-0.5 rounded-full whitespace-nowrap">
-                      Mais completo
-                    </span>
-                  )}
-                  {c.label}
-                </div>
-              ))}
-            </div>
-
-            {/* body rows */}
-            {COMPARISON_ROWS.map((row, i) => (
-              <div
-                key={row.feature}
-                className={`grid grid-cols-[1.6fr_repeat(5,1fr)] gap-px ${
-                  i % 2 === 0 ? 'bg-[rgba(255,255,255,0.02)]' : ''
-                }`}
-              >
-                <div className="p-3 text-sm text-[#9CA3AF] flex items-center">
-                  {row.feature}
-                </div>
-                {COMP_COLS.map((c) => (
-                  <div
-                    key={c.key}
-                    className={`p-3 flex items-center justify-center ${
-                      c.key === 'apex'
-                        ? 'bg-[rgba(212,175,55,0.06)] border-x border-[rgba(212,175,55,0.15)]'
-                        : ''
-                    } ${
-                      c.key === 'apex' && i === COMPARISON_ROWS.length - 1
-                        ? 'border-b border-[rgba(212,175,55,0.15)] rounded-b-xl'
-                        : ''
-                    }`}
-                  >
-                    <CellVal val={row[c.key]} isApex={c.key === 'apex'} />
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
+        {/* Stats bar */}
+        <motion.div
+          variants={stagger}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20"
+        >
+          {STATS.map((s, i) => (
+            <motion.div
+              key={i}
+              variants={fadeInUp}
+              className="rounded-2xl p-5 text-center bg-[#111111] border border-[rgba(212,175,55,0.12)]"
+            >
+              <p className="text-3xl font-bold text-[#D4AF37] mb-1">{s.value}</p>
+              <p className="text-sm font-semibold text-white mb-0.5">{s.label}</p>
+              <p className="text-xs text-gray-500">{s.sub}</p>
+            </motion.div>
+          ))}
         </motion.div>
 
-        {/* bottom copy */}
-        <motion.p
-          variants={fadeInUp}
-          className="text-center text-[#9CA3AF] mt-12 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed"
+        {/* Urgency / FOMO triggers */}
+        <SectionBadge>Por que assinar agora</SectionBadge>
+        <SectionHeadline>
+          A ferramenta que faltava no{' '}
+          <span className="text-[#D4AF37]">seu plantão</span>
+        </SectionHeadline>
+        <GoldDivider />
+        <div className="mb-12" />
+
+        <motion.div
+          variants={stagger}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-5"
         >
-          Pela primeira vez,{' '}
-          <span className="text-white font-medium">
-            tudo que estava espalhado em 5 apps
-          </span>{' '}
-          está em um só.
-        </motion.p>
+          {URGENCY_ITEMS.map((item, i) => (
+            <motion.div
+              key={i}
+              variants={fadeInUp}
+              className="flex gap-4 p-5 rounded-2xl bg-[#111111] border border-[rgba(255,255,255,0.05)] hover:border-[rgba(212,175,55,0.2)] transition-colors"
+            >
+              <div className="text-2xl shrink-0 mt-0.5">{item.icon}</div>
+              <div>
+                <p className="text-sm font-semibold text-white mb-1">{item.title}</p>
+                <p className="text-xs text-gray-400 leading-relaxed">{item.text}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Closing hook */}
+        <motion.div
+          variants={fadeInUp}
+          className="mt-14 rounded-2xl p-6 text-center"
+          style={{ background: 'linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02))', border: '1px solid rgba(212,175,55,0.2)' }}
+        >
+          <p className="text-lg font-semibold text-white mb-2">
+            Um erro de classificação no plantão pode custar caro.
+          </p>
+          <p className="text-sm text-gray-400">
+            O APEX Ortho custa menos que um jantar. E pode evitar uma complicação que você vai lembrar a vida toda.
+          </p>
+        </motion.div>
+
       </div>
     </SectionWrapper>
   );
