@@ -857,7 +857,7 @@ export default function LandingPage() {
                   boxShadow: '0 0 30px rgba(212,175,55,0.3)',
                 }}
               >
-                COMECAR AGORA — R$ 39,90/mes
+                COMECAR AGORA — R$ 49,99/mes
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
@@ -868,7 +868,7 @@ export default function LandingPage() {
                 to="/login"
                 className="text-[#D4AF37] hover:text-[#F4D03F] underline underline-offset-4 decoration-[#D4AF37]/30 transition-colors"
               >
-                R$ 599,90 acesso vitalicio (economize 15 meses)
+                R$ 599,90 acesso vitalicio para sempre
               </Link>
             </motion.p>
 

@@ -527,7 +527,7 @@ export function PricingSection() {
             </h3>
 
             <div className="mb-2">
-              <span className="text-4xl font-bold text-white">R$ 39,90</span>
+              <span className="text-4xl font-bold text-white">R$ 49,99</span>
               <span className="text-[#6B7280] ml-1">/mês</span>
             </div>
             <p className="text-sm text-[#6B7280] mb-8">
@@ -569,19 +569,11 @@ export function PricingSection() {
             </h3>
 
             <div className="relative mb-1">
-              <span className="text-sm text-[#6B7280] line-through mr-2">
-                De R$ 1.199,90
-              </span>
-              <span className="inline-flex items-center gap-1 text-xs font-semibold text-[#22C55E] bg-[rgba(34,197,94,0.1)] px-2 py-0.5 rounded-full">
-                Economize R$ 600
-              </span>
-            </div>
-            <div className="relative mb-1">
               <span className="text-5xl font-bold text-white">R$ 599,90</span>
               <span className="text-[#6B7280] ml-2 text-sm">pagamento único</span>
             </div>
             <p className="relative text-sm text-[#6B7280] mb-8">
-              ou 12x de R$ 57,49
+              ou 12x de R$ 49,99
             </p>
 
             <ul className="relative space-y-3 mb-8 flex-1">
@@ -623,7 +615,7 @@ export function PricingSection() {
             <span className="text-white font-medium">~R$3.300/ano</span>.
             <br />
             APEX Ortho{' '}
-            <span className="text-[#D4AF37] font-bold">R$599,90 para sempre</span>.
+            <span className="text-[#D4AF37] font-bold">R$599,90 — acesso vitalício</span>.
           </p>
         </motion.div>
       </div>
@@ -795,7 +787,7 @@ export function FinalCTASection() {
 
           <span className="text-sm text-[#6B7280]">
             ou{' '}
-            <span className="text-[#9CA3AF] font-medium">R$ 39,90/mês</span>
+            <span className="text-[#9CA3AF] font-medium">R$ 49,99/mês</span>
           </span>
         </motion.div>
 
