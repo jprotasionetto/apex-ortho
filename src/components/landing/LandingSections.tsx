@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import {
@@ -10,7 +10,47 @@ import {
   Zap,
   Crown,
   Quote,
+  Loader2,
 } from 'lucide-react';
+import { supabase } from '@/lib/supabase.ts';
+
+/** Cria sessão de checkout no Mercado Pago.
+ *  Se o usuário não estiver logado, redireciona para /signup. */
+function useCheckout() {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState<'monthly' | 'lifetime' | null>(null);
+
+  const checkout = useCallback(async (plan_type: 'monthly' | 'lifetime') => {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session) {
+      navigate('/signup');
+      return;
+    }
+    setLoading(plan_type);
+    try {
+      const res = await fetch('/api/create-checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${session.access_token}`,
+        },
+        body: JSON.stringify({ plan_type }),
+      });
+      const data = await res.json();
+      if (data.init_point) {
+        window.location.href = data.init_point;
+      } else {
+        alert(data.error || 'Erro ao criar checkout. Tente novamente.');
+      }
+    } catch {
+      alert('Erro de conexão. Tente novamente.');
+    } finally {
+      setLoading(null);
+    }
+  }, [navigate]);
+
+  return { checkout, loading };
+}
 
 /* ─────────────── animation variants ─────────────── */
 
@@ -500,7 +540,7 @@ const FEATURES_LIFETIME = [
 ];
 
 export function PricingSection() {
-  const navigate = useNavigate();
+  const { checkout, loading: checkoutLoading } = useCheckout();
   return (
     <SectionWrapper id="precos">
       <div className="max-w-5xl mx-auto">
@@ -543,7 +583,12 @@ export function PricingSection() {
               ))}
             </ul>
 
-            <button onClick={() => navigate('/app')} className="w-full py-3.5 rounded-xl text-sm font-bold uppercase tracking-wider border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[rgba(212,175,55,0.1)] transition-colors">
+            <button
+              onClick={() => checkout('monthly')}
+              disabled={checkoutLoading !== null}
+              className="w-full py-3.5 rounded-xl text-sm font-bold uppercase tracking-wider border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[rgba(212,175,55,0.1)] transition-colors disabled:opacity-60 flex items-center justify-center gap-2"
+            >
+              {checkoutLoading === 'monthly' ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
               Assinar Mensal
             </button>
           </motion.div>
@@ -585,7 +630,12 @@ export function PricingSection() {
               ))}
             </ul>
 
-            <button onClick={() => navigate('/app')} className="relative w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-gradient-to-r from-[#D4AF37] to-[#F4D03F] text-[#0A0A0A] hover:brightness-110 transition-all shadow-[0_0_30px_rgba(212,175,55,0.25)]">
+            <button
+              onClick={() => checkout('lifetime')}
+              disabled={checkoutLoading !== null}
+              className="relative w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-gradient-to-r from-[#D4AF37] to-[#F4D03F] text-[#0A0A0A] hover:brightness-110 transition-all shadow-[0_0_30px_rgba(212,175,55,0.25)] disabled:opacity-60 flex items-center justify-center gap-2"
+            >
+              {checkoutLoading === 'lifetime' ? <Loader2 className="w-4 h-4 animate-spin text-[#0A0A0A]" /> : null}
               Garantir Acesso Vitalício
             </button>
           </motion.div>
@@ -733,7 +783,7 @@ export function FAQSection() {
    ============================================================ */
 
 export function FinalCTASection() {
-  const navigate = useNavigate();
+  const { checkout, loading: checkoutLoading } = useCheckout();
   return (
     <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* background mesh / gradient */}
@@ -778,16 +828,29 @@ export function FinalCTASection() {
         </motion.p>
 
         <motion.div variants={fadeInUp} className="flex flex-col items-center gap-4">
-          <button onClick={() => navigate('/app')} className="group relative px-10 py-4 rounded-xl text-base font-bold uppercase tracking-wider bg-gradient-to-r from-[#D4AF37] to-[#F4D03F] text-[#0A0A0A] hover:brightness-110 transition-all shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+          <button
+            onClick={() => checkout('lifetime')}
+            disabled={checkoutLoading !== null}
+            className="group relative px-10 py-4 rounded-xl text-base font-bold uppercase tracking-wider bg-gradient-to-r from-[#D4AF37] to-[#F4D03F] text-[#0A0A0A] hover:brightness-110 transition-all shadow-[0_0_40px_rgba(212,175,55,0.3)] disabled:opacity-60 flex items-center gap-2"
+          >
+            {checkoutLoading === 'lifetime'
+              ? <Loader2 className="w-5 h-5 animate-spin" />
+              : null}
             <span className="flex items-center gap-2">
               Começar Agora — R$ 599,90 Vitalício
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              {checkoutLoading !== 'lifetime' && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
             </span>
           </button>
 
           <span className="text-sm text-[#6B7280]">
             ou{' '}
-            <span className="text-[#9CA3AF] font-medium">R$ 49,99/mês</span>
+            <button
+              onClick={() => checkout('monthly')}
+              disabled={checkoutLoading !== null}
+              className="text-[#9CA3AF] font-medium hover:text-[#D4AF37] transition-colors disabled:opacity-60"
+            >
+              R$ 49,99/mês
+            </button>
           </span>
         </motion.div>
 

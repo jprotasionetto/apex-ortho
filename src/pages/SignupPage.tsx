@@ -1,43 +1,63 @@
-import { useState, useEffect } from 'react'
-import { Link, useNavigate, useSearchParams } from 'react-router-dom'
-import { Lock, Eye, EyeOff, Shield, Mail, AlertCircle } from 'lucide-react'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { Lock, Eye, EyeOff, Shield, Mail, User, AlertCircle, CheckCircle2 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext.tsx'
 
-export default function LoginPage() {
-  const { signIn, user, subscription, loading } = useAuth()
+export default function SignupPage() {
+  const { signUp } = useAuth()
   const navigate = useNavigate()
-  const [params] = useSearchParams()
-  const reason = params.get('reason')
 
+  const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [show, setShow] = useState(false)
   const [error, setError] = useState('')
+  const [success, setSuccess] = useState(false)
   const [submitting, setSubmitting] = useState(false)
-
-  // Redireciona se já autenticado e com acesso
-  useEffect(() => {
-    if (!loading && user && subscription?.hasAccess) {
-      navigate('/app', { replace: true })
-    }
-  }, [user, subscription, loading, navigate])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    if (password.length < 8) {
+      setError('A senha deve ter pelo menos 8 caracteres.')
+      return
+    }
     setSubmitting(true)
     setError('')
-    const { error: err } = await signIn(email.trim(), password)
+    const { error: err } = await signUp(email.trim(), password, fullName.trim())
     if (err) {
       setError(
-        err.includes('Invalid login')
-          ? 'Email ou senha incorretos.'
-          : err.includes('Email not confirmed')
-          ? 'Confirme seu email antes de entrar.'
+        err.includes('already registered')
+          ? 'Este email já está cadastrado. Faça login.'
           : err
       )
       setSubmitting(false)
+    } else {
+      setSuccess(true)
     }
-    // Redirecionamento feito pelo useEffect acima via subscription change
+  }
+
+  if (success) {
+    return (
+      <div className="min-h-screen bg-[#0A0A0A] flex flex-col items-center justify-center p-6">
+        <div className="w-full max-w-sm text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6"
+            style={{ background: 'linear-gradient(135deg, rgba(34,197,94,0.2), rgba(34,197,94,0.05))', border: '1px solid rgba(34,197,94,0.3)' }}>
+            <CheckCircle2 className="w-8 h-8 text-green-400" />
+          </div>
+          <h2 className="text-xl font-bold text-white mb-2">Conta criada!</h2>
+          <p className="text-sm text-gray-400 mb-6">
+            Verifique seu email <span className="text-white font-medium">{email}</span> e clique no link de confirmação para ativar sua conta.
+          </p>
+          <button
+            onClick={() => navigate('/login')}
+            className="w-full py-3 rounded-xl text-sm font-semibold text-[#0A0A0A]"
+            style={{ background: 'linear-gradient(135deg, #D4AF37, #B8961E)' }}
+          >
+            Ir para o Login
+          </button>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -60,26 +80,29 @@ export default function LoginPage() {
       {/* Card */}
       <div className="w-full max-w-sm bg-[#111111] border border-[rgba(212,175,55,0.15)] rounded-2xl p-6 shadow-2xl">
         <div className="mb-6">
-          <h2 className="text-lg font-semibold text-white">Entrar na conta</h2>
+          <h2 className="text-lg font-semibold text-white">Criar conta</h2>
           <p className="text-xs text-gray-400 mt-1">
-            Acesse com o email cadastrado no momento da compra.
+            Crie sua conta para acessar após a compra.
           </p>
         </div>
 
-        {/* Aviso de acesso negado */}
-        {reason === 'no_access' && (
-          <div className="mb-4 flex items-start gap-2 rounded-xl bg-amber-500/10 border border-amber-500/20 p-3 text-xs text-amber-400">
-            <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
-            <span>
-              Sua assinatura está inativa ou expirada.{' '}
-              <Link to="/#precos" className="underline hover:text-amber-300">
-                Renove o acesso aqui.
-              </Link>
-            </span>
-          </div>
-        )}
-
         <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Nome */}
+          <div className="relative">
+            <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+              <User className="w-4 h-4 text-gray-500" />
+            </div>
+            <input
+              type="text"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              placeholder="Nome completo"
+              autoComplete="name"
+              required
+              className="w-full bg-[#0A0A0A] border border-[rgba(255,255,255,0.1)] rounded-xl pl-10 pr-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[rgba(212,175,55,0.5)] transition-colors"
+            />
+          </div>
+
           {/* Email */}
           <div className="relative">
             <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
@@ -105,8 +128,8 @@ export default function LoginPage() {
               type={show ? 'text' : 'password'}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Senha"
-              autoComplete="current-password"
+              placeholder="Senha (mín. 8 caracteres)"
+              autoComplete="new-password"
               required
               className="w-full bg-[#0A0A0A] border border-[rgba(255,255,255,0.1)] rounded-xl pl-10 pr-10 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[rgba(212,175,55,0.5)] transition-colors"
             />
@@ -128,27 +151,21 @@ export default function LoginPage() {
 
           <button
             type="submit"
-            disabled={submitting || !email || !password}
+            disabled={submitting || !email || !password || !fullName}
             className="w-full py-3 rounded-xl text-sm font-semibold text-[#0A0A0A] transition-all disabled:opacity-40"
             style={{ background: 'linear-gradient(135deg, #D4AF37, #B8961E)' }}
           >
-            {submitting ? 'Entrando...' : 'Entrar'}
+            {submitting ? 'Criando conta...' : 'Criar conta'}
           </button>
         </form>
 
-        <div className="mt-5 pt-5 border-t border-[rgba(255,255,255,0.06)] text-center space-y-2">
+        <div className="mt-5 pt-5 border-t border-[rgba(255,255,255,0.06)] text-center">
           <p className="text-xs text-gray-500">
-            Ainda não tem conta?{' '}
-            <Link to="/signup" className="text-[#D4AF37] hover:text-[#F4D03F] transition-colors">
-              Criar conta
+            Já tem conta?{' '}
+            <Link to="/login" className="text-[#D4AF37] hover:text-[#F4D03F] transition-colors">
+              Entrar
             </Link>
           </p>
-          <Link
-            to="/#precos"
-            className="block text-xs text-gray-600 hover:text-gray-400 transition-colors"
-          >
-            Ver planos →
-          </Link>
         </div>
       </div>
 

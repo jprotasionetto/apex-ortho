@@ -1,36 +1,40 @@
-import { lazy, Suspense, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { AppShell } from '@/components/layout/AppShell.tsx';
-import { useAppStore } from '@/store/appStore.ts';
-import { ProtectedRoute } from '@/components/ProtectedRoute.tsx';
+import { lazy, Suspense, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { AppShell } from '@/components/layout/AppShell.tsx'
+import { useAppStore } from '@/store/appStore.ts'
+import { ProtectedRoute } from '@/components/ProtectedRoute.tsx'
 
-const HomePage = lazy(() => import('@/pages/HomePage.tsx'));
-const ModulePage = lazy(() => import('@/pages/ModulePage.tsx'));
-const ToolPage = lazy(() => import('@/pages/ToolPage.tsx'));
-const FavoritesPage = lazy(() => import('@/pages/FavoritesPage.tsx'));
-const RecentPage = lazy(() => import('@/pages/RecentPage.tsx'));
-const LandingPage = lazy(() => import('@/pages/LandingPage.tsx'));
-const LoginPage = lazy(() => import('@/pages/LoginPage.tsx'));
+const HomePage = lazy(() => import('@/pages/HomePage.tsx'))
+const ModulePage = lazy(() => import('@/pages/ModulePage.tsx'))
+const ToolPage = lazy(() => import('@/pages/ToolPage.tsx'))
+const FavoritesPage = lazy(() => import('@/pages/FavoritesPage.tsx'))
+const RecentPage = lazy(() => import('@/pages/RecentPage.tsx'))
+const LandingPage = lazy(() => import('@/pages/LandingPage.tsx'))
+const LoginPage = lazy(() => import('@/pages/LoginPage.tsx'))
+const SignupPage = lazy(() => import('@/pages/SignupPage.tsx'))
+
+const Loader = () => <div className="min-h-screen bg-[#0A0A0A]" />
 
 export default function App() {
-  const theme = useAppStore((s) => s.theme);
+  const theme = useAppStore((s) => s.theme)
 
   useEffect(() => {
-    const root = document.documentElement;
+    const root = document.documentElement
     if (theme === 'dark') {
-      root.classList.add('dark');
-      root.classList.remove('light');
+      root.classList.add('dark')
+      root.classList.remove('light')
     } else {
-      root.classList.add('light');
-      root.classList.remove('dark');
+      root.classList.add('light')
+      root.classList.remove('dark')
     }
-  }, [theme]);
+  }, [theme])
 
   return (
     <Routes>
       {/* Public routes */}
-      <Route path="/" element={<Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}><LandingPage /></Suspense>} />
-      <Route path="/login" element={<Suspense fallback={<div className="min-h-screen bg-[#0A0A0A]" />}><LoginPage /></Suspense>} />
+      <Route path="/" element={<Suspense fallback={<Loader />}><LandingPage /></Suspense>} />
+      <Route path="/login" element={<Suspense fallback={<Loader />}><LoginPage /></Suspense>} />
+      <Route path="/signup" element={<Suspense fallback={<Loader />}><SignupPage /></Suspense>} />
 
       {/* Protected app routes */}
       <Route element={<ProtectedRoute />}>
@@ -43,5 +47,5 @@ export default function App() {
         </Route>
       </Route>
     </Routes>
-  );
+  )
 }

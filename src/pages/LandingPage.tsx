@@ -850,26 +850,29 @@ export default function LandingPage() {
             {/* CTA Buttons */}
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 mb-6">
               <Link
-                to="/login"
+                to="/#precos"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-sm tracking-wider text-black transition-all hover:scale-[1.02] active:scale-[0.98]"
                 style={{
                   background: 'linear-gradient(135deg, #D4AF37, #F4D03F)',
                   boxShadow: '0 0 30px rgba(212,175,55,0.3)',
                 }}
               >
-                COMECAR AGORA — R$ 49,99/mes
+                VER PLANOS
                 <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/login"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-sm tracking-wider text-[#D4AF37] transition-all hover:scale-[1.02] active:scale-[0.98] border border-[rgba(212,175,55,0.3)] hover:bg-[rgba(212,175,55,0.05)]"
+              >
+                Já tenho conta
               </Link>
             </motion.div>
 
             <motion.p variants={fadeInUp} className="text-sm mb-8">
-              <span className="text-gray-500">ou </span>
-              <Link
-                to="/login"
-                className="text-[#D4AF37] hover:text-[#F4D03F] underline underline-offset-4 decoration-[#D4AF37]/30 transition-colors"
-              >
-                R$ 599,90 acesso vitalicio para sempre
-              </Link>
+              <span className="text-gray-500">A partir de </span>
+              <span className="text-[#D4AF37] font-medium">R$ 49,99/mês</span>
+              <span className="text-gray-500"> · </span>
+              <span className="text-gray-400">ou R$ 599,90 vitalício</span>
             </motion.p>
 
             {/* Micro proof */}
