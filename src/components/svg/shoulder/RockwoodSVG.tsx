@@ -18,9 +18,9 @@ const CLINICAL_COLORS = {
 const GRADES = [
   { id: 'type-i', label: 'Type I', color: CLINICAL_COLORS.safe, desc: 'AC sprain' },
   { id: 'type-ii', label: 'Type II', color: CLINICAL_COLORS.safe, desc: 'AC torn, CC sprain' },
-  { id: 'type-iii', label: 'Type III', color: CLINICAL_COLORS.info, desc: 'AC+CC torn, <100%' },
+  { id: 'type-iii', label: 'Type III', color: CLINICAL_COLORS.info, desc: 'AC+CC torn, &lt;100%' },
   { id: 'type-iv', label: 'Type IV', color: CLINICAL_COLORS.caution, desc: 'Posterior displacement' },
-  { id: 'type-v', label: 'Type V', color: CLINICAL_COLORS.danger, desc: 'AC+CC torn, >100%' },
+  { id: 'type-v', label: 'Type V', color: CLINICAL_COLORS.danger, desc: 'AC+CC torn, &gt;100%' },
   { id: 'type-vi', label: 'Type VI', color: CLINICAL_COLORS.danger, desc: 'Inferior displacement' },
 ] as const;
 

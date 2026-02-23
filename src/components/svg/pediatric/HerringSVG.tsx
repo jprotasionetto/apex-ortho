@@ -35,7 +35,7 @@ const GROUPS: HerringGroup[] = [
   {
     id: 'group-b',
     label: 'Group B',
-    description: 'Lateral pillar >50% height maintained',
+    description: 'Lateral pillar &gt;50% height maintained',
     pillarHeight: '>50%',
     prognosis: 'Variable prognosis',
     color: CLINICAL_COLORS.caution,
@@ -53,8 +53,8 @@ const GROUPS: HerringGroup[] = [
   {
     id: 'group-c',
     label: 'Group C',
-    description: 'Lateral pillar <50% height maintained',
-    pillarHeight: '<50%',
+    description: 'Lateral pillar &lt;50% height maintained',
+    pillarHeight: '&lt;50%',
     prognosis: 'Poor prognosis',
     color: CLINICAL_COLORS.danger,
     heightFraction: 0.3,
@@ -432,9 +432,9 @@ export function HerringSVG({
                 </text>
                 <text x={65} y={367} fill={BONE_OUTLINE} fontSize={9} opacity={0.5} fontFamily="system-ui, sans-serif">
                   {group.id === 'group-a' && 'No lateral pillar involvement. Femoral head remains spherical. Best outcome regardless of age.'}
-                  {group.id === 'group-b' && 'Some lateral pillar collapse but >50% maintained. Outcome age-dependent (worse if >8 years).'}
+                  {group.id === 'group-b' && 'Some lateral pillar collapse but &gt;50% maintained. Outcome age-dependent (worse if &gt;8 years).'}
                   {group.id === 'group-b-c' && 'Borderline group. Lateral pillar at approximately 50%. Treat as Group C in older children.'}
-                  {group.id === 'group-c' && 'Significant lateral pillar collapse (<50%). High risk of femoral head deformity. Worst prognosis.'}
+                  {group.id === 'group-c' && 'Significant lateral pillar collapse (&lt;50%). High risk of femoral head deformity. Worst prognosis.'}
                 </text>
               </>
             );

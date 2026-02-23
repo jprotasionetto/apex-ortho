@@ -20,7 +20,7 @@ export default function SpinalStenosisGuideTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Conservador: fisioterapia em flexão, infiltração epidural (sintomático). Cirúrgico: laminectomia descompressiva ± fusão se instabilidade (> espondilolistese grau I, deformidade). Claudicação lombar 90% melhora com descompressão cirúrgica.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Conservador: fisioterapia em flexão, infiltração epidural (sintomático). Cirúrgico: laminectomia descompressiva ± fusão se instabilidade (&gt; espondilolistese grau I, deformidade). Claudicação lombar 90% melhora com descompressão cirúrgica.</p>
           </div>
         </div>
       </div>

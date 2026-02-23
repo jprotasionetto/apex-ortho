@@ -129,7 +129,7 @@ export default function GustiloAndersonSVG({
             <line x1={bL} y1={FRAC_Y} x2={bR} y2={FRAC_Y + 3} stroke={grade.color} strokeWidth={2} strokeLinecap="round" />
             {/* Small wound < 1 cm */}
             <line x1={bR + 2} y1={FRAC_Y - 3} x2={bR + 6} y2={FRAC_Y + 3} stroke={grade.color} strokeWidth={2.5} strokeLinecap="round" />
-            <text x={bR + 10} y={FRAC_Y + 2} fill={grade.color} fontSize={8} fontFamily="system-ui" opacity={0.8}>{'<1cm'}</text>
+            <text x={bR + 10} y={FRAC_Y + 2} fill={grade.color} fontSize={8} fontFamily="system-ui" opacity={0.8}>{'&lt;1cm'}</text>
           </g>
         );
 

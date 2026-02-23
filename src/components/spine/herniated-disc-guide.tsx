@@ -20,7 +20,7 @@ export default function HerniatedDiscGuideTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Conservador 6-12 semanas: 90% melhora espontânea. Indicação cirúrgica: déficit neurológico progressivo, falha conservadora >6 semanas, síndrome da cauda equina (emergência). Cervical: ACDF ou artroplastia. Lombar: microdiscectomia (padrão-ouro).</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Conservador 6-12 semanas: 90% melhora espontânea. Indicação cirúrgica: déficit neurológico progressivo, falha conservadora &gt;6 semanas, síndrome da cauda equina (emergência). Cervical: ACDF ou artroplastia. Lombar: microdiscectomia (padrão-ouro).</p>
           </div>
         </div>
       </div>

@@ -881,8 +881,7 @@ export default function LandingPage() {
               className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-gray-500"
             >
               <span className="flex items-center gap-1.5">
-                <Lock className="w-3 h-3 text-[#D4AF37]" />
-                7 dias de garantia
+                <Lock className="w-3 h-3 text-[#D4AF37]" /> 7 dias de garantia
               </span>
               <span className="flex items-center gap-1.5">
                 <Smartphone className="w-3 h-3 text-[#D4AF37]" />

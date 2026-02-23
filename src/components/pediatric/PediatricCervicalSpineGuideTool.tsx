@@ -23,7 +23,7 @@ const sections = [
       'PSEUDOSSUBLUXAÇÃO C2-C3 (e C3-C4): NORMAL até 8 anos',
       '  — Translação anterior até 3 mm é NORMAL em flexão',
       '  — Linha de Swischuk: traça borda posterior de C1-C2-C3 (confirma pseudossubluxação)',
-      '  — Se linha de Swischuk desviada >2 mm → suspeita de fratura real',
+      '  — Se linha de Swischuk desviada &gt;2 mm → suspeita de fratura real',
       'ATLAS: ossifica de 3 centros; sínfise anterior fecha 7-10 anos',
       'DENTE/ODONTÓIDE: 2 centros primários + ápice; sínfise com corpo C2 fecha aos 7 anos',
       'Espaço atlantodental (ADI) normal: < 5 mm em crianças (< 3 mm em adultos)',

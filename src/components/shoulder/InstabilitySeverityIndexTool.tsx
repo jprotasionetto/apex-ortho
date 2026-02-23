@@ -27,7 +27,7 @@ export default function InstabilitySeverityIndexTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">ISI ≤3 pts: Bankart artroscópico — baixo risco de recidiva (<10%). ISI 4-6: zona cinzenta — considerar Latarjet. ISI ≥7: Latarjet indicado — alto risco de recidiva com Bankart (>70%). Cada ponto aumenta o risco de falha em ~10%.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">ISI ≤3 pts: Bankart artroscópico — baixo risco de recidiva (&lt;10%). ISI 4-6: zona cinzenta — considerar Latarjet. ISI ≥7: Latarjet indicado — alto risco de recidiva com Bankart (&gt;70%). Cada ponto aumenta o risco de falha em ~10%.</p>
           </div>
         </div>
       </div>

@@ -72,7 +72,7 @@ export default function CongenitalScoliosisGuideTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Barra não segmentada + hemivertebra contralateral: pior prognóstico (até 10°/ano de progressão). Observação: curvas <40° sem progressão. Cirurgia precoce (hemivertebra): evitar deformidade severa. Hemiepifisiodese: para curvas leves em crescimento. Fusão espinhal definitiva após maturidade.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Barra não segmentada + hemivertebra contralateral: pior prognóstico (até 10°/ano de progressão). Observação: curvas &lt;40° sem progressão. Cirurgia precoce (hemivertebra): evitar deformidade severa. Hemiepifisiodese: para curvas leves em crescimento. Fusão espinhal definitiva após maturidade.</p>
           </div>
         </div>
       </div>

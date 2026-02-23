@@ -24,7 +24,7 @@ export default function SpondylolisthesisMeyerdingTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Grau I (<25%): geralmente conservador. Grau II (25-50%): conservador ou cirurgia se sintomático. Grau III-IV (>50%): cirurgia (redução + fusão instrumentada). Espondiloptose (>100%): caso complexo — redução parcial + fusão longa.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Grau I (&lt;25%): geralmente conservador. Grau II (25-50%): conservador ou cirurgia se sintomático. Grau III-IV (&gt;50%): cirurgia (redução + fusão instrumentada). Espondiloptose (&gt;100%): caso complexo — redução parcial + fusão longa.</p>
           </div>
         </div>
       </div>

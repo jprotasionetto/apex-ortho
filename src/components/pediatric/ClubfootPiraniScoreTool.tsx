@@ -27,7 +27,7 @@ export default function ClubfootPiraniScoreTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Score inicial alto (>4): mais gessos necessários (8-10) e maior risco de necessitar tenotomia de Aquiles. Score baixo (<3): resposta mais rápida (5-6 gessos). Score do mediopé e retropé separados orientam quando fazer tenotomia percutânea. Sucesso: 90-95% com Ponseti.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Score inicial alto (&gt;4): mais gessos necessários (8-10) e maior risco de necessitar tenotomia de Aquiles. Score baixo (&lt;3): resposta mais rápida (5-6 gessos). Score do mediopé e retropé separados orientam quando fazer tenotomia percutânea. Sucesso: 90-95% com Ponseti.</p>
           </div>
         </div>
       </div>

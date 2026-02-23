@@ -21,12 +21,12 @@ const sections = [
     title: 'Eletrodiagnóstico',
     content: [
       'Estudo de condução nervosa (NCS): gold standard para confirmação',
-      'Latência sensitiva distal do mediano >3.5ms (anormal)',
-      'Latência motora distal do mediano >4.2ms (anormal)',
-      'Diferença de latência sensitiva mediano-ulnar >0.4ms',
+      'Latência sensitiva distal do mediano &gt;3.5ms (anormal)',
+      'Latência motora distal do mediano &gt;4.2ms (anormal)',
+      'Diferença de latência sensitiva mediano-ulnar &gt;0.4ms',
       'EMG: sinais de denervação na musculatura tenar em casos severos',
       'Classificação eletrofisiológica: leve (sensitivo), moderada (sensitivo + motor), severa (ausência de resposta sensitiva + denervação)',
-      'Ecografia: área de secção transversal do mediano >10mm² no inlet do túnel',
+      'Ecografia: área de secção transversal do mediano &gt;10mm² no inlet do túnel',
     ],
   },
   {

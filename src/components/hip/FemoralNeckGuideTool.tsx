@@ -4,11 +4,11 @@ import { Alert } from '@/components/ui/Alert.tsx';
 const sections = [
   {
     id: 'young-patient',
-    title: 'Paciente Jovem (<60 anos)',
+    title: 'Paciente Jovem (&lt;60 anos)',
     content: [
       'Geralmente fratura de alta energia (acidente, queda de altura)',
       'PRIORIDADE: preservar a cabeça femoral',
-      'Redução urgente: idealmente <6 horas para fraturas desviadas (reduz risco de NAV)',
+      'Redução urgente: idealmente &lt;6 horas para fraturas desviadas (reduz risco de NAV)',
       'Fixação: parafusos canulados (3 em triângulo invertido) ou DHS',
       'Pauwels III (vertical): considerar osteotomia valgizante ou placa angulada 130°',
       'Carga parcial protegida por 6-8 semanas',
@@ -22,9 +22,9 @@ const sections = [
     content: [
       'Fixação com parafusos canulados (3 parafusos): tratamento padrão',
       'Alternativa: DHS (dynamic hip screw) com parafuso anti-rotacional',
-      'Hemiartoplastia: considerar em pacientes >80 anos com risco de falha de fixação',
+      'Hemiartoplastia: considerar em pacientes &gt;80 anos com risco de falha de fixação',
       'Fatores de risco para falha: osteoporose severa, Pauwels III, Garden II com traço posterior',
-      'Cirurgia idealmente <24-48h (reduz mortalidade e complicações)',
+      'Cirurgia idealmente &lt;24-48h (reduz mortalidade e complicações)',
       'Carga parcial imediata se fixação estável',
       'Risco de desvio secundário: 8-15% (requer conversão para artroplastia)',
     ],
@@ -33,8 +33,8 @@ const sections = [
     id: 'elderly-displaced',
     title: 'Idoso - Com Desvio (Garden III-IV)',
     content: [
-      'Hemiartoplastia: pacientes com baixa demanda funcional, >75-80 anos',
-      'ATQ (artroplastia total): pacientes ativos, artrose pré-existente, >65 anos e independentes',
+      'Hemiartoplastia: pacientes com baixa demanda funcional, &gt;75-80 anos',
+      'ATQ (artroplastia total): pacientes ativos, artrose pré-existente, &gt;65 anos e independentes',
       'Hemiartoplastia bipolar vs unipolar: bipolar pode ter menor erosão acetabular',
       'ATQ vs hemiartoplastia: ATQ melhor função a longo prazo, maior risco de luxação',
       'Abordagem anterior ou anterolateral: menor risco de luxação que posterior para ATQ',
@@ -46,9 +46,9 @@ const sections = [
     id: 'timing',
     title: 'Timing Cirúrgico',
     content: [
-      'Fraturas desviadas em jovens: <6h (emergência relativa) - reduz risco de NAV',
-      'Fraturas no idoso: <24-48h (reduz mortalidade em 30 dias)',
-      'Atraso >48h: aumento de mortalidade, úlceras de pressão, TVP/TEP, infecção',
+      'Fraturas desviadas em jovens: &lt;6h (emergência relativa) - reduz risco de NAV',
+      'Fraturas no idoso: &lt;24-48h (reduz mortalidade em 30 dias)',
+      'Atraso &gt;48h: aumento de mortalidade, úlceras de pressão, TVP/TEP, infecção',
       'Otimização pré-operatória rápida: anticoagulação, anemia, desequilíbrio metabólico',
       'Não atrasar para eco cardíaco de rotina se paciente estável',
       'Protocolo de via rápida (fast-track): otimizar e operar dentro de 24-36h',

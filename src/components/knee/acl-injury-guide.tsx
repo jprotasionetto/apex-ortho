@@ -16,7 +16,7 @@ export default function AclInjuryGuideTool() {
         <div className="grid grid-cols-2 gap-2 mt-2">
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Instabilidade de joelho após entorse com pop e derrame. Lachman >3mm, pivot shift positivo. RM confirma com ~95% sensibilidade. Indica reconstrução em pacientes ativos ou com falha conservadora.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Instabilidade de joelho após entorse com pop e derrame. Lachman &gt;3mm, pivot shift positivo. RM confirma com ~95% sensibilidade. Indica reconstrução em pacientes ativos ou com falha conservadora.</p>
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>

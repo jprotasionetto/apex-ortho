@@ -7,8 +7,8 @@ const sections = [
     title: 'Indicações Cirúrgicas',
     content: [
       'Mal-rotação: qualquer grau de rotação clinicamente evidente (cascata digital alterada)',
-      'Mal-rotação >10° na avaliação radiográfica',
-      'Envolvimento de >50% da superfície articular',
+      'Mal-rotação &gt;10° na avaliação radiográfica',
+      'Envolvimento de &gt;50% da superfície articular',
       'Fraturas instáveis: oblíquas longas, espirais, com encurtamento progressivo',
       'Fraturas com subluxação articular associada',
       'Fraturas abertas (Gustilo II-III)',

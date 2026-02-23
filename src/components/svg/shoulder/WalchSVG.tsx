@@ -20,8 +20,8 @@ const GRADES = [
   { id: 'a2', label: 'A2', color: CLINICAL_COLORS.info, desc: 'Major central erosion' },
   { id: 'b1', label: 'B1', color: CLINICAL_COLORS.info, desc: 'Post. sublux, no bone loss' },
   { id: 'b2', label: 'B2', color: CLINICAL_COLORS.caution, desc: 'Biconcave glenoid' },
-  { id: 'b3', label: 'B3', color: CLINICAL_COLORS.danger, desc: 'Monoconcave >15\u00B0 retro' },
-  { id: 'c', label: 'C', color: CLINICAL_COLORS.caution, desc: 'Dysplasia >25\u00B0 retro' },
+  { id: 'b3', label: 'B3', color: CLINICAL_COLORS.danger, desc: 'Monoconcave &gt;15\u00B0 retro' },
+  { id: 'c', label: 'C', color: CLINICAL_COLORS.caution, desc: 'Dysplasia &gt;25\u00B0 retro' },
   { id: 'd', label: 'D', color: CLINICAL_COLORS.info, desc: 'Anterior subluxation' },
 ] as const;
 

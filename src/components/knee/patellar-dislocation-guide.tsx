@@ -20,7 +20,7 @@ export default function PatellarDislocationGuideTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Primeiro episódio sem fatores de risco: conservador (fisioterapia VMMQ, órtese). ISI-score ≥4 ou recidiva: reconstrução de MPFL ± trocleoplastia ± anteromediação da tuberosidade tibial. TT-TG >20mm indica mediação da TAT.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Primeiro episódio sem fatores de risco: conservador (fisioterapia VMMQ, órtese). ISI-score ≥4 ou recidiva: reconstrução de MPFL ± trocleoplastia ± anteromediação da tuberosidade tibial. TT-TG &gt;20mm indica mediação da TAT.</p>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function CanadianCspineTool() {
         <div className="grid grid-cols-2 gap-2 mt-2">
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Adulto consciente com trauma cervical para determinar necessidade de imagem. Não aplicável: >65 anos com mecanismo perigoso, parestesias em extremidades, instabilidade hemodinâmica.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Adulto consciente com trauma cervical para determinar necessidade de imagem. Não aplicável: &gt;65 anos com mecanismo perigoso, parestesias em extremidades, instabilidade hemodinâmica.</p>
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>

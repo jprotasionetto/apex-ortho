@@ -11,7 +11,7 @@ const sections = [
       'A correção segue uma sequência específica: cavus → adução → varo → equino (nunca pronação!)',
       'O fulcro da manipulação é a cabeça do tálus (palpada lateralmente)',
       'Abdução do antepé sobre o tálus estabilizado corrige simultaneamente o varo e a adução',
-      'Taxa de sucesso >95% quando aplicado corretamente por profissional treinado',
+      'Taxa de sucesso &gt;95% quando aplicado corretamente por profissional treinado',
     ],
   },
   {
@@ -33,7 +33,7 @@ const sections = [
     title: 'Tenotomia de Aquiles',
     content: [
       'Necessária em ~85% dos casos para corrigir o equino residual',
-      'Indicação: dorsiflexão <15° após correção da adução e do varo',
+      'Indicação: dorsiflexão &lt;15° após correção da adução e do varo',
       'Tenotomia percutânea com lâmina de bisturi (técnica minimamente invasiva)',
       'Realizada em ambiente ambulatorial sob anestesia local',
       'Seccionar o tendão de Aquiles completamente (pop audível)',
@@ -64,7 +64,7 @@ const sections = [
       'Sinais: reaparecimento de supinação dinâmica, varo do retropé, equino',
       'Causa mais comum: não adesão à ortótese',
       'Tratamento da recidiva leve: novo ciclo de gessos seriados (1-3 gessos)',
-      'Recidiva com supinação dinâmica em >2.5 anos: transferência do tibial anterior',
+      'Recidiva com supinação dinâmica em &gt;2.5 anos: transferência do tibial anterior',
       'Transferência do tibial anterior: do 1º cuneiforme para o 3º cuneiforme (corrige supinação)',
       'Recidiva tardia severa: pode necessitar osteotomia (cubóide lateral closing wedge ou cuneiforme medial opening wedge)',
       'Raramente: liberação cirúrgica extensa (reservada para falhas múltiplas)',
@@ -89,11 +89,11 @@ export default function PonsetiMethodGuideTool() {
         <div className="grid grid-cols-2 gap-2 mt-2">
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Padrão-ouro para tratamento do pé torto congênito idiopático desde o nascimento. Idealmente iniciado nas primeiras semanas de vida. Eficaz mesmo em casos moderados a graves (Pirani >3).</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Padrão-ouro para tratamento do pé torto congênito idiopático desde o nascimento. Idealmente iniciado nas primeiras semanas de vida. Eficaz mesmo em casos moderados a graves (Pirani &gt;3).</p>
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Fase de gessagem: 5-7 gessos semanais. Tenotomia percutânea do Aquiles: ~90% dos casos. Fase de órtese (botinha-barra): essencial — uso 23h/dia por 3 meses, depois noturno por 4-5 anos. Recidiva (20-30%): nova gessagem. Taxa de sucesso >90% se adesão à órtese.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Fase de gessagem: 5-7 gessos semanais. Tenotomia percutânea do Aquiles: ~90% dos casos. Fase de órtese (botinha-barra): essencial — uso 23h/dia por 3 meses, depois noturno por 4-5 anos. Recidiva (20-30%): nova gessagem. Taxa de sucesso &gt;90% se adesão à órtese.</p>
           </div>
         </div>
       </div>

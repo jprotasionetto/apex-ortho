@@ -17,7 +17,7 @@ interface MeyerdingGrade {
   label: string;
   percentage: string;
   description: string;
-  slipFraction: number; // 0 to 1.2 (>1 for spondyloptosis)
+  slipFraction: number; // 0 to 1.2 (&gt;1 for spondyloptosis)
   color: string;
 }
 

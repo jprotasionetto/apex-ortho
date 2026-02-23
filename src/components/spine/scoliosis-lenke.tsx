@@ -19,7 +19,7 @@ export default function ScoliosisLenkeTool() {
         <div className="grid grid-cols-2 gap-2 mt-2">
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Escoliose idiopática com indicação cirúrgica (Cobb >45-50°). Determina quais curvas fundir e os níveis instrumentados. Não aplicável à escoliose congênita, neuromuscular ou degenerativa.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Escoliose idiopática com indicação cirúrgica (Cobb &gt;45-50°). Determina quais curvas fundir e os níveis instrumentados. Não aplicável à escoliose congênita, neuromuscular ou degenerativa.</p>
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>

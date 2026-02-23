@@ -342,7 +342,7 @@ const STATS = [
   { value: '200+', label: 'ferramentas clínicas', sub: 'classificações, scores e algoritmos' },
   { value: '13', label: 'módulos anatômicos', sub: 'do ombro ao pé, coluna e tumores' },
   { value: '100%', label: 'offline', sub: 'funciona sem internet no plantão' },
-  { value: '<3s', label: 'por consulta', sub: 'tudo a 3 toques de distância' },
+  { value: '&lt;3s', label: 'por consulta', sub: 'tudo a 3 toques de distância' },
 ];
 
 const URGENCY_ITEMS = [
@@ -359,7 +359,7 @@ const URGENCY_ITEMS = [
   {
     icon: '📈',
     title: 'Quem usa, não desinstala',
-    text: 'A retenção mensal é >95%. Não é hype: é uma ferramenta que substitui 5 apps de uma vez.',
+    text: 'A retenção mensal é &gt;95%. Não é hype: é uma ferramenta que substitui 5 apps de uma vez.',
   },
   {
     icon: '🎓',
@@ -858,8 +858,7 @@ export function FinalCTASection() {
           variants={fadeInUp}
           className="mt-8 flex items-center justify-center gap-2 text-sm text-[#6B7280]"
         >
-          <Shield className="w-4 h-4 text-[#22C55E]" />
-          7 dias de garantia — reembolso total, sem perguntas.
+          <Shield className="w-4 h-4 text-[#22C55E]" /> 7 dias de garantia — reembolso total, sem perguntas.
         </motion.div>
       </motion.div>
     </section>

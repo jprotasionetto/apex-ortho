@@ -21,7 +21,7 @@ export default function PauwelsClassificationTool() {
         <div className="grid grid-cols-2 gap-2 mt-2">
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Fraturas do colo femoral em pacientes com osso de qualidade adequada para fixação interna (geralmente &lt; 65 anos ou &gt; 65 anos biologicamente jovens).</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Fraturas do colo femoral em pacientes com osso de qualidade adequada para fixação interna (geralmente &lt;65 anos ou &gt; 65 anos biologicamente jovens).</p>
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância</p>

@@ -30,7 +30,7 @@ const sections = [
       'Rotação femoral: definida pela anatomia original do fémur distal',
       'Vantagens: cinemática mais natural, possível melhor satisfação',
       'Desvantagens: menor evidência a longo prazo, risco de varo residual',
-      'Contraindicação relativa: deformidades severas (>15°)',
+      'Contraindicação relativa: deformidades severas (&gt;15°)',
       'Restricted kinematic alignment: limitar desvios a uma zona segura',
     ],
   },

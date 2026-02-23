@@ -21,11 +21,11 @@ const sections = [
     id: 'age-suspicion',
     title: 'Suspição por Idade',
     content: [
-      'Lactente não deambulante (<1 ano) com qualquer fratura: investigar SEMPRE',
-      'Fratura do fémur em criança <18 meses sem história de trauma significativo',
-      'Fratura do úmero em criança <3 anos: 50% associada a maus-tratos',
+      'Lactente não deambulante (&lt;1 ano) com qualquer fratura: investigar SEMPRE',
+      'Fratura do fémur em criança &lt;18 meses sem história de trauma significativo',
+      'Fratura do úmero em criança &lt;3 anos: 50% associada a maus-tratos',
       'Quanto mais jovem a criança, maior a probabilidade de lesão não acidental',
-      'Crianças <2 anos: 80% das fraturas por maus-tratos ocorrem nesta faixa',
+      'Crianças &lt;2 anos: 80% das fraturas por maus-tratos ocorrem nesta faixa',
       'História inconsistente com o padrão de fratura ou nível de desenvolvimento motor',
       'Atraso na procura de cuidados médicos',
       'História que muda entre relatos ou entre cuidadores',
@@ -35,7 +35,7 @@ const sections = [
     id: 'workup',
     title: 'Investigação',
     content: [
-      'Levantamento esquelético completo (skeletal survey): obrigatório em <2 anos',
+      'Levantamento esquelético completo (skeletal survey): obrigatório em &lt;2 anos',
       'AP e lateral de todos os ossos longos, mãos, pés, crânio, coluna, tórax, pelve',
       'Repetir levantamento esquelético em 2 semanas (fraturas ocultas tornam-se visíveis)',
       'TC crânio: excluir hemorragia intracraniana',
@@ -95,7 +95,7 @@ export default function ChildAbuseGuideTool() {
         <div className="grid grid-cols-2 gap-2 mt-2">
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Indicação</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Fratura em criança <2 anos sem mecanismo compatível, fraturas múltiplas em diferentes fases de consolidação, fraturas de arco posterior de costelas, fraturas metafisárias em balde. Qualquer suspeita deve ser notificada.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Fratura em criança &lt;2 anos sem mecanismo compatível, fraturas múltiplas em diferentes fases de consolidação, fraturas de arco posterior de costelas, fraturas metafisárias em balde. Qualquer suspeita deve ser notificada.</p>
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>

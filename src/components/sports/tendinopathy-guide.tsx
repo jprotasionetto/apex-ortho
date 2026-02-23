@@ -21,7 +21,7 @@ export default function TendinopathyGuideTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Reativa (aguda): redução de carga, anti-inflamatório breve. Repair: exercícios excêntricos (Alfredson para Aquiles, protocolo Stanish). Degenerativa: PRP, ondas de choque extracorpórea. Cirurgia: falha conservadora >6-12 meses — desbridamento tendinoso artroscópico ou aberto.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Reativa (aguda): redução de carga, anti-inflamatório breve. Repair: exercícios excêntricos (Alfredson para Aquiles, protocolo Stanish). Degenerativa: PRP, ondas de choque extracorpórea. Cirurgia: falha conservadora &gt;6-12 meses — desbridamento tendinoso artroscópico ou aberto.</p>
           </div>
         </div>
       </div>

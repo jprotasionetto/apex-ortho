@@ -26,7 +26,7 @@ export default function LysholmScoreTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Excelente: 95-100 | Bom: 84-94 | Regular: 65-83 | Ruim: <65. Sensível para instabilidade de joelho. MCID: ~10 pontos. Limitação: não avalia retorno específico ao esporte — complementar com Tegner. Amplamente validado em português.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Excelente: 95-100 | Bom: 84-94 | Regular: 65-83 | Ruim: &lt;65. Sensível para instabilidade de joelho. MCID: ~10 pontos. Limitação: não avalia retorno específico ao esporte — complementar com Tegner. Amplamente validado em português.</p>
           </div>
         </div>
       </div>

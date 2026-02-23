@@ -21,7 +21,7 @@ export default function ShoulderInstabilityGuideTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Primeiro episódio >25 anos, baixa demanda: conservador. Atleta, recidivante ou perda óssea >20%: Latarjet. Perda óssea 13-20% + ISI alto: Latarjet. <13% perda + ISI baixo: Bankart artroscópico. Instabilidade multidirecional: reabilitação 6 meses antes de considerar cirurgia.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Primeiro episódio &gt;25 anos, baixa demanda: conservador. Atleta, recidivante ou perda óssea &gt;20%: Latarjet. Perda óssea 13-20% + ISI alto: Latarjet. &lt;13% perda + ISI baixo: Bankart artroscópico. Instabilidade multidirecional: reabilitação 6 meses antes de considerar cirurgia.</p>
           </div>
         </div>
       </div>

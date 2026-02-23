@@ -19,14 +19,14 @@ const sections = [
     title: 'Princípios da Zona II',
     content: [
       'Zona mais desafiadora cirurgicamente (FDP + FDS na mesma bainha)',
-      'Reparação primária dentro de 2 semanas (idealmente <24h)',
+      'Reparação primária dentro de 2 semanas (idealmente &lt;24h)',
       'Sutura core de 4 fios (4-strand): resistência adequada para mobilização precoce',
       'Técnicas comuns: Kessler modificada, Savage, Strickland, cruciate',
       'Sutura epitendinosa circunferencial: aumenta resistência em 10-50%',
       'Reparar ambos os tendões (FDP + FDS) quando possível',
       'Se necessário sacrificar um: manter FDP, pode exceder slip do FDS',
       'Preservar polias A2 e A4 (prevenir bowstringing)',
-      'Gap >3mm no foco de sutura = risco de falha',
+      'Gap &gt;3mm no foco de sutura = risco de falha',
     ],
   },
   {

@@ -27,7 +27,7 @@ export default function RoweScoreTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Excelente: 90-100 | Bom: 75-89 | Regular: 51-74 | Ruim: ≤50. Recidiva: score cai drasticamente para <50 pts. Limitação: não detecta bem instabilidade posterior. Amplamente usado em publicações de instabilidade do ombro como outcome primário.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Excelente: 90-100 | Bom: 75-89 | Regular: 51-74 | Ruim: ≤50. Recidiva: score cai drasticamente para &lt;50 pts. Limitação: não detecta bem instabilidade posterior. Amplamente usado em publicações de instabilidade do ombro como outcome primário.</p>
           </div>
         </div>
       </div>

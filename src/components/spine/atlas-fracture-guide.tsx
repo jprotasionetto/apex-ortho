@@ -125,7 +125,7 @@ export default function AtlasFractureGuideTool() {
           <div className="flex items-start gap-3 p-3 rounded-lg bg-[rgba(34,197,94,0.08)] border border-[rgba(34,197,94,0.2)]">
             <div className="w-3 h-3 rounded-full bg-[#22C55E] flex-shrink-0 mt-0.5" />
             <div>
-              <p className="text-sm font-medium text-white">Soma dos desvios &lt; 6,9 mm → Ligamento intacto (estável)</p>
+              <p className="text-sm font-medium text-white">Soma dos desvios &lt;6,9 mm → Ligamento intacto (estável)</p>
               <p className="text-xs text-gray-400 mt-0.5">Tratamento conservador com colar ou halo</p>
             </div>
           </div>
@@ -233,7 +233,7 @@ export default function AtlasFractureGuideTool() {
           </div>
           <div className="flex gap-2">
             <span className="text-[#D4AF37] flex-shrink-0">•</span>
-            <span><span className="text-white font-medium">Halo vest:</span> Fraturas instáveis sem indicação cirúrgica imediata — Gehweiler IV com Spence &lt; 6,9 mm, ou lesão incompleta do ligamento transverso</span>
+            <span><span className="text-white font-medium">Halo vest:</span> Fraturas instáveis sem indicação cirúrgica imediata — Gehweiler IV com Spence &lt;6,9 mm, ou lesão incompleta do ligamento transverso</span>
           </div>
         </div>
       </div>

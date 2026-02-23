@@ -21,7 +21,7 @@ export default function OsteochondralLesionGuideTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Lesão estável <1cm² < 18 anos: tratamento conservador ou perfuração retrógrada. Instável ou adulto: OAT (mosaicoplastia) para <2-3cm². MACI/ACI para lesões grandes. Aloenxerto para lesões >3cm². Resultado inversamente proporcional ao tamanho da lesão.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Lesão estável &lt;1cm² &lt;18 anos: tratamento conservador ou perfuração retrógrada. Instável ou adulto: OAT (mosaicoplastia) para &lt;2-3cm². MACI/ACI para lesões grandes. Aloenxerto para lesões &gt;3cm². Resultado inversamente proporcional ao tamanho da lesão.</p>
           </div>
         </div>
       </div>

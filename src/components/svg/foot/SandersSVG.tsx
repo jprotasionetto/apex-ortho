@@ -24,7 +24,7 @@ const TYPES: SandersType[] = [
   {
     id: 'type-i',
     label: 'Type I',
-    description: 'Non-displaced (<2mm)',
+    description: 'Non-displaced (&lt;2mm)',
     parts: '1 part',
     color: CLINICAL_COLORS.safe,
   },
@@ -45,7 +45,7 @@ const TYPES: SandersType[] = [
   {
     id: 'type-iv',
     label: 'Type IV',
-    description: 'Comminuted (>3 parts)',
+    description: 'Comminuted (&gt;3 parts)',
     parts: '4+ parts',
     color: CLINICAL_COLORS.danger,
   },
@@ -366,7 +366,7 @@ export function SandersSVG({
                   {type.label} - {type.description}
                 </text>
                 <text x={65} y={330} fill={BONE_OUTLINE} fontSize={10} fontFamily="system-ui, sans-serif">
-                  {type.id === 'type-i' && 'All fractures regardless of number of fracture lines. Non-displaced (<2mm displacement).'}
+                  {type.id === 'type-i' && 'All fractures regardless of number of fracture lines. Non-displaced (&lt;2mm displacement).'}
                   {type.id === 'type-ii' && 'Single fracture line through posterior facet. Subtypes A, B, C based on fracture line position.'}
                   {type.id === 'type-iii' && 'Two fracture lines creating 3 articular fragments of the posterior facet. Subtypes AB, AC, BC.'}
                   {type.id === 'type-iv' && 'Highly comminuted with 3+ fracture lines. Worst prognosis. Often requires primary arthrodesis.'}

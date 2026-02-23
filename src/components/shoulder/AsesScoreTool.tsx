@@ -27,7 +27,7 @@ export default function AsesScoreTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Score 0-100 (maior = melhor). MCID: ~12-17 pontos. Excelente: >80 pts. Limitação: não avalia amplitude de movimento nem função muscular diretamente. Complementar com Constant Score para avaliação mais completa. Ambos os escores são padrão em estudos de ombro.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Score 0-100 (maior = melhor). MCID: ~12-17 pontos. Excelente: &gt;80 pts. Limitação: não avalia amplitude de movimento nem função muscular diretamente. Complementar com Constant Score para avaliação mais completa. Ambos os escores são padrão em estudos de ombro.</p>
           </div>
         </div>
       </div>

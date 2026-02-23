@@ -22,7 +22,7 @@ const sections = [
       'Tipo III: lesão aberta com perda de substância (pele + tendão)',
       'Tipo IVa: fratura de Salter-Harris I/II da falange distal (criança)',
       'Tipo IVb: fratura com envolvimento de 20-50% da superfície articular',
-      'Tipo IVc: fratura com envolvimento de >50% da superfície articular + subluxação volar',
+      'Tipo IVc: fratura com envolvimento de &gt;50% da superfície articular + subluxação volar',
     ],
   },
   {
@@ -32,11 +32,11 @@ const sections = [
       'Mallet tendinoso (Tipo I): tala em extensão/hiperextensão da IFD por 6-8 semanas contínuas',
       'Após 6-8 semanas: desmame progressivo com tala noturna por mais 4 semanas',
       'NUNCA permitir flexão da IFD durante tratamento (reinicia contagem se flexionar)',
-      'Mallet ósseo (<30% articular, sem subluxação): tala em extensão 6-8 semanas',
-      'Mallet ósseo (>30% articular ou subluxação volar): cirurgia - fixação com extensão block pinning ou RAFI',
+      'Mallet ósseo (&lt;30% articular, sem subluxação): tala em extensão 6-8 semanas',
+      'Mallet ósseo (&gt;30% articular ou subluxação volar): cirurgia - fixação com extensão block pinning ou RAFI',
       'Tipo II (aberto): reparação do tendão + tala',
       'Tipo III: reconstrução tecidual + reparação tendinosa',
-      'Mallet crônico (>3 meses): tala pode ainda ser tentada; cirurgia (Fowler tenotomia) se refratário',
+      'Mallet crônico (&gt;3 meses): tala pode ainda ser tentada; cirurgia (Fowler tenotomia) se refratário',
     ],
   },
   {

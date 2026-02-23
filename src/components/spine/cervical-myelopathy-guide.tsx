@@ -10,7 +10,7 @@ export default function CervicalMyelopathyGuideTool() {
           <div className="w-1 min-h-[40px] rounded-full bg-[#D4AF37] flex-shrink-0" />
           <div>
             <p className="text-sm font-semibold text-white">Guia de Mielopatia Cervical Espondilótica</p>
-            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Compressão crônica da medula espinhal por espondilose cervical (osteófitos, hipertrofia ligamentar, discos degenerados). Principal causa de disfunção medular em adultos >55 anos.</p>
+            <p className="text-xs text-gray-400 mt-1 leading-relaxed">Compressão crônica da medula espinhal por espondilose cervical (osteófitos, hipertrofia ligamentar, discos degenerados). Principal causa de disfunção medular em adultos &gt;55 anos.</p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-2 mt-2">
@@ -20,7 +20,7 @@ export default function CervicalMyelopathyGuideTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">mJOA <12 (mielopatia grave) ou progressão: indicação cirúrgica. Abordagem: anterior (ACDF, ACCF) vs posterior (laminoplastia, laminectomia + fusão) — depende da localização e curvatura. Sem tratamento: progressão em 20-60% dos casos.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">mJOA &lt;12 (mielopatia grave) ou progressão: indicação cirúrgica. Abordagem: anterior (ACDF, ACCF) vs posterior (laminoplastia, laminectomia + fusão) — depende da localização e curvatura. Sem tratamento: progressão em 20-60% dos casos.</p>
           </div>
         </div>
       </div>

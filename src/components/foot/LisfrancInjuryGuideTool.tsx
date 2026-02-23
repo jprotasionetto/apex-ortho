@@ -36,7 +36,7 @@ export default function LisfrancInjuryGuideTool() {
         <h3 className="text-base font-semibold text-white">Diagnóstico</h3>
         <ul className="space-y-2">
           {[
-            { bold: 'Radiografia em carga:', rest: 'AP, lateral e oblíqua bilateral — essencial para detectar pequenos desvios. Desalinhamento >2 mm = indicação cirúrgica.' },
+            { bold: 'Radiografia em carga:', rest: 'AP, lateral e oblíqua bilateral — essencial para detectar pequenos desvios. Desalinhamento &gt;2 mm = indicação cirúrgica.' },
             { bold: 'Sinal do Fleck:', rest: 'fragmento ósseo avulsionado entre bases do 1º e 2º MT — patognomônico da lesão do ligamento de Lisfranc.' },
             { bold: 'Alinhamento normal (AP):', rest: 'borda medial do 2º MT alinhada com borda medial do cuneiforme intermediário.' },
             { bold: 'Alinhamento normal (oblíqua):', rest: 'borda medial do 4º MT alinhada com borda medial do cubóide.' },
@@ -67,7 +67,7 @@ export default function LisfrancInjuryGuideTool() {
         <ul className="space-y-2">
           {[
             { bold: 'Conservador:', rest: 'reservado a lesões puramente ligamentares sem desvio identificáveis apenas na RM. Imobilização 6–8 semanas com carga progressiva.' },
-            { bold: 'Indicação cirúrgica:', rest: 'desvio >2 mm em qualquer incidência (AP, lateral ou oblíqua). Inclui lesões com Sinal do Fleck.' },
+            { bold: 'Indicação cirúrgica:', rest: 'desvio &gt;2 mm em qualquer incidência (AP, lateral ou oblíqua). Inclui lesões com Sinal do Fleck.' },
             { bold: 'ORIF:', rest: 'redução anatômica + fixação com parafusos transarticulares. Sequência: 2º MT primeiro (pedra angular), depois coluna medial, depois lateral.' },
             { bold: 'Artrodese Primária:', rest: 'preferida para lesões puramente ligamentares (sem fragmento ósseo). Fusão da coluna medial (1º–3º TMT) preservando a mobilidade da coluna lateral.' },
             { bold: 'Pós-operatório:', rest: 'sem carga por 6–8 semanas. Retirada dos parafusos transarticulares em 3–4 meses para restaurar mobilidade residual.' },

@@ -24,7 +24,7 @@ export default function SamilsonPrietoTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Grau 0: sem alterações. Grau I: osteófito <3mm. Grau II: osteófito 3-7mm. Grau III: osteófito >7mm com remodelação articular. Graus III-IV = artropatia avançada: indicar artroplastia total glenoumeral ou RTSA. Grau II com instabilidade ativa: ainda pode tentar estabilização.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Grau 0: sem alterações. Grau I: osteófito &lt;3mm. Grau II: osteófito 3-7mm. Grau III: osteófito &gt;7mm com remodelação articular. Graus III-IV = artropatia avançada: indicar artroplastia total glenoumeral ou RTSA. Grau II com instabilidade ativa: ainda pode tentar estabilização.</p>
           </div>
         </div>
       </div>

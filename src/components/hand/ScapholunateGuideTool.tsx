@@ -19,7 +19,7 @@ const sections = [
     content: [
       'Pré-dinâmica: dor sem instabilidade demonstrável, ligamento parcialmente lesado',
       'Dinâmica: instabilidade demonstrada com stress (Watson test), RX estático normal',
-      'Estática redutível: gap SL >3mm no RX estático, corrige com manipulação',
+      'Estática redutível: gap SL &gt;3mm no RX estático, corrige com manipulação',
       'Estática irredutível: gap SL fixo, DISI estabelecido, sem artrose',
       'SLAC wrist: artrose degenerativa secundária (estágios I-III)',
     ],
@@ -29,9 +29,9 @@ const sections = [
     title: 'Diagnóstico',
     content: [
       'Watson shift test (scaphoid shift): subluxação dorsal do escafóide com pressão no tubérculo',
-      'Gap escafolunar >3mm (sinal de Terry-Thomas) no RX AP com punho cerrado',
-      'Padrão DISI: semilunar em extensão (ângulo SL >60°, normal 30-60°)',
-      'Ângulo escafolunar >70° = dissociação SL',
+      'Gap escafolunar &gt;3mm (sinal de Terry-Thomas) no RX AP com punho cerrado',
+      'Padrão DISI: semilunar em extensão (ângulo SL &gt;60°, normal 30-60°)',
+      'Ângulo escafolunar &gt;70° = dissociação SL',
       'RM ou artro-RM para lesões parciais/pré-dinâmicas',
       'Artroscopia: gold standard para estadiamento (classificação de Geissler)',
     ],
@@ -40,7 +40,7 @@ const sections = [
     id: 'treatment',
     title: 'Tratamento',
     content: [
-      'Aguda (<6 semanas): reparação direta do ligamento + fixação com fios K por 8-12 semanas',
+      'Aguda (&lt;6 semanas): reparação direta do ligamento + fixação com fios K por 8-12 semanas',
       'Subaguda (6 semanas - 6 meses): reparação + capsulodese dorsal (Blatt)',
       'Crônica redutível: reconstrução ligamentar (tenodese tipo Brunelli modificada)',
       'Crônica irredutível sem artrose: artrodese SL ou redução + reconstrução',

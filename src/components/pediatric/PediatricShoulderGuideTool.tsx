@@ -38,7 +38,7 @@ const sections = [
       '  — Lateral: equivalente de fratura de acrômio em adultos',
       'ÚMERO PROXIMAL (Fise): Salter-Harris II mais comum',
       '  — Mecanismo: queda sobre o braço estendido ou trauma direto',
-      '  — <5 anos: períosteo espesso, fise cartilaginosa extensa',
+      '  — &lt;5 anos: períosteo espesso, fise cartilaginosa extensa',
       '  — 5-12 anos: SH-II típico, potencial de remodelação alto',
       '  — Adolescente: SH-I/II com deslocamento maior, menos remodelação',
       'ESCÁPULA: fraturas incomuns na criança — alto mecanismo necessário',

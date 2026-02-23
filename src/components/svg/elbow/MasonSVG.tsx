@@ -27,8 +27,8 @@ interface GradeInfo {
 }
 
 const grades: GradeInfo[] = [
-  { id: 'type-i', label: 'Type I', description: 'Marginal, non-displaced (<2mm)', color: CLINICAL_COLORS.safe },
-  { id: 'type-ii', label: 'Type II', description: 'Marginal, displaced (>2mm, >30%)', color: CLINICAL_COLORS.caution },
+  { id: 'type-i', label: 'Type I', description: 'Marginal, non-displaced (&lt;2mm)', color: CLINICAL_COLORS.safe },
+  { id: 'type-ii', label: 'Type II', description: 'Marginal, displaced (&gt;2mm, &gt;30%)', color: CLINICAL_COLORS.caution },
   { id: 'type-iii', label: 'Type III', description: 'Comminuted entire head', color: CLINICAL_COLORS.danger },
   { id: 'type-iv', label: 'Type IV', description: 'Fracture + dislocation', color: CLINICAL_COLORS.danger },
 ];

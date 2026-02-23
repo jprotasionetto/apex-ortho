@@ -7,8 +7,8 @@ const sections = [
     title: 'Classificação',
     content: [
       'Loder (funcional): Estável (consegue caminhar) vs Instável (não consegue caminhar)',
-      'Temporal: Agudo (<3 semanas), Crónico (>3 semanas), Agudo sobre crónico',
-      'Gravidade (ângulo de deslizamento): Leve (<30°), Moderado (30-50°), Grave (>50°)',
+      'Temporal: Agudo (&lt;3 semanas), Crónico (&gt;3 semanas), Agudo sobre crónico',
+      'Gravidade (ângulo de deslizamento): Leve (&lt;30°), Moderado (30-50°), Grave (&gt;50°)',
       'A classificação de Loder é a mais importante para prognóstico: instável = 20-50% NAV',
       'A estabilidade é determinada CLINICAMENTE (capacidade de caminhar), não por imagem',
     ],
@@ -17,7 +17,7 @@ const sections = [
     id: 'presentation',
     title: 'Apresentação Clínica',
     content: [
-      'Adolescente tipicamente obeso (IMC >95º percentil)',
+      'Adolescente tipicamente obeso (IMC &gt;95º percentil)',
       'Idade: 10-16 anos (raparigas 10-14, rapazes 12-16)',
       'Dor inguinal ou referida ao joelho (15-50% apresentam-se com gonalgia!)',
       'Claudicação progressiva (crónico) ou início agudo (instável)',
@@ -50,7 +50,7 @@ const sections = [
       'ECFE estável: fixação in situ com 1 parafuso canulado central na epífise',
       'NÃO tentar reduzir o ECFE estável (risco de NAV)',
       'Parafuso perpendicular à fise, centralmente na epífise (guiado por fluoroscopia)',
-      'ECFE instável: urgência cirúrgica (idealmente <24h)',
+      'ECFE instável: urgência cirúrgica (idealmente &lt;24h)',
       'ECFE instável: redução gentil (controversa) + fixação com parafusos canulados',
       'Capsulotomia anterior: descompressão do hematoma intra-articular (pode reduzir NAV)',
       'Fixação profilática contralateral: controversa (risco-benefício individual)',

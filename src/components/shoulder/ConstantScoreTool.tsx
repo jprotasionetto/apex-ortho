@@ -27,7 +27,7 @@ export default function ConstantScoreTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Score 0-100 (maior = melhor). Resultado normal para idade >75 pts. Limitação: força medida com dinamômetro ou método padronizado — sem equipamento, pode ser estimada. Constant age-adjusted: normaliza por sexo e idade. Complementar com ASES para avaliação completa.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Score 0-100 (maior = melhor). Resultado normal para idade &gt;75 pts. Limitação: força medida com dinamômetro ou método padronizado — sem equipamento, pode ser estimada. Constant age-adjusted: normaliza por sexo e idade. Complementar com ASES para avaliação completa.</p>
           </div>
         </div>
       </div>

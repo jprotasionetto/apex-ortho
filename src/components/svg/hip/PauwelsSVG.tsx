@@ -29,7 +29,7 @@ interface GradeInfo {
 }
 
 const grades: GradeInfo[] = [
-  { id: 'type-i', label: 'Type I', angle: '<30\u00B0', description: 'Minimal shear forces', prognosis: 'Good prognosis', color: CLINICAL_COLORS.safe },
+  { id: 'type-i', label: 'Type I', angle: '&lt;30\u00B0', description: 'Minimal shear forces', prognosis: 'Good prognosis', color: CLINICAL_COLORS.safe },
   { id: 'type-ii', label: 'Type II', angle: '30-50\u00B0', description: 'Intermediate shear', prognosis: 'Moderate prognosis', color: CLINICAL_COLORS.caution },
   { id: 'type-iii', label: 'Type III', angle: '>50\u00B0', description: 'High shear forces', prognosis: 'Poor prognosis', color: CLINICAL_COLORS.danger },
 ];

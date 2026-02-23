@@ -38,7 +38,7 @@ const sections = [
       'Tipo I: reinserção do tendão na falange distal com âncora ou pull-out suture - URGENTE',
       'Tipo II: reinserção na falange distal, pode avançar tendão do nível da IFP',
       'Tipo III: fixação do fragmento ósseo com micro-parafuso ou pull-out + fio K',
-      'Crônico (>6 semanas, Tipo I): reconstrução em estágio (hunter rod → enxerto tendinoso)',
+      'Crônico (&gt;6 semanas, Tipo I): reconstrução em estágio (hunter rod → enxerto tendinoso)',
       'Alternativas se reconstrução não possível: tenodese da IFD ou artrodese da IFD',
       'Pós-operatório: protocolo de mobilização precoce protegida (Duran modificado)',
     ],

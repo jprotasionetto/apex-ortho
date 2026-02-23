@@ -49,7 +49,7 @@ export default function HarrisHipScoreTool() {
           </div>
           <div className="bg-[#0A0A0A] rounded-lg p-2">
             <p className="text-[10px] text-[#D4AF37] uppercase tracking-wider font-semibold mb-1">Relevância Clínica</p>
-            <p className="text-xs text-gray-300 leading-relaxed">Excelente: ≥90 | Bom: 80-89 | Regular: 70-79 | Ruim: <70. Um aumento de ≥10 pontos é clinicamente significativo. A subescala de dor (44 pts) é o domínio mais ponderado do escore.</p>
+            <p className="text-xs text-gray-300 leading-relaxed">Excelente: ≥90 | Bom: 80-89 | Regular: 70-79 | Ruim: &lt;70. Um aumento de ≥10 pontos é clinicamente significativo. A subescala de dor (44 pts) é o domínio mais ponderado do escore.</p>
           </div>
         </div>
       </div>
