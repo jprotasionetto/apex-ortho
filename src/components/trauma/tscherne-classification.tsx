@@ -1,16 +1,30 @@
 import { useState } from 'react';
 import { tscherneClassificationData } from '@/data/trauma/tscherne-classification.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import TscherneSVG from '@/components/svg/trauma/TscherneSVG.tsx';
 
 export default function TscherneClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
   const active = selected ? tscherneClassificationData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
-      {/* Interactive SVG Diagram */}
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <TscherneSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
+      {/* Imagens do Manual de Trauma Ortopédico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Lesões de Partes Moles (AO/Tscherne) — Manual SBOT (pp. 188–190)</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {[
+            { src: '/images/manual-trauma/page188_img1.png', caption: 'Classificação AO de partes moles — visão geral' },
+            { src: '/images/manual-trauma/page189_img1.png', caption: 'Tscherne/AO — Grau 1: escoriações e contusões' },
+            { src: '/images/manual-trauma/page190_img1.png', caption: 'Grau 2/3 — mentotaxia para redução e estabilização' },
+            { src: '/images/manual-trauma/page190_img2.png', caption: 'Fixação externa — controle de danos em partes moles' },
+            { src: '/images/manual-trauma/page190_img3.png', caption: 'Resultado após estabilização temporária' },
+            { src: '/images/manual-trauma/page190_img4.png', caption: 'Fechamento definitivo — partes moles' },
+          ].map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="grid gap-2">
         {tscherneClassificationData.grades.map((g) => (

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { aoClassificationData } from '@/data/trauma/ao-classification.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import AOClassificationSVG from '@/components/svg/trauma/AOClassificationSVG.tsx';
 
 export default function AoClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -28,9 +27,23 @@ export default function AoClassificationTool() {
           </div>
         </div>
       </div>
-      {/* Interactive SVG Diagram */}
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <AOClassificationSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
+      {/* Imagens do Manual de Trauma Ortopédico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Classificação AO/OTA — Manual SBOT (pp. 25, 79, 161)</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {[
+            { src: '/images/manual-trauma/page25_img1.png', caption: 'AO — conexão entre segmentos (diagrama 1)' },
+            { src: '/images/manual-trauma/page25_img2.png', caption: 'AO — conexão entre segmentos (diagrama 2)' },
+            { src: '/images/manual-trauma/page25_img3.png', caption: 'AO — conexão entre segmentos (diagrama 3)' },
+            { src: '/images/manual-trauma/page79_img1.png', caption: 'Classificação AO completa — fratura diafisária do úmero' },
+            { src: '/images/manual-trauma/page161_img1.png', caption: 'Classificação AO — orientação para o tratamento' },
+          ].map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="grid gap-2">
         {aoClassificationData.grades.map((g) => (

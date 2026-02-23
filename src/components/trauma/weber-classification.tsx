@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { weberClassificationData } from '@/data/trauma/weber-classification.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import { WeberSVG } from '@/components/svg/foot/WeberSVG.tsx';
 
 export default function WeberClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -53,10 +52,6 @@ export default function WeberClassificationTool() {
         </div>
       </div>
 
-      {/* Interactive SVG Diagram */}
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <WeberSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
-      </div>
       <div className="grid gap-2">
         {weberClassificationData.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-primary-500 bg-primary-500/10' : 'border-slate-700 hover:border-slate-600'}`}>

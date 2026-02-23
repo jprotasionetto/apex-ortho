@@ -3,6 +3,29 @@ import { Alert } from '@/components/ui/Alert.tsx';
 export default function DamageControlOrthoTool() {
   return (
     <div className="space-y-6">
+      {/* Imagens do Manual de Trauma Ortopédico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Damage Control Ortho — Manual SBOT (pp. 174–177, 250–251)</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {[
+            { src: '/images/manual-trauma/page174_img1.png', caption: 'DCO — controle de danos: fixador externo em fêmur' },
+            { src: '/images/manual-trauma/page174_img2.png', caption: 'DCO — estabilização pélvica temporária' },
+            { src: '/images/manual-trauma/page175_img1.png', caption: 'DCO — paciente politraumatizado na UTI' },
+            { src: '/images/manual-trauma/page175_img2.png', caption: 'Conversão fixador externo → haste intramedular' },
+            { src: '/images/manual-trauma/page175_img3.png', caption: 'Riscos do imobilismo prolongado' },
+            { src: '/images/manual-trauma/page177_img1.png', caption: 'Consolidação em 14–16 semanas — fêmur' },
+            { src: '/images/manual-trauma/page177_img2.png', caption: 'Haste intramedular bloqueada — técnica' },
+            { src: '/images/manual-trauma/page177_img3.png', caption: 'Resultado funcional pós-ETC/DCO' },
+            { src: '/images/manual-trauma/page251_img1.png', caption: 'Placas bloqueadas e hastes intramedulares — princípios' },
+            { src: '/images/manual-trauma/page251_img2.png', caption: 'Implantes de fixação definitiva' },
+          ].map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
       <section>
         <h2 className="text-lg font-semibold text-slate-100 mb-3">Princípios</h2>
         <div className="bg-slate-800 border border-slate-700 rounded-xl p-4 space-y-3">

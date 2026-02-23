@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { gustiloAndersonData } from '@/data/trauma/gustilo-anderson.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import GustiloAndersonSVG from '@/components/svg/trauma/GustiloAndersonSVG.tsx';
 
 export default function GustiloAndersonTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -13,10 +12,12 @@ export default function GustiloAndersonTool() {
         <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">
           Fraturas Expostas — Manual SBOT (pp. 31–40)
         </p>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
           {[
             { src: '/images/manual-trauma/page30_img1.png', caption: 'Algoritmo de conduta — lesão arterial e estado hemodinâmico' },
             { src: '/images/manual-trauma/page50_img1.png', caption: 'Classificação de Gustilo-Anderson — Tipos I, II, III' },
+            { src: '/images/manual-trauma/page51_img1.png', caption: 'Gustilo Tipo IIIA — cobertura adequada de periósteo' },
+            { src: '/images/manual-trauma/page51_img2.png', caption: 'Gustilo Tipo IIIB/C — perda de cobertura, lesão vascular' },
           ].map((img) => (
             <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
               <img src={img.src} alt={img.caption} className="w-full h-32 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
@@ -24,10 +25,6 @@ export default function GustiloAndersonTool() {
             </div>
           ))}
         </div>
-      </div>
-      {/* Interactive SVG Diagram */}
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <GustiloAndersonSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
       </div>
       <div className="grid gap-2">
         {gustiloAndersonData.grades.map((g) => (

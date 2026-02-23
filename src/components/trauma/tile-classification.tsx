@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { tileClassificationData } from '@/data/trauma/tile-classification.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import TilePelvicSVG from '@/components/svg/trauma/TilePelvicSVG.tsx';
 
 export default function TileClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -28,10 +27,6 @@ export default function TileClassificationTool() {
             </div>
           ))}
         </div>
-      </div>
-      {/* Interactive SVG Diagram */}
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <TilePelvicSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
       </div>
       <div className="grid gap-2">
         {tileClassificationData.grades.map((g) => (

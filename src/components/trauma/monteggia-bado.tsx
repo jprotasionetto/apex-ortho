@@ -27,6 +27,25 @@ export default function MonteggiaBadoTool() {
           </div>
         </div>
       </div>
+      {/* Imagens do Manual de Trauma Ortopédico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Monteggia-Bado — Manual SBOT (pp. 208)</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {[
+            { src: '/images/manual-trauma/page208_img1.png', caption: 'Bado Tipo I — luxação anterior da cabeça do rádio' },
+            { src: '/images/manual-trauma/page208_img2.png', caption: 'Bado Tipo II — luxação posterior' },
+            { src: '/images/manual-trauma/page208_img3.png', caption: 'Bado Tipo III — luxação lateral' },
+            { src: '/images/manual-trauma/page208_img4.png', caption: 'Bado Tipo IV — fratura de ambos os ossos + luxação' },
+            { src: '/images/manual-trauma/page208_img5.png', caption: 'Fixação da ulna com placa — técnica cirúrgica' },
+            { src: '/images/manual-trauma/page208_img6.png', caption: 'Resultado pós-operatório — redução da cabeça do rádio' },
+          ].map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="grid gap-2">
         {monteggiaBadoData.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-primary-500 bg-primary-500/10' : 'border-slate-700 hover:border-slate-600'}`}>

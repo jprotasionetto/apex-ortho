@@ -3,6 +3,21 @@ import { Alert } from '@/components/ui/Alert.tsx';
 export default function MangledExtremityAlgorithmTool() {
   return (
     <div className="space-y-6">
+      {/* Imagens do Manual de Trauma Ortopédico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Membro Gravemente Traumatizado — Manual SBOT (pp. 30, 83)</p>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { src: '/images/manual-trauma/page30_img1.png', caption: 'Algoritmo de conduta — lesão arterial e hemodinâmica' },
+            { src: '/images/manual-trauma/page83_img1.png', caption: 'Avaliação de partes moles e isquemia vascular' },
+          ].map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-28 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
+            </div>
+          ))}
+        </div>
+      </div>
       <section>
         <h2 className="text-lg font-semibold text-slate-100 mb-3">Avaliação Inicial</h2>
         <div className="bg-slate-800 border border-slate-700 rounded-xl p-4 space-y-3">

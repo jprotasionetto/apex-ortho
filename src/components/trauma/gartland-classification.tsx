@@ -1,16 +1,30 @@
 import { useState } from 'react';
 import { gartlandClassificationData } from '@/data/trauma/gartland-classification.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import GartlandSVG from '@/components/svg/elbow/GartlandSVG.tsx';
 
 export default function GartlandClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
   const active = selected ? gartlandClassificationData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
-      {/* Interactive SVG Diagram */}
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <GartlandSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
+      {/* Imagens do Manual de Trauma Ortopédico */}
+      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Fraturas Supracondilianas (Gartland) — Manual SBOT (pp. 88–90)</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {[
+            { src: '/images/manual-trauma/page88_img1.png', caption: 'Fraturas da extremidade distal do cotovelo — epidemiologia' },
+            { src: '/images/manual-trauma/page89_img1.png', caption: 'Gartland Tipo I — sem desvio' },
+            { src: '/images/manual-trauma/page89_img2.png', caption: 'Gartland Tipo II — desvio posterior com cortical anterior íntegra' },
+            { src: '/images/manual-trauma/page89_img3.png', caption: 'Gartland Tipo III — desvio completo' },
+            { src: '/images/manual-trauma/page90_img1.png', caption: 'Tratamento cirúrgico — fixação percutânea com fios de Kirschner' },
+            { src: '/images/manual-trauma/page90_img2.png', caption: 'Técnica de fixação em pinça — divergente lateral' },
+          ].map((img) => (
+            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+              <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="grid gap-2">
         {gartlandClassificationData.grades.map((g) => (

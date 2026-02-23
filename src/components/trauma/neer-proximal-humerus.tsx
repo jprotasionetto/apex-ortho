@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { neerProximalHumerusData } from '@/data/trauma/neer-proximal-humerus.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import NeerSVG from '@/components/svg/shoulder/NeerSVG.tsx';
 
 const colorMap: Record<string, string> = { safe: '#22C55E', caution: '#F59E0B', danger: '#EF4444', info: '#3B82F6' };
 
@@ -37,9 +36,6 @@ export default function NeerProximalHumerusTool() {
             <p className="text-xs text-gray-300 leading-relaxed">1-2 partes: conservador frequente (tipoia, fisioterapia precoce). 3-4 partes em jovem: ORIF (placa angular bloqueada). 3-4 partes em idoso (&gt;65 anos): hemiartroplastia ou RTSA. NAV: fratura-luxação cabeça ou 4 partes = alto risco (&gt;75%). RTSA supera hemiartroplastia em resultados funcionais em idosos.</p>
           </div>
         </div>
-      </div>
-      <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4 overflow-hidden">
-        <NeerSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
       </div>
       <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
         <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Úmero Proximal — Manual SBOT (pp. 68–71)</p>

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { gardenClassificationData } from '@/data/trauma/garden-classification.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import GardenSVG from '@/components/svg/hip/GardenSVG.tsx';
 
 export default function GardenClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -27,10 +26,6 @@ export default function GardenClassificationTool() {
             </div>
           ))}
         </div>
-      </div>
-      {/* Interactive SVG Diagram */}
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <GardenSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
       </div>
       <div className="grid gap-2">
         {gardenClassificationData.grades.map((g) => (
