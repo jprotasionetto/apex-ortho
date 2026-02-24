@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { pauwelsClassificationData } from '@/data/hip/pauwels-classification.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import PauwelsSVG from '@/components/svg/hip/PauwelsSVG.tsx';
 
 export default function PauwelsClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -29,8 +28,28 @@ export default function PauwelsClassificationTool() {
           </div>
         </div>
       </div>
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <PauwelsSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
+      {/* Manual Images */}
+      <div className="pt-2 pb-4 border-b border-[rgba(212,175,55,0.15)]">
+        <p className="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-3">Manual SBOT — Imagens de Referência (pp. 156–162)</p>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { src: '/images/manual-trauma/page156_img1.png', alt: 'Fratura do colo femoral — anatomia geral' },
+            { src: '/images/manual-trauma/page157_img1.png', alt: 'Ângulo de Pauwels — linha de fratura' },
+            { src: '/images/manual-trauma/page158_img1.png', alt: 'Pauwels I, II, III — forças de cisalhamento' },
+            { src: '/images/manual-trauma/page161_img1.png', alt: 'Fixação interna — parafusos canulados' },
+            { src: '/images/manual-trauma/page162_img1.png', alt: 'Artroplastia em Pauwels III' },
+          ].map((img, idx) => (
+            <div key={idx} className="rounded-lg overflow-hidden bg-[#0A0A0A] border border-[rgba(212,175,55,0.1)]">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-auto object-contain"
+                onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display='none'; }}
+              />
+              <p className="text-[10px] text-[#6B7280] p-1.5 leading-tight">{img.alt}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="grid gap-2">
         {pauwelsClassificationData.grades.map((g) => (

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { goutallierClassificationData } from '@/data/shoulder/goutallier-classification.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import GoutallierSVG from '@/components/svg/shoulder/GoutallierSVG.tsx';
 
 export default function GoutallierClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -28,10 +27,6 @@ export default function GoutallierClassificationTool() {
             <p className="text-xs text-gray-300 leading-relaxed">Goutallier ≥3 está associado a maior taxa de re-ruptura pós-reparo. Pode contraindicar reparo primário e favorecer artroplastia reversa.</p>
           </div>
         </div>
-      </div>
-      {/* Interactive SVG Diagram */}
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <GoutallierSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
       </div>
       <div className="grid gap-2">
         {goutallierClassificationData.grades.map((g) => (

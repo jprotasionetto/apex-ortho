@@ -1,15 +1,34 @@
 import { useState } from 'react';
 import { denisClassificationSpine } from '@/data/spine/denis-classification-spine.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import { DenisColumnsSVG } from '@/components/svg/spine/DenisColumnsSVG.tsx';
 
 export default function DenisClassificationSpineTool() {
   const [selected, setSelected] = useState<string | null>(null);
   const active = selected ? denisClassificationSpine.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <DenisColumnsSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
+      {/* Manual Images */}
+      <div className="pt-2 pb-4 border-b border-[rgba(212,175,55,0.15)]">
+        <p className="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-3">Manual SBOT — Imagens de Referência (pp. 329–335)</p>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { src: '/images/manual-trauma/page329_img1.png', alt: 'Três colunas de Denis — anterior, média, posterior' },
+            { src: '/images/manual-trauma/page330_img1.png', alt: 'Fratura por compressão — coluna anterior' },
+            { src: '/images/manual-trauma/page331_img1.png', alt: 'Fratura burst — colapso das colunas' },
+            { src: '/images/manual-trauma/page332_img1.png', alt: 'Fratura por flexão-distração (Chance)' },
+            { src: '/images/manual-trauma/page335_img1.png', alt: 'Fratura-luxação — instabilidade total' },
+          ].map((img, idx) => (
+            <div key={idx} className="rounded-lg overflow-hidden bg-[#0A0A0A] border border-[rgba(212,175,55,0.1)]">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-auto object-contain"
+                onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display='none'; }}
+              />
+              <p className="text-[10px] text-[#6B7280] p-1.5 leading-tight">{img.alt}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="grid gap-2">
         {denisClassificationSpine.grades.map((g) => (

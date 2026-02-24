@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { spondylolisthesisMeyerding } from '@/data/spine/spondylolisthesis-meyerding.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import { MeyerdingSVG } from '@/components/svg/spine/MeyerdingSVG.tsx';
 
 export default function SpondylolisthesisMeyerdingTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -29,8 +28,27 @@ export default function SpondylolisthesisMeyerdingTool() {
         </div>
       </div>
 
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <MeyerdingSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
+      {/* Manual Images */}
+      <div className="pt-2 pb-4 border-b border-[rgba(212,175,55,0.15)]">
+        <p className="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-3">Manual SBOT — Imagens de Referência (pp. 330–332, 340)</p>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { src: '/images/manual-trauma/page330_img1.png', alt: 'Espondilólise — defeito no istmo' },
+            { src: '/images/manual-trauma/page331_img1.png', alt: 'Espondilolistese — deslizamento vertebral' },
+            { src: '/images/manual-trauma/page332_img1.png', alt: 'Meyerding graus I–IV e espondiloptose' },
+            { src: '/images/manual-trauma/page340_img1.png', alt: 'Fusão instrumentada — L5-S1' },
+          ].map((img, idx) => (
+            <div key={idx} className="rounded-lg overflow-hidden bg-[#0A0A0A] border border-[rgba(212,175,55,0.1)]">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-auto object-contain"
+                onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display='none'; }}
+              />
+              <p className="text-[10px] text-[#6B7280] p-1.5 leading-tight">{img.alt}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="grid gap-2">
         {spondylolisthesisMeyerding.grades.map((g) => (

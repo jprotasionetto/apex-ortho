@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { ennekingStagingData } from '@/data/tumor/enneking-staging.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import { EnnekingSVG } from '@/components/svg/tumor/EnnekingSVG.tsx';
 
 export default function EnnekingStagingTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -29,8 +28,26 @@ export default function EnnekingStagingTool() {
           </div>
         </div>
       </div>
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <EnnekingSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
+      {/* Manual Images */}
+      <div className="pt-2 pb-4 border-b border-[rgba(212,175,55,0.15)]">
+        <p className="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-3">Manual SBOT — Imagens de Referência (p. 386)</p>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { src: '/images/manual-trauma/page386_img1.png', alt: 'Estadiamento de Enneking — tumores benignos' },
+            { src: '/images/manual-trauma/page386_img2.png', alt: 'Estadiamento de Enneking — tumores malignos' },
+            { src: '/images/manual-trauma/page386_img3.png', alt: 'Margens cirúrgicas e ressecção oncológica' },
+          ].map((img, idx) => (
+            <div key={idx} className="rounded-lg overflow-hidden bg-[#0A0A0A] border border-[rgba(212,175,55,0.1)]">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-auto object-contain"
+                onError={(e) => { (e.target as HTMLImageElement).parentElement!.style.display='none'; }}
+              />
+              <p className="text-[10px] text-[#6B7280] p-1.5 leading-tight">{img.alt}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="grid gap-2">
         {ennekingStagingData.grades.map((g) => (

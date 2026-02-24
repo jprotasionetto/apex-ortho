@@ -1,16 +1,12 @@
 import { useState } from 'react';
 import { meniscusClassification } from '@/data/knee/meniscus-classification.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import { MeniscalZonesSVG } from '@/components/svg/knee/MeniscalZonesSVG.tsx';
 
 export default function MeniscusClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
   const active = selected ? meniscusClassification.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <MeniscalZonesSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
-      </div>
       <div className="grid gap-2">
         {meniscusClassification.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-primary-500 bg-primary-500/10' : 'border-slate-700 hover:border-slate-600'}`}>

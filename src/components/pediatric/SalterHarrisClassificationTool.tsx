@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { salterHarrisClassificationData } from '@/data/pediatric/salter-harris.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import { SalterHarrisSVG } from '@/components/svg/pediatric/SalterHarrisSVG.tsx';
 
 export default function SalterHarrisClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -28,9 +27,6 @@ export default function SalterHarrisClassificationTool() {
             </div>
           ))}
         </div>
-      </div>
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <SalterHarrisSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
       </div>
       <div className="grid gap-2">
         {salterHarrisClassificationData.grades.map((g) => (

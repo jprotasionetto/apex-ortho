@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { walchClassificationData } from '@/data/shoulder/walch-classification.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import WalchSVG from '@/components/svg/shoulder/WalchSVG.tsx';
 
 export default function WalchClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -28,10 +27,6 @@ export default function WalchClassificationTool() {
             <p className="text-xs text-gray-300 leading-relaxed">Tipos B2/B3 e C têm maior risco de falha do implante; influenciam a decisão entre implante anatômico vs reverso.</p>
           </div>
         </div>
-      </div>
-      {/* Interactive SVG Diagram */}
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <WalchSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
       </div>
       <div className="grid gap-2">
         {walchClassificationData.grades.map((g) => (

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { herbertClassificationData } from '@/data/hand/herbert-classification.ts';
 import { Alert } from '@/components/ui/Alert.tsx';
-import HerbertSVG from '@/components/svg/hand/HerbertSVG.tsx';
 
 export default function HerbertClassificationTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -9,10 +8,6 @@ export default function HerbertClassificationTool() {
 
   return (
     <div className="space-y-6">
-      {/* Interactive SVG Diagram */}
-      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 overflow-hidden">
-        <HerbertSVG activeGrade={selected} onGradeSelect={setSelected} interactive={true} showLabels={true} />
-      </div>
       <div className="grid gap-2">
         {herbertClassificationData.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-primary-500 bg-primary-500/10' : 'border-slate-700 hover:border-slate-600'}`}>
