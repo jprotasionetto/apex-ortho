@@ -4,7 +4,7 @@ const AO_TYPES = [
   {
     id: '42A',
     label: 'AO 42-A — Fratura simples',
-    description: 'Fratura diafisária simples (traço único). Subtipo A1: espiral; A2: oblíqua (≥30°); A3: transversa (<30°).',
+    description: 'Fratura diafisária simples (traço único). Subtipo A1: espiral; A2: oblíqua (≥30°); A3: transversa (&lt;30°).',
     colorCode: 'safe',
     criteria: [
       'Traço único, sem fragmento intermediário',

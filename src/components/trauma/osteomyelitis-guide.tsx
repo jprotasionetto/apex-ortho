@@ -80,7 +80,7 @@ export default function OsteomyelitisGuideTool() {
         <div className="bg-[#111111] border border-[rgba(255,255,255,0.08)] rounded-xl p-4 space-y-2">
           {[
             { label: 'Aguda — apresentação', desc: 'Febre, dor local, eritema, edema e impotência funcional. VHS e PCR elevados. Bacteremia presente em até 50% dos casos hematogênicos' },
-            { label: 'Aguda — diagnóstico por imagem', desc: 'Rx: alterações visíveis após 10–21 dias (reação periosteal, rarefação). RNM: exame de escolha — sensibilidade >90%, detecta precocemente edema medular e coleções' },
+            { label: 'Aguda — diagnóstico por imagem', desc: 'Rx: alterações visíveis após 10–21 dias (reação periosteal, rarefação). RNM: exame de escolha — sensibilidade &gt;90%, detecta precocemente edema medular e coleções' },
             { label: 'Crônica — características', desc: 'Sequestro ósseo necrótico (avascular, colonizado), involucro (neoformação óssea ao redor), fístula crônica com drenagem purulenta. VHS e PCR podem ser normais ou levemente elevados' },
             { label: 'Crônica — diagnóstico', desc: 'Biópsia óssea com cultura é o padrão-ouro. Swab de fístula tem baixa correlação com o agente causador (exceto S. aureus). RNM identifica sequestros e coleções' },
           ].map((item, i) => (
