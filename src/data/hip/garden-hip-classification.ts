@@ -5,6 +5,9 @@ export const gardenHipClassificationData: ClassificationData = {
   name: 'Classificação de Garden – Fraturas do Colo Femoral',
   author: 'Garden',
   year: 1961,
+  epidemiology: 'Fraturas do colo femoral representam a 4ª fratura mais comum no mundo e são responsáveis por significativa morbimortalidade no idoso. Incidência global: ~1,5 milhão/ano; no Brasil: ~200.000/ano. Pico em mulheres > 75 anos (relação 2-3:1 mulher:homem). Mortalidade em 1 ano: 20–36% (pacientes idosos com comorbidades). Fraturas deslocadas (Garden III–IV) representam ~50–60% dos casos. Taxa de necrose avascular (NAV): Garden I–II: 10–25%; Garden III: 25–40%; Garden IV: 40–60%. Taxa de pseudoartrose em fixados: Garden III–IV: 10–30%. Custo hospitalar elevado — hospitalização prolongada e reabilitação intensiva.',
+  mechanism: 'Mecanismo bifásico: (1) Queda de baixa energia com trauma direto no trocânter maior (idoso com osteoporose) — força de compressão transferida ao colo femoral; (2) Em jovens: trauma de alta energia (acidente de trânsito, queda de altura) com impacto axial. O colo femoral é uma estrutura biomecânica de alta tensão: superfície compressiva medial (cortical espessa, trabéculas em arco de tensão) e superfície de tração lateral (Ward triangle — área de menor densidade). A osteoporose diminui a resistência do osso trabecular, tornando o colo vulnerável à fratura. O ângulo de Pauwels (inclinação da linha de fratura) complementa Garden na avaliação de estabilidade: Pauwels I < 30° (compressão), II = 30–50°, III > 50° (cisalhamento — instável).',
+  surgicalBasis: 'Decisão terapêutica baseada em 3 variáveis: (1) Deslocamento (Garden I–II vs III–IV); (2) Idade e demanda funcional; (3) Comorbidades e expectativa de vida. Garden I–II (não deslocada): fixação in situ com 3 parafusos canulados em triângulo invertido — preservar a cabeça femoral. Garden III–IV em jovens (<60 anos): redução urgente aberta ou fechada + fixação (parafusos ou DHS com parafuso de apoio) — objetivo: preservar vascularização residual e a cabeça. Garden III–IV em idosos ativos (60–75 anos): artroplastia total do quadril (ATQ) — menores taxas de revisão que fixação. Garden III–IV em idosos baixa demanda (>75 anos): hemiartroplastia (cimento) — mais rápida, anestesia mais curta, menos instabilidade.',
   grades: [
     {
       id: 'garden-i',
@@ -67,8 +70,8 @@ export const gardenHipClassificationData: ClassificationData = {
       colorCode: 'danger',
     },
   ],
-  clinicalPearl: 'Garden I-II: fixacao in situ. Garden III-IV: artroplastia em idosos',
-  pitfall: 'Incidencia lateral fundamental para confirmacao',
+  clinicalPearl: 'Simplificação prática validada: Garden I–II (não deslocadas) = fixação; Garden III–IV (deslocadas) = artroplastia em idosos / fixação urgente em jovens. A incidência lateral é OBRIGATÓRIA — 15–25% das Garden I–II aparentemente não deslocadas mostram desvio significativo na lateral.',
+  pitfall: '"Paradoxo de Garden IV": no Garden IV, o trabeculado da cabeça re-alinha com o acetábulo (rotação interna da cabeça com retináculo rompido) — pode ser confundido com Garden II em AP. A lateral e a QUALIDADE da redução são mais preditores de NAV do que a classificação de Garden isoladamente. Reprodutibilidade interobservador da Garden (4 tipos) é moderada — muitos cirurgiões usam apenas "deslocada vs não deslocada" (Garden I–II vs III–IV).',
   references: [
     {
       authors: 'Garden RS',

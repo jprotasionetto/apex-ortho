@@ -5,6 +5,8 @@ export const schatzkerClassificationData: ClassificationData = {
   name: 'Classificação de Schatzker — Planalto Tibial',
   author: 'Schatzker',
   year: 1979,
+  epidemiology: 'Fraturas do planalto tibial representam ~1% de todas as fraturas e ~8% das fraturas em idosos. Incidência bimodal: homens jovens (20–50 anos) por trauma de alta energia (acidentes automotivos, atropelamento) e mulheres idosas (>65 anos) por trauma de baixa energia sobre osso osteoporótico. O tipo mais comum é o Tipo II (split-depressão lateral) em ~35% dos casos, seguido pelo Tipo VI (~25%) e Tipo I (~13%). Lesões associadas: menisco lateral em 50–70% dos Tipos I–III, LCM em 10–20%, LCA em 10–30%, nervo fibular comum em ~5% dos Tipos IV–VI. Síndrome compartimental em 5–15% dos Tipos V e VI — maior risco de quadros de alta energia. Infecção em 5–10% das RAFI com tecidos moles comprometidos.',
+  mechanism: 'Mecanismo principal: compressão axial + valgismo (Tipos I–III) ou varismo (Tipo IV) + carga sobre a tíbia. Tipo I: valgo + compressão axial em osso jovem (resiliente) → split puro sem depressão. Tipo II: valgo + compressão axial em osso de menor qualidade → split + impacção subcondral. Tipo III: compressão pura (sem valgo) → impacção central sem cisão. Tipo IV (medial): varismo em alta energia → osso medial (mais denso) requer mais força para fraturar. Tipos V e VI: trauma de alta energia com compressão axial bilateral → bicondilar, com ou sem dissociação metadiafisária. O compartimento posterior do planalto (fragmento posteromedial) — melhor visualizado em TC com cortes sagitais — é frequentemente ignorado no Rx e altera o plano cirúrgico.',
   grades: [
     {
       id: 'type-i',

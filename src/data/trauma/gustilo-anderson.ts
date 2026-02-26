@@ -5,6 +5,8 @@ export const gustiloAndersonData: ClassificationData = {
   name: 'Classificação de Gustilo-Anderson',
   author: 'Gustilo & Anderson',
   year: 1976,
+  epidemiology: 'Fraturas expostas representam 2–3% de todas as fraturas de extremidades, com incidência aproximada de 11,5/100.000 pessoas/ano. Distribuição por tipo: Tipo I em ~50%, Tipo II em ~35%, Tipo III em ~15% (sendo IIIA 10%, IIIB 4%, IIIC 1%). A tíbia é o osso mais frequentemente acometido (~40% das fraturas expostas), seguida pelo fêmur (~20%). Pico de incidência em homens jovens (20–40 anos) por acidentes motociclísticos; segundo pico em idosos por fraturas de baixa energia com pele frágil. Taxa de infecção global: Tipo I 0–2%, Tipo II 2–7%, Tipo IIIA 7–10%, Tipo IIIB 10–50%, Tipo IIIC 25–50%. Taxa de amputação no IIIC: 20–50% dependendo da extensão da isquemia.',
+  mechanism: 'O mecanismo determina a gravidade da lesão de tecidos moles, não o tamanho da ferida. Tipo I ("inside-out"): energia baixa, osso atravessa a pele de dentro para fora — lesão mínima de partes moles. Tipo II: energia moderada, geralmente impacto direto. Tipo III: alta energia — atropelamento, queda de altura > 2 m, ferimento por arma de fogo (FAF), acidentes agrícolas ou industriais, trauma por explosão. Contaminação maciça (solo de fazenda, água contaminada) = Tipo IIIA mínimo independente do tamanho da ferida. Lesão vascular = sempre Tipo IIIC independente dos tecidos moles. Princípio fundamental: fratura exposta de alta energia com ferida pequeníssima (puntiforme) NÃO é Tipo I — é Tipo IIIA no mínimo.',
   grades: [
     {
       id: 'type-i',
