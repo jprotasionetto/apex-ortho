@@ -5,6 +5,8 @@ export const pauwelsClassificationData: ClassificationData = {
   name: 'Classificação de Pauwels – Fraturas do Colo Femoral',
   author: 'Pauwels',
   year: 1935,
+  epidemiology: 'Pauwels (1935) é o sistema biomecânico mais utilizado para fraturas do colo femoral, complementando Garden no planejamento cirúrgico. Prevalência por tipo: Tipo I (~20–25%), Tipo II (~40–45%), Tipo III (~30–35%) — embora a distribuição varie com a definição do examinador e a qualidade do Rx. Importância prognóstica: em jovens com Pauwels III, a taxa de pseudoartrose pode atingir 20–35% mesmo com fixação adequada, comparada a < 10% no Tipo I. Osteotomia valgizante de Pauwels (converte Tipo III em Tipo I) é indicada em falhas de fixação em jovens. A classificação de Pauwels tem reprodutibilidade interobservador moderada (Kappa 0,45–0,60) devido à variação do ângulo conforme posição do membro no Rx.',
+  mechanism: 'O mecanismo biomecânico de Pauwels baseia-se na orientação da linha de fratura em relação à horizontal (medida em AP): Tipo I (< 30°) → forças de compressão axial predominam, impactando os fragmentos (estabilizante) → consolidação favorável. Tipo II (30–50°) → equilíbrio entre compressão e cisalhamento → estabilidade intermediária. Tipo III (> 50°) → forças de cisalhamento superam compressão → o fragmento proximal desliza sobre o distal → falha do implante e pseudoartrose. A inclinação do traço determina o vetor de carga: quanto mais vertical, maior a componente de cisalhamento e menor a impactação. A posição do membro no Rx influencia diretamente o ângulo medido — o membro deve estar em posição neutra. Em fraturas com Garden III–IV, o ângulo de Pauwels é mais difícil de medir com precisão, mas ainda orienta o tipo de fixação (parafusos canulados paralelos vs DHS vs osteotomia).',
   grades: [
     {
       id: 'type-i',
@@ -51,8 +53,8 @@ export const pauwelsClassificationData: ClassificationData = {
       colorCode: 'danger',
     },
   ],
-  clinicalPearl: 'Angulo >50 graus: forcas de cisalhamento superam as de compressao',
-  pitfall: 'Angulo varia conforme posicao do membro na radiografia',
+  clinicalPearl: 'Pauwels III com angulo > 50°: forças de cisalhamento superam compressão — converter tipo III em tipo I com osteotomia valgizante de Pauwels em jovens com pseudoartrose ou alto risco biomecânico. Regra prática: Pauwels define o "como fixar" (ângulo, dispositivo), Garden define o "quem opera" (idade, deslocamento).',
+  pitfall: 'O ângulo de Pauwels varia significativamente conforme a posição do membro na radiografia. Membro em rotação interna subestima o ângulo; rotação externa superestima. Sempre medir em posição neutra com quadril a 15° de rotação interna para anular a anteversão femoral. Em fraturas Garden III–IV muito deslocadas, a medição é imprecisa — usar TC se necessário.',
   references: [
     {
       authors: 'Pauwels F',
