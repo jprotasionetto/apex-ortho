@@ -5,6 +5,8 @@ export const lodwickClassificationData: ClassificationData = {
   name: 'Classificacao de Lodwick (Padrao Radiografico de Lesoes Osseas)',
   author: 'Lodwick',
   year: 1980,
+  epidemiology: 'Classificação de Lodwick: escala radiográfica de agressividade mais usada em oncologia ortopédica. Tipo IA/IB: benigno na grande maioria → observação ou curetagem. Tipo II/III: maligno em 60–80% dos casos. Prevalência de lesões ósseas incidentais (Tipo IA): 2–5% das radiografias. Metástases ósseas (Tipo II): 100× mais comuns que tumores primários em pacientes >40a. Mieloma múltiplo: causa mais comum de lesão óssea em >40a (padrão II/III). Diagnóstico diferencial entre Tipo II e osteomielite: crítico e frequentemente requer biopsia.',
+  mechanism: 'A zona de transição (interface lesão-osso normal) é o parâmetro fundamental: traduz velocidade de crescimento tumoral. Lesão lenta: osso tem tempo de criar borda esclerótica reativa (Tipo IA, <1mm). Lesão moderada: borda definida sem esclerose (Tipo IB). Lesão agressiva: osso não tem tempo de responder → zona de transição ampla (IC: parcialmente definida; II moth-eaten: destruição trabecular; III permeativo: destruição difusa). Reação periosteal agressiva (triângulo de Codman = interrupção cortical + levantamento periostal; "raios de sol" = tumor crescendo ao longo dos canais de Havers na cortical): sinais adicionais de malignidade de alto grau.',
   grades: [
     {
       id: 'type-ia',

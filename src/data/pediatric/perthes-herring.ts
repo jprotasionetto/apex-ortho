@@ -5,6 +5,8 @@ export const perthesHerringClassificationData: ClassificationData = {
   name: 'Classificação de Herring – Pilar Lateral (Perthes)',
   author: 'Herring',
   year: 1992,
+  epidemiology: 'Herring (pilar lateral) tem melhor reprodutibilidade interobservador que Catterall (κ=0,64 vs 0,35). Validado pelo multicenter LCPD Study Group (JBJS 2004): grupo B/C e C em >8 anos = maiores benefícios com contenção cirúrgica. Grupo A: 100% desfecho favorável independente da idade. Grupo C em >8 anos: 76% desfecho ruim mesmo com cirurgia. Grupo B em >8 anos: cirurgia melhora de 20% para 54% resultados favoráveis. A classificação é o padrão-ouro atual para Perthes.',
+  mechanism: 'Pilar lateral = coluna estrutural da cabeça femoral na face lateral (15–30% da largura total da cabeça). Funciona como suporte mecânico durante a fase de revascularização. Se colabado: cabeça femoral perde contorno esférico → coxa magna (cabeça alargada, aplainada) → subluxação → artrose de Stulberg III–V. Avaliação na RX AP durante fase de fragmentação (pico do processo): altura do pilar lateral medida em relação à altura original da cabeça femoral. Pilar A intacto: cabeça mantém suporte lateral → remodelação esférica (Stulberg I–II). Pilar C colabado >50%: perda de esfericidade → deformidade.',
   grades: [
     {
       id: 'group-a',

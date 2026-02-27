@@ -5,6 +5,8 @@ export const brobergMorreyData: ClassificationData = {
   name: 'Classificação de Broberg-Morrey – Fraturas do Úmero Distal',
   author: 'Broberg & Morrey',
   year: 1986,
+  epidemiology: 'Fraturas do úmero distal representam 2–6% de todas as fraturas do úmero; incidência 0,5–7/100.000/ano. Distribuição bimodal: adultos jovens (alta energia: acidentes, quedas de altura) e idosos >65a (osteoporose). Mulheres predominam no grupo idoso. Tipo III (cominutiva) mais frequente em >70a com osso osteoporótico. Classificação AO (13-A/B/C) é a mais usada mundialmente; Broberg-Morrey orienta decisão RAFI vs TEA.',
+  mechanism: 'O úmero distal é uma estrutura bicolumnar com capitellum e tróclea. Mecanismo primário: queda com cotovelo fletido + carga axial transmitida pelo rádio e ulna. Jovens: trauma de alta energia. Idosos: queda simples. Princípio bicolumnar de Müller: dupla placa paralela (medial + lateral) converte forças torcionais em compressão através das placas → estabilidade rotacional superior à placa perpendicular. TEA (prótese total do cotovelo) em Tipo III >70a: cimento com link semi-constrained elimina necessidade de reconstrução articular.',
   grades: [
     {
       id: 'type-i',

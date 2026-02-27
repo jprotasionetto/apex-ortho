@@ -5,6 +5,8 @@ export const aoClassificationData: ClassificationData = {
   name: 'Classificação AO/OTA — Compêndio 2018',
   author: 'Müller / ICCFC',
   year: 2018,
+  epidemiology: 'O sistema AO/OTA é a classificação alfanumérica universal de fraturas, criado por Müller (1990) e atualizado no Compêndio 2018 (Meinberg et al., J Orthop Trauma). Compêndio 2018: removeu o hífen (31A, não 31-A), substituiu "complexa" por "multifragmentária", integrou Neer no úmero proximal (11A=unifocal, 11B=bifocal, 11C=articular), integrou exceções para fêmur proximal (31A=trocantérica, 31B=colo femoral, 31C=cabeça femoral) e padronizou os qualificadores. Usado em >150 países; codificação padronizada em ensaios clínicos, banco de dados da OTA e publicações internacionais.',
+  mechanism: 'Princípio hierárquico AO A<B<C reflete crescente instabilidade e gravidade. Diafisárias: Tipo A (simples, 2 fragmentos, contato cortical total após redução) → B (cunha com fragmento intermediário, contato parcial) → C (multifragmentária, sem contato = máxima instabilidade). Segmentos finais (proximal/distal): Tipo A (extra-articular, melhor prognóstico) → B (articular parcial, parte da articulação ainda unida à diáfise) → C (articular completa, separação total = máxima complexidade técnica e pior prognóstico funcional). Para diáfises: A = tratamento conservador possível na maioria; B/C = fixação cirúrgica preferencial.',
   grades: [
     {
       id: 'diaphysis-a',

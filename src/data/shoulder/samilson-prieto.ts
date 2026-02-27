@@ -5,6 +5,8 @@ export const samilsonPrietoData: ClassificationData = {
   name: 'Classificação de Samilson-Prieto – Artrose Glenoumeral',
   author: 'Samilson/Prieto',
   year: 1983,
+  epidemiology: 'Artrose glenoumeral primária afeta 20–30% dos >60a em algum grau radiográfico; sintomática em 2–3% dos adultos. Principal causa de artroplastia total do ombro (TSA/RSA). Mulheres > homens após 60a; homens <60a por artrose pós-traumática. Samilson-Prieto severa (grau 3) com coifa intacta = TSA anatômica com 90% de satisfação a 10 anos. Artroplastia total de ombro cresceu 250% nos EUA entre 2002–2011. Classificação de Walch (morfologia glenoidal) complementa Samilson-Prieto para planejamento cirúrgico.',
+  mechanism: 'Degeneração progressiva da cartilagem hialina glenoumeral por carga compressiva cíclica + instabilidade capsular. Osteófito inferior da cabeça umeral = primeiro sinal radiográfico — surge como resposta periosteal à tração capsular inferior crônica (medido em AP verdadeiro com rotação neutra). Erosão glenoidal posterior (Walch B): subluxação posterior crônica por desequilíbrio muscular (subescapular vs infraespinhoso). Osteófito >7mm (Grau 3): implica colapso do espaço articular com lesão de espessura total da cartilagem. Quistos subcondrais = sinal de doença avançada.',
   grades: [
     {
       id: 'mild',

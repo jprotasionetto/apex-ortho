@@ -5,6 +5,8 @@ export const periprostheticFractureHipClassificationData: ClassificationData = {
   name: 'Classificação de Vancouver (Fraturas Periprotésicas do Fémur)',
   author: 'Duncan/Masri',
   year: 1995,
+  epidemiology: 'Fraturas periprotésicas femorais: 0,5–2% das ATQs primárias e 3–5% das revisões. Incidência aumenta com osteoporose, hastes não-cimentadas e revisões. Tipo B = 70–75% de todas as periprotésicas; Tipo A = 10–15%; Tipo C = 15–20%. Mortalidade em 1 ano: 5–10% (semelhante à fratura de quadril geriátrica). Vancouver é a classificação mais usada mundialmente. B2/B3 demandam revisão da haste — cirurgia de maior morbidade e custo.',
+  mechanism: 'Vancouver (Duncan-Masri 1995) determina tratamento por 3 variáveis: (1) LOCALIZAÇÃO: A=trocantérica (AG=grande, AL=pequeno), B=nível da haste, C=distal à haste. (2) ESTABILIDADE DA HASTE: B1=haste estável, B2=haste solta (osso adequado), B3=haste solta (osso inadequado). (3) QUALIDADE ÓSSEA. Haste estável B1: biomecânica favorece RAFI com placa bloqueada + cerclagens, bypass do tip da haste. Haste solta B2: não fixar fratura sem resolver afrouxamento → revisão com haste longa que bypassa a fratura. B3: reconstrução combinada da fratura + stock ósseo deficiente.',
   grades: [
     {
       id: 'type-ag',

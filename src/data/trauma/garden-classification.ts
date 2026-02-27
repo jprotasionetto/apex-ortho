@@ -5,6 +5,8 @@ export const gardenClassificationData: ClassificationData = {
   name: 'Classificação de Garden — Colo Femoral',
   author: 'Garden',
   year: 1961,
+  epidemiology: 'Fraturas do colo femoral representam ~50% das fraturas proximais do fêmur; incidência: 80–120/100.000/ano em >65a; projeção de 6 milhões/ano no mundo em 2050. Mortalidade em 1 ano: 20–36%; cada hora de atraso além de 24–36h aumenta mortalidade. Necrose avascular (NAV): Garden I–II: 10–25%; Garden III–IV: 25–50%; em jovens: 10–30%. Pseudoartrose: 10–30% em Garden III–IV sem fixação precoce. Decisão cirúrgica prática: Garden I–II = fixação com parafusos canulados; Garden III–IV em idoso = artroplastia (parcial ou total); Garden III–IV em jovem = redução urgente + fixação (<6h).',
+  mechanism: 'Suprimento vascular crítico do colo femoral: artérias retinaculares (ramos da artéria femoral circunflexa medial) ascendem pelo colo sob o retináculo posterior → penetram a cabeça subcapitalmente. Qualquer deslocamento do colo → tensão/ruptura das artérias retinaculares → isquemia da cabeça femoral → NAV. Garden I: impactação em valgo preserva o retináculo posterior. Garden II: completa sem desvio — retináculo tenso mas íntegro. Garden III: desvio em varo — retináculo parcialmente rompido. Garden IV: "paradoxo de Garden" = desvio total → trabeculado da cabeça re-alinha com o acetábulo → retináculo completamente rompido → risco máximo de NAV. Princípio do timing: redução e fixação em <6–8h → descompressão do hematoma intracapsular e restauração do fluxo retinacular em jovens.',
   grades: [
     {
       id: 'garden-i',

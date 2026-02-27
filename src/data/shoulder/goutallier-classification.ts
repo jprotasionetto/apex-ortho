@@ -5,6 +5,8 @@ export const goutallierClassificationData: ClassificationData = {
   name: 'Classificação de Goutallier – Infiltração Gordurosa',
   author: 'Goutallier',
   year: 1994,
+  epidemiology: 'Infiltração gordurosa muscular (Goutallier) é o principal preditor de resultado após reparação da coifa. Prevalência em roturas massivas: Grau 0–1: 30–40%, Grau 2: 20–30%, Grau 3–4: 30–40%. Tempo de progressão: roturas 1–3 anos → Grau 2; >3 anos → Grau 3–4. Grau 2 = ponto de viragem clínico-cirúrgico. Grau ≥3 = processo IRREVERSÍVEL mesmo após reparação bem-sucedida — músculo não recupera força nem estrutura. Supraespinhoso é o tendão mais frequentemente afetado; infraespinhoso envolvido em roturas massivas.',
+  mechanism: 'Rotura tendínea → retração do tendão → desinervação parcial do músculo → substituição progressiva de fibras musculares por adipócitos (lipidose intersticial). Processo irreversível: sem reinervaçâo adequada e sem angiogênese suficiente para regeneração muscular mesmo após reparação cirúrgica. Avaliação: TC original de Goutallier (cortes axiais) — proporção gordura:músculo por inspeção visual. RM: cortes sagitais em plano Y-spine (ao nível da espinha da escápula) → proporção volume gorduroso vs muscular. RM pode sobrestimar 0,5–1 grau vs TC.',
   grades: [
     {
       id: 'stage-0',

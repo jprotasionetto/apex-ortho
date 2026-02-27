@@ -5,6 +5,8 @@ export const campanacciClassificationData: ClassificationData = {
   name: 'Classificacao de Campanacci (Tumor de Celulas Gigantes)',
   author: 'Campanacci',
   year: 1987,
+  epidemiology: 'Tumor de células gigantes (TCG) representa 5% dos tumores ósseos primários e 20% dos benignos. Incidência: 1–1,5/1.000.000/ano; pico 20–40 anos; leve predominância feminina. Localização: metáfise-epífise de ossos longos — 60% ao redor do joelho (fêmur distal + tíbia proximal). Grau III: 15–25% dos casos. Transformação maligna: <5%. Metástase pulmonar benigna (lung implants): 2–3% independente do grau. Denosumab (anti-RANKL) aprovado FDA 2013 para TCG irressecável ou cirurgia com morbidade excessiva.',
+  mechanism: 'TCG origina das células estromais do compartimento mieloide — não das células gigantes (osteoclastos recrutados). Células estromais expressam RANKL em excesso → recrutamento de osteoclastos (células gigantes multinucleadas) → destruição óssea agressiva. Denosumab: anticorpo anti-RANKL → inibe osteoclastos → recuperação da cortical óssea. Adjuvantes intraoperatórios (fenol 5%, N2 líquido, eletrocautério): criam necrose química/física de 1–2mm além da margem visível → reduz recidiva de 40–60% (curetagem simples) para 10–30% (curetagem + adjuvante). PMMA gera necrose térmica adicional e permite detecção precoce de recidiva pelo RX.',
   grades: [
     {
       id: 'grade-1',

@@ -5,6 +5,8 @@ export const tscherneClassificationData: ClassificationData = {
   name: 'Classificação de Tscherne',
   author: 'Tscherne',
   year: 1984,
+  epidemiology: 'Classificação de Tscherne (1982/1984) avalia lesão de tecidos moles em fraturas FECHADAS (C0–C3). Para fraturas abertas: classificação de Gustilo-Anderson (I, II, IIIA, IIIB, IIIC). Tscherne C0–C3 orienta o TIMING da fixação definitiva — crítico para prevenir complicações. Grau C2–C3: fixação externa temporária (damage control orthopedics — DCO) + RAFI diferida quando wrinkle test positivo (habitualmente 7–14 dias). Síndrome compartimental: 1–10% das fraturas fechadas da perna (emergência cirúrgica — fasciotomia <6h). Lesão de Morel-Lavallée (degloving fechado): associada a C3 → contaminação grave do hematoma = infecção pós-RAFI.',
+  mechanism: 'Tscherne classifica a extensão do dano tecidual em 4 graus pela energia do trauma e comprometimento de pele, subcutâneo e músculo. C0: trauma indireto de baixa energia → tecidos moles normais → RAFI imediata segura. C1: abrasão/contusão superficial por pressão de fragmento → edema moderado → aguardar 24–48h idealmente. C2: contusão profunda, flictenas serosas, iminência compartimental → alto risco cirúrgico → fixador externo temporário; RAFI apenas com wrinkle test positivo. C3: esmagamento extenso, degloving, síndrome compartimental estabelecida, lesão vascular → damage control: fasciotomia + fixador externo + reparo vascular; RAFI definitiva adiada 5–14 dias. Princípio do wrinkle test: rugas na pele ao pinçar levemente = edema resolvido = momento seguro para RAFI definitiva.',
   grades: [
     {
       id: 'grade-0',

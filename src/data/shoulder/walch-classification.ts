@@ -5,6 +5,8 @@ export const walchClassificationData: ClassificationData = {
   name: 'Classificação de Walch – Morfologia Glenoidal',
   author: 'Walch',
   year: 1999,
+  epidemiology: 'A morfologia glenoidal tem impacto direto nos resultados da artroplastia do ombro. Distribuição em pacientes operados por artrose primária: Tipo A (centrada) 40–50%, Tipo B (subluxação posterior) 40–50%, Tipo C/D <10%. B2 é a mais desafiante: retroversão >15° requer augment posterior ou BIO-RSA. Erro de versão sem PSI: 8° (aceitável <5°); com PSI: reduz para 2°. Loosening asséptico do componente glenoidal é a complicação mais frequente de TSA (5–10% a 10 anos) — principal causa: retroversão não corrigida (B2/B3).',
+  mechanism: 'Glenoide normal: retroversão média 0–5°. Artrose com subluxação posterior (B1→B2→B3): erosão assimétrica posterior por translação posterior crônica da cabeça umeral. Mecanismo: desequilíbrio subescapular vs infraespinhoso → translação posterior repetida → sobrecarga na glenoide posterior → erosão → biconcavidade (B2: neoglenoide + orthoglenoide). Tipo C: displasia congênita — glenoide retrovertida desde o nascimento sem erosão necessária. Planejamento: retroversão >10° = correção obrigatória por reaming anterior eccentric ou augment posterior para prevenir loosening do componente glenoidal.',
   grades: [
     {
       id: 'a1',

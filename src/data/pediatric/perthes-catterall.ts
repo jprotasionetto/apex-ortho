@@ -5,6 +5,8 @@ export const perthersCatterallClassificationData: ClassificationData = {
   name: 'Classificação de Catterall (Perthes)',
   author: 'Catterall',
   year: 1971,
+  epidemiology: 'Doença de Legg-Calvé-Perthes afeta 1–3/20.000 crianças; pico 4–8 anos; F:M 1:4. NAV idiopática da cabeça femoral. Bilateral em 12% (assíncrona). Duração da doença: 2–5 anos. Grupo I: 100% bom prognóstico. Grupo IV: 50–70% deformidade residual (coxa magna). Adultos com Stulberg IV–V têm artrose prematura antes dos 50 anos. Reprodutibilidade interobservador de Catterall (κ=0,35) é inferior ao pilar lateral de Herring (κ=0,64).',
+  mechanism: 'Oclusão vascular idiopática (possível trombofilias, hipercoagulabilidade) → necrose da epífise femoral cefálica → fases: 1) necrose (esclerose, 3–6m), 2) fragmentação (lucências, 6–18m), 3) reconstituição (18–36m), 4) remodelação. Catterall classifica durante fragmentação pela extensão do sequestro (zona necrótica). Sinais de head-at-risk: calcificação lateral à epífise (extrusão), subluxação lateral (doenças >20% da cabeça fora do acetábulo), sinal de Gage (V-sign lateral), fise horizontal e metáfise difusa. Presença de ≥2 sinais = contenção urgente.',
   grades: [
     {
       id: 'group-i',

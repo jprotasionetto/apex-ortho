@@ -5,6 +5,8 @@ export const reganMorreyData: ClassificationData = {
   name: 'Classificação de Regan-Morrey – Fraturas da Coronóide',
   author: 'Regan & Morrey',
   year: 1989,
+  epidemiology: 'Fraturas da coronóide ocorrem em 2–15% das luxações do cotovelo. Tipo I isolada: 50% casos; como parte de padrão complexo (tríade terrível = luxação + coronóide + cabeça do rádio): 30–40%. Tríade terrível tem instabilidade persistente em 50% se não tratada adequadamente. Classificação de O\'Driscoll (2003) expandiu para 3 subtipos anatômicos (anterolateral, anteromedial, basal) com maior relevância cirúrgica. Fraturas anteromediais (O\'Driscoll subtipo II) comprometem o LCM anterior e a estabilidade varo-posteromedial.',
+  mechanism: 'A coronóide é o principal estabilizador anterior do cotovelo contra translação posterior — contribui 70% da resistência. Tipo I: avulsão da ponta por luxação (inserção do braquial e cápsula anterior). Tipo II/III: impacção axial durante luxação com carga. Inserção do LCM (ligamento colateral medial, banda anterior): pilar anteromedial da coronóide — fraturas tipo II anteromedial de O\'Driscoll → instabilidade varo-posteromedial grave. Tríade terrível: mecanismo de queda com cotovelo extenso + pronação → luxação posterolateral → coronóide fratura → cabeça rádio fratura.',
   grades: [
     {
       id: 'type-i',

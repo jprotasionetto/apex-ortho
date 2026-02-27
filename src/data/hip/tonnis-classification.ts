@@ -5,6 +5,8 @@ export const tonnisClassificationData: ClassificationData = {
   name: 'Classificação de Tönnis – Artrose do Quadril',
   author: 'Tönnis',
   year: 1976,
+  epidemiology: 'Artrose do quadril afeta 5–10% dos adultos >55 anos; incidência aumenta de 88/100.000/ano (45–64a) para 258/100.000/ano (>75a). Causa em adultos jovens: displasia acetabular (<55%), FAI (~30%), necrose avascular (~10%), sequelas de Perthes/infecção. Grau Tönnis 0–1: candidatos a preservação articular (artroscopia, osteotomia periacetabular). Grau 2–3: candidatos a artroplastia total. 40–60% dos pacientes com FAI sintomático têm Tönnis 0–1 → cirurgia preservadora factível. Progressão: média de 0,1–0,2mm de perda de espaço articular/ano.',
+  mechanism: 'Tönnis (1976) sistematizou a avaliação radiográfica em 4 graus (0–3) baseados em: espaço articular, esclerose subcondral, osteófitos e cistos subcondrais no RX AP de pelve. Mecanismo de artrose: carga articular anormal (displasia → concentração de pressão no teto acetabular; FAI → impacto cam/pincer → lesão labral e cartilaginosa superolateral) → degradação da MEC cartilaginosa (ativação de MMPs, IL-1, TNF-α) → perda de proteoglicanos → falha mecânica progressiva → esclerose subcondral (ativação osteoblástica compensatória) → cistos degenerativos (necrose focal por pressão) → colapso articular. Grau 0: sem alterações degenerativas; Grau 3: obliteração do espaço articular.',
   grades: [
     {
       id: 'grade-0',

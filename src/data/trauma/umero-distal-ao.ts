@@ -5,6 +5,8 @@ export const umeroDistalAOData: ClassificationData = {
   name: 'Classificação AO — Fratura do Úmero Distal (13)',
   author: 'Müller / AO Foundation',
   year: 2018,
+  epidemiology: 'Fraturas do úmero distal representam 2–6% de todas as fraturas do úmero; incidência: 5–7/100.000/ano. Bimodal: adultos jovens (alta energia, 13-C) e idosos >65a (queda simples, 13-C3 osteoporótica). Lesão do nervo ulnar: 25% das fraturas 13-C — identificar e transpor anteriormente na cirurgia. Rigidez pós-operatória significativa (arco <100°): 10–20%. Artrose do cotovelo: 20–30% a longo prazo. Taxa de reoperação: 15–25%. Artroplastia total do cotovelo (ATC): indicada em 13-C3 em idoso >70a com osteoporose grave — resultados funcionais superiores à ORIF impossível neste subgrupo.',
+  mechanism: 'Úmero distal: estrutura bicolumnar — coluna lateral (capitelo + côndilo lateral) + coluna medial (tróclea + epicôndilo medial) ligadas por bloco articular. Fratura 13-A (extra-articular): epicôndilos ou metáfise supracondilar — sem envolvimento articular. Fratura 13-B (articular parcial): capítulo (B1, "em semiluna" no perfil) ou tróclea (B2, rara) ou côndilo (B3) — parte da articulação permanece unida à diáfise. Fratura 13-C (articular completa): carga axial + torção → ambos os côndilos separados da diáfise E entre si (T ou Y). Princípio bicolumnar de fixação: 2 placas a 90° ou paralelas (190°) distribuem cargas em ambas as colunas → estabilidade rotacional superior a placa única → osteotomia de olécrano tipo chevron para exposição articular completa nas fraturas 13-C.',
   grades: [
     {
       id: 'ao-13a',

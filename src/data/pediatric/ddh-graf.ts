@@ -5,6 +5,8 @@ export const ddhGrafClassificationData: ClassificationData = {
   name: 'Classificação de Graf (DDQ – Ecografia)',
   author: 'Graf',
   year: 1980,
+  epidemiology: 'Displasia do desenvolvimento do quadril (DDQ) afeta 1–2% dos neonatos. Screening ecográfico universal é obrigatório em muitos países europeus às 4–6 semanas. Fatores de risco: sexo feminino (F:M 6:1), apresentação pélvica, história familiar, primogênito. Tipo IIa fisiológica normaliza espontaneamente em 90% até 6 semanas. Sem screening: diagnóstico tardio em 1–3/1.000 nascimentos. Tipo III/IV (alfa <43°) = luxação completa = urgência ortopédica.',
+  mechanism: 'O acetábulo se forma pela ossificação progressiva dos três ossos do quadril ao redor da cabeça femoral como estímulo mecânico. Ângulo alfa de Graf: medido no corte standard (superfície plana ilíaca como linha de base) — tangente ao teto ósseo vs horizontal ilíaca. Alfa >60°: teto ósseo angular = cobertura óssea adequada (Tipo I). Alfa 50–59°: teto arredondado/deficiente (Tipo IIa/b). Alfa 43–49°: quadril crítico ou descentrando (IIc/D). Alfa <43°: luxação com labrum deformado (III) ou invertido (IV). Ângulo beta: mede cobertura cartilaginosa (labrum) — beta >55° = cobertura cartilagínea insuficiente.',
   grades: [
     {
       id: 'type-i',

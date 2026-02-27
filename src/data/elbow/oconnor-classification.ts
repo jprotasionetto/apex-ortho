@@ -5,6 +5,8 @@ export const oconnorClassificationData: ClassificationData = {
   name: 'Classificação de OConnor – OCD do Cotovelo',
   author: 'OConnor',
   year: 1992,
+  epidemiology: 'OCD do cotovelo afeta 0,1–0,3/100.000 jovens atletas (13–16 anos). Capitellum envolvido em 85–90% dos casos (face anterolateral). Predomina em atletas de arremesso e ginastas. Diagnóstico diferencial com Doença de Panner: Panner afeta <10a (processo autolimitado, tratamento conservador), OCD >12a (lesão mecânica, potencial cirúrgico). Desfecho sem tratamento: Estágio I–II com fise aberta → cura em 50–80% com repouso. Estágio III–IV → risco de artrose a longo prazo.',
+  mechanism: 'Microtrauma repetitivo por compressão lateral no capitellum durante abdução + carga axial (arremesso, carga em apoio na ginástica). Zona de watershed avascular do capitellum anterolateral predisposta à necrose subcondral. Progressão: edema subcondral (I) → fissuração da cartilagem (II) → fragmento destacado in situ (III) → corpo livre deslocado (IV). RM com contraste: linha de fluido subcondral = fragmento instável = indicação cirúrgica. Artroscopia: confirmação e estadiamento definitivo.',
   grades: [
     {
       id: 'stage-i',

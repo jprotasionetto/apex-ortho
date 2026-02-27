@@ -5,6 +5,8 @@ export const hamadaClassificationData: ClassificationData = {
   name: 'Classificação de Hamada – Artropatia da Coifa',
   author: 'Hamada',
   year: 1990,
+  epidemiology: 'Artropatia da coifa representa o estágio terminal das roturas massivas não tratadas. Prevalência: 4–8% dos adultos >60a têm rotura massiva; destes, ~50% progridem para artropatia em 10–15 anos. AHI normal: 7–14mm. AHI <7mm = rotura massiva (sensibilidade 72%, especificidade 94%). Hamada 3–5 = indicação para prótese invertida. Incidência de artroplastia invertida cresceu >900% entre 2004–2009 nos EUA, principalmente por artropatia da coifa. Hamada 4b e 5 complicam a reconstrução glenoidal protésica.',
+  mechanism: 'Rotura massiva da coifa (supraespinhoso + infraespinhoso) → perda do efeito de compressão e centralização da cabeça umeral → migração superior progressiva → impacto contra arco coracoacromial → erosão em cúpula do acrômio (acetabulização: Hamada 3). Perda de congruência glenoumeral → artrose secundária (Hamada 4a/4b). Colapso da cabeça umeral: NAV secundária por compromisso do suprimento vascular cefálico (Hamada 5). Diferencial com artrose primária: Hamada tem AHI reduzido, migração superior e coifa insuficiente — artroplastia anatômica contraindicada.',
   grades: [
     {
       id: 'grade-1',

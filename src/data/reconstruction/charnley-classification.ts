@@ -5,6 +5,8 @@ export const charnleyClassificationData: ClassificationData = {
   name: 'Classificação de Charnley (Classe Funcional)',
   author: 'Charnley',
   year: 1972,
+  epidemiology: 'Classificação de Charnley criada para estratificar resultados e comparar séries de artroplastia total do quadril (ATQ). ATQ: uma das cirurgias mais custo-efetivas da medicina — 90–95% satisfação a 10 anos. Incidência: >700.000/ano nos EUA. Classe C: resultados funcionais inferiores, mas alta satisfação subjetiva (alívio da dor persiste apesar de limitações sistêmicas). Indispensável para comparação de séries clínicas e ensaios randomizados de próteses.',
+  mechanism: 'A classificação reconhece que o resultado funcional da ATQ é limitado por fatores além do quadril operado. Classe A: toda a melhoria funcional é atribuível ao quadril operado (avaliação ideal). Classe B: quadril contralateral compromete marcha mesmo após cirurgia — resultado global limitado pelo lado não operado. Classe C: comorbidades sistêmicas (artrite reumatoide poliarticular, neuropatia, insuficiência cardiovascular) determinam teto funcional — ATQ alivia dor mas não melhora capacidade de marcha. Importância: não comparar scores funcionais entre classes diferentes.',
   grades: [
     {
       id: 'class-a',

@@ -5,6 +5,8 @@ export const ennekingStagingData: ClassificationData = {
   name: 'Estadiamento de Enneking (Tumores Musculoesqueleticos)',
   author: 'Enneking',
   year: 1980,
+  epidemiology: 'Estadiamento de Enneking (1980) é o sistema padrão da MSTS (Musculoskeletal Tumor Society) para tumores musculoesqueléticos primários. Osteossarcoma (Estágio IIB): 3–5/1.000.000/ano; pico 10–20 anos; sem tratamento: sobrevida 15%. Com quimioterapia neoadjuvante (MAP: metotrexato + adriamicina + cisplatina) + ressecção ampla: sobrevida 5 anos = 65–75%. Sarcoma de Ewing: segunda causa de sarcoma ósseo em <20 anos; protocolo VAIA/VIDE; sobrevida 5 anos = 60–70%.',
+  mechanism: 'Enneking define grau histológico (G1=baixo grau: bem diferenciado, poucas mitoses; G2=alto grau: pobreza de diferenciação, mitoses frequentes) e compartimentalização (intracompartimental-A vs extracompartimental-B). Sarcomas Estágio A: confinados ao osso/músculo de origem → margens amplas mais factíveis. Estágio B: ultrapassam fáscia ou córtex → margens amplas mais difíceis, maior risco de recidiva. Grau histológico = principal preditor de metástase: >95% dos óbitos por sarcoma decorrem de doença metastática pulmonar.',
   grades: [
     {
       id: 'benign-1',

@@ -5,6 +5,8 @@ export const scoliosisRisserClassificationData: ClassificationData = {
   name: 'Sinal de Risser (Maturidade Esquelética)',
   author: 'Risser',
   year: 1958,
+  epidemiology: 'Sinal de Risser é o marcador de maturidade esquelética mais usado em ortopedia pediátrica. Risco de progressão da escoliose: Risser 0–1 = 68%; Risser 2–4 = 23%; Risser 5 = mínimo. Correlação com menarca: Risser 1–2 = peri-menarca; Risser 5 = ~2 anos após menarca. Utilizado desde 1958; alternativa mais precisa: escala Sanders de 8 estágios (baseada em ossificação dos dedos das mãos, com melhor correlação com altura e progressão da curva).',
+  mechanism: 'A apófise ilíaca ossifica de lateral (EIAS = espinha ilíaca ântero-superior) para medial (articulação sacroilíaca) — progresso Risser 1→4, dividindo a crista ilíaca em 4 quartos de 25% cada. Fusão da apófise ao ílio = Risser 5 = maturidade esquelética. Fisiologia: durante Risser 0–2 (fase de crescimento ativo, platô de aceleração/pico), a escoliose progride mais rapidamente por assimetria de crescimento vertebral. Pós-Risser 4: crescimento em desaceleração → risco de progressão mínimo. Pós-Risser 5: progressão possível, mas lenta (0,5–1°/ano em curvas >50° na vida adulta).',
   grades: [
     {
       id: 'stage-0',

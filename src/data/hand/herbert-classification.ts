@@ -5,6 +5,8 @@ export const herbertClassificationData: ClassificationData = {
   name: 'Classificação de Herbert – Fraturas do Escafóide',
   author: 'Herbert',
   year: 1984,
+  epidemiology: 'Fraturas do escafóide representam 60–70% de todas as fraturas do carpo e 2–7% de todas as fraturas do esqueleto. Incidência: 2–7/10.000/ano; pico homens 15–30 anos. Diagnóstico atrasado em 25–30% (RX inicial normal em 20% dos casos → RM se suspeita clínica). Pseudoartrose: 5–15% com imobilização adequada; >50% sem tratamento. Necrose avascular do polo proximal: 10–40% das fraturas do polo proximal. SNAC wrist (Scaphoid Non-union Advanced Collapse): sequela tardia de pseudoartrose não tratada → estadiamento separado (SNAC 1–4).',
+  mechanism: 'O escafóide é o elo central entre as fileiras carpais. Suprimento vascular: 70–80% pelo ramo dorsal da artéria radial, entrando pelo dorso do waist → polo proximal depende de fluxo retrógrado intraósseo (zona avascular) → fraturas proximais ao waist comprometem vascularização. Mecanismo: queda com dorsiflexão forçada >95° + desvio radial → tensão no côncavo palmar supera resistência → traço oblíquo com tendência à angulação humpback (colapso em flexão = DISI). Herbert (1984) classifica por estabilidade e deslocamento: A = estável (tubérculo e incompleto), B = instável (oblíqua distal, waist completa, polo proximal, trans-escafóide perilunar), C = consolidação retardada, D = pseudoartrose (D1 fibrosa, D2 estabelecida com colapso).',
   grades: [
     {
       id: 'type-a1',

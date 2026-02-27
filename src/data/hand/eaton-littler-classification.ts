@@ -5,6 +5,8 @@ export const eatonLittlerClassificationData: ClassificationData = {
   name: 'Classificação de Eaton-Littler – Artrose CMC do Polegar',
   author: 'Eaton/Littler',
   year: 1973,
+  epidemiology: 'Artrose CMC do polegar é a segunda artrose mais comum da mão (atrás de Heberden), afetando 25–35% das mulheres >55 anos e 15% dos homens. Relação feminina:masculina = 6:1. Sintomáticas: 5–8% da população adulta. Estádio III–IV: 50–60% dos casos diagnosticados clinicamente. Trapeziectomia é uma das cirurgias mais realizadas em cirurgia da mão. Herança genética estimada em 47% da variância. Prevalência em mulheres pós-menopausa sugere influência hormonal (receptores de estrogênio em fibroblastos CMC).',
+  mechanism: 'CMC do polegar é articulação em sela biaxial com ampla mobilidade e alta carga (força de pinça lateral = torque de ~120 kg·cm na CMC). Instabilidade do ligamento oblíquo anterior (AOL/beak ligament) → subluxação dorsal-radial do 1º metacarpo → perda da congruência → cartilagem dorso-radial recebe carga anormal → erosão progressiva em 4 estádios. Ciclo vicioso: sinovite → distensão capsular → mais instabilidade → mais erosão. Estágios de Eaton-Littler baseiam-se no espaço articular CMC e STT + osteófitos + subluxação → guiam indicação entre conservador (I–II) e cirúrgico (III–IV: trapeziectomia ± LRTI).',
   grades: [
     {
       id: 'stage-i',
