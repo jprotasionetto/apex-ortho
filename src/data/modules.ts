@@ -2,9 +2,9 @@ import type { ModuleDefinition } from '@/types/tool.ts';
 
 export const modules: ModuleDefinition[] = [
   { id: 'trauma', name: 'Trauma', description: 'Classificacoes de fraturas e lesoes traumaticas', icon: 'Bone', color: '#EF4444', toolCount: 21 },
-  { id: 'shoulder', name: 'Ombro', description: 'Ferramentas clinicas para o ombro', icon: 'CircleDot', color: '#F59E0B', toolCount: 14 },
+  { id: 'shoulder', name: 'Ombro', description: 'Ferramentas clinicas para o ombro', icon: 'CircleDot', color: '#F59E0B', toolCount: 15 },
   { id: 'elbow', name: 'Cotovelo', description: 'Ferramentas clinicas para o cotovelo', icon: 'Radius', color: '#8B5CF6', toolCount: 12 },
-  { id: 'hand', name: 'Mao e Punho', description: 'Ferramentas clinicas para mao e punho', icon: 'Hand', color: '#EC4899', toolCount: 12 },
+  { id: 'hand', name: 'Mao e Punho', description: 'Ferramentas clinicas para mao e punho', icon: 'Hand', color: '#EC4899', toolCount: 14 },
   { id: 'hip', name: 'Quadril', description: 'Ferramentas clinicas para o quadril', icon: 'Circle', color: '#06B6D4', toolCount: 15 },
   { id: 'knee', name: 'Joelho', description: 'Ferramentas clinicas para o joelho', icon: 'Disc', color: '#10B981', toolCount: 19 },
   { id: 'spine', name: 'Coluna', description: 'Ferramentas clinicas para a coluna', icon: 'Layers', color: '#6366F1', toolCount: 19 },
