@@ -5,6 +5,8 @@ export const magerlClassification: ClassificationData = {
   name: 'Classificação de Magerl / AO Spine (Fratura Toracolombar)',
   author: 'Magerl',
   year: 1994,
+  epidemiology: 'Fraturas toracolombares são as mais comuns de toda a coluna vertebral — junção T11-L2 concentra ~50% de todas as fraturas espinhais. Distribuição: Tipo A 50–55%, Tipo B 30–35%, Tipo C 10–15%. TLICS ≥5 pontos = indicação cirúrgica; ≤3 = conservador; 4 = individualizado. AO Spine (2013/2016) adicionou modificadores neurológicos (N0–N4) e clínicos (M1 complexo ligamentar, M2 comorbidades).',
+  mechanism: 'A junção toracolombar (T11-L2) é biomechanicamente vulnerável pela transição abrupta de rigidez entre a coluna torácica (imobilizada pelas costelas) e a lombar (mais móvel). Tipo A: carga axial pura ou com flexão → compressão do corpo anterior, coluna posterior intacta. Tipo B: fratura de Chance (B1) por mecanismo cinto de segurança → distração posterior em hiperflexão; B3: extensão-distração com rotura anterior. Tipo C: rotação-translação de alta energia → lesão das 3 colunas → instabilidade absoluta.',
   grades: [
     {
       id: 'type-a',

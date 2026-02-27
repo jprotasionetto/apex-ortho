@@ -5,6 +5,8 @@ export const denisClassificationSpine: ClassificationData = {
   name: 'Classificação de Denis - 3 Colunas (Coluna Vertebral)',
   author: 'Denis',
   year: 1983,
+  epidemiology: 'A classificação de Denis (1983) introduziu o conceito das 3 colunas vertebrais, baseada em análise de 412 fraturas toracolombares. Denis identificou que a coluna média (1/3 posterior do corpo + LLP) era o pivot de estabilidade — conceito revolucionário que substituiu o modelo de 2 colunas de Holdsworth. Fraturas por compressão: ~49% do total. Burst (colunas A+M): ~14% — déficit neurológico em 16–57% dependendo do grau de comprometimento do canal. Fratura-luxação (3 colunas): ~5% — déficit neurológico em 75% dos casos.',
+  mechanism: 'Denis definiu 3 colunas para análise biomecânica: ANTERIOR = ligamento longitudinal anterior + 2/3 anteriores do corpo vertebral e ânulo fibroso. MÉDIA = 1/3 posterior do corpo + ânulo posterior + ligamento longitudinal posterior (LLP). POSTERIOR = complexo osteoligamentar posterior (pedículos, lâminas, facetas, ligamentos). Instabilidade de 1ª grau (mecânica): 2+ colunas. Instabilidade de 2ª grau (neurológica): burst com comprometimento do canal >50% ou cifose >20°. Instabilidade de 3ª grau (mecânica + neurológica): fratura-luxação com déficit neurológico.',
   grades: [
     {
       id: 'one-column',

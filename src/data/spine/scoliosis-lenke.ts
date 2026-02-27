@@ -5,6 +5,8 @@ export const scoliosisLenke: ClassificationData = {
   name: 'Classificação de Lenke (Escoliose Idiopática do Adolescente)',
   author: 'Lenke',
   year: 2001,
+  epidemiology: 'Escoliose idiopática do adolescente (EIA) afeta 2–4% da população com 10–16 anos; representa 80% de todos os casos de escoliose. Relação F:M = 7:1 para curvas progressivas (>40°); para curvas pequenas (<10°), 1:1. Estudo BRAIST (NEJM 2013): colete reduz progressão >50° de 58% para 32% (NNT=4). Risco de progressão: curva >25° no início pubertário, Risser 0–1, feminino. Distribuição por tipo Lenke: Tipo 1=38%, Tipo 5=14%, Tipo 2=11%, Tipo 3=10%, restantes distribuídos. Polimorfismos associados: FBN1, CHD7, GPR126.',
+  mechanism: 'A EIA tem etiologia multifatorial ainda não completamente elucidada. Fatores propostos: dismorfismo da placa de crescimento, desequilíbrio melatonina/serotonina, anormalidades proprioceptivas. Classificação de Lenke: 6 tipos baseados em curvas estruturais (rígidas em bending <25°) vs compensatórias. Modificadores: lombar A (CSVL entre pedículos apicais) / B (CSVL toca corpo) / C (CSVL medial ao corpo) — guia extensão distal da fusão. Modificador torácico: - (<10° cifose), N (10–40°), + (>40°) — influencia abordagem. Ângulo de Cobb: medido do platô superior da vértebra proximal ao platô inferior da vértebra distal da curva.',
   grades: [
     {
       id: 'type-1',

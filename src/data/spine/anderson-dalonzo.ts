@@ -5,6 +5,8 @@ export const andersonDalonzoClassification: ClassificationData = {
   name: 'Classificação de Anderson-D\'Alonzo (Fratura do Odontoide)',
   author: 'Anderson/D\'Alonzo',
   year: 1974,
+  epidemiology: 'Fraturas do odontoide representam 10–15% de todas as fraturas cervicais; segunda vértebra cervical mais fraturada. Distribuição bimodal: jovens (alta energia: MVA, esportes) e idosos >65a (baixa energia: queda da própria altura — osteoporose). Tipo II é o mais comum (60–65% das fraturas do odontoide). Taxa de pseudartrose do Tipo II sem cirurgia: 26–40%; fatores de risco: idade >50a, deslocamento >5mm, angulação posterior, demora no diagnóstico. Mortalidade do Tipo II em idosos: 25–35% em 1 ano (lesão associada e imobilização prolongada).',
+  mechanism: 'O odontoide é uma coluna osseoligamentar vertical que conecta C2 ao C1 via ligamento transverso. Suprimento vascular: artéria espinal anterior → entra na base (Tipo III = osso esponjoso bem vascularizado → boa consolidação). Tipo II: traço na zona avascular da junção corpo-dente → supply sanguíneo precário → pseudartrose. Tipo I: avulsão apical pelo lig. alar (muito rara; excluir instabilidade atlanto-axial oculta). Mecanismo: hiperflexão (Tipo II anterior) ou hiperextensão (Tipo II posterior — pior prognóstico pela tensão ligamentar posterior).',
   grades: [
     {
       id: 'type-1',
