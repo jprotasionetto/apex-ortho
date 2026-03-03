@@ -144,6 +144,12 @@ export default function LoginPage() {
             </Link>
           </p>
           <Link
+            to="/forgot-password"
+            className="block text-xs text-gray-600 hover:text-gray-400 transition-colors"
+          >
+            Esqueceu a senha?
+          </Link>
+          <Link
             to="/#precos"
             className="block text-xs text-gray-600 hover:text-gray-400 transition-colors"
           >

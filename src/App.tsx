@@ -12,6 +12,8 @@ const RecentPage = lazy(() => import('@/pages/RecentPage.tsx'))
 const LandingPage = lazy(() => import('@/pages/LandingPage.tsx'))
 const LoginPage = lazy(() => import('@/pages/LoginPage.tsx'))
 const SignupPage = lazy(() => import('@/pages/SignupPage.tsx'))
+const ForgotPasswordPage = lazy(() => import('@/pages/ForgotPasswordPage.tsx'))
+const ResetPasswordPage = lazy(() => import('@/pages/ResetPasswordPage.tsx'))
 
 const Loader = () => <div className="min-h-screen bg-[#0A0A0A]" />
 
@@ -35,6 +37,8 @@ export default function App() {
       <Route path="/" element={<Suspense fallback={<Loader />}><LandingPage /></Suspense>} />
       <Route path="/login" element={<Suspense fallback={<Loader />}><LoginPage /></Suspense>} />
       <Route path="/signup" element={<Suspense fallback={<Loader />}><SignupPage /></Suspense>} />
+      <Route path="/forgot-password" element={<Suspense fallback={<Loader />}><ForgotPasswordPage /></Suspense>} />
+      <Route path="/reset-password" element={<Suspense fallback={<Loader />}><ResetPasswordPage /></Suspense>} />
 
       {/* Protected app routes */}
       <Route element={<ProtectedRoute />}>

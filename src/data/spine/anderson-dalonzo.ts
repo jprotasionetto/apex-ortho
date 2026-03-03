@@ -10,12 +10,12 @@ export const andersonDalonzoClassification: ClassificationData = {
   referenceImages: [
     {
       src: 'https://upload.wikimedia.org/wikipedia/commons/3/32/PdensfracCT.png',
-      caption: 'TC da fratura da base do odontóide (Tipo III de Anderson-D'Alonzo) — corte axial. Fonte: James Heilman MD, CC BY-SA 3.0.',
+      caption: "TC da fratura da base do odontóide (Tipo III de Anderson-D'Alonzo) — corte axial. Fonte: James Heilman MD, CC BY-SA 3.0.",
       source: 'Wikimedia Commons — CC BY-SA 3.0 (James Heilman MD)'
     },
     {
       src: 'https://upload.wikimedia.org/wikipedia/commons/2/29/OdontoidType3.png',
-      caption: 'Fratura do odontóide Tipo III — TC com identificação explícita do tipo (Anderson-D'Alonzo). Fonte: James Heilman MD, CC BY-SA 4.0.',
+      caption: "Fratura do odontóide Tipo III — TC com identificação explícita do tipo (Anderson-D'Alonzo). Fonte: James Heilman MD, CC BY-SA 4.0.",
       source: 'Wikimedia Commons — CC BY-SA 4.0 (James Heilman MD)'
     },
     {

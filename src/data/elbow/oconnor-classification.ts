@@ -10,7 +10,7 @@ export const oconnorClassificationData: ClassificationData = {
   referenceImages: [
     {
       src: 'https://upload.wikimedia.org/wikipedia/commons/6/66/CT_and_projectional_radiography_of_osteochondritis_dissecans_-_annotated.jpg',
-      caption: 'Osteocondrite dissecante do capitelo (O'Connor) — TC e radiografia anotadas. Fonte: Wikimedia Commons, CC0.',
+      caption: "Osteocondrite dissecante do capitelo (O'Connor) — TC e radiografia anotadas. Fonte: Wikimedia Commons, CC0.",
       source: 'Wikimedia Commons — CC0 (Domínio Público)'
     },
   ],

@@ -20,6 +20,8 @@ interface AuthContextType {
   signUp: (email: string, password: string, fullName: string) => Promise<{ error: string | null }>
   signOut: () => Promise<void>
   refreshSubscription: () => Promise<void>
+  resetPassword: (email: string) => Promise<{ error: string | null }>
+  updatePassword: (password: string) => Promise<{ error: string | null }>
 }
 
 const DEFAULT_SUB: SubscriptionStatus = {
@@ -89,7 +91,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const { error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { full_name: fullName } },
+      options: {
+        data: { full_name: fullName },
+        emailRedirectTo: `${window.location.origin}/login`,
+      },
     })
     if (error) return { error: error.message }
     return { error: null }
@@ -104,11 +109,26 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (session) await fetchSubscription(session)
   }
 
+  async function resetPassword(email: string) {
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    })
+    if (error) return { error: error.message }
+    return { error: null }
+  }
+
+  async function updatePassword(password: string) {
+    const { error } = await supabase.auth.updateUser({ password })
+    if (error) return { error: error.message }
+    return { error: null }
+  }
+
   return (
     <AuthContext.Provider value={{
       session, user, loading,
       subscription, subscriptionLoading,
       signIn, signUp, signOut, refreshSubscription,
+      resetPassword, updatePassword,
     }}>
       {children}
     </AuthContext.Provider>
