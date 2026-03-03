@@ -9,9 +9,9 @@ export const pfirrmannClassification: ClassificationData = {
   mechanism: 'O disco intervertebral normal contém núcleo pulposo com ~80% de água (proteoglicanos agrecano + colágeno tipo II). Degeneração: perda de proteoglicanos → desidratação → redução do sinal T2 (núcleo pulposo perde brilho característico). Grau I–II: discreta desidratação, distinção nítida núcleo/ânulo preservada. Grau III: transição — distinção núcleo/ânulo se torna imprecisa, T2 intermediário. Grau IV: desidratação marcada, sem distinção nítida, T2 escuro. Grau V: colapso total do disco, possível vacuum phenomenon (gás intradiscal = sinal de Knuttson — patognomônico de degeneração severa).',
   referenceImages: [
     {
-      src: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/SpondyloL5S1Mark.png',
-      caption: 'RM sagital da coluna lombar — a classificação de Pfirrmann avalia a degeneração discal em T2 por intensidade de sinal e morfologia. Fonte: Wikimedia Commons, CC BY-SA 4.0.',
-      source: 'Wikimedia Commons — CC BY-SA 4.0'
+      src: '/images/pfirrmann/pfirrmann-classification.png',
+      caption: 'Classificação de Pfirrmann — RM sagital T2 da coluna lombar mostrando os graus de degeneração discal (I a V) pela intensidade de sinal e morfologia do núcleo pulposo.',
+      source: 'Arquivo do autor — uso educacional'
     },
   ],
   grades: [
