@@ -9,9 +9,14 @@ export const walchClassificationData: ClassificationData = {
   mechanism: 'Glenoide normal: retroversão média 0–5°. Artrose com subluxação posterior (B1→B2→B3): erosão assimétrica posterior por translação posterior crônica da cabeça umeral. Mecanismo: desequilíbrio subescapular vs infraespinhoso → translação posterior repetida → sobrecarga na glenoide posterior → erosão → biconcavidade (B2: neoglenoide + orthoglenoide). Tipo C: displasia congênita — glenoide retrovertida desde o nascimento sem erosão necessária. Planejamento: retroversão >10° = correção obrigatória por reaming anterior eccentric ou augment posterior para prevenir loosening do componente glenoidal.',
   referenceImages: [
     {
-      src: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Separated_shoulder.jpg',
-      caption: 'Ombro — radiografia AP (a classificação de Walch da glenoide é avaliada em TC axial para o planejamento de artroplastia do ombro). Fonte: Wikimedia Commons, CC0.',
-      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+      src: '/images/walch/walch-classification.png',
+      caption: 'Classificação de Walch — TC axial da glenoide mostrando os tipos principais: A1 (concêntrica centrada), A2 (erosão central), B1 (retroversão), B2 (biconcavidade), C (hiperdisplasia).',
+      source: 'Arquivo do autor — uso educacional'
+    },
+    {
+      src: '/images/walch/walch-types-detail.png',
+      caption: 'Walch — detalhe dos tipos B2 (neoglenóide bicôncava com erosão posterior), B3 (monocôncava retrovertida >15°) e D (anteversão glenoidal). Relevante para planejamento de artroplastia total do ombro.',
+      source: 'Arquivo do autor — uso educacional'
     },
   ],
   grades: [

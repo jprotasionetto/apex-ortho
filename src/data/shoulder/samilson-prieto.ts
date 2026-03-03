@@ -9,9 +9,14 @@ export const samilsonPrietoData: ClassificationData = {
   mechanism: 'Degeneração progressiva da cartilagem hialina glenoumeral por carga compressiva cíclica + instabilidade capsular. Osteófito inferior da cabeça umeral = primeiro sinal radiográfico — surge como resposta periosteal à tração capsular inferior crônica (medido em AP verdadeiro com rotação neutra). Erosão glenoidal posterior (Walch B): subluxação posterior crônica por desequilíbrio muscular (subescapular vs infraespinhoso). Osteófito >7mm (Grau 3): implica colapso do espaço articular com lesão de espessura total da cartilagem. Quistos subcondrais = sinal de doença avançada.',
   referenceImages: [
     {
-      src: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Separated_shoulder.jpg',
-      caption: 'Ombro — radiografia AP bilateral (a classificação de Samilson-Prieto avalia artropatia glenoumeral por instabilidade recidivante). Fonte: Wikimedia Commons, CC0.',
-      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+      src: '/images/samilson-prieto/samilson-prieto-grade1-2.png',
+      caption: 'Samilson-Prieto Graus I e II — Rx AP do ombro mostrando calcificações periarticulares iniciais (<3mm) e moderadas (3–7mm) na articulação glenoumeral.',
+      source: 'Arquivo do autor — uso educacional'
+    },
+    {
+      src: '/images/samilson-prieto/samilson-prieto-grade3.png',
+      caption: 'Samilson-Prieto Grau III — calcificações periarticulares avançadas (>7mm) com artropatia glenoumeral estabelecida e estreitamento do espaço articular.',
+      source: 'Arquivo do autor — uso educacional'
     },
   ],
   grades: [

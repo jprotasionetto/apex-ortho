@@ -10,9 +10,9 @@ export const castellviClassification: ClassificationData = {
   surgicalBasis: 'Implicações cirúrgicas: (1) Identificação correta do nível é crítica — erros de nível em cirurgia de coluna são mais comuns com VTLS. (2) Artrodese na VTLS: nos Tipos III e IV, o segmento de transição é fixo, e a artrodese deve incluir L4-L5 (segmento mais sintomático). (3) Ressecção da neoarticulação (Tipo II) pode aliviar a dor em casos selecionados. (4) Injeção na pseudoartrose diagnóstica: se alívio > 80%, ressecção ou bloqueio crônico são opções.',
   referenceImages: [
     {
-      src: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/SpondyloL5S1Mark.png',
-      caption: 'Radiografia L5-S1 — a transição lombossacra onde se encontram as vértebras transicionais (Castellvi). Fonte: Wikimedia Commons, CC BY-SA 4.0.',
-      source: 'Wikimedia Commons — CC BY-SA 4.0'
+      src: '/images/castellvi/castellvi-classification.png',
+      caption: 'Classificação de Castellvi — Rx AP da transição lombossacra mostrando os tipos de vértebra de transição (sacralização L5 / lombarização S1). Tipos I a IV com subtipos a/b.',
+      source: 'Arquivo do autor — uso educacional'
     },
   ],
   grades: [

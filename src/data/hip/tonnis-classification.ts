@@ -9,9 +9,14 @@ export const tonnisClassificationData: ClassificationData = {
   mechanism: 'Tönnis (1976) sistematizou a avaliação radiográfica em 4 graus (0–3) baseados em: espaço articular, esclerose subcondral, osteófitos e cistos subcondrais no RX AP de pelve. Mecanismo de artrose: carga articular anormal (displasia → concentração de pressão no teto acetabular; FAI → impacto cam/pincer → lesão labral e cartilaginosa superolateral) → degradação da MEC cartilaginosa (ativação de MMPs, IL-1, TNF-α) → perda de proteoglicanos → falha mecânica progressiva → esclerose subcondral (ativação osteoblástica compensatória) → cistos degenerativos (necrose focal por pressão) → colapso articular. Grau 0: sem alterações degenerativas; Grau 3: obliteração do espaço articular.',
   referenceImages: [
     {
-      src: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/X-ray_of_pelvis_with_total_arthroplasty.jpg',
-      caption: 'Pelve pós-artroplastia total — a classificação de Tönnis da displasia é avaliada na radiografia AP pré-operatória. Fonte: Wikimedia Commons, CC0.',
-      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+      src: '/images/tonnis/tonnis-grade0-1.png',
+      caption: 'Tönnis Grau 0 e 1 — Rx AP da pelve mostrando articulação coxofemoral normal (Grau 0) e displasia leve com redução do CE angle (Grau 1).',
+      source: 'Arquivo do autor — uso educacional'
+    },
+    {
+      src: '/images/tonnis/tonnis-grade2-3.png',
+      caption: 'Tönnis Grau 2 e 3 — Rx AP da pelve com displasia moderada a grave: subluxação da cabeça femoral, acetábulo deficiente e CE angle <20° (Grau 2) ou luxação franca (Grau 3).',
+      source: 'Arquivo do autor — uso educacional'
     },
   ],
   grades: [
