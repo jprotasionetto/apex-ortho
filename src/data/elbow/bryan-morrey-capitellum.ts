@@ -13,6 +13,13 @@ export const bryanMorreyCapitellumData: ClassificationData = {
     'O capitelo e o sulco trochlear lateral constituem a articulação lateral do cotovelo. A falha do osso subcondral (plano de fratura coronal) gera fragmentos de espessura variável, que determinam o tratamento. A classificação de Bryan-Morrey (1985) foi a primeira sistematização clínica amplamente adotada.',
   surgicalBasis:
     'Acesso anterolateral (Kaplan ou Kocher) permite visualização direta do capitelo. Fixação com parafusos sem cabeça (Herbert, Acutrak) inseridos de posterior para anterior. Tipos I e IV: RAFI. Tipo II: excisão (osso subcondral insuficiente para fixação estável). Tipo III: excisão ou artroplastia total do cotovelo em idosos.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/RadHeadFracMark.png',
+      caption: 'Radiografia do cotovelo — o capitelo do úmero é avaliado na incidência lateral (Bryan-Morrey: Tipo I capitel, Tipo II osteocondral, Tipo III cominutiva). Fonte: Wikimedia Commons.',
+      source: 'Wikimedia Commons'
+    },
+  ],
   grades: [
     {
       id: 'type-i',

@@ -7,6 +7,13 @@ export const patelaAOData: ClassificationData = {
   year: 2018,
   epidemiology: 'Fraturas da patela representam 1–1,5% de todas as fraturas; incidência: 10–15/100.000/ano; pico 20–50 anos. AO 34-B (transversa completa): 50–80% dos casos; 34-A (polo): 10–30%; 34-C (cominutiva): 10–20%. Mecanismo direto (trauma sobre joelho fletido) é mais comum. Taxa de reoperação por proeminência de material após banda de tensão de arame (TBW): 20–50%. Artrose patelofemoral a longo prazo: 20–50% mesmo com redução anatômica. Critério cirúrgico funcional: incapacidade de extensão ativa do joelho contra a gravidade (Straight Leg Raise negativo) = indicação independente do desvio.',
   mechanism: 'A patela é um osso sesamoide que aumenta o braço de alavanca do quadríceps em 30–50% e distribui compressão femoropatelar. Mecanismo direto: trauma focal sobre o polo ou corpo → fratura transversa (34-B) ou cominutiva (34-C) — retináculo pode estar íntegro se trauma focal pequeno. Mecanismo indireto (avulsão): contração excêntrica violenta do quadríceps sobre joelho semifletido → avulsão polar inferior (34-A2) ou superior (34-A1) — retináculo frequentemente rompido → perda de extensão ativa. Princípio da banda de tensão AO: 2 fios K paralelos longitudinais + arame figura-8 converte força de tração do quadríceps em compressão articular posterior com a flexão = indicado APENAS para fraturas transversas simples. Cominuição (34-C): banda de tensão falha — placa mini-fragmento ou patelectomia parcial.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Knee_plain_X-ray_weight_bearing.jpg',
+      caption: 'Radiografia do joelho — mostrando a patela em incidência AP. A classificação AO/OTA da patela usa o mesmo princípio hierárquico A–B–C. Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+  ],
   grades: [
     {
       id: 'ao-34a',

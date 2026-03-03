@@ -7,6 +7,18 @@ export const transtrocantericaAOData: ClassificationData = {
   year: 2018,
   epidemiology: 'Fraturas transtrocantéricas representam 50% de todas as fraturas proximais do fêmur; incidência: 120–200/100.000/ano em >80 anos. Mortalidade em 1 ano: 15–35% (comorbidades e imobilidade pós-fratura). Distribuição: AO 31-A1 estável: 40–50%; 31-A2 instável: 40–45%; 31-A3 (oblíqua reversa): 5–15%. Objetivo: cirurgia dentro de 48h → redução de mortalidade em 30 dias de ~30%. Complicação mais temida: cut-out do parafuso cefálico (TAD>25mm). Haste intramedular (PFNA, Gamma nail, TFN-A): implante de eleição para 31-A2 instável e 31-A3.',
   mechanism: 'Fraturas trocantéricas ocorrem FORA da cápsula articular → suprimento vascular da cabeça femoral preservado → sem risco de NAV (diferente do colo femoral). Mecanismo: queda com impacto lateral sobre trocânter em idoso osteoporótico → força axial + torção. Estabilidade de A1: parede posteromedial (spur de Ramadier) intacta → carga axial comprime os fragmentos. Instabilidade de A2: cominuição medial → perda do spur → colapso em varo com DHS. Oblíqua reversa (A3): traço de superomedial para inferolateral → fragmento distal puxado lateralmente pelos abdutores → DHS falha catastroficamente (parafuso deslizante não controla migração lateral); apenas haste intramedular controla. TAD de Baumgaertner: preditor de cut-out; TAD<25mm = risco<2%, TAD>45mm = risco>50%.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/b/ba/Hip_fracture_classification.png',
+      caption: 'Classificação das fraturas do fêmur proximal — região trocantérica (AO/OTA 31A). Fonte: Wikimedia Commons, CC0.',
+      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/1/11/Cdm_hip_fracture_343.jpg',
+      caption: 'Fratura intertrocantérica do fêmur — radiografia AP mostrando fratura da região trocantérica. Fonte: Wikimedia Commons, CC BY-SA 3.0.',
+      source: 'Wikimedia Commons — CC BY-SA 3.0'
+    },
+  ],
   grades: [
     {
       id: 'ao-31a1',

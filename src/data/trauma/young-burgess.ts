@@ -7,6 +7,18 @@ export const youngBurgessData: ClassificationData = {
   year: 1986,
   epidemiology: 'Young-Burgess (1986) é o sistema cinemático para fraturas pélvicas, complementar ao Tile (estrutural). LC (Lateral Compression) é o mecanismo MAIS COMUM: 60–70% das fraturas pélvicas de alta energia. APC (Anteroposterior Compression) é responsável pela maior hemorragia (livro aberto aumenta volume pélvico). VS (Vertical Shear) tem maior taxa de lesão neurológica. Distribuição: LC 60–70%, APC 20–25%, VS 5–10%, CM <5%. Mortalidade por mecanismo: LC-I ~3%, APC-III 15–20%, VS 25–35%. Necessidade transfusional média: LC-I 2–4U, APC-II 6–8U, APC-III/VS 10–20U. Correlação clínica: APC = hemorragia venosa + arterial (embolização frequente); LC = principalmente venosa (packing pélvico + tamponamento natural). Lesões urológicas: APC > LC (uretra membranosa em homens). Lesões neurológicas: VS > APC > LC (plexo L4–S3).',
   mechanism: 'Young-Burgess define o vetor de força que deformou o anel pélvico — crucial para entender o padrão hemorrágico e de instabilidade. LC (força lateral): hemipelve ROTA INTERNAMENTE → DIMINUI o volume pélvico → efeito tamponador natural → menor hemorragia inicial, mas risco de lesão visceral por compressão. LC-III = "windswept pelvis": lado ipsilateral em rotação interna + contralateral abre (livro aberto contralateral). APC (força AP): hemipelve ROTA EXTERNAMENTE → AUMENTA o volume pélvico → o hematoma retroperitoneal se expande sem tamponamento → hemorragia potencialmente fatal. APC-III = ruptura completa de todos os ligamentos = pelve completamente "aberta em livro" (Tile C). VS (cisalhamento vertical = queda de altura com membro em extensão): força axial ao acetábulo → cisalhamento da articulação SI → deslocamento cranial do hemipelve → tração das raízes L4–S3. Regra mnemônica: LC fecha, APC abre, VS sobe. Cada mecanismo prediz o padrão de lesão ligamentar e orienta a ORDEM de fixação: fixar primeiro o que estabiliza mais (geralmente posterior primeiro no VS/APC-III).',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/0/04/Pelvic_Fracture_Young-Burgess_Classification.png',
+      caption: 'Classificação de Young-Burgess das fraturas do anel pélvico — diagrama dos padrões LC (Lateral Compression), APC (Antero-Posterior Compression), VS (Vertical Shear) e CM (Combined Mechanism). Fonte: Wikimedia Commons, Domínio Público.',
+      source: 'Wikimedia Commons — Domínio Público'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Anterior_view%2C_Vertical_Shear_Fracture.png',
+      caption: 'Cisalhamento vertical da pelve (Young-Burgess VS) — radiografia AP mostrando ascensão do hemipelve. Fonte: Wikimedia Commons.',
+      source: 'Wikimedia Commons'
+    },
+  ],
   grades: [
     {
       id: 'lc-i',

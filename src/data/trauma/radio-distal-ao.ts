@@ -7,6 +7,18 @@ export const radioDistalAOData: ClassificationData = {
   year: 2018,
   epidemiology: 'Fraturas do rádio distal são as mais comuns no adulto: 15–20% de todas as fraturas em PS; incidência: 400/100.000/ano em mulheres >65a. Bimodal: adultos jovens (alta energia: acidentes) e mulheres pós-menopáusicas (osteoporose). Fratura de Colles (23-A2/A3, extra-articular dorsal): ~75% de todas as fraturas do rádio distal. Articular completa (23-C): 25–30%. Taxa de desvio secundário em gesso: 30–50% em idosos — justifica maior indicação cirúrgica. Placa volar de ângulo fixo (VLP): revolucionou o tratamento → fixação estável + reabilitação precoce + retorno precoce às atividades.',
   mechanism: 'A metáfise distal do rádio é zona de transição entre osso esponjoso (compressão) e cortical (tensão) → vulnerável a impactação. Mecanismo clássico: queda sobre mão em extensão → carga axial + momento de flexão dorsal → fratura da metáfise distal (Colles). Tipos AO: A (extra-articular) → B (articular parcial, uma margem preserva ligação com metáfise) → C (articular completa, toda articulação separada da diáfise). SARUD (superfície articular rádio-ulnar distal): lesão associada frequente (23-C → "Galeazzi do punho") — avaliação obrigatória. Classificação de Fernandez complementa a AO pelo mecanismo: I (flexão) → II (compressão articular = die-punch) → III (avulsão ligamentar = Barton) → IV (alta energia) → V (luxação).',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Collesfracture.jpg',
+      caption: 'Fratura de Colles (rádio distal) — radiografia lateral mostrando deformidade em dorso de garfo. Fonte: Wikimedia Commons, CC BY-SA 3.0.',
+      source: 'Wikimedia Commons — CC BY-SA 3.0'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/d/d7/Distalradiusfracture.jpg',
+      caption: 'Fratura do rádio distal — radiografia PA mostrando o traço de fratura e desvio dos fragmentos. Fonte: Wikimedia Commons, Domínio Público.',
+      source: 'Wikimedia Commons — Domínio Público'
+    },
+  ],
   grades: [
     {
       id: 'ao-23a',

@@ -8,6 +8,13 @@ export const milchCondyleFracturesData: ClassificationData = {
   epidemiology: 'Fraturas do côndilo lateral representam 12–17% de todas as fraturas do cotovelo em crianças (2ª mais comum, após supracondiliana). Pico de incidência: 5–10 anos. Mecanismo: queda com valgo em extensão — compressão do capitelo pelo cabeça do rádio. Fraturas do côndilo medial são raras (1% das fraturas do cotovelo pediátrico), frequentemente associadas a avulsão do epicôndilo medial. Na classificação de Milch: Tipo II são instáveis e requerem redução aberta por risco de cubitus valgus e síndrome do nervo ulnar tardio.',
   mechanism: 'Côndilo lateral (mais comum): mecanismo de valgismo em extensão + compressão axial pela cabeça do rádio empurrando o capitelo. O fragmento inclui o capitelo e pode incluir a crista lateral da tróclea (Tipo II — instável). Côndilo medial (raro): mecanismo de avulsão em valgo — o epitróclea arranca com parte do côndilo medial, ou compressão direta em varo. A linha de fratura em relação ao sulco/crista troclear determina a estabilidade articular (chave da classificação).',
   surgicalBasis: 'A classificação de Milch guia o tratamento pelo conceito de estabilidade articular: Tipo I (Milch) — a crista lateral da tróclea permanece com o úmero, mantendo a articulação de dobradiça → pode ser estável → tratamento conservador se sem deslocamento. Tipo II (Milch) — a linha de fratura passa medialmente à tróclea, levando a crista lateral COM o fragmento → articulação instável → indicação cirúrgica de redução aberta + fixação com fios de Kirschner ou parafusos. Complicações de fraturas não tratadas do côndilo lateral: malunião em valgo (cubitus valgus), síndrome do nervo ulnar tardio (décadas depois), não-união (pseudoartrose), artrose pós-traumática.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/RadHeadFracMark.png',
+      caption: 'Radiografia do cotovelo — articulação úmero-ulnar e sulco troclear (contexto fraturas do côndilo de Milch). Fonte: Wikimedia Commons.',
+      source: 'Wikimedia Commons'
+    },
+  ],
   grades: [
     {
       id: 'lateral-tipo-1',

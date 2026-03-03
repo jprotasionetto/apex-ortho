@@ -11,6 +11,18 @@ export const halluxValgusClassificationData: ClassificationData = {
     'Desvio lateral progressivo do hálux com desvio medial do 1o metatarso (metatarsus primus varus). A pronação do hálux e subluxação lateral dos sesamóides perpetuam a deformidade. O tendão do flexor longo do hálux desvia-se lateralmente e passa a atuar como deformante. Calçados com bico estreito e salto alto aumentam a pressão lateral sobre o hálux e aceleram a progressão.',
   surgicalBasis:
     'Indicação cirúrgica: dor persistente refratária ao conservador por no mínimo 3-6 meses. A escolha da técnica baseia-se nos ângulos radiográficos (HVA e IMA), na presença de artrose da 1a MTF e na hipermobilidade do 1o raio. Radiografias devem ser em carga. O DASA (Distal Articular Set Angle) normal é <10°; DASA aumentado indica articulação incongruente e influencia a indicação de osteotomia da falange (Akin).',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/3/32/Hallux_valgus_Normwerte_%28only_X-ray%29.jpg',
+      caption: 'Radiografia do hálux valgo — mostrando os ângulos de medição (HV e IM intermetatarsal) usados na classificação. Fonte: Wikimedia Commons, CC BY-SA 3.0.',
+      source: 'Wikimedia Commons — CC BY-SA 3.0'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Hallux_valgus_or_bunion_radiographie_radiography.jpg',
+      caption: 'Hálux valgo — radiografia DP em carga mostrando desvio do primeiro raio. Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+  ],
   grades: [
     {
       id: 'grade-1-mild',

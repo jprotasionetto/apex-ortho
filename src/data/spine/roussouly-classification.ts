@@ -8,6 +8,13 @@ export const roussoulyClassification: ClassificationData = {
   epidemiology: 'A classificação de Roussouly descreve 4 morfotipos sagitais da coluna vertebral baseados na inclinação sacral (SS) e na forma da lordose lombar. Estudos em populações assintomáticas demonstram distribuição aproximada: Tipo 1 em ~15%, Tipo 2 em ~20%, Tipo 3 em ~40% e Tipo 4 em ~25%. A incidência pélvica (PI) é o parâmetro pélvico fixo que determina a morfologia individual — quanto maior o PI, maior a demanda por lordose lombar (LL ideal ≈ PI − 9° ± 9°). Desequilíbrio sagital (PI-LL > 10°) está associado a piores desfechos clínicos e funcionais após cirurgia de coluna.',
   mechanism: 'A incidência pélvica (PI) é um parâmetro morfológico fixo definido pelo ângulo entre a perpendicular ao platô sacral e a linha do centro dos eixos femorais. PI = SS + PT (inclinação pélvica). Indivíduos com PI baixo tendem a morfotipos planos (Tipos 1 e 2), enquanto PI alto predispõe lordose pronunciada (Tipo 4). A compensação sagital ocorre por retroversão pélvica (aumento do PT) e flexão dos joelhos. Perdas de lordose lombar por fusão ou degeneração levam a translação anterior do tronco, aumentando o SVA (Sagittal Vertical Axis).',
   surgicalBasis: 'O conhecimento do morfotipo de Roussouly é essencial no planejamento de artrodeses lombares. Restaurar a lordose segmentar nas regiões corretas evita o fenômeno de "junctional failure" (falha de junção proximal — PJK/PJF). Tipo 1: lordose curta L4-S1, risco de síndrome de disco adjacente superior. Tipo 4: lordose longa, implantes com maior curvatura. A fórmula de Schwab (LL = PI − 9°) e os parâmetros SRS-Schwab guiam a correção cirúrgica. Osteotomias (PSO, VCR) são reservadas para deformidades rígidas com PI-LL > 20°.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/SpondyloL5S1Mark.png',
+      caption: 'Coluna lombossacra em TC — a classificação de Roussouly avalia o perfil sagital lombar (lordose, incidência pélvica) nas radiografias panorâmicas. Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+  ],
   grades: [
     {
       id: 'tipo-1',

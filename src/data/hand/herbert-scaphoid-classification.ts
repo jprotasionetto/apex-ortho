@@ -12,6 +12,18 @@ export const herbertScaphoidClassificationData: ClassificationData = {
     'Mecanismo clássico: queda com a mão espalmada no chão (FOOSH — Fall On OutStretched Hand) com dorsiflexão forçada do punho + desvio radial. O polo proximal do escafoide fica fixo na fossa escafoidal do rádio enquanto o polo distal acompanha o movimento do carpo distal → cisalhamento na cintura (ponto de menor resistência). Suprimento vascular do escafoide: 70–80% por entrada DORSAL (ramo da artéria radial → entrada pelo dorso da cintura → irrigação proximal retrógrada). O polo proximal é COMPLETAMENTE dependente dessa irrigação retrógrada → qualquer fratura proximal à cintura = risco alto de isquemia do polo proximal. Fraturas do polo distal (tubérculo) = extraarticulares + excelente vascularização = consolidação confiável. Diagnóstico tardio = pseudoartrose por fibrocartilagem interposta na linha de fratura que impede consolidação. RNM é o gold standard para fratura oculta: sensibilidade 97–100%, especificidade 89–96% — indicar se RX negativo mas clínica positiva após 2 semanas de imobilização.',
   surgicalBasis:
     'Algoritmo de Herbert baseado em estabilidade. Tipo A (estável = sem desvio): imobilização gessada 8–12 semanas. Tipo B (instável = desvio ≥ 1mm, perpendicular, ângulo SL > 60° ou RL > 15°): RAFI com parafuso Herbert (compressão diferencial) ou cannulated screw (Acutrak, AO 3.0mm). Tipo C (pseudoartrose precoce < 6 meses): gesso por mais 12 semanas OU parafuso Herbert sozinho. Tipo D (pseudoartrose estabelecida > 6 meses): cirurgia obrigatória — D1 (fibrose, sem colapso): curetagem + enxerto esponjoso + parafuso Herbert; D2 (necrose, colapso): Russe grafting (enxerto corticoesponjoso ilíaco); D3 (avascular + SNAC): enxerto vascularizado (MFC — medial femoral condyle, ou 1,2-ICSRA) + parafuso. SNAC wrist avançado: salvamento (ressecção da fileira proximal, 4-corner fusion, ou artrodese total).',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/1/17/ScaphoidFrac2Mark.png',
+      caption: 'Fratura do escafoide — radiografia PA com marcação. Fonte: Wikimedia Commons.',
+      source: 'Wikimedia Commons'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Scaphoid_fracture_with_a_radiolucent_line_after_12_days.jpg',
+      caption: 'Fratura do escafoide com linha radiolucente — visível 12 dias após o trauma quando não detectada no Rx inicial. Fonte: Wikimedia Commons.',
+      source: 'Wikimedia Commons'
+    },
+  ],
   grades: [
     {
       id: 'herbert-a1',

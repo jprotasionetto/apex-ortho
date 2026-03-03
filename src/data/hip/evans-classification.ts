@@ -7,6 +7,18 @@ export const evansClassificationData: ClassificationData = {
   year: 1949,
   epidemiology: 'Fraturas intertrocantéricas representam ~49% de todas as fraturas do fêmur proximal — incidência ~75/100.000/ano em >80 anos. Segunda fratura mais comum no idoso após colo femoral. Distribuição F:M 3:1 em >75 anos; <50 anos = alta energia (acidentes, quedas de altura). Mortalidade em 1 ano: 15–20% (maior dependência da comorbidade do que do padrão de fratura). Distribuição de Evans: estável 50–55%, instável Tipo 1 35%, obliquidade reversa 10%. Tendência atual: CMN (haste cefalomedular) para todos os padrões intertrocantéricos pelos resultados funcionais superiores e menor falha mecânica em idosos osteoporóticos vs DHS. Evans IIA/obliquidade reversa (traço de superomedial para inferolateral): DHS CONTRAINDICADO — o parafuso desliza lateralmente → cut-out ou falha em varo. Consolidação em zona esponjosa vascular: pseudoartrose rara <2% (vs 5–15% no subtrocantérico). Fratura periprotética deve ser excluída em portadores de ATQ.',
   mechanism: 'Região intertrocantérica: zona extraperiosteal, vascularização esponjosa abundante — consolidação quase garantida. Força principal: baixa energia em idosos (queda da própria altura) → impacto sobre o grande trocânter → fragmentação ao longo da linha intertrocantérica (trocânter maior → trocânter menor). Forças deformantes pós-fratura: fragmento proximal (flexão + abdução + RE por iliopsoas/glúteos/rotadores curtos), fragmento distal (adução + encurtamento). Conceito de Evans: SUPORTE MEDIAL (calcar femoral + trocânter menor) = elemento decisivo para estabilidade mecânica pós-fixação. Fratura ESTÁVEL = cortical medial posterior redutível → "contact point" para o parafuso dinâmico distribuir carga. Fratura INSTÁVEL = cominuição posteromedial não redutível → carga transmite direto ao implante → colapso em varo. Obliquidade reversa (Evans instável Tipo 2): traço oblíquo reverso vai de superomedial para inferolateral → o fragmento distal migra lateralmente com carga → DHS "expulsa" o fragmento pelo parafuso → haste cefalomedular obrigatória.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/b/ba/Hip_fracture_classification.png',
+      caption: 'Classificação das fraturas do fêmur proximal — fraturas trocantéricas (Evans) mostradas na zona extracapsular. Fonte: Wikimedia Commons, CC0.',
+      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/1/11/Cdm_hip_fracture_343.jpg',
+      caption: 'Fratura intertrocantérica do fêmur — radiografia AP (padrão Evans). Fonte: Wikimedia Commons, CC BY-SA 3.0.',
+      source: 'Wikimedia Commons — CC BY-SA 3.0'
+    },
+  ],
   grades: [
     {
       id: 'stable',

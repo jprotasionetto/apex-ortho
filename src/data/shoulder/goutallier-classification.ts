@@ -7,6 +7,18 @@ export const goutallierClassificationData: ClassificationData = {
   year: 1994,
   epidemiology: 'Infiltração gordurosa muscular (Goutallier) é o principal preditor de resultado após reparação da coifa. Prevalência em roturas massivas: Grau 0–1: 30–40%, Grau 2: 20–30%, Grau 3–4: 30–40%. Tempo de progressão: roturas 1–3 anos → Grau 2; >3 anos → Grau 3–4. Grau 2 = ponto de viragem clínico-cirúrgico. Grau ≥3 = processo IRREVERSÍVEL mesmo após reparação bem-sucedida — músculo não recupera força nem estrutura. Supraespinhoso é o tendão mais frequentemente afetado; infraespinhoso envolvido em roturas massivas.',
   mechanism: 'Rotura tendínea → retração do tendão → desinervação parcial do músculo → substituição progressiva de fibras musculares por adipócitos (lipidose intersticial). Processo irreversível: sem reinervaçâo adequada e sem angiogênese suficiente para regeneração muscular mesmo após reparação cirúrgica. Avaliação: TC original de Goutallier (cortes axiais) — proporção gordura:músculo por inspeção visual. RM: cortes sagitais em plano Y-spine (ao nível da espinha da escápula) → proporção volume gorduroso vs muscular. RM pode sobrestimar 0,5–1 grau vs TC.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Rotator_cuff_tear.jpg',
+      caption: 'Rotura do manguito rotador — RNM sagital mostrando degeneração gordurosa e atrofia muscular (contexto Goutallier). Fonte: Wikimedia Commons, CC BY 4.0.',
+      source: 'Wikimedia Commons — CC BY 4.0'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Supraspinatustear.PNG',
+      caption: 'Rotura espessura total do supraespinal — RNM coronal oblíqua. Fonte: Wikimedia Commons, CC BY-SA 3.0.',
+      source: 'Wikimedia Commons — CC BY-SA 3.0'
+    },
+  ],
   grades: [
     {
       id: 'stage-0',

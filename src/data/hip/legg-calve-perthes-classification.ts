@@ -7,6 +7,18 @@ export const leggCalvePerthesClassificationData: ClassificationData = {
   year: 1910,
   epidemiology: 'Doença de Legg-Calvé-Perthes (LCP): osteocondrose idiopática da epífise femoral proximal — necrose avascular na criança. Incidência: 5–15/100.000 crianças/ano. Pico etário: 4–8 anos (raro <3 anos ou >12 anos). Predominância masculina 4–5:1. Bilateral em 10–15% (frequentemente assimétrico e em fases diferentes). Distribuição racial: caucasianos > asiáticos > negros. Fator prognóstico mais importante: IDADE ao diagnóstico — <6 anos: 85–95% bom resultado independente do tratamento; >8 anos: 50–60% de artrose precoce (4ª–5ª décadas). Classificação de Herring (pilar lateral) define o tratamento na fase de fragmentação — a única janela terapêutica cirúrgica. Herring A: resultado excelente sem cirurgia. Herring B: cirúrgico se >8 anos. Herring C: cirúrgico todos, resultados menos previsíveis. Classificação de Stulberg define o prognóstico final: I–II (esférico) = bom; III–IV (aspérico congruente) = artrose leve/moderada na meia-idade; V (aspérico incongruente) = artrose precoce.',
   mechanism: 'Etiopatogenia: NAV idiopática da epífise femoral proximal — vascularização deficiente transitória + episódios repetidos de isquemia. Suprimento vascular da epífise femoral em crianças: exclusivamente pelos vasos retinaculares laterais (ramos da circunflexa medial femoral) — sem contribuição da artéria do ligamento redondo até os ~7 anos + sem vasos metafisários (placa de crescimento é barreira avascular). Qualquer compressão ou interrupção desses vasos → necrose da epífise. Hipótese atual: hipercoagulabilidade transitória (deficiência de proteínas C/S, fator V Leiden em 20% dos casos) + sinovite aguda recorrente → hipertensão intra-articular → compressão venosa e arterial. Progressão em 4 fases (2–4 anos total): (1) Necrose: epífise infarta → fica densa ao RX (sem renovação). (2) Fragmentação: reabsorção osteoclástica do osso morto → heterogeneidade radiográfica → colapso progressivo — fase mais crítica para contenção. (3) Re-ossificação: células mesenquimais e vasculares invadem o osso morto → osso imaturo substitui progressivamente. (4) Cura/Residual: forma final da cabeça determinada — quanto maior o colapso do pilar lateral, mais plana a cabeça (coxa plana). Pilar lateral (Herring): terço lateral da epífise = a porção estruturalmente mais importante para suporte de carga — integridade do pilar lateral é o preditor mais sensível do resultado final.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/LCPdisease2015.png',
+      caption: 'Doença de Legg-Calvé-Perthes — radiografia AP bilateral comparativa mostrando fragmentação e achatamento da cabeça femoral direita. Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Roe-perthes.jpg',
+      caption: 'Doença de Perthes — radiografia AP mostrando fragmentação da epífise femoral. Fonte: Wikimedia Commons, Domínio Público.',
+      source: 'Wikimedia Commons — Domínio Público'
+    },
+  ],
   grades: [
     {
       id: 'initial-necrosis',

@@ -7,6 +7,13 @@ export const umeroDiafisarioAOData: ClassificationData = {
   year: 2018,
   epidemiology: 'Fraturas diafisárias do úmero representam 1–3% de todas as fraturas; incidência: 14/100.000/ano. Pico bimodal: jovens (alta energia, politrauma) e idosos >65a (queda simples, osteoporose). Lesão do nervo radial associada: 8–15% — mais comum nas fraturas do 1/3 distal (Holstein-Lewis: espiral distal onde o nervo perfura o septo intermuscular lateral). 70% das lesões radiais primárias recuperam espontaneamente em 3–4 meses (neuropraxia). Brace funcional de Sarmiento: taxa de consolidação 95% para tipos A1/A2 sem complicações — padrão mundial para fraturas simples não complicadas.',
   mechanism: 'A diáfise umeral apresenta anatomia neurovascular complexa: o nervo radial espirala no sulco posterior (1/3 médio) e perfura o septo intermuscular lateral a ~10cm do epicôndilo lateral (zona de Holstein-Lewis). Mecanismo: queda direta ou trauma axial → fratura simples (A), com cunha (B), ou multifragmentária (C). Brace de Sarmiento: pressão circunferencial sobre tecidos moles do braço cria "hidráulica muscular" que estabiliza os fragmentos → permite movimentação ativa, forças interfragmentárias compressivas durante carga. Hierarquia AO: A (simples, 2 fragmentos, contato total) → B (cunha, contato mantido) → C (multifragmentária, sem contato = máxima instabilidade e necessidade de fixação).',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/4/42/ProxHumeralFracture.png',
+      caption: 'Fratura do úmero — radiografia para contexto da classificação AO/OTA do segmento diafisário (12A–B–C). Fonte: James Heilman MD, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0 (James Heilman MD)'
+    },
+  ],
   grades: [
     {
       id: 'ao-12a',

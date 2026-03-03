@@ -7,6 +7,18 @@ export const dimeglioClassificationData: ClassificationData = {
   year: 1995,
   epidemiology: 'Pé torto congênito (equinovaro) afeta 1–2/1.000 nascimentos; F:M 1:2; bilateral em 50% dos casos. Etiologia multifatorial (genética + ambiental). Método de Ponseti (gessos seriados) reduziu necessidade de cirurgia extensiva de 80% para <5%. Recidiva pós-Ponseti: 25–30% (principalmente por não-compliance com ortótese de abdução Dennis-Brown). Dimeglio I–II (postural/moderado): ~80% dos casos. Dimeglio IV (teratológico): 10–15%, associado a artrogripose, espinha bífida, síndromes genéticas.',
   mechanism: 'Deformidade CAVE: Cavo (arcabouço elevado), equino (plantarflexão do tornozelo), Aduto (adução do antepé), Varo (calcâneo em varo). Dimeglio avalia 4 ângulos: equino sagital, varo do retropé, desrotação do bloco calcâneo-pedioso, adução do antepé — cada um 0–4 pontos (4=irredutível). Ponseti: correção por abdução+pronação do antepé com contra-apoio no corpo do tálus (não no calcâneo) → deslizamento do navicular sobre a cabeça talar → correção progressiva. Tenotomia percutânea do Aquiles (90% dos casos) para último 15° de equino residual.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Adductus_Illustration.png',
+      caption: 'Componente de adução do pé torto — o score de Dimeglio avalia quatro componentes: equino, varo, desvio medial e cavidade. Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Pied_bot%2C_varus_%C3%A9quin_%28bilateral%29.jpg',
+      caption: 'Pé torto congênito varo-equino bilateral (CTEV) — visão clínica. Fonte: Wikimedia Commons, CC BY-SA 3.0.',
+      source: 'Wikimedia Commons — CC BY-SA 3.0'
+    },
+  ],
   grades: [
     {
       id: 'grade-i',

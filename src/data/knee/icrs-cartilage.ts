@@ -11,6 +11,13 @@ export const icrsCartilageData: ClassificationData = {
     'Lesões traumáticas (impacto direto, cisalhamento) ou degenerativas (sobrecarga crônica, mau alinhamento). A cartilagem articular é avascular e tem capacidade limitada de cicatrização. Lesões focais em pacientes jovens são distintas de artrose difusa. Localização mais comum: côndilo femoral medial (45%), patela (20%), côndilo lateral (15%), troclear (10%).',
   surgicalBasis:
     'Limiar de tratamento cirúrgico: lesões grau III-IV sintomáticas, especialmente em pacientes jovens e ativos. Microfratura (Steadman): indicada em lesões grau III-IV de até 2-4 cm² em pacientes <40 anos; resultados declinam após 2 anos. ACI/MACI (transplante de condrócitos autólogos): indicada em lesões >4 cm², falha de microfratura, pacientes jovens. OATS/Mosaicoplastia: lesões 1-4 cm², côndilos femorais. Correlação com Outerbridge: grau I=Outerbridge I, grau II=Outerbridge II, grau III=Outerbridge III, grau IV=Outerbridge IV. Correlação OARSI: OARSI 0-1 ~ ICRS 0-1; OARSI 2-3 ~ ICRS 2-3; OARSI 4-5 ~ ICRS 3-4; OARSI 6 ~ ICRS 4.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/6/66/CT_and_projectional_radiography_of_osteochondritis_dissecans_-_annotated.jpg',
+      caption: 'TC e radiografia de osteocondrits dissecante — lesão condral comparável ao ICRS Grau III–IV. Fonte: Wikimedia Commons, CC0.',
+      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+    },
+  ],
   grades: [
     {
       id: 'grade-0',

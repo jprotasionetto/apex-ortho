@@ -11,6 +11,13 @@ export const palmerTfccClassificationData: ClassificationData = {
     'Mecanismo Classe 1 (traumática): (1A) Perfuração central — hiperpronação + carga axial ou queda; (1B) Avulsão ulnar — força de distração com desvio radial + pronação; (1C) Avulsão do assoalho (extensores carpoulnar/pisiforme) — queda com punho em dorsiflexão + desvio ulnar + pronação; (1D) Avulsão radial — fratura do processo estiloide do rádio + tração do disco. Mecanismo Classe 2 (degenerativa): variante ulnar positiva → a ulna mais comprida impacta contra o lado ulnar do carpo (lunato + triquetro) durante pronação + carga axial → desgaste progressivo do disco CFCT → condromalácia do lunato/cabeça ulnar → perfuração degenerativa → lesão da fibrocartilagem lunotriquetral. A distinção Classe 1 vs 2 tem implicação cirúrgica: Classe 1 = reparo do tecido lesado (sutura/reancoragem); Classe 2 = procedimentos de descarga ulnar (osteotomia de encurtamento ulnar) antes ou associado ao desbridamento.',
   surgicalBasis:
     'Algoritmo baseado em Classe (traumática vs degenerativa) e subestágio. Classe 1A: central, >2mm — desbridamento artroscópico; <2mm ou periférico: conservador 6 semanas. Classe 1B (avulsão ulnar): mais cirúrgica — reparo artroscópico ou aberto dos ligamentos radioulnares. Classe 1C (avulsão assoalho): reparo artroscópico dos ligamentos ulnocarpais. Classe 1D (avulsão radial): fixação da fratura do estiloide + reparo. Classe 2 A–B: osteotomia de encurtamento ulnar (reduz a carga na impactação). Classe 2C–D: desbridamento artroscópico + osteotomia de encurtamento. Classe 2E: pancarpal — artrodese radiolunotriquetral ou ATU conforme extensão.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/d/d7/Distalradiusfracture.jpg',
+      caption: 'Punho — radiografia PA mostrando espaço ulnocarpal e articulação rádio-ulnar distal (região do TFCC). Fonte: Wikimedia Commons, Domínio Público.',
+      source: 'Wikimedia Commons — Domínio Público'
+    },
+  ],
   grades: [
     {
       id: 'palmer-1a',

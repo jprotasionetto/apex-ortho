@@ -7,6 +7,18 @@ export const morreyClassificationData: ClassificationData = {
   year: 2000,
   epidemiology: 'Fraturas do olécrano representam 10–17% das fraturas ao redor do cotovelo; incidência 11,5/100.000/ano. Distribuição bimodal: adultos jovens (esportes, acidentes) e idosos (queda da própria altura). Associação com outras lesões do cotovelo: 20% (tríade terrível, Monteggia variante). Distribuição por tipo: não deslocadas (I) 20–30%; deslocadas estáveis (II) 50–60%; instáveis (III) 15–25%. Complicação principal: migração de material (fios K em banda de tensão, 30–40%).',
   mechanism: 'O olécrano é a inserção do músculo tríceps braquial — principal extensor do cotovelo. Mecanismo direto: trauma direto sobre cotovelo fletido → forças de cisalhamento. Mecanismo indireto: contração excêntrica violenta do tríceps durante queda (mão espalmada) → avulsão por tensão. Banda de tensão (cerclagem em 8): converte forças de tensão na face posterior em compressão na face articular anterior — válida apenas para traço transverso simples (Tipo II transversa). Tipo III: fratura-luxação trans-olecraniana ou Monteggia posterior → articulação radioumeral também deslocada.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/5/51/OlecranonFracMark.png',
+      caption: 'Fratura do olécrano — radiografia lateral (Classificação de Morrey: Tipo I não deslocada, Tipo II deslocada, Tipo III cominutiva). Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Olecranon_Fracture.jpg',
+      caption: 'Fratura do olécrano — radiografia AP/lateral. Fonte: Wikimedia Commons, CC BY-SA 3.0.',
+      source: 'Wikimedia Commons — CC BY-SA 3.0'
+    },
+  ],
   grades: [
     {
       id: 'type-i',

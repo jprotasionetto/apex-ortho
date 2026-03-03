@@ -7,6 +7,18 @@ export const loderClassificationData: ClassificationData = {
   year: 1993,
   epidemiology: 'ECFE (Epifisiólise da Cabeça Femoral) afeta 2–13/100.000 adolescentes (10–16 anos); F:M 1:2,4; maior em afrodescendentes e obesos (IMC >85° percentil em 73% dos casos). Bilateral em 20–40%. Distribuição por estabilidade: estável 85%, instável 15%. Hipotireoidismo, GH exógeno e doença renal aumentam risco. Classificação de Wilson por grau de deslizamento: Grau I (<33%), II (33–50%), III (>50%). Taxa de NAV: estável <10%, instável 20–50%.',
   mechanism: 'Fise proximal femoral (zona hipertrófica) = zona de menor resistência mecânica durante surto de crescimento pubertário. Obesidade + obliquidade fisária aumentada + enfraquecimento hormonal → deslizamento posterior-inferior da epífise sobre a metáfise (RX AP: deslizamento medial; RX lateral: deslizamento posterior — "sorvete caindo da casquinha"). Instabilidade de Loder (clínica, não radiográfica): se não deambula = ruptura do periósteo → hematoma intra-articular → compressão das artérias retinaculares → risco de NAV. Urgência: capsulotomia para descompressão + fixação in situ sem redução.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/4/48/SCFE_FROG_B%26W.jpg',
+      caption: 'Epifisiolise da cabeça femoral (SCFE) — radiografia em posição de rã mostrando escorregamento da epífise. Fonte: Wikimedia Commons, Domínio Público.',
+      source: 'Wikimedia Commons — Domínio Público'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/3/30/Epilys.jpg',
+      caption: 'Epifisiolise femoral proximal — radiografia AP bilateral comparativa mostrando desvio medial da epífise (classificação de Loder). Fonte: Wikimedia Commons, Domínio Público.',
+      source: 'Wikimedia Commons — Domínio Público'
+    },
+  ],
   grades: [
     {
       id: 'stable',

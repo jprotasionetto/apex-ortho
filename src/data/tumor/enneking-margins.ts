@@ -7,6 +7,13 @@ export const ennekingMarginsData: ClassificationData = {
   year: 1980,
   epidemiology: 'Sistema de margens de Enneking (1980): linguagem universal em oncologia ortopédica. Margem ampla = padrão-ouro para sarcomas. Estudos modernos: margem <1mm em tecido não-reativo ("close margin") pode ser equivalente à margem de 2cm se análise molecular negativa. Contaminação intraoperatória = conversão de ampla → marginal → aumento drástico de recidiva local (5% → 25–50%). Taxa de salvamento de membro em sarcomas de alto grau: >90% com quimioterapia neoadjuvante moderna vs 5% nos anos 1970.',
   mechanism: 'Zona reativa (pseudocápsula) = mistura de tumor comprimido + células inflamatórias + vasos + células satélite → margem pela pseudocápsula tem risco de deixar células tumorais. Margem ampla: vai além da zona reativa → elimina células satélite e nódulos em trânsito. Margem radical: resseca todo o compartimento → elimina migração por via intrafascial (importância diminuiu com quimioterapia neoadjuvante moderna). Trajetória da biópsia: contamina todos os tecidos que atravessa → DEVE ser ressecada en bloc com a peça definitiva — biópsia mal planejada pode inviabilizar o salvamento do membro.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/3/36/Osteosarcoma_of_the_tibia.png',
+      caption: 'Tumor ósseo maligno — imagem de referência para margens cirúrgicas (Enneking: intralesional/marginal/ampla/radical). Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+  ],
   grades: [
     {
       id: 'intralesional',

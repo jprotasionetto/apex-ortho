@@ -7,6 +7,18 @@ export const monteggiaBadoData: ClassificationData = {
   year: 1967,
   epidemiology: 'Lesão de Monteggia (fratura da ulna + luxação da cabeça do rádio) representa 1–2% de todas as fraturas do antebraço em adultos e ~5% das fraturas do cotovelo em crianças. Tipo I de Bado: 60–70% dos casos. Diagnóstico tardio: 10–30% em adultos — principal causa de resultados ruins (rigidez, dor crônica, instabilidade). Crianças: excelente resultado com redução fechada nas primeiras horas. Adultos: resultados funcionais moderados mesmo com tratamento ideal. Complicação neurológica (nervo interósseo posterior, NIP): 10–17% nos tipos I e III — geralmente neuropraxia com recuperação espontânea em 3–4 meses.',
   mechanism: 'Rádio e ulna formam um par biomecânico rígido ligados pelo ligamento anular e membrana interóssea — qualquer deformação de um osso afeta o alinhamento do outro. Princípio de Bado: a direção da luxação da cabeça do rádio corresponde à angulação do ápice da fratura da ulna. Tipo I (ápice anterior): hiperpronação forçada → ulna angula para frente → rádio luxa anteriormente. Tipo II (ápice posterior): trauma axial com cotovelo fletido → rádio luxa posteriormente. Tipo III (metáfise proximal): abdução forçada → rádio luxa lateralmente. Tipo IV: combinação com fratura simultânea do rádio. Axioma diagnóstico: "Em toda fratura de ulna, o eixo do rádio DEVE atravessar o centro do capitelo em qualquer incidência — se não, há luxação da cabeça do rádio."',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Bado_Classification_-_Monteggia_Fractures.jpg',
+      caption: 'Classificação de Bado das lesões de Monteggia — diagrama dos Tipos I (luxação anterior), II (posterior), III (lateral) e IV (com fratura do rádio). Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/Monteggia_Fracture.jpg',
+      caption: 'Fratura de Monteggia — radiografia mostrando fratura da ulna com luxação da cabeça do rádio. Fonte: Wikimedia Commons.',
+      source: 'Wikimedia Commons'
+    },
+  ],
   grades: [
     {
       id: 'type-i',

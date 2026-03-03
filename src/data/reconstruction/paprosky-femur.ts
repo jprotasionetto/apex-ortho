@@ -7,6 +7,13 @@ export const paproskyfemurClassificationData: ClassificationData = {
   year: 2000,
   epidemiology: 'Defeitos femorais na revisão de ATQ: Tipo I/II = 40–50% das revisões; Tipo IIIA/IIIB = 20–30%; Tipo IV = 5–10%. Hastes não-cimentadas tapered fluted (Wagner SL, Restoration Modular) são o padrão para Tipos II–IIIA. Taxa de afrouxamento de revisão femoral a 10 anos: Tipo I 5–10%, Tipo IV 20–35%. Mortalidade cirúrgica da revisão ATQ: 1–2%, aumentando com complexidade e tempo operatório. TC pré-operatória avalia diâmetro do canal, qualidade cortical e viabilidade de scratch-fit diafisário.',
   mechanism: 'Fixação biológica de haste não-cimentada requer: (1) scratch-fit ≥4cm no istmo femoral para estabilidade rotacional primária, (2) osso suficiente para osteointegração. Tipos I/II: istmo preservado → haste extensamente porosa com press-fit distal. Tipo IIIA: ≥4cm scratch-fit ainda possível → haste tapered fluted (maior diâmetro distal) de fixação diafisária. Tipo IIIB: <4cm scratch-fit → APC (aloenxerto + haste cimentada) ou haste modular. Tipo IV: istmo destruído, canal stovepipe → megaprótese femoral proximal ou impaction bone grafting com haste cimentada longa.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/1/10/X-ray_of_hip_with_total_arthroplasty_-_Anteroposterior.jpg',
+      caption: 'Radiografia AP do fêmur com haste femoral — avaliação de perda óssea femoral na revisão de ATQ (Paprosky). Fonte: Wikimedia Commons, CC0.',
+      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+    },
+  ],
   grades: [
     {
       id: 'type-i',

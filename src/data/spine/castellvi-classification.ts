@@ -8,6 +8,13 @@ export const castellviClassification: ClassificationData = {
   epidemiology: 'A vértebra de transição lombossacral (VTLS) é uma variação anatômica congênita com prevalência de 4–35% na população geral (variação por critério diagnóstico). A VTLS pode ser sacralização do L5 (fusão com o sacro) ou lombarização do S1 (S1 com morfologia lombar). A síndrome de Bertolotti — lombalgia associada à VTLS — afeta 4–8% dos adultos jovens com dor lombar. Indivíduos com VTLS têm menor mobilidade no segmento de transição, maior estresse nos segmentos adjacentes (L4-L5 frequentemente) e risco aumentado de hérnia de disco e artrose facetária em L4-L5.',
   mechanism: 'A VTLS resulta de falha na segmentação embriológica da coluna lombossacral. O processo transverso anômalo (hipertrófico ou fundido) cria uma neoarticulação (pseudoartrose) ou fusão óssea com o sacro/ilíaco. O número de vértebras lombares pode variar: no caso de sacralização, o indivíduo tem apenas 4 vértebras lombares móveis; na lombarização, tem 6. A contagem de vértebras a partir do sacro (numeração "de baixo para cima") é fundamental para evitar erros cirúrgicos de nível. Técnica de Farshad: contar a partir da última costela ou usar ressonância magnética com todo o sacro visível.',
   surgicalBasis: 'Implicações cirúrgicas: (1) Identificação correta do nível é crítica — erros de nível em cirurgia de coluna são mais comuns com VTLS. (2) Artrodese na VTLS: nos Tipos III e IV, o segmento de transição é fixo, e a artrodese deve incluir L4-L5 (segmento mais sintomático). (3) Ressecção da neoarticulação (Tipo II) pode aliviar a dor em casos selecionados. (4) Injeção na pseudoartrose diagnóstica: se alívio > 80%, ressecção ou bloqueio crônico são opções.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/SpondyloL5S1Mark.png',
+      caption: 'Radiografia L5-S1 — a transição lombossacra onde se encontram as vértebras transicionais (Castellvi). Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+  ],
   grades: [
     {
       id: 'tipo-ia',

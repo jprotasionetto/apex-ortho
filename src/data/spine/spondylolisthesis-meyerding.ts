@@ -7,6 +7,18 @@ export const spondylolisthesisMeyerding: ClassificationData = {
   year: 1932,
   epidemiology: 'Espondilolistese afeta 5–8% da população adulta ocidental; prevalência aumenta com a idade. Classificação etiológica de Wiltse-Newman: ístmica (pars fratura de fadiga, L5-S1 mais comum, atletas com hiperlordose) e degenerativa (artrose facetária, L4-L5 mais comum, mulheres >50a). 95% dos casos são Graus I–II; Grau III–V é raro (<1% da população geral). Prevalência 6–8% em indivíduos ativos (ginastas, jogadores de futebol americano).',
   mechanism: 'Espondilolistese ístmica: fratura de fadiga (espondilólise) no pars interarticularis → pedículo intacto permite deslizamento anterior do corpo vertebral sem englobar os elementos posteriores (diferente da degenerativa). Fórmula de Meyerding: % deslizamento = (deslocamento anterior / comprimento platô sacral ou vertebral caudal) × 100. Graus I–II: sintomas por compressão radicular e instabilidade dinâmica (>4mm de deslizamento em RX dinâmico = instabilidade). Graus III–V: deformidade sagital com cifoselordose lombossacral patológica.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/6/61/Spondylolisthesis_measurement_on_X-ray.png',
+      caption: 'Medição da espondilolistese em radiografia — método de Meyerding (divisão em quartis do platô superior de S1). Fonte: Wikimedia Commons, CC BY 4.0.',
+      source: 'Wikimedia Commons — CC BY 4.0'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/SpondyloL5S1Mark.png',
+      caption: 'TC de espondilolistese L5-S1 — corte sagital mostrando escorregamento anterior e marcações anatômicas. Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+  ],
   grades: [
     {
       id: 'grade-1',

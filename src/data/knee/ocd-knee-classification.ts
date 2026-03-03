@@ -11,6 +11,18 @@ export const ocdKneeClassificationData: ClassificationData = {
     'Etiologia multifatorial: (1) Microtrauma repetitivo — impacto da espinha tibial posterior sobre o côndilo femoral medial em extensão-rotação (mecanismo de Wilson); (2) Isquemia focal por compressão vascular no osso subcondral; (3) Predisposição genética (casos familiares relatados). Fisiopatologia: necrose do osso subcondral → separação da cartilagem + osso necrótico = fragmento OCD → progressão: fragmento in situ estável → fragmento parcialmente destacado instável → fragmento solto (corpo livre intra-articular). O sinal de Wilson (dor à extensão com tíbia em rotação interna, aliviada com rotação externa) é positivo em ~90% dos casos sintomáticos de OCD do côndilo medial. Fatores de mau prognóstico: fise fechada (adulto), lesão > 2 cm², localização lateral do côndilo medial, fragmento destacado.',
   surgicalBasis:
     'Algoritmo baseado em 3 variáveis: (1) Estabilidade do fragmento; (2) Maturidade esquelética (juvenil vs adulto); (3) Tamanho. OCD estável (Guhl I–IIA / ICRS I–II): 6–12 meses conservador → se falha → fixação percutânea (parafusos Herbert ou cabeçados reabsorvíveis) ± perfurações retrógradas (drilling de Bandi). OCD instável com fragmento viável (Guhl IIB–III / ICRS III): RAFI com fixação do fragmento (fragmentos >1 cm²) OU microfraturas/perfurações se fragmento não viável (<1 cm²). Fragmento destacado (corpo livre, Guhl IV / ICRS IV): remoção do corpo livre + tratamento da lesão osteocondral de base — microfraturas se < 2 cm², osteocondral autólogo (OATS) se 2–4 cm², aloenxerto osteocondral ou MACI se > 4 cm² ou falha de microfraturas.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/6/66/CT_and_projectional_radiography_of_osteochondritis_dissecans_-_annotated.jpg',
+      caption: 'Osteocondrite dissecante — TC e radiografia anotadas mostrando fragmento osteocondral com zona de delimitação e estágio. Fonte: Wikimedia Commons, CC0.',
+      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Osteochondritis_dissecans_diagram.JPEG',
+      caption: 'Diagrama da osteocondrite dissecante — ilustração esquemática mostrando integridade da cartilagem e estabilidade do fragmento. Fonte: Wikimedia Commons, CC BY 2.0.',
+      source: 'Wikimedia Commons — CC BY 2.0'
+    },
+  ],
   grades: [
     // ─── Guhl (Artroscópica) ───────────────────────────────────────────────
     {

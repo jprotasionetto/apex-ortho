@@ -7,6 +7,13 @@ export const paproskyAcetabulumClassificationData: ClassificationData = {
   year: 1994,
   epidemiology: 'Defeitos acetabulares na revisão de ATQ: Tipo I/IIA = 60–70% dos casos; Tipo IIIB = 5–10%, com custo cirúrgico 3–5× maior. Revisão acetabular necessária em 5–15% das ATQs a 10 anos; 20–25% a 20 anos (osteólise, afrouxamento asséptico). Descontinuidade pélvica (IIIB): 1–5% das revisões. TC com reconstrução 3D: padrão de avaliação pré-operatória para Tipos IIIA e IIIB — essencial para planejamento de augments, cages e implantes customizados.',
   mechanism: 'Fixação biológica do cotilo requer ≥50% de contato com osso hospedeiro vivo. Paprosky baseia-se em 4 parâmetros radiográficos: (1) migração do cotilo em relação ao centro de rotação anatômico (horizontal e vertical), (2) lise do arco de Köhler (parede medial/coluna anterior), (3) lise isquiática (coluna posterior), (4) suporte ósseo disponível. Tipo I: sem migração → cotilo press-fit padrão. Tipos IIA-IIC: migração leve, colunas intactas → jumbo cup (≥60mm). Tipo IIIA: 30–60% suporte, colunas comprometidas → tantalum augments. Tipo IIIB: <30% + descontinuidade → cup-cage construct ou triflange personalizado (impressão 3D).',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/X-ray_of_pelvis_with_total_arthroplasty.jpg',
+      caption: 'Pelve pós-ATQ — avaliação de perda óssea acetabular (Paprosky). Fonte: Wikimedia Commons, CC0.',
+      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+    },
+  ],
   grades: [
     {
       id: 'type-i',

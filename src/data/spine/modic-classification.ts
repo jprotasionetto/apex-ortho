@@ -7,6 +7,13 @@ export const modicClassification: ClassificationData = {
   year: 1988,
   epidemiology: 'Alterações de Modic (signal changes dos platôs vertebrais na RM) são achados extremamente comuns: prevalência em indivíduos com dor lombar = 40–50%; em assintomáticos = 6–10%. Modic I tem OR 2,0–4,0 para lombalgia clinicamente relevante. Controvérsia MAST: protocolo de antibióticos prolongados (amoxicilina-clavulanato 100 dias) baseado na hipótese de Cutibacterium acnes intradiscal — resultados conflitantes, não recomendado universalmente. Conversão Modic I→II é comum (>50% em 3 anos).',
   mechanism: 'O disco intervertebral transmite cargas mecânicas e sofre microtraumas repetitivos → fissuras ânulo fibroso → migração nuclear e citocinas inflamatórias (IL-1, TNF-α) ativam receptores nos platôs. Tipo I (edema): edema medular ativo + tecido de granulação fibroso → T1 baixo, T2 alto, STIR alto — simula espondilodiscite. Tipo II (gorduroso): substituição gordurosa crônica da medula subcondral → T1 alto, T2 alto, STIR baixo (supressão de gordura). Tipo III (esclerose): calcificação e esclerose avançada → T1 baixo, T2 baixo — correlaciona com esclerose subcondral na TC.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/SpondyloL5S1Mark.png',
+      caption: 'RM da coluna lombar — as alterações de Modic são encontradas nas placas terminais vertebrais visíveis em RM (T1 e T2). Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+  ],
   grades: [
     {
       id: 'type-1',

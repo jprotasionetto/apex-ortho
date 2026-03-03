@@ -7,6 +7,18 @@ export const rotatorCuffClassificationData: ClassificationData = {
   year: 1982,
   epidemiology: 'Roturas da coifa são extremamente prevalentes: 51% dos >80a assintomáticos têm rotura completa (Yamaguchi, JSES 2006). Incidência de roturas sintomáticas: 4–5/1.000/ano. Distribuição por tamanho: pequena 20%, média 30%, grande 30%, massiva 20%. Taxa de re-rotura após reparação: pequena <10%, média 15–25%, grande 25–40%, massiva 40–60%. Fatores de risco para re-rotura: tamanho da rotura, Goutallier ≥2, retração tendinosa Patte 3, qualidade óssea e compliance de fisioterapia.',
   mechanism: 'Zona hipovascular de Codman (área crítica): 1cm proximal à inserção do supraespinhoso na tuberosidade maior → microtrauma cumulativo → roturas parciais → progressão para completa. Footprint anatômica do supraespinhoso: 16mm AP × 11mm ML. Classificação de Cofield: mede dimensão ântero-posterior da rotura na superfície bursal. Reparação dupla-fila: restaura o footprint anatômica → maior área de cicatrização vs fila simples. Retração >5cm = mobilização tendinosa difícil (releases intervalares, coracoumeral). Roturas massivas de Cofield ≥2 tendões completos e >5cm.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Rotator_cuff_tear.jpg',
+      caption: 'Rotura do manguito rotador — RNM sagital oblíqua com rotura do supraespinal e degeneração gordurosa muscular. Fonte: Wikimedia Commons, CC BY 4.0.',
+      source: 'Wikimedia Commons — CC BY 4.0'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/9/9f/Full_Thickness_Tear.jpg',
+      caption: 'Rotura de espessura total do manguito — RNM mostrando gap completo no tendão. Fonte: Wikimedia Commons, Attribution.',
+      source: 'Wikimedia Commons — Attribution'
+    },
+  ],
   grades: [
     {
       id: 'small',

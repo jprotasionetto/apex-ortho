@@ -7,6 +7,13 @@ export const muscleInjuryClassification: ClassificationData = {
   year: 2013,
   epidemiology: 'Lesões musculares representam 30–45% de todas as lesões esportivas no futebol (Munich Consensus, 2013). Isquiotibiais: 12–16% de todas as lesões no futebol; taxa de recidiva 12–34%; principal causa de dias perdidos. Quadríceps: 5–7%; adutores: 10–18%. Taxa de recidiva global: Tipo 3A 7–15%, Tipo 3B 14–30%, Tipo 4 5–10% após reparo cirúrgico. Ausência média: Tipo 3A 2–4 semanas, Tipo 3B 4–8 semanas, Tipo 4 3–6 meses. DOMS (Tipo 1B): afeta 95% dos atletas após treino excêntrico incomum.',
   mechanism: 'Classificação Munich distingue lesões FUNCIONAIS (Tipo 1–2: sem ruptura sarcomérica macroscópica = RM normal ou apenas edema difuso) de ESTRUTURAIS (Tipo 3–4: ruptura sarcomérica com edema focal e hematoma na RM). Tipo 1 (overload): acúmulo de metabólitos → sensibilização de nociceptores intramusculares; RM normal. Tipo 2 (neuromotor): tônus aumentado por reflexo espinhal (2A = origem espinal) ou desequilíbrio motor (2B = intramuscular); RM normal. Tipo 3A: <1 fascículo ou <5mm; Tipo 3B: >1 fascículo ou >5mm — escalonamento baseado em extensão da ruptura sarcomérica. Tipo 4: avulsão completa = ruptura de toda a unidade musculotendínea. Quanto maior a extensão, maior o hematoma e o tempo de retorno.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Rotator_cuff_tear.jpg',
+      caption: 'RNM de lesão muscular — o edema e a descontinuidade das fibras musculares são os critérios de estadiamento nas classificações de lesão muscular. Fonte: Wikimedia Commons, CC BY 4.0.',
+      source: 'Wikimedia Commons — CC BY 4.0'
+    },
+  ],
   grades: [
     {
       id: 'type-1a',

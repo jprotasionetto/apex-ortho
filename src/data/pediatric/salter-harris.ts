@@ -7,6 +7,13 @@ export const salterHarrisClassificationData: ClassificationData = {
   year: 1963,
   epidemiology: 'Fraturas fisárias representam 15–30% de todas as fraturas em crianças. Tipo II é o mais comum (75% das fisárias). Distribuição anatômica: falanges 30%, rádio distal 25%, tornozelo distal 25%. Barra fisária pós-traumática: Tipo I <1%, II <2%, III 5–10%, IV 10–20%, V >50%. Distúrbio de crescimento clinicamente significativo: 1–2/10.000 fraturas fisárias. Fises com maior contribuição ao crescimento (e maior risco): joelho distal-proximal (38% do comprimento total do membro inferior).',
   mechanism: 'A fise tem zonas de resistência variável: zona germinativa (mais resistente, células-tronco) → zona proliferativa → zona hipertrófica (mais fraca = plano de clivagem dos Tipos I e II). Tipos I/II: clivagem na zona de calcificação provisória → periósteo intacto no lado do fragmento = dobradiça → redução estável. Tipos III/IV: atravessam a zona de células germinativas e cartilagem articular → barra fisária (pontes ósseas entre metáfise e epífise → fusão prematura → deformidade angular). Tipo V: compressão axial difusa → lesão da zona germinativa sem traço radiográfico visível inicialmente → diagnóstico retrospectivo pela barra fisária.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/1/1b/SalterHarris.svg',
+      caption: 'Classificação de Salter-Harris — diagrama esquemático dos Tipos I a V mostrando o envolvimento da fise, epífise e metáfise. Fonte: Wikimedia Commons, CC BY-SA 3.0.',
+      source: 'Wikimedia Commons — CC BY-SA 3.0'
+    },
+  ],
   grades: [
     {
       id: 'type-i',

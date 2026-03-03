@@ -7,6 +7,18 @@ export const meniscusClassification: ClassificationData = {
   year: 2005,
   epidemiology: 'Lesões meniscais são as lesões intra-articulares do joelho mais comuns. Incidência: 60–70/100.000/ano. Distribuição: menisco medial 70–75%, lateral 25–30% (medial menos móvel e mais vulnerável). Bimodal: jovens atletas 15–35 anos (traumáticas — vertical longitudinal/alça de balde em LCA) e >55 anos (degenerativas — horizontal/oblíqua no corno posterior). Lesão meniscal + LCA: simultaneidade em 50–70%. Tipo mais frequente em jovens: longitudinal vertical → se completa + deslocada = alça de balde (bucket handle) = joelho bloqueado. Tipo degenerativo: horizontal (clivagem) no corno posterior do menisco medial = mais comum em >50 anos. Zona vermelha-vermelha (0–3mm da borda): vascularizada → reparo cicatriza em 90%. Zona branca-branca (>5mm): avascular → reparo falha em 60–70% → meniscectomia preferida. Meniscectomia total: artrose radiográfica em 50% em 20 anos (aceleração de K-L por 10–15 anos). Preservação meniscal = objetivo fundamental — cada 10% de menisco preservado reduz em 10% a carga compartimentar.',
   mechanism: 'Meniscos medial e lateral: fibrocartilagem semilunares sobre plateau tibial — funções de transmissão de carga (60% lateral, 50% medial), absorção de impacto, propriocepção, lubrificação, estabilidade AP. Tipos de lesões por mecanismo: (1) VERTICAL LONGITUDINAL (traumática): torção com joelho em semiflexão + carga → cisalhamento nas fibras circunferenciais → clivagem paralela à borda meniscal → se avança = alça de balde. (2) RADIAL (traumática): força de impacto perpendicular → rompe as fibras circunferenciais → comprometimento catastrófico da hoop stress → perda imediata da transmissão de carga. (3) OBLÍQUA/FLAP (transicional): mistura de radial + longitudinal → fragmento em forma de flap. (4) HORIZONTAL (degenerativa): cisalhamento repetitivo nas camadas média do menisco em >45 anos → clivagem horizontal que divide o menisco em folhas superior e inferior → pode formar cisto parameniscal. Alça de balde (bucket handle): longitudinal completa que desloca o fragmento interno para a fossa intercondilar → extensão bloqueada mecanicamente ("joelho bloqueado") — urgência artroscópica relativa.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/d/d8/MRI_on_tear_of_meniscus.jpg',
+      caption: 'RNM de lesão meniscal — sequência sagital mostrando rotura do menisco medial. Fonte: Wikimedia Commons, Attribution.',
+      source: 'Wikimedia Commons — Attribution'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Meniscal_Tear_MRI.jpg',
+      caption: 'Rotura meniscal — RNM coronal do joelho mostrando lesão do menisco medial. Fonte: Wikimedia Commons, CC BY-SA 3.0.',
+      source: 'Wikimedia Commons — CC BY-SA 3.0'
+    },
+  ],
   grades: [
     {
       id: 'vertical-longitudinal',

@@ -7,6 +7,13 @@ export const dorrClassificationData: ClassificationData = {
   year: 1993,
   epidemiology: 'A morfologia do canal femoral varia com a idade, sexo e densidade óssea. Tipo A: predomina em jovens (<60a) com boa qualidade óssea. Tipo C: predomina em mulheres idosas >70a com osteoporose (prevalência 15–20% dos candidatos a ATQ). Índice CFI (Canal Flare Index = diâmetro metafisário / diâmetro ístmico): Tipo A >4,7; B 3,0–4,7; C <3,0. Importância cirúrgica: seleção inadequada de haste → fratura intraoperatória (Tipo A: curvatura excessiva) ou subsidence (Tipo C: sem press-fit).',
   mechanism: 'Tipo A (champagne flute): metáfise estreita com ístmo bem definido → press-fit mecânico excelente para haste em cunha (taper-wedge); encaixe estável ao implante. Tipo B: forma intermediária, a maioria dos designs de hastes não-cimentadas funciona adequadamente; escolha padrão. Tipo C (stovepipe): sem diferenciação metáfise-diáfise, córtex fino e frágil → press-fit mecânico precário → risco de subsidence e fratura intraoperatória. Para Tipo C: cimentação de 3ª geração (pressurização do cimento, tampão distal, irrigação) ou haste modular extensamente porosa.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/1/10/X-ray_of_hip_with_total_arthroplasty_-_Anteroposterior.jpg',
+      caption: 'Radiografia AP do quadril pós-ATQ — a classificação de Dorr (A, B, C) avalia a morfologia do canal femoral para seleção do implante. Fonte: Wikimedia Commons, CC0.',
+      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+    },
+  ],
   grades: [
     {
       id: 'type-a',

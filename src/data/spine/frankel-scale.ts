@@ -7,6 +7,13 @@ export const frankelScale: ClassificationData = {
   year: 1969,
   epidemiology: 'Lesões medulares traumáticas: incidência global 10–83/1.000.000/ano (EUA: ~17.000 novos casos/ano; estimativa Brasil: 6.000–10.000 novos casos/ano). Pico bimodal: jovens 15–29a (acidentes de trânsito 38%, quedas 30%, mergulho 8%) e idosos >65a (quedas com estenose cervical pré-existente). Distribuição ASIA na admissão: ASIA A 35–45%, B 10–15%, C 10–15%, D 25–35%. Nível neurológico: C4-C7 = 50% (tetraplegia predominante), T12-L1 = 30% (paraplegia). Recuperação neurológica: ASIA B/C → 50–60% convertem para ASIA D ou E; ASIA A → <5% recuperam função motora útil. Mortalidade hospitalar: 4–17% — maior em tetraplegia completa e pacientes >60a. ASIA 2019 (5ª edição): atualizou os critérios de Frankel mas manteve estrutura A-E com definição explícita de "preservação sacral" (S4-S5) como marcador de incompletude.',
   mechanism: 'Classificação de Frankel (1969) foi a primeira escala neurológica padronizada para trauma medular, precursora da ASIA. Avalia preservação de função motora e sensitiva nos segmentos sacrais S4-S5 — "preservação sacral" = qualquer sensibilidade perianal OU contração anal voluntária = lesão INCOMPLETA. Choque medular (período agudo 24–72h): perda transitória completa de toda função abaixo da lesão → NÃO classificar como Frankel/ASIA A durante esta fase → esperar o retorno do reflexo bulbocavernoso (primeiro reflexo a retornar = fim do choque medular). Graus de incompletude: Frankel B (preservação sensitiva apenas com função motora ausente), C (força muscular <3 na maioria dos músculos-chave) e D (força ≥3 na maioria) refletem extensão da preservação de tratos descendentes. Síndrome medular central (mais comum em idosos): dano preferencial ao trato corticoespinal cervical central → fraqueza desproporcional nos membros superiores → geralmente Frankel C/D. Síndrome de Brown-Séquard: hemissecção medular → hemiplegia ipsilateral + hemianestesia termoalgésica contralateral → melhor prognóstico entre as incompletas.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Dermatoms_alt.svg',
+      caption: 'Dermátomos da coluna — mapa dos níveis sensitivos relevante para avaliação da escala de Frankel/ASIA em lesão medular. Fonte: Wikimedia Commons, Domínio Público.',
+      source: 'Wikimedia Commons — Domínio Público'
+    },
+  ],
   grades: [
     {
       id: 'grade-a',

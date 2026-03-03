@@ -8,6 +8,18 @@ export const coltonOlecranonData: ClassificationData = {
   epidemiology: 'Fraturas do olécrano representam 10% de todas as fraturas do cotovelo em adultos; incidência: 12/100.000/ano. Bimodal: adultos jovens (trauma direto, queda sobre cotovelo fletido) e idosos >65a (queda simples, osteoporose). Distribuição: Colton I (não deslocada): 5–10%; Colton IIB (transversa deslocada): 60–70%; IIC (cominutiva): 15–20%; IID (fratura-luxação): 5–10%. Taxa de reoperação por proeminência de material após banda de tensão de arame (TBW): 20–80% — principal causa de reintervenção. Placa dorsal LCP 3,5 mm: menor necessidade de retirada, superiores resultados em cominuição.',
   mechanism: 'O olécrano é o processo proximal da ulna que forma a articulação troclear com o úmero. O tríceps insere na face posterior → fraturas desviadas perdem a extensão ativa. Mecanismo direto: queda sobre cotovelo → compressão axial → fratura transversa ou cominutiva. Mecanismo indireto (avulsão): contração excêntrica violenta do tríceps = fratura-avulsão polar proximal (Colton IIA). Fratura-luxação (IID): alta energia → ruptura do aparato estabilizador → rádio e ulna deslocam-se anteriormente em bloco. Princípio da banda de tensão: 2 fios K paralelos + arame figura-8 convertem força de tração excêntrica do tríceps em compressão articular anterior durante a flexão = indicado APENAS para fraturas transversas simples sem cominuição.',
   revision: 'Mayo Classification — Morrey BF',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/5/51/OlecranonFracMark.png',
+      caption: 'Fratura do olécrano — radiografia lateral com marcação do traço de fratura (contexto classificação de Colton). Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Fracture_of_Olecranon_pre_and_post_typical_surgery.jpg',
+      caption: 'Fratura do olécrano — radiografia pré e pós-operatória mostrando fixação com placa. Fonte: Wikimedia Commons, CC BY 3.0.',
+      source: 'Wikimedia Commons — CC BY 3.0'
+    },
+  ],
   grades: [
     {
       id: 'colton-i',

@@ -7,6 +7,13 @@ export const pfirrmannClassification: ClassificationData = {
   year: 2001,
   epidemiology: 'A degeneração discal avaliada por Pfirrmann na RM é extremamente prevalente em assintomáticos: dados de Brinjikji 2015 (Spine): Grau III–V visível em 37% aos 20 anos, 52% aos 30 anos, 68% aos 40 anos, 80% aos 50 anos, 88% aos 60 anos. Confiabilidade: κ = 0,68 (inter-observador), κ = 0,82 (intra-observador). Grau modificado 8-pontos foi proposto para maior granularidade em ensaios clínicos. Correlação com dor lombar fraca isoladamente — necessário correlação clínica.',
   mechanism: 'O disco intervertebral normal contém núcleo pulposo com ~80% de água (proteoglicanos agrecano + colágeno tipo II). Degeneração: perda de proteoglicanos → desidratação → redução do sinal T2 (núcleo pulposo perde brilho característico). Grau I–II: discreta desidratação, distinção nítida núcleo/ânulo preservada. Grau III: transição — distinção núcleo/ânulo se torna imprecisa, T2 intermediário. Grau IV: desidratação marcada, sem distinção nítida, T2 escuro. Grau V: colapso total do disco, possível vacuum phenomenon (gás intradiscal = sinal de Knuttson — patognomônico de degeneração severa).',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/SpondyloL5S1Mark.png',
+      caption: 'RM sagital da coluna lombar — a classificação de Pfirrmann avalia a degeneração discal em T2 por intensidade de sinal e morfologia. Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+  ],
   grades: [
     {
       id: 'grade-1',

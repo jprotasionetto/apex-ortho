@@ -7,6 +7,13 @@ export const clavienDindoClassification: ClassificationData = {
   year: 2004,
   epidemiology: 'Classificação de Clavien-Dindo (2004) é o sistema de graduação de complicações cirúrgicas mais utilizado no mundo — >100.000 citações. Proposta por Pierre-Alain Clavien (1992) e refinada por Dindo, Demartines e Clavien (2004) em coorte de 6.336 pacientes. Taxas de complicação em ortopedia: ATQ = 15–25% (maioria Grau I-II), ATJ = 10–20%, fixação de fratura exposta = 20–35% (Grau II-IIIb). Complicações requerendo reoperação (Grau IIIb ou mais): 2–5% em cirurgias eletivas, 10–20% em trauma de alta energia. Complicações mais comuns por módulo: infecção de sítio cirúrgico (Grau II-IIIb), hematoma (Grau I-IIIa), TVP/TEP (Grau II-IVa), soltura/falha de implante (Grau IIIb). Sufixo "d" (disability): adicionado quando complicação persiste com incapacidade residual na alta hospitalar — ex: "Grau IIIbd" para reoperação com sequela funcional persistente.',
   mechanism: 'A classificação Clavien-Dindo não descreve um mecanismo fisiopatológico, mas uma hierarquia de gravidade baseada no TRATAMENTO necessário para resolver a complicação. Princípio: o grau reflete a intervenção terapêutica mais invasiva necessária — quanto mais invasiva, maior o grau. Hierarquia: Graus I-II = tratamento não invasivo (medidas de suporte, medicamentos, transfusão); Grau IIIa-b = intervenção invasiva sem/com anestesia geral (radiologia intervencionista, endoscopia, reoperação); Grau IVa-b = risco de vida com suporte orgânico em UTI (disfunção de 1 vs múltiplos órgãos); Grau V = óbito. Vantagem sobre sistemas anteriores: padronização objetiva permite comparação de resultados entre centros, estudos multicêntricos e auditorias de qualidade cirúrgica. Limitação: subjetividade no limiar de indicação de intervenção pode gerar discordância entre observadores — ex: drenagem de hematoma sob anestesia local (Grau IIIa) vs sob anestesia geral (Grau IIIb). Regra: classificar pela complicação mais GRAVE quando múltiplas estiverem presentes.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/X-ray_of_pelvis_with_total_arthroplasty.jpg',
+      caption: 'Radiografia pós-ATQ — contexto de avaliação de complicações pós-operatórias classificadas por Clavien-Dindo (Graus I–V). Fonte: Wikimedia Commons, CC0.',
+      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+    },
+  ],
   grades: [
     {
       id: 'grade-1',

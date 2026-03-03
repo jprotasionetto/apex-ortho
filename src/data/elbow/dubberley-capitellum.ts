@@ -13,6 +13,13 @@ export const dubberleyCapitellumData: ClassificationData = {
     'A classificação de Dubberley (2006) amplia a de Bryan-Morrey ao estratificar explicitamente o envolvimento troclear e a presença de cominuição posterior, dois fatores que impactam diretamente a escolha do acesso cirúrgico e o prognóstico. O sistema A/B (sem/com cominuição) em cada tipo reflete a qualidade óssea e a complexidade da fixação.',
   surgicalBasis:
     'Acesso anterolateral (Kaplan ou Kocher) para exposição do capitelo e tróclea lateral. Tipos com envolvimento troclear completo (Tipo 3) podem requerer acesso lateral ampliado ou olecranização. Fixação com parafusos sem cabeça (Herbert, Acutrak 2) inseridos de posterior para anterior, afundados abaixo da cartilagem. Cominuição posterior (sufixo B) dificulta a fixação e piora o prognóstico.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/1/19/RadHeadCTMark.png',
+      caption: 'TC do cotovelo — mostrando o capitelo e articulação radiocapitelar (relevante para classificação de Dubberley). Fonte: Wikimedia Commons.',
+      source: 'Wikimedia Commons'
+    },
+  ],
   grades: [
     {
       id: 'type-1a',

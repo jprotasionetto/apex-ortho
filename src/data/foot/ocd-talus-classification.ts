@@ -9,6 +9,13 @@ export const ocdTalusClassification: ClassificationData = {
   epidemiology: 'As lesões osteocondrais do tálus (LOT) ocorrem em 0,09% da população, com pico entre 20–30 anos. São mais comuns no terço médio da borda medial (60–70%) e no terço anterior da borda lateral (30–40%). LOT mediais tendem a ser mais profundas e cônicas (trauma de flexão plantar + inversão); LOT laterais são mais rasas e fragmentadas (trauma de dorsiflexão + inversão). Associação com entorse de tornozelo em 50–70% dos casos. Taxa de LOT ocultas após entorse de tornozelo com fratura associada: 6,5%.',
   mechanism: 'LOT lateral: mecanismo de compressão em dorsiflexão + inversão — superfície lateral do tálus comprime-se contra a fíbula. LOT medial: mecanismo de tração + torção em flexão plantar + inversão — traciona-se o ligamento deltóide, arrancando osteocondral posteromedial. Após o trauma inicial, a lesão pode evoluir por ciclos de pressão hidrostática no tecido subcondral, levando a necrose isquêmica, formação de cisto e destacamento do fragmento. A cartilagem avascular depende 100% do líquido sinovial para nutrição.',
   surgicalBasis: 'Tratamento baseado no tamanho e estabilidade da lesão: (1) Lesões estáveis pequenas (<1,5 cm²): microfraturas artroscópicas — estimulam fibrocartilagem, bons resultados em 75–85% dos casos. (2) Lesões maiores ou falha das microfraturas: transplante osteocondral (OAT/mosaicoplastia) — cartilagem hialina real, melhor para lesões >1,5 cm². (3) MACI/ACI (implante de condrócitos autólogos): lesões grandes, jovens. (4) Fragmento grande viável: fixação artroscópica com parafuso reabsorvível ou pino bioabsorvível. Abordagem artroscópica transtibial ou posterolateral dependendo da localização.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/6/66/CT_and_projectional_radiography_of_osteochondritis_dissecans_-_annotated.jpg',
+      caption: 'Osteocondrite dissecante — TC e radiografia anotadas. As lesões OCDs do tálus seguem estadiamento análogo ao do joelho. Fonte: Wikimedia Commons, CC0.',
+      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+    },
+  ],
   grades: [
     {
       id: 'berndt-1',

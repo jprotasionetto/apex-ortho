@@ -7,6 +7,18 @@ export const sandersClassification: ClassificationData = {
   year: 1993,
   epidemiology: 'Fraturas do calcâneo representam 1–2% de todas as fraturas e 60–65% de todas as fraturas do tarso. Incidência: 10–15/100.000/ano; pico masculino 30–50 anos (queda de altura = principal mecanismo, frequentemente acidente de trabalho). 75% são intra-articulares (Sanders I–IV). Distribuição: Tipo I 10–20%, Tipo II 40–50%, Tipo III 25–35%, Tipo IV 10–15%. Lesão contralateral simultânea: 5–10% (bilateral). Lesão compressiva da coluna lombar (L1): associada em 10% dos casos — queda de altura. Complicação mais temida: infecção de ferida após ORIF extensile lateral — 5–25%, aumenta significativamente com tabagismo, DM, IMC>30 e edema excessivo. Critério para ORIF: edema resolvido com sinal de rugas (wrinkle test) na pele lateral — geralmente 7–14 dias após o trauma. Ângulo de Böhler (<20°): preditor de gravidade e prognóstico funcional pós-operatório.',
   mechanism: 'Mecanismo clássico: queda de altura (>1,5m) em pé → carga axial transmitida pelo processo posterior do tálus ao calcâneo → fratura primária oblíqua (de superomedial para inferolateral) criando fragmento anterolateral e posteromedial → linhas secundárias na faceta posterior determinam os subtipos. Anatomia crítica: faceta posterior (articulação talocalcaneana posterior) é o componente articular principal — sua reconstrução anatômica é o objetivo cirúrgico. Classificação de Sanders usa TC coronal no corte mais largo da faceta posterior: o número de linhas de fratura no corte = número de fragmentos − 1. 1 linha = 2 fragmentos (Tipo II), 2 linhas = 3 fragmentos (Tipo III, com fragmento central deprimido "die-punch"), 3+ linhas = 4+ fragmentos (Tipo IV = cominuição). Ângulo de Böhler: formado entre a linha do processo anterior calcâneo ao ponto mais alto da faceta posterior e da faceta posterior ao tubérculo posterior. Normal 20–40° — redução < 20° indica impactação grave da faceta. Ângulo de Gissane: ângulo crítico do calcâneo (normal 120–145°) — amplia com a impactação. Achado característico: "double density sign" na RX lateral = sobreposição de fragmentos da faceta posterior.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/3/30/CalcanealfractCT.png',
+      caption: 'TC de fratura do calcâneo — o exame padrão-ouro para classificação de Sanders (cortes coronais na faceta posterior). Fonte: James Heilman MD, CC BY-SA 3.0.',
+      source: 'Wikimedia Commons — CC BY-SA 3.0 (James Heilman MD)'
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/d/dc/CalFrac.png',
+      caption: 'Fratura do calcâneo — radiografia lateral mostrando redução do ângulo de Böhler. Fonte: James Heilman MD, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0 (James Heilman MD)'
+    },
+  ],
   grades: [
     {
       id: 'type-1',

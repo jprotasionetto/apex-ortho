@@ -7,6 +7,13 @@ export const bennettRolandoClassificationData: ClassificationData = {
   year: 1882,
   epidemiology: 'Fraturas da base do 1º metacarpo representam 4% de todas as fraturas da mão; Bennett é a fratura intra-articular mais comum do polegar (80% das fraturas CMC). Incidência: 5/100.000/ano; pico 20–40 anos; predominância masculina 10:1. Rolando (<20% dos casos) tem prognóstico significativamente pior. Artrose pós-traumática CMC: 20–50% a longo prazo mesmo com redução anatômica; correlaciona-se com degrau articular residual. Cirurgia de salvamento: trapeziecotmia ou artrodese CMC se artrose sintomática tardia.',
   mechanism: 'Mecanismo de Bennett: carga axial no 1º metacarpo semifletido → traço oblíquo libera o corpo do metacarpo; fragmento volar-ulnar retido pelo ligamento oblíquo anterior (beak ligament = AOL volar) enquanto o APL traciona o metacarpo dorso-radialmente causando subluxação. Rolando: força axial mais severa fragmenta a base em padrão Y/T pela impactação acetabular. Biomecânica da CMC em sela biaxial: estabilidade depende de capsuloligamentos (AOL, dorsorradial, intermetacarpal) → reconstrução do AOL é prioridade. Princípio de redução: anestesia + distração + pronação do metacarpo reduz fragmento; fio K mantém redução.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Collesfracture.jpg',
+      caption: 'Fratura da mão — contexto de fraturas da base do primeiro metacarpo (Bennett/Rolando) que envolvem a articulação carpometacarpal do polegar. Fonte: Wikimedia Commons, CC BY-SA 3.0.',
+      source: 'Wikimedia Commons — CC BY-SA 3.0'
+    },
+  ],
   grades: [
     {
       id: 'bennett',

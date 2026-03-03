@@ -11,6 +11,13 @@ export const dejourTrochlearDysplasiaData: ClassificationData = {
     'Anormalidade morfológica congênita da tróclea femoral, desenvolvida durante o período fetal e de crescimento. A teoria da direção da força do quadríceps propõe que a força anormal do músculo quadríceps durante o crescimento impede a formação adequada do sulco troclear. A ausência de "estresse compressivo" normal pela patela na tróclea resulta em tróclea rasa ou convexa.',
   surgicalBasis:
     'Trocleoplastia (aprofundamento troclear) indicada em displasia sintomática de alto grau (Tipos B, C e D) com instabilidade documentada e falha no tratamento conservador. Frequentemente combinada com reconstrução do MPFL (ligamento patelofemoral medial). Osteotomia de Tibial Tuberosity (TTO) indicada se TTTG >20 mm. Em casos Tipo A, artroscopia com sulcoplastia superficial pode ser suficiente em sintomas leves.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Knee_plain_X-ray_weight_bearing.jpg',
+      caption: 'Radiografia do joelho — a incidência lateral é essencial para avaliar o "crossing sign" de Dejour na tróclea. Fonte: Wikimedia Commons, CC BY-SA 4.0.',
+      source: 'Wikimedia Commons — CC BY-SA 4.0'
+    },
+  ],
   grades: [
     {
       id: 'type-a',

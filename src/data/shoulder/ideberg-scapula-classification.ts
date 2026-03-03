@@ -12,6 +12,13 @@ export const idebergScapulaClassificationData: ClassificationData = {
     'A escápula é protegida por músculos em todas as direções — sua fratura requer energia extrema. Tipos de fratura e mecanismos: Ideberg I (borda anterior/posterior): arrancamento ligamentar ou impacto durante luxação glenoumeral (o úmero "arranca" a borda da glenóide durante a redução ou luxação). Ideberg II (fratura inferior): compressão axial com abdução — úmero impacta a borda inferior da glenóide. Ideberg III (fratura superior): compressão axial com abdução + elevação — força pelo processo coracoide. Ideberg IV (horizontal): cisalhamento horizontal — forças complexas de alta energia. Ideberg V (combinação): mecanismos múltiplos combinados. Ideberg VI (cominuição): impacto direto ou cisalhamento extremo. Fraturas do corpo escapular: impacto direto na face posterior do ombro (mais comuns — ~50% das fraturas escapulares). "Floating shoulder": a interrupção simultânea da clavícula + escápula/glenoide remove todo o suporte ósseo do ombro → instabilidade completa do cinto escapular → indicação cirúrgica controversa.',
   surgicalBasis:
     'A maioria das fraturas escapulares (corpo, processos) é tratada CONSERVADORAMENTE pela excelente estabilidade muscular e consolidação confiável. Indicações cirúrgicas: (1) Fratura da glenoide articular (Ideberg I–VI) com desvio > 5mm ou envolvimento > 25% da superfície articular — risco de artrose glenoumeral e instabilidade. (2) Floating shoulder com cintilha livre instável — fixação da clavícula geralmente estabiliza o sistema. (3) Glenoide mediada > 25mm por fratura do colo escapular com angulação glenoidal patológica. (4) Síndrome do desfiladeiro torácico pós-traumática por calo exuberante. Via de acesso: abordagem posterior de Judet para fraturas do corpo/colo; abordagem deltopeitoral para fraturas anteriores da glenoide (Ideberg I/II/III).',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Separated_shoulder.jpg',
+      caption: 'Radiografia do ombro — mostrando a anatomia da escápula e articulação glenoumeral relevante para fraturas da glenoide (Ideberg). Fonte: Wikimedia Commons, CC0.',
+      source: 'Wikimedia Commons — CC0 (Domínio Público)'
+    },
+  ],
   grades: [
     {
       id: 'ideberg-i',
