@@ -15,10 +15,16 @@ export default function LoginPage() {
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
-  // Redireciona se já autenticado e com acesso
+  // Redireciona se autenticado com acesso; reseta submitting se não tiver acesso
   useEffect(() => {
-    if (!loading && user && subscription?.hasAccess) {
-      navigate('/app', { replace: true })
+    if (!loading && user && subscription !== null) {
+      if (subscription.hasAccess) {
+        navigate('/app', { replace: true })
+      } else {
+        // Login OK mas sem assinatura ativa — sai do loading e mostra aviso
+        setSubmitting(false)
+        setError('Sua assinatura está inativa ou expirada. Adquira um plano para continuar.')
+      }
     }
   }, [user, subscription, loading, navigate])
 
@@ -37,7 +43,7 @@ export default function LoginPage() {
       )
       setSubmitting(false)
     }
-    // Redirecionamento feito pelo useEffect acima via subscription change
+    // Redirecionamento ou erro de acesso tratado pelo useEffect acima
   }
 
   return (

@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+// useNavigate removed — checkout no longer redirects to /signup
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import {
   Check,
@@ -11,45 +11,150 @@ import {
   Crown,
   Quote,
   Loader2,
+  Mail,
 } from 'lucide-react';
 import { supabase } from '@/lib/supabase.ts';
 
-/** Cria sessão de checkout no Mercado Pago.
- *  Se o usuário não estiver logado, redireciona para /signup. */
-function useCheckout() {
-  const navigate = useNavigate();
-  const [loading, setLoading] = useState<'monthly' | 'lifetime' | null>(null);
+/** Modal para capturar email antes de redirecionar ao Mercado Pago */
+function EmailCheckoutModal({
+  plan,
+  onClose,
+}: {
+  plan: 'monthly' | 'lifetime';
+  onClose: () => void;
+}) {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const checkout = useCallback(async (plan_type: 'monthly' | 'lifetime') => {
-    const { data: { session } } = await supabase.auth.getSession();
-    if (!session) {
-      navigate('/signup');
-      return;
-    }
-    setLoading(plan_type);
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
     try {
       const res = await fetch('/api/create-checkout', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${session.access_token}`,
-        },
-        body: JSON.stringify({ plan_type }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ plan_type: plan, payer_email: email.trim() }),
       });
       const data = await res.json();
       if (data.init_point) {
         window.location.href = data.init_point;
       } else {
-        alert(data.error || 'Erro ao criar checkout. Tente novamente.');
+        setError(data.error || 'Erro ao criar checkout.');
+        setLoading(false);
       }
     } catch {
-      alert('Erro de conexão. Tente novamente.');
-    } finally {
-      setLoading(null);
+      setError('Erro de conexão. Tente novamente.');
+      setLoading(false);
     }
-  }, [navigate]);
+  }
 
-  return { checkout, loading };
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95, y: 20 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.95, y: 20 }}
+        className="w-full max-w-sm bg-[#111111] border border-[rgba(212,175,55,0.25)] rounded-2xl p-6 shadow-2xl"
+      >
+        <div className="flex items-start justify-between mb-5">
+          <div>
+            <h3 className="text-base font-semibold text-white">Continuar para pagamento</h3>
+            <p className="text-xs text-gray-500 mt-0.5">
+              {plan === 'monthly' ? 'Assinatura Mensal — R$ 49,99/mês' : 'Acesso Vitalício — R$ 599,90'}
+            </p>
+          </div>
+          <button onClick={onClose} className="text-gray-500 hover:text-gray-300 transition-colors">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label className="block text-xs text-gray-400 mb-1.5">Seu email</label>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                <Mail className="w-4 h-4 text-gray-500" />
+              </div>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="seu@email.com"
+                autoComplete="email"
+                autoFocus
+                required
+                className="w-full bg-[#0A0A0A] border border-[rgba(255,255,255,0.1)] rounded-xl pl-10 pr-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[rgba(212,175,55,0.5)] transition-colors"
+              />
+            </div>
+            <p className="text-xs text-gray-600 mt-1.5">
+              Use este email para criar sua conta após o pagamento.
+            </p>
+          </div>
+
+          {error && <p className="text-xs text-red-400">{error}</p>}
+
+          <button
+            type="submit"
+            disabled={loading || !email}
+            className="w-full py-3 rounded-xl text-sm font-bold text-[#0A0A0A] disabled:opacity-50 flex items-center justify-center gap-2"
+            style={{ background: 'linear-gradient(135deg, #D4AF37, #B8961E)' }}
+          >
+            {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : null}
+            {loading ? 'Aguarde...' : 'Ir para pagamento →'}
+          </button>
+        </form>
+
+        <p className="text-xs text-gray-600 text-center mt-4">
+          Após o pagamento, você receberá acesso para criar sua conta.
+        </p>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+/** Cria sessão de checkout no Mercado Pago.
+ *  Se o usuário não estiver logado, abre modal de email. */
+function useCheckout() {
+  const [loading, setLoading] = useState<'monthly' | 'lifetime' | null>(null);
+  const [pendingPlan, setPendingPlan] = useState<'monthly' | 'lifetime' | null>(null);
+
+  const checkout = useCallback(async (plan_type: 'monthly' | 'lifetime') => {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session?.user?.email) {
+      // Logged in — proceed directly with session email
+      setLoading(plan_type);
+      try {
+        const res = await fetch('/api/create-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ plan_type, payer_email: session.user.email }),
+        });
+        const data = await res.json();
+        if (data.init_point) {
+          window.location.href = data.init_point;
+        } else {
+          alert(data.error || 'Erro ao criar checkout. Tente novamente.');
+        }
+      } catch {
+        alert('Erro de conexão. Tente novamente.');
+      } finally {
+        setLoading(null);
+      }
+    } else {
+      // Not logged in — show email modal
+      setPendingPlan(plan_type);
+    }
+  }, []);
+
+  return { checkout, loading, pendingPlan, setPendingPlan };
 }
 
 /* ─────────────── animation variants ─────────────── */
@@ -540,7 +645,7 @@ const FEATURES_LIFETIME = [
 ];
 
 export function PricingSection() {
-  const { checkout, loading: checkoutLoading } = useCheckout();
+  const { checkout, loading: checkoutLoading, pendingPlan, setPendingPlan } = useCheckout();
   return (
     <SectionWrapper id="precos">
       <div className="max-w-5xl mx-auto">
@@ -669,6 +774,12 @@ export function PricingSection() {
           </p>
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {pendingPlan && (
+          <EmailCheckoutModal plan={pendingPlan} onClose={() => setPendingPlan(null)} />
+        )}
+      </AnimatePresence>
     </SectionWrapper>
   );
 }
@@ -783,7 +894,7 @@ export function FAQSection() {
    ============================================================ */
 
 export function FinalCTASection() {
-  const { checkout, loading: checkoutLoading } = useCheckout();
+  const { checkout, loading: checkoutLoading, pendingPlan, setPendingPlan } = useCheckout();
   return (
     <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* background mesh / gradient */}
@@ -861,6 +972,12 @@ export function FinalCTASection() {
           <Shield className="w-4 h-4 text-[#22C55E]" /> 7 dias de garantia — reembolso total, sem perguntas.
         </motion.div>
       </motion.div>
+
+      <AnimatePresence>
+        {pendingPlan && (
+          <EmailCheckoutModal plan={pendingPlan} onClose={() => setPendingPlan(null)} />
+        )}
+      </AnimatePresence>
     </section>
   );
 }

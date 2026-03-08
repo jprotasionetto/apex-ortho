@@ -4,7 +4,9 @@ import { createClient } from '@supabase/supabase-js'
 /**
  * Create Mercado Pago Checkout — APEX Ortho
  * POST /api/create-checkout
- * Body: { plan_type: 'monthly' | 'lifetime' }
+ * Body: { plan_type: 'monthly' | 'lifetime', payer_email: string }
+ *
+ * Auth header is optional — if provided and valid, also saves user_id in metadata.
  *
  * Env vars required:
  *   SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY
@@ -26,26 +28,36 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   Object.entries(CORS_HEADERS).forEach(([k, v]) => res.setHeader(k, v))
 
   try {
-    const authHeader = req.headers.authorization
-    if (!authHeader) throw new Error('Missing authorization header')
-
-    const userClient = createClient(
-      process.env.SUPABASE_URL!,
-      process.env.SUPABASE_ANON_KEY!,
-      { global: { headers: { Authorization: authHeader } } }
-    )
-    const { data: { user } } = await userClient.auth.getUser()
-    if (!user) throw new Error('Não autorizado')
-
-    const { plan_type } = req.body
+    const { plan_type, payer_email } = req.body
     if (!plan_type || !['monthly', 'lifetime'].includes(plan_type)) {
       throw new Error('plan_type deve ser "monthly" ou "lifetime"')
+    }
+    if (!payer_email) throw new Error('payer_email é obrigatório')
+
+    const email = String(payer_email).toLowerCase().trim()
+
+    // Optional auth — include user_id in metadata if logged in
+    let userId: string | null = null
+    const authHeader = req.headers.authorization
+    if (authHeader) {
+      try {
+        const userClient = createClient(
+          process.env.SUPABASE_URL!,
+          process.env.SUPABASE_ANON_KEY!,
+          { global: { headers: { Authorization: authHeader } } }
+        )
+        const { data: { user } } = await userClient.auth.getUser()
+        if (user) userId = user.id
+      } catch {
+        // ignore auth errors — checkout still proceeds without user_id
+      }
     }
 
     const MP_ACCESS_TOKEN = process.env.MERCADOPAGO_ACCESS_TOKEN
     if (!MP_ACCESS_TOKEN) throw new Error('MERCADOPAGO_ACCESS_TOKEN não configurado')
 
     const origin = req.headers.origin || 'https://ortho.apexhealthia.com'
+    const successRedirect = `${origin}/signup?payment=success&email=${encodeURIComponent(email)}`
 
     if (plan_type === 'monthly') {
       const preapprovalResponse = await fetch('https://api.mercadopago.com/preapproval', {
@@ -59,10 +71,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             transaction_amount: 49.99,
             currency_id: 'BRL',
           },
-          payer_email: user.email,
-          back_url: `${origin}/app?payment=success`,
-          external_reference: `${user.id}_monthly_${Date.now()}`,
-          metadata: { user_id: user.id, plan_type: 'monthly' },
+          payer_email: email,
+          back_url: successRedirect,
+          external_reference: `${userId ?? email}_monthly_${Date.now()}`,
+          metadata: { user_id: userId, payer_email: email, plan_type: 'monthly' },
         }),
       })
       if (!preapprovalResponse.ok) {
@@ -77,16 +89,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Lifetime
     const preference = {
       items: [{ title: 'APEX Ortho — Acesso Vitalício', quantity: 1, unit_price: 599.90, currency_id: 'BRL' }],
-      payer: { email: user.email },
+      payer: { email },
       payment_methods: { installments: 12, default_installments: 1 },
-      metadata: { user_id: user.id, plan_type: 'lifetime' },
+      metadata: { user_id: userId, payer_email: email, plan_type: 'lifetime' },
       back_urls: {
-        success: `${origin}/app?payment=success`,
+        success: successRedirect,
         failure: `${origin}/login?payment=failure`,
-        pending: `${origin}/login?payment=pending`,
+        pending: `${origin}/signup?payment=pending&email=${encodeURIComponent(email)}`,
       },
       auto_return: 'approved',
-      external_reference: `${user.id}_lifetime_${Date.now()}`,
+      external_reference: `${userId ?? email}_lifetime_${Date.now()}`,
     }
 
     const mpResponse = await fetch('https://api.mercadopago.com/checkout/preferences', {

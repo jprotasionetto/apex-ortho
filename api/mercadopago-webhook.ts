@@ -8,6 +8,10 @@ import { createClient } from '@supabase/supabase-js'
  * Configure in MP Dashboard:
  *   Webhook URL: https://ortho.apexhealthia.com/api/mercadopago-webhook
  *   Events: payment, subscription_preapproval, subscription_authorized_payment
+ *
+ * On payment approved:
+ *   1. Writes payer email to signup_approvals (allows signup)
+ *   2. If existing user found by email, activates subscription immediately
  */
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -24,7 +28,57 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const { type, data } = req.body
     console.log('Webhook received:', type, data?.id)
 
-    // ── PAYMENT (lifetime) ────────────────────────────────────────────────────
+    // ── Helper: activate subscription for a known user_id ─────────────────────
+    async function activateForUser(
+      userId: string,
+      plan: 'lifetime' | 'monthly',
+      mpPaymentId: string,
+      periodStart: string,
+      periodEnd: string | null
+    ) {
+      const role = plan === 'lifetime' ? 'lifetime' : 'paid'
+      await supabase.from('subscriptions').upsert({
+        user_id: userId,
+        plan,
+        status: 'active',
+        mp_payment_id: mpPaymentId,
+        current_period_start: periodStart,
+        current_period_end: periodEnd,
+        updated_at: new Date().toISOString(),
+      }, { onConflict: 'user_id' })
+      await supabase.from('profiles')
+        .update({ role, updated_at: new Date().toISOString() })
+        .eq('id', userId)
+      console.log(`${plan} activated for user:`, userId)
+    }
+
+    // ── Helper: write to signup_approvals and try to activate existing user ────
+    async function approveEmailAndActivate(
+      payerEmail: string,
+      plan: 'lifetime' | 'monthly',
+      mpPaymentId: string,
+      periodStart: string,
+      periodEnd: string | null
+    ) {
+      const normalizedEmail = payerEmail.toLowerCase().trim()
+
+      // Always store approval so signup is unblocked
+      await supabase.from('signup_approvals').upsert({
+        email: normalizedEmail,
+        plan,
+        mp_payment_id: mpPaymentId,
+      }, { onConflict: 'email' })
+      console.log('signup_approvals updated for email:', normalizedEmail)
+
+      // Try to find existing user by email and activate immediately
+      const { data: { users } } = await supabase.auth.admin.listUsers({ perPage: 1000 })
+      const existingUser = users?.find(u => u.email?.toLowerCase() === normalizedEmail)
+      if (existingUser) {
+        await activateForUser(existingUser.id, plan, mpPaymentId, periodStart, periodEnd)
+      }
+    }
+
+    // ── PAYMENT (lifetime one-time) ────────────────────────────────────────────
     if (type === 'payment') {
       const paymentResp = await fetch(
         `https://api.mercadopago.com/v1/payments/${data.id}`,
@@ -35,28 +89,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       if (payment.status === 'approved') {
         const userId = payment.metadata?.user_id
         const planType = payment.metadata?.plan_type
+        const payerEmail = payment.metadata?.payer_email || payment.payer?.email
 
-        if (userId && planType === 'lifetime') {
-          await supabase.from('subscriptions').upsert({
-            user_id: userId,
-            plan: 'lifetime',
-            status: 'active',
-            mp_payment_id: String(data.id),
-            current_period_start: new Date().toISOString(),
-            current_period_end: null,
-            updated_at: new Date().toISOString(),
-          }, { onConflict: 'user_id' })
+        if (planType === 'lifetime') {
+          const periodStart = new Date().toISOString()
 
-          await supabase.from('profiles')
-            .update({ role: 'lifetime', updated_at: new Date().toISOString() })
-            .eq('id', userId)
-
-          console.log('Lifetime activated for user:', userId)
+          // If we have a user_id, activate directly
+          if (userId) {
+            await activateForUser(userId, 'lifetime', String(data.id), periodStart, null)
+          }
+          // Also write signup_approvals for payer email (covers new-user flow)
+          if (payerEmail) {
+            await approveEmailAndActivate(payerEmail, 'lifetime', String(data.id), periodStart, null)
+          }
         }
       }
     }
 
-    // ── SUBSCRIPTION (monthly) ────────────────────────────────────────────────
+    // ── SUBSCRIPTION (monthly recurring) ─────────────────────────────────────
     if (type === 'subscription_preapproval' || type === 'subscription_authorized_payment') {
       const preapprovalResp = await fetch(
         `https://api.mercadopago.com/preapproval/${data.id}`,
@@ -64,32 +114,42 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       )
       const preapproval = await preapprovalResp.json()
 
-      let userId = preapproval.metadata?.user_id
-      if (!userId && preapproval.external_reference) {
-        userId = preapproval.external_reference.split('_')[0]
-      }
+      const userId = preapproval.metadata?.user_id
+        || preapproval.external_reference?.split('_')[0]
+      const payerEmail = preapproval.metadata?.payer_email || preapproval.payer_email
 
-      if (userId) {
-        const mpStatus = preapproval.status
-        const dbStatus = mpStatus === 'authorized' ? 'active'
-          : mpStatus === 'paused' ? 'inactive'
-          : mpStatus === 'cancelled' ? 'cancelled' : 'pending'
-        const role = dbStatus === 'active' ? 'paid' : 'free'
+      const mpStatus = preapproval.status
+      const dbStatus = mpStatus === 'authorized' ? 'active'
+        : mpStatus === 'paused' ? 'inactive'
+        : mpStatus === 'cancelled' ? 'cancelled' : 'pending'
+      const role = dbStatus === 'active' ? 'paid' : 'free'
 
+      const periodStart = preapproval.date_created || new Date().toISOString()
+      const periodEnd = preapproval.next_payment_date || null
+
+      if (dbStatus === 'active') {
+        // Approve email (for new-user flow) and activate existing user if found
+        if (payerEmail) {
+          await approveEmailAndActivate(payerEmail, 'monthly', String(data.id), periodStart, periodEnd)
+        }
+        // Also update by user_id if we have it
+        if (userId && userId !== payerEmail) {
+          await activateForUser(userId, 'monthly', String(data.id), periodStart, periodEnd)
+        }
+      } else if (userId) {
+        // Subscription paused/cancelled — update status by user_id
         await supabase.from('subscriptions').upsert({
           user_id: userId,
-          plan: dbStatus === 'active' ? 'monthly' : 'free',
+          plan: 'monthly',
           status: dbStatus,
           mp_subscription_id: String(data.id),
-          current_period_start: preapproval.date_created || new Date().toISOString(),
-          current_period_end: preapproval.next_payment_date || null,
+          current_period_start: periodStart,
+          current_period_end: periodEnd,
           updated_at: new Date().toISOString(),
         }, { onConflict: 'user_id' })
-
         await supabase.from('profiles')
           .update({ role, updated_at: new Date().toISOString() })
           .eq('id', userId)
-
         console.log('Monthly subscription updated for user:', userId, 'status:', dbStatus)
       }
     }
