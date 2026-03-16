@@ -6,6 +6,18 @@ export const rorabeckClassificationData: ClassificationData = {
   author: 'Rorabeck CH, Taylor JW',
   year: 1999,
   epidemiology: 'Fraturas periprotésicas supracondilianas do fêmur após artroplastia total do joelho (ATJ): incidência 0,3-2,5% das ATJs primárias, até 4% das revisões. Incidência crescente com envelhecimento populacional e aumento do número de ATJs. Fatores de risco: osteoporose, notching anterior da cortical femoral, revisão de ATJ, artrite reumatóide, corticoterapia crónica. A maioria ocorre após queda de baixa energia em pacientes idosos.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Postoperative_X-ray_of_normal_knee_prosthesis%2C_anteroposterior_view.jpg',
+      caption: 'ATJ — radiografia AP pós-operatória normal (referência para avaliar afrouxamento)',
+      source: 'Wikimedia Commons — CC BY-SA 4.0',
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Knee_Replacement.jpg',
+      caption: 'Artroplastia total do joelho — radiografia lateral',
+      source: 'Wikimedia Commons — CC BY-SA 3.0',
+    },
+  ],
   mechanism: 'Classificação baseada em 2 variáveis: (1) DESVIO da fratura e (2) ESTABILIDADE do componente femoral da prótese. Tipo I: não deslocada, prótese estável — menor energia. Tipo II: deslocada, prótese estável — energia moderada. Tipo III: qualquer fratura com prótese instável (solta) — independentemente do desvio, a prótese precisa ser revisada. A distinção B1 vs B2 (do tipo II) nem sempre é clara e pode necessitar TC ou fluoroscopia intraoperatória.',
   grades: [
     {

@@ -6,6 +6,18 @@ export const frykmanClassificationData: ClassificationData = {
   author: 'Frykman G.',
   year: 1967,
   epidemiology: 'Fraturas do rádio distal: as mais comuns do adulto (15-20% de todas as fraturas). A classificação de Frykman (1967) é uma das mais antigas e ainda amplamente testada em provas de residência. Baseia-se em 2 variáveis: (1) envolvimento articular (radiocarpal e/ou radioulnar distal) e (2) presença de fratura da ulna distal associada. Tipos ímpares = sem fratura da ulna; Tipos pares = com fratura da ulna. Tipos I-II: extra-articulares; III-IV: radiocarpal; V-VI: radioulnar distal; VII-VIII: ambas articulações.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Collesfracture.jpg',
+      caption: 'Fratura de Colles — radiografia lateral mostrando desvio dorsal clássico',
+      source: 'Wikimedia Commons — CC BY-SA 3.0',
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/d/d7/Distalradiusfracture.jpg',
+      caption: 'Fratura do rádio distal — radiografia AP',
+      source: 'Wikimedia Commons — CC BY-SA 3.0',
+    },
+  ],
   mechanism: 'Mecanismo clássico: queda sobre mão em extensão (FOOSH = Fall On OutStretched Hand). Energia crescente correlaciona com tipos mais altos: extra-articular (I-II) → envolvimento radiocarpal (III-IV) → envolvimento radioulnar (V-VI) → ambas articulações (VII-VIII). A presença de fratura da ulna distal (tipos pares) indica maior energia e pior prognóstico. Limitação: não descreve o padrão de deslocamento (dorsal/volar) nem a cominuição — por isso complementada pelas classificações AO e Fernandez.',
   grades: [
     {

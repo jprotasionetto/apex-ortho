@@ -6,6 +6,13 @@ export const royCamilleClassificationData: ClassificationData = {
   author: 'Roy-Camille R, Saillant G, Gagna G, Mazel C',
   year: 1985,
   epidemiology: 'Fraturas do sacro: presentes em 30-45% das fraturas do anel pélvico de alta energia. Frequentemente subdiagnosticadas (até 50% não identificadas na radiografia inicial). A classificação de Roy-Camille (1985) é específica para fraturas TRANSVERSAS do sacro (padrão horizontal/transverso), complementando as zonas de Denis (1988) que descrevem fraturas VERTICAIS. Fraturas transversas do sacro: mais comuns nas zonas II-III de Denis. Associação com déficit neurológico: 25-50% (raízes sacrais, cauda equina). Incidência real subestimada pela dificuldade diagnóstica.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Gray241.png',
+      caption: 'Anatomia do sacro — vista anterior (Gray\'s Anatomy)',
+      source: 'Wikimedia Commons — Domínio Público (Gray\'s Anatomy)',
+    },
+  ],
   mechanism: 'Fraturas transversas do sacro resultam de carga axial direta sobre o sacro (queda de altura sentado, acidente de motocicleta) ou mecanismo de flexão-compressão. Roy-Camille classifica em 3 tipos pela angulação e deslocamento do fragmento distal (cóccix + sacro distal) em relação ao proximal: Tipo 1: sem angulação (flexão pura), Tipo 2: com angulação posterior (flexão + deslocamento), Tipo 3: com deslocamento anterior completo do fragmento distal (máxima instabilidade). Tipos mais altos correlacionam com maior taxa de déficit neurológico. Strange-Vognsen & Lebech (1991) adicionaram Tipo 4: complicada com fragmento de corpo vertebral no canal.',
   grades: [
     {

@@ -6,6 +6,13 @@ export const neerHorowitzData: ClassificationData = {
   author: 'Neer CS II, Horowitz BS',
   year: 1965,
   epidemiology: 'Fraturas do úmero proximal em crianças e adolescentes: ~5% das fraturas pediátricas. Pico de incidência: 11-15 anos (durante o estirão de crescimento). Meninos > meninas (2:1). A fise proximal do úmero contribui com 80% do crescimento longitudinal do úmero — enorme potencial de remodelação. Mecanismo: queda sobre mão estendida ou trauma direto no ombro. Maioria são fraturas metafisárias (Salter-Harris tipo II) através da fise proximal.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/4/42/ProxHumeralFracture.png',
+      caption: 'Fratura do úmero proximal — radiografia AP',
+      source: 'Wikimedia Commons — CC BY-SA 4.0',
+    },
+  ],
   mechanism: 'Classificação baseada no DESLOCAMENTO do fragmento distal em relação à largura da diáfise do úmero na radiografia AP. O potencial de remodelação é diretamente proporcional à quantidade de crescimento remanescente na fise proximal do úmero. Crianças <10 anos: até 40-50° de angulação e 50% de translação remodelam completamente. Adolescentes >12 anos: potencial de remodelação limitado — critérios mais rigorosos para aceitação.',
   grades: [
     {

@@ -6,6 +6,13 @@ export const winquistHansenData: ClassificationData = {
   author: 'Winquist RA, Hansen ST Jr.',
   year: 1980,
   epidemiology: 'Fraturas diafisárias do fêmur: 10/100.000/ano. Bimodal: jovens (alta energia, acidentes de trânsito) e idosos >65a (queda simples em osso osteoporótico). A classificação de Winquist-Hansen avalia a porcentagem de contato cortical remanescente após a cominuição, o que determina a estabilidade rotacional e axial após a hastelização intramedular. Graus 0-II: contato cortical >50% → estabilidade após haste; Graus III-IV: contato cortical <50% ou inexistente → instabilidade rotacional e telescoping → bloqueio estático obrigatório.',
+  referenceImages: [
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Osteonecrosis_femur_1.jpg',
+      caption: 'Fêmur — radiografia AP (referência anatômica)',
+      source: 'Wikimedia Commons — CC BY-SA 3.0',
+    },
+  ],
   mechanism: 'A cominuição resulta de energia crescente: impacto de baixa energia → fratura simples (Grau 0); energia crescente → fragmento em borboleta pequeno (I), grande (II); alta energia → cominuição com perda de >50% do contato (III) ou cominuição segmentar/circunferencial com perda total de contato (IV). A estabilidade da montagem haste + osso depende diretamente do contato cortical remanescente. Winquist III-IV exigem bloqueio estático proximal e distal para prevenir rotação e encurtamento.',
   grades: [
     {
