@@ -54,11 +54,14 @@ export default function BankartLesionGuideTool() {
         <p className="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-3">Manual SBOT — Imagens de Referência</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {[
-            { src: '/images/manual-trauma/page72_img1.png', alt: 'Reparo do lábio glenoidal — técnica de Bankart' },
-            { src: '/images/manual-trauma/page74_img1.png', alt: 'Instabilidade glenoumeral — padrões' },
-            { src: '/images/manual-trauma/page74_img2.png', alt: 'Instabilidade glenoumeral (2)' },
-            { src: '/images/manual-trauma/page74_img3.png', alt: 'Instabilidade glenoumeral (3)' },
-            { src: '/images/manual-trauma/page74_img4.png', alt: 'Instabilidade glenoumeral (4)' },
+            { src: '/images/manual-trauma/page68_img1.png', alt: 'Luxação anterior do ombro — aspecto clínico' },
+            { src: '/images/manual-trauma/page68_img2.png', alt: 'Luxação anterior — radiografia' },
+            { src: '/images/manual-trauma/page70_img1.png', alt: 'Exame físico — testes de instabilidade glenoumeral' },
+            { src: '/images/manual-trauma/page71_img1.png', alt: 'RM — lesão de Bankart (labrum anteroinferior)' },
+            { src: '/images/manual-trauma/page71_img2.png', alt: 'RM — Bankart com seta indicando lesão labral' },
+            { src: '/images/manual-trauma/page72_img1.png', alt: 'Artroscopia — reparo do lábio glenoidal' },
+            { src: '/images/manual-trauma/page74_img1.png', alt: 'Fixação com âncoras — técnica cirúrgica' },
+            { src: '/images/manual-trauma/page74_img2.png', alt: 'Radiografia pós-operatória — âncoras no rebordo glenoidal' },
           ].map((img, idx) => (
             <div key={idx} className="rounded-lg overflow-hidden bg-[#0A0A0A] border border-[rgba(212,175,55,0.1)]">
               <img src={img.src} alt={img.alt} className="w-full h-auto object-contain"

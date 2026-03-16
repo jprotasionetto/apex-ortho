@@ -33,11 +33,11 @@ export default function GardenHipClassificationTool() {
         <p className="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-3">Manual SBOT — Imagens de Referência (pp. 156–162)</p>
         <div className="grid grid-cols-2 gap-2">
           {[
-            { src: '/images/manual-trauma/page156_img1.png', alt: 'Fratura do colo femoral — anatomia' },
-            { src: '/images/manual-trauma/page157_img1.png', alt: 'Garden I-II — trabéculas preservadas' },
-            { src: '/images/manual-trauma/page158_img1.png', alt: 'Garden III-IV — deslocamento completo' },
-            { src: '/images/manual-trauma/page161_img1.png', alt: 'Fixação com parafusos canulados' },
-            { src: '/images/manual-trauma/page162_img1.png', alt: 'Hemiartroplastia — cabeça femoral' },
+            { src: '/images/manual-trauma/page156_img1.png', alt: 'Fratura do colo femoral — anatomia (Garden I-II)' },
+            { src: '/images/manual-trauma/page156_img2.png', alt: 'Fratura do colo femoral — anatomia (Garden III-IV)' },
+            { src: '/images/manual-trauma/page158_img1.png', alt: 'Garden — padrão trabecular (4 tipos)' },
+            { src: '/images/manual-trauma/page158_img2.png', alt: 'Anatomia do fêmur proximal — ângulos' },
+            { src: '/images/manual-trauma/page162_img1.png', alt: 'Tratamento — DHS e haste intramedular' },
           ].map((img, idx) => (
             <div key={idx} className="rounded-lg overflow-hidden bg-[#0A0A0A] border border-[rgba(212,175,55,0.1)]">
               <img

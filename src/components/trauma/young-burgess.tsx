@@ -27,29 +27,29 @@ export default function YoungBurgessTool() {
           </div>
         </div>
       </div>
-      {/* Imagem do Manual */}
+      {/* Imagens do Manual — Fraturas Pélvicas (pp. 143–144) */}
       <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
         <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">
-          Fraturas Pélvicas — Manual SBOT (p. 175)
+          Fraturas Pélvicas — Manual SBOT (pp. 143–144)
         </p>
         <div className="grid grid-cols-2 gap-2">
           <div className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
             <img
-              src="/images/manual-trauma/page175_img2.png"
-              alt="Young-Burgess — padrão de fratura pélvica por compressão"
+              src="/images/manual-trauma/page143_img1.png"
+              alt="Epidemiologia e mecanismo das fraturas pélvicas"
               className="w-full h-28 object-cover bg-[#0A0A0A]"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
-            <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">Padrão de fratura pélvica (2)</p></div>
+            <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">Epidemiologia e mecanismo das fraturas pélvicas</p></div>
           </div>
           <div className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
             <img
-              src="/images/manual-trauma/page175_img3.png"
-              alt="Young-Burgess — padrão de fratura pélvica por cisalhamento"
+              src="/images/manual-trauma/page144_img1.png"
+              alt="Corona mortis — anastomose presente em 84% da população"
               className="w-full h-28 object-cover bg-[#0A0A0A]"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
-            <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">Padrão de fratura pélvica (3)</p></div>
+            <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">Corona mortis — variante vascular importante</p></div>
           </div>
         </div>
       </div>

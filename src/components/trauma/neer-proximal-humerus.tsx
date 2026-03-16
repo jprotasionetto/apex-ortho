@@ -4,13 +4,7 @@ import { Alert } from '@/components/ui/Alert.tsx';
 
 const colorMap: Record<string, string> = { safe: '#22C55E', caution: '#F59E0B', danger: '#EF4444', info: '#3B82F6' };
 
-const images = [
-  { src: '/images/manual-trauma/page68_img1.png', caption: 'Classificação de Neer — os 4 segmentos do úmero proximal' },
-  { src: '/images/manual-trauma/page68_img2.png', caption: 'Critérios de desvio: > 1 cm ou > 45° de angulação' },
-  { src: '/images/manual-trauma/page70_img1.png', caption: 'Fraturas em 2 partes — tipos e padrões radiológicos' },
-  { src: '/images/manual-trauma/page71_img1.png', caption: 'Fraturas em 3 e 4 partes — padrões de desvio' },
-  { src: '/images/manual-trauma/page71_img2.png', caption: 'Fratura-luxação e fratura da superfície articular' },
-];
+const images: { src: string; caption: string }[] = [];
 
 export default function NeerProximalHumerusTool() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -37,8 +31,9 @@ export default function NeerProximalHumerusTool() {
           </div>
         </div>
       </div>
+      {images.length > 0 && (
       <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
-        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Úmero Proximal — Manual SBOT (pp. 68–71)</p>
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Úmero Proximal — Manual SBOT</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {images.map((img) => (
             <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
@@ -48,6 +43,7 @@ export default function NeerProximalHumerusTool() {
           ))}
         </div>
       </div>
+      )}
       <div className="grid gap-2">
         {neerProximalHumerusData.grades.map((g) => (
           <button key={g.id} onClick={() => setSelected(g.id === selected ? null : g.id)} className={`text-left p-4 rounded-xl border transition-all ${selected === g.id ? 'border-[#D4AF37] bg-[rgba(212,175,55,0.08)]' : 'border-[rgba(255,255,255,0.08)] hover:border-[rgba(212,175,55,0.3)] bg-[#111111]'}`}>

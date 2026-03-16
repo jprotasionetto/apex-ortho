@@ -5,10 +5,9 @@ import { Alert } from '@/components/ui/Alert.tsx';
 const colorMap: Record<string, string> = { safe: '#22C55E', caution: '#F59E0B', danger: '#EF4444' };
 
 const images = [
-  { src: '/images/manual-trauma/page61_img1.png', caption: 'Classificação de Robinson — terços da clavícula' },
-  { src: '/images/manual-trauma/page61_img2.png', caption: 'Tipos de fratura — terço médio e distal' },
-  { src: '/images/manual-trauma/page62_img1.png', caption: 'Anatomia e relações neurovasculares' },
-  { src: '/images/manual-trauma/page90_img3.png', caption: 'Tratamento definitivo — fixação da clavícula' },
+  { src: '/images/manual-trauma/page61_img1.png', caption: 'Abordagem cirúrgica da clavícula (1)' },
+  { src: '/images/manual-trauma/page61_img2.png', caption: 'Abordagem cirúrgica da clavícula (2)' },
+  { src: '/images/manual-trauma/page62_img1.png', caption: 'Fixação bilateral com fios — radiografia' },
 ];
 
 export default function RobinsonClavicleTool() {

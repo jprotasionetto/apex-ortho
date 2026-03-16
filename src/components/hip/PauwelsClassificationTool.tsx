@@ -34,10 +34,9 @@ export default function PauwelsClassificationTool() {
         <div className="grid grid-cols-2 gap-2">
           {[
             { src: '/images/manual-trauma/page156_img1.png', alt: 'Fratura do colo femoral — anatomia geral' },
-            { src: '/images/manual-trauma/page157_img1.png', alt: 'Ângulo de Pauwels — linha de fratura' },
-            { src: '/images/manual-trauma/page158_img1.png', alt: 'Pauwels I, II, III — forças de cisalhamento' },
-            { src: '/images/manual-trauma/page161_img1.png', alt: 'Fixação interna — parafusos canulados' },
-            { src: '/images/manual-trauma/page162_img1.png', alt: 'Artroplastia em Pauwels III' },
+            { src: '/images/manual-trauma/page157_img1.png', alt: 'Pauwels I (30°), II (50°), III (70°) — ângulos de fratura' },
+            { src: '/images/manual-trauma/page158_img2.png', alt: 'Anatomia do fêmur proximal — geometria e ângulos' },
+            { src: '/images/manual-trauma/page162_img1.png', alt: 'Tratamento — DHS e haste intramedular' },
           ].map((img, idx) => (
             <div key={idx} className="rounded-lg overflow-hidden bg-[#0A0A0A] border border-[rgba(212,175,55,0.1)]">
               <img

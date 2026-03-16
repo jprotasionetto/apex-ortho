@@ -7,23 +7,14 @@ export default function GartlandClassificationTool() {
   const active = selected ? gartlandClassificationData.grades.find((g) => g.id === selected) : null;
   return (
     <div className="space-y-6">
-      {/* Imagens do Manual de Trauma Ortopédico */}
+      {/* Imagens do Manual de Trauma Ortopédico — Úmero distal/cotovelo (p. 83) */}
       <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
-        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Fraturas Supracondilianas (Gartland) — Manual SBOT (pp. 88–90)</p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-          {[
-            { src: '/images/manual-trauma/page88_img1.png', caption: 'Fraturas da extremidade distal do cotovelo — epidemiologia' },
-            { src: '/images/manual-trauma/page89_img1.png', caption: 'Gartland Tipo I — sem desvio' },
-            { src: '/images/manual-trauma/page89_img2.png', caption: 'Gartland Tipo II — desvio posterior com cortical anterior íntegra' },
-            { src: '/images/manual-trauma/page89_img3.png', caption: 'Gartland Tipo III — desvio completo' },
-            { src: '/images/manual-trauma/page90_img1.png', caption: 'Tratamento cirúrgico — fixação percutânea com fios de Kirschner' },
-            { src: '/images/manual-trauma/page90_img2.png', caption: 'Técnica de fixação em pinça — divergente lateral' },
-          ].map((img) => (
-            <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
-              <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-              <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">{img.caption}</p></div>
-            </div>
-          ))}
+        <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">Fraturas Supracondilianas (Gartland) — Manual SBOT</p>
+        <div className="max-w-sm mx-auto">
+          <div className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
+            <img src="/images/manual-trauma/page83_img1.png" alt="Classificação AO do úmero distal — padrões de fratura A/B/C" className="w-full h-auto object-contain bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+            <div className="px-2 py-1 bg-[#0A0A0A]"><p className="text-xs text-gray-400 leading-tight">Padrões de fratura do úmero distal — classificação AO (A/B/C)</p></div>
+          </div>
         </div>
       </div>
       <div className="grid gap-2">

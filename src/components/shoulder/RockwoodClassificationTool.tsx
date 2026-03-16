@@ -3,9 +3,9 @@ import { rockwoodClassificationData } from '@/data/shoulder/rockwood-classificat
 import { Alert } from '@/components/ui/Alert.tsx';
 
 const manualImages = [
-  { src: '/images/manual-trauma/page61_img1.png', caption: 'Classificação de Rockwood — Articulação Acromioclavicular (1)' },
-  { src: '/images/manual-trauma/page61_img2.png', caption: 'Classificação de Rockwood — AC joint, complicações e graus (2)' },
-  { src: '/images/manual-trauma/page62_img1.png', caption: 'Figura 2 — Rockwood AC joint, graus de separação' },
+  { src: '/images/manual-trauma/page50_img1.png', caption: 'Complexo Suspensório Superior (Goss) — anatomia AC' },
+  { src: '/images/manual-trauma/page51_img1.png', caption: 'Classificação de Rockwood — Tipos I a VI' },
+  { src: '/images/manual-trauma/page51_img2.png', caption: 'Padrões de lesão AC — variantes A a E' },
 ];
 
 export default function RockwoodClassificationTool() {
@@ -37,7 +37,7 @@ export default function RockwoodClassificationTool() {
       {/* Manual SBOT — Imagens de Referência */}
       <div className="bg-[#111111] border border-[rgba(212,175,55,0.2)] rounded-xl p-4">
         <p className="text-xs text-[#D4AF37] font-medium uppercase tracking-wider mb-3">
-          Articulação Acromioclavicular — Manual SBOT (pp. 61–62)
+          Articulação Acromioclavicular — Manual SBOT (pp. 50–51)
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {manualImages.map((img) => (

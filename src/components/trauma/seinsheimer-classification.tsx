@@ -5,10 +5,10 @@ import { Alert } from '@/components/ui/Alert.tsx';
 const colorMap: Record<string, string> = { safe: '#22C55E', caution: '#F59E0B', danger: '#EF4444' };
 
 const images = [
-  { src: '/images/manual-trauma/page174_img1.png', caption: 'Controle de danos — fixador externo temporário' },
-  { src: '/images/manual-trauma/page174_img2.png', caption: 'Seinsheimer — tipos I a V' },
-  { src: '/images/manual-trauma/page175_img1.png', caption: 'Haste intramedular definitiva' },
+  { src: '/images/manual-trauma/page174_img1.png', caption: 'Fratura subtrocantérica — radiografia AP' },
+  { src: '/images/manual-trauma/page174_img2.png', caption: 'Fratura subtrocantérica — radiografia perfil' },
   { src: '/images/manual-trauma/page177_img1.png', caption: 'Consolidação viciosa — subtrocantérica' },
+  { src: '/images/manual-trauma/page177_img2.png', caption: 'Fixação com placa — pós-operatório' },
   { src: '/images/manual-trauma/page177_img3.png', caption: 'Técnica de redução — fragmento proximal' },
 ];
 

@@ -14,11 +14,11 @@ export default function GardenClassificationTool() {
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {[
-            { src: '/images/manual-trauma/page156_img1.png', caption: 'Fratura do colo femoral — tipos Garden I e II' },
-            { src: '/images/manual-trauma/page156_img2.png', caption: 'Garden III e IV — com desvio' },
-            { src: '/images/manual-trauma/page157_img1.png', caption: 'Classificação de Pauwels — ângulo de inclinação' },
-            { src: '/images/manual-trauma/page158_img1.png', caption: 'Fixação com parafusos canulados — Garden I/II' },
-            { src: '/images/manual-trauma/page158_img2.png', caption: 'Artroplastia — Garden III/IV em idosos' },
+            { src: '/images/manual-trauma/page156_img1.png', caption: 'Fratura do colo femoral — anatomia (Garden I-II)' },
+            { src: '/images/manual-trauma/page156_img2.png', caption: 'Fratura do colo femoral — anatomia (Garden III-IV)' },
+            { src: '/images/manual-trauma/page158_img1.png', caption: 'Garden — padrão trabecular (classificação)' },
+            { src: '/images/manual-trauma/page158_img2.png', caption: 'Anatomia do fêmur proximal — ângulos e geometria' },
+            { src: '/images/manual-trauma/page162_img1.png', caption: 'Tratamento — DHS e haste intramedular' },
           ].map((img) => (
             <div key={img.caption} className="rounded-lg overflow-hidden border border-[rgba(255,255,255,0.06)]">
               <img src={img.src} alt={img.caption} className="w-full h-24 object-cover bg-[#0A0A0A]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
