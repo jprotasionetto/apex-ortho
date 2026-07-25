@@ -2,17 +2,30 @@ export interface NpsResposta {
   id: string
   created_at: string
   nota: number
-  palestrante: string | null
   comentario: string | null
+  conteudo: number | null
+  didatica: number | null
+  aplicabilidade: number | null
+  exemplos: number | null
+  organizacao: number | null
+  profundidade: number | null
+  expectativa: number | null
 }
 
 export type Categoria = 'promotor' | 'neutro' | 'detrator'
 
-export const PALESTRANTES = [
-  'João Protásio',
-  'Rubens de Andrade',
-  'Curso como um todo',
+/** As 7 perguntas sobre o curso (escala 1–5) */
+export const PERGUNTAS = [
+  { campo: 'conteudo', rotulo: 'Relevância do conteúdo para a sua prática' },
+  { campo: 'didatica', rotulo: 'Didática e clareza das aulas' },
+  { campo: 'aplicabilidade', rotulo: 'Aplicável já na sua rotina de consultório' },
+  { campo: 'exemplos', rotulo: 'Qualidade dos exemplos e demonstrações ao vivo' },
+  { campo: 'organizacao', rotulo: 'Organização do evento (local, horários, estrutura)' },
+  { campo: 'profundidade', rotulo: 'Profundidade técnica na medida certa' },
+  { campo: 'expectativa', rotulo: 'O curso entregou o que prometeu' },
 ] as const
+
+export type CampoPergunta = (typeof PERGUNTAS)[number]['campo']
 
 export function categoria(nota: number): Categoria {
   if (nota >= 9) return 'promotor'

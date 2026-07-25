@@ -4,7 +4,7 @@ import { QRCodeSVG } from 'qrcode.react'
 import { useNpsRespostas } from '../hooks/useNpsRespostas'
 import {
   categoria,
-  PALESTRANTES,
+  PERGUNTAS,
   resumirNps,
   zonaNps,
   type Categoria,
@@ -13,11 +13,11 @@ import {
 
 const COR_CATEGORIA: Record<
   Categoria,
-  { hex: string; rotulo: string; plural: string }
+  { hex: string; rotulo: string; plural: string; textoSobre: string }
 > = {
-  promotor: { hex: '#0ca30c', rotulo: 'Promotor', plural: 'Promotores' },
-  neutro: { hex: '#eda100', rotulo: 'Neutro', plural: 'Neutros' },
-  detrator: { hex: '#d03b3b', rotulo: 'Detrator', plural: 'Detratores' },
+  promotor: { hex: '#0ca30c', rotulo: 'Promotor', plural: 'Promotores', textoSobre: 'text-white' },
+  neutro: { hex: '#fab219', rotulo: 'Neutro', plural: 'Neutros', textoSobre: 'text-black' },
+  detrator: { hex: '#e05252', rotulo: 'Detrator', plural: 'Detratores', textoSobre: 'text-black' },
 }
 
 function fmtPct(v: number) {
@@ -38,13 +38,17 @@ export default function Dashboard() {
     return contagem
   }, [respostas])
 
-  const porPalestrante = useMemo(
+  const mediasPerguntas = useMemo(
     () =>
-      PALESTRANTES.map((p) => {
-        const notas = respostas
-          .filter((r) => r.palestrante === p)
-          .map((r) => r.nota)
-        return { palestrante: p, resumo: resumirNps(notas) }
+      PERGUNTAS.map(({ campo, rotulo }) => {
+        const valores = respostas
+          .map((r) => r[campo])
+          .filter((v): v is number => typeof v === 'number')
+        const media =
+          valores.length > 0
+            ? valores.reduce((s, v) => s + v, 0) / valores.length
+            : null
+        return { campo, rotulo, media, n: valores.length }
       }),
     [respostas],
   )
@@ -66,14 +70,14 @@ export default function Dashboard() {
     <div className="min-h-dvh bg-page px-6 py-5 lg:px-10">
       <header className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <p className="text-sm font-bold tracking-wide text-brand-mid uppercase">
+          <p className="text-sm font-bold tracking-widest text-gold uppercase">
             ProClinic Academy · IAForDoctors
           </p>
-          <h1 className="text-3xl font-black tracking-tight text-brand lg:text-4xl">
+          <h1 className="text-gold-gradient text-3xl font-black tracking-tight lg:text-4xl">
             NPS — IA na Prática Médica
           </h1>
         </div>
-        <div className="flex items-center gap-3 rounded-full bg-white px-5 py-2.5 shadow-sm ring-1 ring-hairline">
+        <div className="flex items-center gap-3 rounded-full border border-hairline bg-card px-5 py-2.5">
           <span className="relative flex h-3 w-3">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-promotor opacity-60" />
             <span className="relative inline-flex h-3 w-3 rounded-full bg-promotor" />
@@ -83,7 +87,7 @@ export default function Dashboard() {
       </header>
 
       {erro && (
-        <p className="mt-6 rounded-2xl bg-detrator/10 px-5 py-4 font-medium text-detrator">
+        <p className="mt-6 rounded-2xl bg-detrator/15 px-5 py-4 font-medium text-detrator">
           Erro ao carregar respostas: {erro}
         </p>
       )}
@@ -101,7 +105,7 @@ export default function Dashboard() {
           {/* Coluna lateral */}
           <div className="space-y-5">
             <CartaoQr url={urlPublica} />
-            <CartaoPalestrantes dados={porPalestrante} />
+            <CartaoPerguntas dados={mediasPerguntas} />
             <CartaoComentarios comentarios={comentarios} />
           </div>
         </main>
@@ -112,22 +116,22 @@ export default function Dashboard() {
 
 function EstadoVazio({ url }: { url: string }) {
   return (
-    <main className="mx-auto mt-10 flex max-w-2xl flex-col items-center rounded-3xl bg-white px-8 py-14 text-center shadow-sm ring-1 ring-hairline">
+    <main className="mx-auto mt-10 flex max-w-2xl flex-col items-center rounded-3xl border border-hairline bg-card px-8 py-14 text-center">
       <motion.div
         animate={{ scale: [1, 1.06, 1] }}
         transition={{ repeat: Infinity, duration: 2.4, ease: 'easeInOut' }}
-        className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-soft text-4xl"
+        className="flex h-20 w-20 items-center justify-center rounded-full bg-gold/10 text-4xl ring-1 ring-hairline-gold"
       >
         📊
       </motion.div>
-      <h2 className="mt-6 text-3xl font-black tracking-tight text-brand">
+      <h2 className="text-gold-gradient mt-6 text-3xl font-black tracking-tight">
         Aguardando as primeiras avaliações...
       </h2>
       <p className="mt-2 max-w-md text-lg text-ink-2">
-        Escaneie o QR Code abaixo para responder — leva 20 segundos.
+        Escaneie o QR Code abaixo para responder — leva 1 minuto.
       </p>
-      <div className="mt-8 rounded-3xl bg-white p-5 shadow-lg ring-1 ring-hairline">
-        <QRCodeSVG value={url} size={220} fgColor="#0f4d3a" marginSize={1} />
+      <div className="mt-8 rounded-3xl bg-white p-5 shadow-[0_0_60px_-15px_rgba(212,175,55,0.45)]">
+        <QRCodeSVG value={url} size={220} fgColor="#0a0a0a" marginSize={1} />
       </div>
       <p className="mt-4 text-sm font-medium break-all text-ink-3">{url}</p>
     </main>
@@ -144,10 +148,10 @@ function HeroNps({ resumo }: { resumo: ReturnType<typeof resumirNps> }) {
   ]
 
   return (
-    <section className="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-hairline lg:p-9">
+    <section className="rounded-3xl border border-hairline bg-card p-7 lg:p-9">
       <div className="flex flex-wrap items-center justify-between gap-6">
         <div>
-          <p className="text-sm font-bold tracking-wide text-ink-3 uppercase">
+          <p className="text-sm font-bold tracking-widest text-ink-3 uppercase">
             NPS ao vivo
           </p>
           <div className="flex items-end gap-5">
@@ -173,7 +177,7 @@ function HeroNps({ resumo }: { resumo: ReturnType<typeof resumirNps> }) {
         </div>
 
         <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-          <Metrica rotulo="Respostas" valor={String(resumo.total)} cor="text-brand" />
+          <Metrica rotulo="Respostas" valor={String(resumo.total)} cor="text-gold" />
           <Metrica
             rotulo="Promotores"
             valor={fmtPct(resumo.pctPromotores)}
@@ -183,14 +187,14 @@ function HeroNps({ resumo }: { resumo: ReturnType<typeof resumirNps> }) {
           <Metrica
             rotulo="Neutros"
             valor={fmtPct(resumo.pctNeutros)}
-            cor="text-zona-aperfeicoar"
-            ponto="#eda100"
+            cor="text-neutro"
+            ponto="#fab219"
           />
           <Metrica
             rotulo="Detratores"
             valor={fmtPct(resumo.pctDetratores)}
             cor="text-detrator"
-            ponto="#d03b3b"
+            ponto="#e05252"
           />
         </div>
       </div>
@@ -207,7 +211,9 @@ function HeroNps({ resumo }: { resumo: ReturnType<typeof resumirNps> }) {
               className="flex items-center justify-center overflow-hidden"
             >
               {pct >= 12 && (
-                <span className="text-sm font-black text-white drop-shadow-sm">
+                <span
+                  className={`text-sm font-black ${COR_CATEGORIA[cat].textoSobre}`}
+                >
                   {fmtPct(pct)}
                 </span>
               )}
@@ -242,7 +248,7 @@ function Metrica({
   ponto?: string
 }) {
   return (
-    <div className="min-w-28 rounded-2xl bg-page px-4 py-3">
+    <div className="min-w-28 rounded-2xl border border-hairline bg-card-2 px-4 py-3">
       <p className="flex items-center gap-1.5 text-xs font-bold tracking-wide text-ink-3 uppercase">
         {ponto && (
           <span
@@ -262,7 +268,7 @@ function Metrica({
 function CartaoDistribuicao({ distribuicao }: { distribuicao: number[] }) {
   const max = Math.max(...distribuicao, 1)
   return (
-    <section className="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-hairline">
+    <section className="rounded-3xl border border-hairline bg-card p-7">
       <h2 className="text-lg font-black tracking-tight text-ink">
         Distribuição das notas
       </h2>
@@ -287,7 +293,7 @@ function CartaoDistribuicao({ distribuicao }: { distribuicao: number[] }) {
                   backgroundColor:
                     qtd > 0 ? COR_CATEGORIA[cat].hex : 'var(--color-hairline)',
                 }}
-                className="w-full min-h-1 rounded-t-md opacity-95"
+                className="w-full min-h-1 rounded-t-md"
               />
               <span className="text-sm font-bold text-ink-3 tabular-nums">
                 {notaAtual}
@@ -300,42 +306,39 @@ function CartaoDistribuicao({ distribuicao }: { distribuicao: number[] }) {
   )
 }
 
-function CartaoPalestrantes({
+function CartaoPerguntas({
   dados,
 }: {
-  dados: { palestrante: string; resumo: ReturnType<typeof resumirNps> }[]
+  dados: { campo: string; rotulo: string; media: number | null; n: number }[]
 }) {
   return (
-    <section className="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-hairline">
+    <section className="rounded-3xl border border-hairline bg-card p-7">
       <h2 className="text-lg font-black tracking-tight text-ink">
-        NPS por palestrante
+        Avaliação do curso
       </h2>
-      <ul className="mt-4 divide-y divide-hairline">
-        {dados.map(({ palestrante, resumo }) => {
-          const zona = resumo.nps === null ? null : zonaNps(resumo.nps)
-          return (
-            <li
-              key={palestrante}
-              className="flex items-center justify-between gap-3 py-3.5"
-            >
-              <div>
-                <p className="font-bold text-ink">{palestrante}</p>
-                <p className="text-xs text-ink-3">
-                  {resumo.total} resposta{resumo.total === 1 ? '' : 's'}
-                </p>
-              </div>
-              {zona ? (
-                <span
-                  className={`text-4xl font-black tracking-tight tabular-nums ${zona.texto}`}
-                >
-                  {resumo.nps}
-                </span>
-              ) : (
-                <span className="text-2xl font-black text-ink-3">—</span>
-              )}
-            </li>
-          )
-        })}
+      <p className="mt-0.5 text-xs font-medium text-ink-3">
+        Média de 1 a 5 por pergunta
+      </p>
+      <ul className="mt-4 space-y-3.5">
+        {dados.map(({ campo, rotulo, media, n }) => (
+          <li key={campo} title={`${rotulo}: ${n} resposta${n === 1 ? '' : 's'}`}>
+            <div className="flex items-baseline justify-between gap-3">
+              <p className="text-sm leading-snug font-medium text-ink-2">
+                {rotulo}
+              </p>
+              <span className="text-xl font-black tracking-tight text-gold tabular-nums">
+                {media === null ? '—' : media.toFixed(1)}
+              </span>
+            </div>
+            <div className="mt-1.5 h-2.5 w-full overflow-hidden rounded-full bg-card-2">
+              <motion.div
+                animate={{ width: media === null ? '0%' : `${(media / 5) * 100}%` }}
+                transition={{ type: 'spring', stiffness: 120, damping: 20 }}
+                className="bg-gold-gradient h-full rounded-full"
+              />
+            </div>
+          </li>
+        ))}
       </ul>
     </section>
   )
@@ -343,7 +346,7 @@ function CartaoPalestrantes({
 
 function CartaoComentarios({ comentarios }: { comentarios: NpsResposta[] }) {
   return (
-    <section className="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-hairline">
+    <section className="rounded-3xl border border-hairline bg-card p-7">
       <h2 className="text-lg font-black tracking-tight text-ink">
         Últimos comentários
       </h2>
@@ -363,20 +366,15 @@ function CartaoComentarios({ comentarios }: { comentarios: NpsResposta[] }) {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ type: 'spring', stiffness: 200, damping: 22 }}
-                  className="rounded-2xl bg-page px-4 py-3"
+                  className="rounded-2xl border border-hairline bg-card-2 px-4 py-3"
                 >
                   <div className="flex items-center gap-2">
                     <span
-                      className="rounded-full px-2.5 py-0.5 text-xs font-black text-white"
+                      className={`rounded-full px-2.5 py-0.5 text-xs font-black ${cor.textoSobre}`}
                       style={{ backgroundColor: cor.hex }}
                     >
                       {c.nota} · {cor.rotulo}
                     </span>
-                    {c.palestrante && (
-                      <span className="text-xs font-medium text-ink-3">
-                        {c.palestrante}
-                      </span>
-                    )}
                   </div>
                   <p className="mt-1.5 text-sm leading-snug text-ink">
                     “{c.comentario}”
@@ -393,14 +391,14 @@ function CartaoComentarios({ comentarios }: { comentarios: NpsResposta[] }) {
 
 function CartaoQr({ url }: { url: string }) {
   return (
-    <section className="flex items-center gap-5 rounded-3xl bg-brand p-6 text-white shadow-sm">
-      <div className="rounded-2xl bg-white p-2.5">
-        <QRCodeSVG value={url} size={104} fgColor="#0f4d3a" marginSize={1} />
+    <section className="bg-gold-gradient flex items-center gap-5 rounded-3xl p-6 text-black">
+      <div className="shrink-0 rounded-2xl bg-white p-2.5">
+        <QRCodeSVG value={url} size={104} fgColor="#0a0a0a" marginSize={1} />
       </div>
       <div>
         <p className="text-lg leading-tight font-black">Escaneie e avalie</p>
-        <p className="mt-1 text-sm leading-snug text-white/75">
-          Aponte a câmera do celular para responder em 20 segundos.
+        <p className="mt-1 text-sm leading-snug font-medium text-black/70">
+          Aponte a câmera do celular para responder em 1 minuto.
         </p>
       </div>
     </section>

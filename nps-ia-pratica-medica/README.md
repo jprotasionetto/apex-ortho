@@ -1,14 +1,14 @@
 # NPS — IA na Prática Médica
 
 Web app de NPS ao vivo para o curso presencial **IA na Prática Médica**
-(ProClinic Academy · IAForDoctors).
+(ProClinic Academy · IAForDoctors), em identidade **dark gold** APEX/ProClinic.
 
 - **`/`** — página pública de coleta (mobile-first, acessada por QR Code):
-  nota 0–10, destaque opcional de palestrante e comentário opcional.
+  nota NPS 0–10, 7 perguntas sobre o curso (escala 1–5) e comentário opcional.
 - **`/palestrantes`** — dashboard em tempo real para projetar no telão:
   NPS gigante com zona colorida, cards de resumo, barra empilhada
-  Promotores/Neutros/Detratores, distribuição das notas, NPS por palestrante,
-  feed de comentários e QR Code da página pública.
+  Promotores/Neutros/Detratores, distribuição das notas, médias das 7
+  perguntas do curso, feed de comentários e QR Code da página pública.
 
 Novas respostas aparecem no dashboard automaticamente via **Supabase
 Realtime**, sem recarregar.
@@ -45,13 +45,19 @@ outro projeto, copie `.env.example` para `.env` e ajuste os valores.
 
 Tabela `public.nps_respostas` (Supabase):
 
-| coluna      | tipo        | detalhe                          |
-| ----------- | ----------- | -------------------------------- |
-| id          | uuid, pk    | default `gen_random_uuid()`      |
-| created_at  | timestamptz | default `now()`                  |
-| nota        | int         | obrigatório, check 0–10          |
-| palestrante | text        | opcional                         |
-| comentario  | text        | opcional                         |
+| coluna         | tipo        | detalhe                     |
+| -------------- | ----------- | --------------------------- |
+| id             | uuid, pk    | default `gen_random_uuid()` |
+| created_at     | timestamptz | default `now()`             |
+| nota           | int         | obrigatório, check 0–10     |
+| comentario     | text        | opcional                    |
+| conteudo       | int         | check 1–5                   |
+| didatica       | int         | check 1–5                   |
+| aplicabilidade | int         | check 1–5                   |
+| exemplos       | int         | check 1–5                   |
+| organizacao    | int         | check 1–5                   |
+| profundidade   | int         | check 1–5                   |
+| expectativa    | int         | check 1–5                   |
 
 RLS habilitado com INSERT e SELECT anônimos; tabela publicada no
 `supabase_realtime`.

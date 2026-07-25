@@ -1,29 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  /* Marca — verde-escuro premium */
-  --color-brand: #0f4d3a;
-  --color-brand-dark: #0a3628;
-  --color-brand-mid: #1a6b52;
-  --color-brand-soft: #e7f1ed;
-  --color-page: #f6f8f7;
+  /* APEX / ProClinic — dark gold */
+  --color-page: #0a0a0a;
+  --color-card: #141414;
+  --color-card-2: #1d1d1d;
 
-  /* Categorias NPS — paleta validada (dataviz) sobre fundo claro */
+  --color-gold: #d4af37;
+  --color-gold-light: #f4d03f;
+  --color-gold-dark: #b8941f;
+
+  /* Categorias NPS — status validado sobre superfície escura (dataviz) */
   --color-promotor: #0ca30c;
-  --color-neutro: #eda100;
-  --color-detrator: #d03b3b;
+  --color-neutro: #fab219;
+  --color-detrator: #e05252;
 
-  /* Zonas do NPS (texto grande, contraste adequado no branco) */
-  --color-zona-critico: #d03b3b;
-  --color-zona-aperfeicoar: #b45309;
-  --color-zona-otimo: #16a34a;
-  --color-zona-excelencia: #0f4d3a;
+  /* Zonas do NPS (número gigante sobre fundo escuro) */
+  --color-zona-critico: #e05252;
+  --color-zona-aperfeicoar: #fab219;
+  --color-zona-otimo: #4ade80;
+  --color-zona-excelencia: #22c55e;
 
-  /* Tinta */
-  --color-ink: #101613;
-  --color-ink-2: #4c5652;
-  --color-ink-3: #83908a;
-  --color-hairline: #e2e8e5;
+  /* Tinta sobre escuro */
+  --color-ink: #ffffff;
+  --color-ink-2: #bdbbb2;
+  --color-ink-3: #8a887f;
+  --color-hairline: rgba(255, 255, 255, 0.09);
+  --color-hairline-gold: rgba(212, 175, 55, 0.28);
 
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
@@ -36,4 +39,29 @@ body {
   font-family: var(--font-sans);
   color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Assinatura APEX: texto em gradiente ouro */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #d4af37, #f4d03f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #b8941f, #d4af37 45%, #f4d03f);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 3px;
 }
