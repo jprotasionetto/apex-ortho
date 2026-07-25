@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  /* Marca — verde-escuro premium */
+  --color-brand: #0f4d3a;
+  --color-brand-dark: #0a3628;
+  --color-brand-mid: #1a6b52;
+  --color-brand-soft: #e7f1ed;
+  --color-page: #f6f8f7;
+
+  /* Categorias NPS — paleta validada (dataviz) sobre fundo claro */
+  --color-promotor: #0ca30c;
+  --color-neutro: #eda100;
+  --color-detrator: #d03b3b;
+
+  /* Zonas do NPS (texto grande, contraste adequado no branco) */
+  --color-zona-critico: #d03b3b;
+  --color-zona-aperfeicoar: #b45309;
+  --color-zona-otimo: #16a34a;
+  --color-zona-excelencia: #0f4d3a;
+
+  /* Tinta */
+  --color-ink: #101613;
+  --color-ink-2: #4c5652;
+  --color-ink-3: #83908a;
+  --color-hairline: #e2e8e5;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  background: var(--color-page);
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
